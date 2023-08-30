@@ -1,1 +1,1 @@
-# OZON2
+JavaRush
