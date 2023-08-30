@@ -1,4 +1,4 @@
-package drivers;
+package help;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.interactions.Pause;
