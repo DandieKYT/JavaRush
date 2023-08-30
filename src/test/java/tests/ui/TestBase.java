@@ -8,11 +8,13 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.BasePage;
 import pages.EnrollInCoursePage;
 import pages.ReviewsAndAboutUsPage;
+import pages.StartLearningPage;
 
 import java.util.Map;
 
 
 public class TestBase extends Attach {
+    StartLearningPage learningPage = new StartLearningPage();
     BasePage basePage = new BasePage();
     ReviewsAndAboutUsPage reviewsAndAboutUsPage = new ReviewsAndAboutUsPage();
     EnrollInCoursePage coursePage = new EnrollInCoursePage();
