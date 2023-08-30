@@ -20,7 +20,7 @@ public class TestBase extends Attach {
     static void setUp() {
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.baseUrl = "https://www.wildberries.ru";
+        Configuration.baseUrl = "https://javarush.com";
 //        Configuration.browser = "chrome";
 //        Configuration.browserVersion = "100.0";
 //        Configuration.remote = "https://user1:1234@" + System.getProperty("selenoid_url", "selenoid.autotests.cloud/wd/hub");
