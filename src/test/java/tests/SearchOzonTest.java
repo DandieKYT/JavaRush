@@ -2,7 +2,8 @@ package tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.WebDriverRunner;
-import drivers.W3cActions;
+import help.PhoneManagerHelper;
+import help.W3cActions;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.PerformsTouchActions;
@@ -16,7 +17,6 @@ import org.openqa.selenium.Point;
 import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.driver;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.appium.java_client.touch.offset.PointOption.point;
 import static java.time.Duration.ofSeconds;
@@ -28,8 +28,8 @@ public class SearchOzonTest extends TestBase {
 
     @Test
     void checkoutTest() {
-        swipeUp(10);
-        $$(AppiumBy.className("android.widget.LinearLayout")).get(3).click();
+        $$(AppiumBy.className("android.widget.LinearLayout")).get(3).shouldBe(Condition.visible);
+        PhoneManagerHelper.swipeFromLeftToRight();
         sleep(2000);
         $$(AppiumBy.className("android.widget.ImageButton")).get(0).click();
         $(AppiumBy.className("android.widget.TextView")).click();
