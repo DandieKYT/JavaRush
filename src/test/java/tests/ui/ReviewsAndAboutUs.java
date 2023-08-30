@@ -20,8 +20,8 @@ public class ReviewsAndAboutUs extends TestBase {
     @DisplayName("Открытие страниц Отзывы/О нас")
     public void productsAndCompany(String param, String expectedText) {
         basePage.openPage();
-        productsAndCompanyPage.openTitle(param);
-        productsAndCompanyPage.checkTitle(expectedText);
+        reviewsAndAboutUsPage.openTitle(param);
+        reviewsAndAboutUsPage.checkTitle(expectedText);
     }
 
 }

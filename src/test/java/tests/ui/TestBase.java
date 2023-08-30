@@ -6,14 +6,14 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.BasePage;
-import pages.ProductsAndCompanyPage;
+import pages.ReviewsAndAboutUsPage;
 
 import java.util.Map;
 
 
 public class TestBase extends Attach {
     BasePage basePage = new BasePage();
-    ProductsAndCompanyPage productsAndCompanyPage = new ProductsAndCompanyPage();
+    ReviewsAndAboutUsPage reviewsAndAboutUsPage = new ReviewsAndAboutUsPage();
     Attach attach = new Attach();
 
     @BeforeAll

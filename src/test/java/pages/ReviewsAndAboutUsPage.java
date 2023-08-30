@@ -1,6 +1,5 @@
 package pages;
 
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
@@ -8,17 +7,17 @@ import static com.codeborne.selenide.Selectors.byTagAndText;
 import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
-public class ProductsAndCompanyPage {
+public class ReviewsAndAboutUsPage {
     CareerAndCompanyLocators locators = new CareerAndCompanyLocators();
 
-    public ProductsAndCompanyPage openTitle(String param) {
+    public ReviewsAndAboutUsPage openTitle(String param) {
         step("Открытие вкладки", () -> {
             locators.openTitle(param).click();
         });
         return null;
     }
 
-    public ProductsAndCompanyPage checkTitle(String expectedText) {
+    public ReviewsAndAboutUsPage checkTitle(String expectedText) {
         step("Проверка содержимого вкладки", () -> {
             locators.checkTitle(expectedText).shouldBe(text(expectedText));
         });
