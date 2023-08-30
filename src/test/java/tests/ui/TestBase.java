@@ -5,15 +5,13 @@ import help.Attach;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import pages.BasePage;
-import pages.EnrollInCoursePage;
-import pages.ReviewsAndAboutUsPage;
-import pages.StartLearningPage;
+import pages.*;
 
 import java.util.Map;
 
 
 public class TestBase extends Attach {
+    SocialGroupsPage groupsPage = new SocialGroupsPage();
     StartLearningPage learningPage = new StartLearningPage();
     BasePage basePage = new BasePage();
     ReviewsAndAboutUsPage reviewsAndAboutUsPage = new ReviewsAndAboutUsPage();

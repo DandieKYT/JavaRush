@@ -19,7 +19,7 @@ public class StartLearningPage {
             blackPictureClick = $x("//*[@id='id_button_jr_welcome_light_theme']/picture"),
             notNowButton = $x("//*[@id='id_button_jr_welcome_sign_up_not_now']"),
             xpInProgrammingNo = $x("//*[@id='id_button_jr_welcome_start_from_scratch']"),
-            checkOutResult =$x("//div[text()='Ваш персональный курс готов']");
+            checkOutResult = $x("//div[text()='Ваш персональный курс готов']");
 
     public ReviewsAndAboutUsPage startLearnButton() {
         step("Нажатие на кнопку \"Начать обучение\"", () -> {
@@ -27,38 +27,51 @@ public class StartLearningPage {
         });
         return null;
     }
+
     public ReviewsAndAboutUsPage beginLearnButton() {
         step("Нажатие на кнопку \"Начать\"", () -> {
             beginLearnButton.click();
         });
         return null;
-    }public ReviewsAndAboutUsPage russianLanguageButton() {
+    }
+
+    public ReviewsAndAboutUsPage russianLanguageButton() {
         step("Нажатие на кнопку \"Русский\"", () -> {
             russianLanguageButton.click();
         });
         return null;
-    }public ReviewsAndAboutUsPage qaButton() {
+    }
+
+    public ReviewsAndAboutUsPage qaButton() {
         step("Нажатие на кнопку \"Инженером Тестирования\"", () -> {
             qaButton.click();
         });
         return null;
-    }public ReviewsAndAboutUsPage blackPictureClick() {
+    }
+
+    public ReviewsAndAboutUsPage blackPictureClick() {
         step("Выбор темной темы", () -> {
             blackPictureClick.click();
         });
         return null;
-    }public ReviewsAndAboutUsPage notNowButton() {
+    }
+
+    public ReviewsAndAboutUsPage notNowButton() {
         step("Нажатие на кнопку \"Не сейчас\"", () -> {
             notNowButton.click();
         });
         return null;
-    }public ReviewsAndAboutUsPage xpInProgrammingNo() {
+    }
+
+    public ReviewsAndAboutUsPage xpInProgrammingNo() {
         step("Нажатие на кнопку \"Нет\"", () -> {
             xpInProgrammingNo.click();
             sleep(10000);
         });
         return null;
-    }public ReviewsAndAboutUsPage checkOutResult() {
+    }
+
+    public ReviewsAndAboutUsPage checkOutResult() {
         step("Проверка заголовка об успешном создании курса", () -> {
             checkOutResult.shouldBe(text("Ваш персональный курс готов"));
         });
