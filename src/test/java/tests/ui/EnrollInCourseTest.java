@@ -4,7 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("Запись на курс по JAVA")
-public class EnrollInCourse  extends TestBase{
+public class EnrollInCourseTest extends TestBase{
     @Test
     public void javaCourse(){
         basePage.openPage();
