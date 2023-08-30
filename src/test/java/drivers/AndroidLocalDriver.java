@@ -1,8 +1,11 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
+import config.MobileConfig;
+import config.WebConfig;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 
@@ -18,6 +21,7 @@ import static io.appium.java_client.remote.MobilePlatform.ANDROID;
 import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class AndroidLocalDriver implements WebDriverProvider {
+    protected static final MobileConfig mobile = ConfigFactory.create(MobileConfig.class);
     @Nonnull
     @Override
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
@@ -26,35 +30,21 @@ public class AndroidLocalDriver implements WebDriverProvider {
 
         options.setAutomationName(ANDROID_UIAUTOMATOR2)
                 .setPlatformName(ANDROID)
-                .setPlatformVersion("11.0")
-                .setDeviceName("Pixel 4 API 30")
-                .setAppPackage("ru.ozon.app.android")
-                .setAppActivity("ru.ozon.app.android.ui.start.PreStartActivity");
+                .setPlatformVersion(mobile.PlatformVersion())
+                .setDeviceName(mobile.deviceName())
+                .setAppPackage(mobile.AppPackage())
+                .setAppActivity(mobile.AppActivity());
 
         return new AndroidDriver(getAppiumServerUrl(), options);
     }
 
     public static URL getAppiumServerUrl() {
         try {
-            return new URL("http://localhost:4723/wd/hub");
+            return new URL(mobile.url());
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
     }
 
-//    private String getAppPath() {
-//        String appUrl = "https://github.com/wikimedia/apps-android-wikipedia" +
-//                "/releases/download/latest/app-alpha-universal-release.apk";
-//        String appPath = "src/test/resources/apps/app-alpha-universal-release.apk";
 //
-//        File app = new File(appPath);
-//        if (!app.exists()) {
-//            try (InputStream in = new URL(appUrl).openStream()) {
-//                copyInputStreamToFile(in, app);
-//            } catch (IOException e) {
-//                throw new AssertionError("Failed to download application", e);
-//            }
-//        }
-//        return app.getAbsolutePath();
-//    }
 }
