@@ -30,8 +30,6 @@ public class TestBaseMobile {
 
     @AfterEach
     void afterEach() {
-//        attachment.screenshotAs("Last screenshot");
-        attachment.pageSource();
         closeWebDriver();
     }
 }
