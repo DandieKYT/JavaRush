@@ -23,8 +23,8 @@ public class Authentication {
     public String authenticate() {
 
         return allureTestOpsSession = given()
-                .header("X-XSRF-TOKEN", authConfig.xsrfToken())
-                .header("Cookie", "XSRF-TOKEN=" + authConfig.xsrfToken())
+                .header("javarush.user.id", "3320682")
+                .cookie("JSESSIONID" , "cb0b9f33-6278-4e1a-ba00-ad704596811a")
                 .formParam("username", authConfig.username())
                 .formParam("password", authConfig.password())
                 .when()
