@@ -17,7 +17,7 @@ public class SocialGroupsPage {
 
     public SocialGroupsPage youtubeButton() {
         step("Открытие страницы на YouTube", () -> {
-            youtubeButton.scrollIntoView(false);
+            youtubeButton.scrollIntoView(true);
             youtubeButton.click();
             Selenide.switchTo().window(1);
         });
@@ -33,7 +33,7 @@ public class SocialGroupsPage {
     }
     public SocialGroupsPage telegramButton() {
         step("Открытие страницы в Telegram", () -> {
-            youtubeButton.scrollIntoView(true);
+            youtubeButton.scrollIntoView(false);
             telegramButton.click();
             Selenide.switchTo().window(1);
         });

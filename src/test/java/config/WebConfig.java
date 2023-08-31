@@ -18,6 +18,15 @@ public interface WebConfig extends Config {
     @DefaultValue("1920x1080")
     String browserSize();
 
-    @Key("remoteDriverUrl")
+    @Key("remoteUrl")
+    @DefaultValue("https://user1:1234@selenoid.autotests.cloud/wd/hub")
     String remoteUrl();
+
+    @Key("pageLoadStrategy")
+    @DefaultValue("eager")
+    String pageLoadStrategy();
+
+    @Key("BaseUrl")
+    @DefaultValue("https://javarush.com")
+    String BaseUrl();
 }
