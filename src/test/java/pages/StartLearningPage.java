@@ -6,8 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.sleep;
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 public class StartLearningPage {
@@ -19,6 +19,8 @@ public class StartLearningPage {
             blackPictureClick = $x("//*[@id='id_button_jr_welcome_light_theme']/picture"),
             notNowButton = $x("//*[@id='id_button_jr_welcome_sign_up_not_now']"),
             xpInProgrammingNo = $x("//*[@id='id_button_jr_welcome_start_from_scratch']"),
+            getButtonLearn = $x("//*[@id='id_button_jr_welcome_get_course']"),
+            profileName = $(".my-profile-card__name"),
             checkOutResult = $x("//div[text()='Ваш персональный курс готов']");
 
     public ReviewsAndAboutUsPage startLearnButton() {
@@ -74,6 +76,18 @@ public class StartLearningPage {
     public ReviewsAndAboutUsPage checkOutResult() {
         step("Проверка заголовка об успешном создании курса", () -> {
             checkOutResult.shouldBe(text("Ваш персональный курс готов"));
+        });
+        return null;
+    }
+    public ReviewsAndAboutUsPage getButtonLearn() {
+        step("Нажатие на кнопку Получить",  () -> {
+            getButtonLearn.click();
+        });
+        return null;
+    }
+    public ReviewsAndAboutUsPage profileName() {
+        step("Проверка созданного профиля",  () -> {
+            profileName.shouldBe(visible);
         });
         return null;
     }
