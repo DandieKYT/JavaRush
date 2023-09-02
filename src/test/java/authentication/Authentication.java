@@ -21,17 +21,15 @@ public class Authentication {
     }
 
     public String authenticate() {
+String sessionID = "JSESSIONID",
+        userId = "javarush.user.id";
 
         return allureTestOpsSession = given()
-                .header("javarush.user.id", "3320682")
-                .cookie("JSESSIONID" , "cb0b9f33-6278-4e1a-ba00-ad704596811a")
-                .formParam("username", authConfig.username())
-                .formParam("password", authConfig.password())
                 .when()
                 .post("/api/login/system")
                 .then()
                 .statusCode(200)
                 .extract().response()
-                .getCookie("ALLURE_TESTOPS_SESSION");
+                .getCookies().toString();
     }
 }
