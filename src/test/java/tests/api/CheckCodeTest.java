@@ -8,7 +8,7 @@ import static org.hamcrest.Matchers.is;
 
 public class CheckCodeTest {
 @Test
-void unSuccessfulLoginWithMissingEmailTest() {
+void status() {
     given()
             .log().uri()
             .contentType(JSON)
