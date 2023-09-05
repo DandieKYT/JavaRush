@@ -18,8 +18,14 @@ public class Specification {
     private static final String BASE_PATCH = "/api/1.0";
     public static RequestSpecification requestSpec =
             with()
-                    .header("javarush.user.id", "3320682")
-                    .cookie("JSESSIONID" , "cb0b9f33-6278-4e1a-ba00-ad704596811a")
+//                    .header("javarush.user.id", "3348689")
+//                    .cookies("JSESSIONID" , "569249ab-f542-4e61-8a0e-0d6f0cf0fa2f",
+//                            "javarush.user.id", "3348689")
+                    .cookies("intercom-device-id-mqlef7yz", "53b03e36-5e47-44df-8282-2cf23848b3c7",
+                            "intercom-session-mqlef7yz" , ";",
+                            "_gcl_au", "1.1.787769479.1693512988",
+                            "_ga_cid", "1139280727.1693512988"
+                    )
                     .baseUri(BASE_URL)
                     .basePath(BASE_PATCH)
                     .log().all()

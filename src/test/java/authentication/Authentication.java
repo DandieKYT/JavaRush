@@ -7,7 +7,7 @@ import static io.restassured.RestAssured.given;
 
 public class Authentication {
     private static Authentication instance;
-    private static String allureTestOpsSession;
+    private static String javaSession;
     private static final AuthConfig authConfig = ConfigFactory.create(AuthConfig.class);
 
     private Authentication() {
@@ -21,10 +21,10 @@ public class Authentication {
     }
 
     public String authenticate() {
-String sessionID = "JSESSIONID",
-        userId = "javarush.user.id";
+String JSESSIONID = "569249ab-f542-4e61-8a0e-0d6f0cf0fa2f",
+        userId = "3348689";
 
-        return allureTestOpsSession = given()
+        return javaSession = given()
                 .when()
                 .post("/api/login/system")
                 .then()
