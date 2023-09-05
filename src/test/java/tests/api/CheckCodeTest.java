@@ -19,6 +19,7 @@ public class CheckCodeTest {
                 .then()
                 .spec(responseSpec)
                 .statusCode(201);
+
     }
 
 }
