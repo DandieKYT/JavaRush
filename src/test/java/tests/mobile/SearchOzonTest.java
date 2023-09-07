@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class SearchOzonTest extends TestBaseMobile {
+public class SearchOzonTest extends TestBaseMobile{
     @Test
     void checkoutTest() {
         $$(AppiumBy.className("android.widget.LinearLayout")).get(3).shouldBe(Condition.visible);
