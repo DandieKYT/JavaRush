@@ -6,7 +6,7 @@ import org.aeonbits.owner.Config;
 })
 public interface MobileConfig extends Config {
     @Key("AppPackage")
-    @DefaultValue("chrome")
+    @DefaultValue("ru.ozon.app.android")
     String AppPackage ();
 
     @Key("AppActivity")
@@ -14,7 +14,7 @@ public interface MobileConfig extends Config {
     String AppActivity();
 
     @Key("deviceName")
-    @DefaultValue("Pixel 4 API 30")
+    @DefaultValue("OnePlus 9")
     String deviceName();
 
     @Key("platformName")
@@ -28,4 +28,19 @@ public interface MobileConfig extends Config {
     @DefaultValue("11.0")
     String PlatformVersion();
 
+    @Key("username")
+    @DefaultValue("dandiekyt_fmCgsX")
+    String username();
+
+    @Key("passwordKey")
+    @DefaultValue("aUkbVXswGV3k2ybtE1Wr")
+    String passwordKey();
+
+    @Key("remoteMobileUrl")
+    @DefaultValue("https://hub.browserstack.com/wd/hub")
+    String remoteMobileUrl();
+
+    @Key("app")
+    @DefaultValue("bs://aeafb14cd38d3e07fe23e50468cf6bf41b0310a7")
+    String app();
 }

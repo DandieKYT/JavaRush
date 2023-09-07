@@ -8,11 +8,11 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class SearchOzonTest extends TestBaseMobile {
+public class SearchOzonTest extends TestBaseMobileRemote{
     @Test
     void checkoutTest() {
         $$(AppiumBy.className("android.widget.LinearLayout")).get(3).shouldBe(Condition.visible);
-        PhoneManagerHelper.swipeFromLeftToRight();
+//        PhoneManagerHelper.swipeFromLeftToRight();
         sleep(2000);
         $(AppiumBy.className("android.widget.TextView")).click();
         $(AppiumBy.className("android.widget.EditText")).sendKeys("Трусы");
