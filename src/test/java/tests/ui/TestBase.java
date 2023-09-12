@@ -29,8 +29,6 @@ String f = "2";
         Configuration.browserSize = webConfig.browserSize();
         Configuration.pageLoadStrategy = webConfig.pageLoadStrategy();
         Configuration.baseUrl = webConfig.BaseUrl();
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
         Configuration.browser = webConfig.browser();
         Configuration.browserVersion = webConfig.browserVersion();
         Configuration.remote = webConfig.remoteUrl();
