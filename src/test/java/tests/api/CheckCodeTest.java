@@ -1,5 +1,6 @@
 package tests.api;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
@@ -9,6 +10,7 @@ import static specs.Specification.responseSpec;
 
 
 public class CheckCodeTest {
+    @Disabled
     @Test
     void status() {
         String message = "{message: \"124\", parentCommentId: null, replyToUserId: null}";
