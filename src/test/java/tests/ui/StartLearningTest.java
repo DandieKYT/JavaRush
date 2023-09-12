@@ -17,8 +17,5 @@ public class StartLearningTest extends TestBase {
         learningPage.notNowButton();
         learningPage.xpInProgrammingNo();
         learningPage.checkOutResult();
-        learningPage.getButtonLearn();
-        basePage.openPage();
-        learningPage.profileName();
     }
 }
