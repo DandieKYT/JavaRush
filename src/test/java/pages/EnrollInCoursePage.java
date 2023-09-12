@@ -29,6 +29,8 @@ public class EnrollInCoursePage {
     public EnrollInCoursePage checkoutForm() {
         step("Проверка заголовка анкеты\"Записаться на курс\"", () -> {
            checkoutForm.shouldBe(text("Записаться на курс"));
+           Selenide.closeWindow();
+           Selenide.switchTo().window(0);
         });
         return null;
     }
