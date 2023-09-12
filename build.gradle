@@ -85,9 +85,13 @@ tasks.withType(Test) {
         }
     }
 }
-task UI_Test(type: Test) {
+test {
+    systemProperty "chromeoptions.prefs", "init.accept_languages=ru"
+    useJUnitPlatform()
+}
+task UITest(type: Test) {
     useJUnitPlatform {
-        includeTags "UI_Test"
+        includeTags "UITest"
     }
 }
 
