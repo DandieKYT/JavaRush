@@ -6,6 +6,8 @@ import help.Attach;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.*;
 
@@ -27,9 +29,11 @@ String f = "2";
         Configuration.browserSize = webConfig.browserSize();
         Configuration.pageLoadStrategy = webConfig.pageLoadStrategy();
         Configuration.baseUrl = webConfig.BaseUrl();
-//        Configuration.browser = webConfig.browser();
-//        Configuration.browserVersion = webConfig.browserVersion();
-//        Configuration.remote = webConfig.remoteUrl();
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        Configuration.browser = webConfig.browser();
+        Configuration.browserVersion = webConfig.browserVersion();
+        Configuration.remote = webConfig.remoteUrl();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(

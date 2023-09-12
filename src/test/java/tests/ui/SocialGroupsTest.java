@@ -13,7 +13,7 @@ public class SocialGroupsTest extends TestBase {
     public void telegramTest(){
         basePage.openPage();
         groupsPage
-//                .closeCookie()
+                .closeCookie()
         .telegramButton()
         .checkOutTelegramTitle();
     }
