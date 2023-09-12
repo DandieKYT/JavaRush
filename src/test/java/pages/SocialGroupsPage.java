@@ -12,7 +12,7 @@ public class SocialGroupsPage {
     private SelenideElement
             closeCookie = $(".button--sm-wide"),
             scrollToButton = $x("//img[@alt='Google Play']"),
-
+            acceptCookieYT = $x("//*[@aria-label='Accept all']"),
             youtubeButton = $x("//*[contains(@class, 'footer-soc__link--youtube')]"),
             checkOutYoutubeTitle = $x("//div[@id='inner-header-container']//yt-formatted-string[@id='text']"),
             telegramButton = $x("//*[contains(@class, 'footer-soc__link--telegram')]"),
@@ -28,7 +28,7 @@ public class SocialGroupsPage {
     }
     public SocialGroupsPage checkOutYoutubeTitle() {
         step("Проверка заголовка на YouTube", () -> {
-            checkOutYoutubeTitle.shouldBe(text("JavaRush"));
+            checkOutYoutubeTitle.shouldHave(text("JavaRush"));
             Selenide.closeWindow();
             Selenide.switchTo().window(0);
         });
