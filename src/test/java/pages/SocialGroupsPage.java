@@ -10,7 +10,7 @@ import static io.qameta.allure.Allure.step;
 
 public class SocialGroupsPage {
     private SelenideElement
-            closeCookie = $(".button--sm-wide"),
+            closeCookie = $x("//button[@class='button button--sm-wide button--apply']"),
             scrollToButton = $x("//img[@alt='Google Play']"),
             acceptCookieYT = $x("//*[@aria-label='Accept all']"),
             youtubeButton = $x("//*[contains(@class, 'footer-soc__link--youtube')]"),
