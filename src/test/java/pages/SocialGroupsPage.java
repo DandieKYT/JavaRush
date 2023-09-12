@@ -56,4 +56,10 @@ public class SocialGroupsPage {
         });
         return null;
     }
+    public SocialGroupsPage acceptCookieYT() {
+        step("Закрытие куки ютуба", () -> {
+            acceptCookieYT.click();
+        });
+        return null;
+    }
 }

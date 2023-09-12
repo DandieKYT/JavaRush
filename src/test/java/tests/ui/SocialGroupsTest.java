@@ -17,6 +17,7 @@ public class SocialGroupsTest extends TestBase {
         basePage.openPage();
         groupsPage.closeCookie()
                .youtubeButton()
+                .acceptCookieYT()
                .checkOutYoutubeTitle();
     }
 }
