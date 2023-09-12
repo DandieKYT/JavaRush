@@ -20,7 +20,8 @@ public class TestBase extends Attach {
     ReviewsAndAboutUsPage reviewsAndAboutUsPage = new ReviewsAndAboutUsPage();
     EnrollInCoursePage coursePage = new EnrollInCoursePage();
     Attach attach = new Attach();
-
+int a = 2;
+String f = "2";
     @BeforeAll
     static void setUp() {
         Configuration.browserSize = webConfig.browserSize();

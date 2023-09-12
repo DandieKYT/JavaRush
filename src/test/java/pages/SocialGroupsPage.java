@@ -4,20 +4,23 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 import static io.qameta.allure.Allure.step;
 
 public class SocialGroupsPage {
     private SelenideElement
-            closeCookie = $x("//button[text()='Принять и закрыть']"),
+            closeCookie = $(".button--sm-wide"),
+            scrollToButton = $x("//img[@alt='Google Play']"),
+
             youtubeButton = $x("//*[contains(@class, 'footer-soc__link--youtube')]"),
-            checkOutYoutubeTitle = $x("//*[@id='text']"),
+            checkOutYoutubeTitle = $x("//div[@id='inner-header-container']//yt-formatted-string[@id='text']"),
             telegramButton = $x("//*[contains(@class, 'footer-soc__link--telegram')]"),
             checkOutTelegramTitle = $x("//span[text()='JavaRush']");
 
     public SocialGroupsPage youtubeButton() {
         step("Открытие страницы на YouTube", () -> {
-            youtubeButton.scrollIntoView(true);
+            scrollToButton.scrollIntoView(true);
             youtubeButton.click();
             Selenide.switchTo().window(1);
         });
@@ -33,7 +36,7 @@ public class SocialGroupsPage {
     }
     public SocialGroupsPage telegramButton() {
         step("Открытие страницы в Telegram", () -> {
-            youtubeButton.scrollIntoView(false);
+            scrollToButton.scrollIntoView(true);
             telegramButton.click();
             Selenide.switchTo().window(1);
         });
