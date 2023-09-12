@@ -45,6 +45,7 @@ public class SocialGroupsPage {
     public SocialGroupsPage checkOutTelegramTitle() {
         step("Проверка заголовка на Telegram", () -> {
             checkOutTelegramTitle.shouldBe(text("JavaRush"));
+            Selenide.sleep(1000);
             Selenide.closeWindow();
             Selenide.switchTo().window(0);
         });
