@@ -15,7 +15,6 @@ public class SocialGroupsTest extends TestBase {
         groupsPage.closeCookie();
         groupsPage.telegramButton();
         groupsPage.checkOutTelegramTitle();
-        basePage.openPage();
         groupsPage.youtubeButton();
         groupsPage.acceptCookieYT();
         groupsPage.checkOutYoutubeTitle();
