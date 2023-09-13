@@ -14,14 +14,14 @@ public class ReviewsAndAboutUsPage {
         step("Открытие вкладки", () -> {
             locators.openTitle(param).click();
         });
-        return null;
+        return this;
     }
 
     public ReviewsAndAboutUsPage checkTitle(String expectedText) {
         step("Проверка содержимого вкладки", () -> {
             locators.checkTitle(expectedText).shouldBe(text(expectedText));
         });
-        return null;
+        return this;
     }
 
 

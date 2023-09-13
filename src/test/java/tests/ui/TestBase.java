@@ -3,6 +3,7 @@ package tests.ui;
 import com.codeborne.selenide.Configuration;
 import config.WebConfig;
 import help.Attach;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -27,6 +28,7 @@ String f = "2";
     @BeforeAll
     static void setUp() {
         Configuration.browserSize = webConfig.browserSize();
+        WebDriverManager.chromedriver().setup();
         Configuration.pageLoadStrategy = webConfig.pageLoadStrategy();
         Configuration.baseUrl = webConfig.BaseUrl();
         Configuration.browser = webConfig.browser();

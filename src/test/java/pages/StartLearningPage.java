@@ -23,72 +23,72 @@ public class StartLearningPage {
             profileName = $(".my-profile-card__name"),
             checkOutResult = $x("//div[text()='Ваш персональный курс готов']");
 
-    public ReviewsAndAboutUsPage startLearnButton() {
-        step("Нажатие на кнопку \"Начать обучение\"", () -> {
+    public StartLearningPage startLearnButton() {
+        step("Нажатие на кнопку 'Начать обучение'", () -> {
             startLearnButton.click();
         });
-        return null;
+        return this;
     }
 
-    public ReviewsAndAboutUsPage beginLearnButton() {
+    public StartLearningPage beginLearnButton() {
         step("Нажатие на кнопку \"Начать\"", () -> {
             beginLearnButton.click();
         });
-        return null;
+        return this;
     }
 
-    public ReviewsAndAboutUsPage russianLanguageButton() {
+    public StartLearningPage russianLanguageButton() {
         step("Нажатие на кнопку \"Русский\"", () -> {
             russianLanguageButton.click();
         });
-        return null;
+        return this;
     }
 
-    public ReviewsAndAboutUsPage qaButton() {
+    public StartLearningPage qaButton() {
         step("Нажатие на кнопку \"Инженером Тестирования\"", () -> {
             qaButton.click();
         });
-        return null;
+        return this;
     }
 
-    public ReviewsAndAboutUsPage blackPictureClick() {
+    public StartLearningPage blackPictureClick() {
         step("Выбор темной темы", () -> {
             blackPictureClick.click();
         });
-        return null;
+        return this;
     }
 
-    public ReviewsAndAboutUsPage notNowButton() {
+    public StartLearningPage notNowButton() {
         step("Нажатие на кнопку \"Не сейчас\"", () -> {
             notNowButton.click();
         });
-        return null;
+        return this;
     }
 
-    public ReviewsAndAboutUsPage xpInProgrammingNo() {
+    public StartLearningPage xpInProgrammingNo() {
         step("Нажатие на кнопку \"Нет\"", () -> {
             xpInProgrammingNo.click();
             sleep(10000);
         });
-        return null;
+        return this;
     }
 
-    public ReviewsAndAboutUsPage checkOutResult() {
+    public StartLearningPage checkOutResult() {
         step("Проверка заголовка об успешном создании курса", () -> {
             checkOutResult.shouldBe(text("Ваш персональный курс готов"));
         });
-        return null;
+        return this;
     }
-    public ReviewsAndAboutUsPage getButtonLearn() {
+    public StartLearningPage getButtonLearn() {
         step("Нажатие на кнопку Получить",  () -> {
             getButtonLearn.click();
         });
-        return null;
+        return this;
     }
-    public ReviewsAndAboutUsPage profileName() {
+    public StartLearningPage profileName() {
         step("Проверка созданного профиля",  () -> {
             profileName.shouldBe(visible);
         });
-        return null;
+        return this;
     }
 }

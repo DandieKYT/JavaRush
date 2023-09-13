@@ -10,13 +10,13 @@ public class StartLearningTest extends TestBase {
     @DisplayName("Создание аккаунта в JAVA-Rush")
     public void startLearnJava(){
         basePage.openPage();
-        learningPage.startLearnButton();
-        learningPage.beginLearnButton();
-        learningPage.russianLanguageButton();
-        learningPage.qaButton();
-        learningPage.blackPictureClick();
-        learningPage.notNowButton();
-        learningPage.xpInProgrammingNo();
-        learningPage.checkOutResult();
+        learningPage.startLearnButton()
+        .beginLearnButton()
+        .russianLanguageButton()
+        .qaButton()
+        .blackPictureClick()
+        .notNowButton()
+        .xpInProgrammingNo()
+        .checkOutResult();
     }
 }

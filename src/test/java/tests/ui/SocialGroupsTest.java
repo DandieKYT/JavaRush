@@ -12,11 +12,11 @@ public class SocialGroupsTest extends TestBase {
     @Test
     public void telegramYoutubeTest(){
         basePage.openPage();
-        groupsPage.closeCookie();
-        groupsPage.telegramButton();
-        groupsPage.checkOutTelegramTitle();
-        groupsPage.youtubeButton();
-        groupsPage.acceptCookieYT();
-        groupsPage.checkOutYoutubeTitle();
+        groupsPage.closeCookie()
+        .telegramButton()
+        .checkOutTelegramTitle()
+        .youtubeButton()
+        .acceptCookieYT()
+        .checkOutYoutubeTitle();
     }
 }
