@@ -6,6 +6,8 @@ import help.Attach;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.*;
 
@@ -20,7 +22,8 @@ public class TestBase extends Attach {
     ReviewsAndAboutUsPage reviewsAndAboutUsPage = new ReviewsAndAboutUsPage();
     EnrollInCoursePage coursePage = new EnrollInCoursePage();
     Attach attach = new Attach();
-
+int a = 2;
+String f = "2";
     @BeforeAll
     static void setUp() {
         Configuration.browserSize = webConfig.browserSize();
