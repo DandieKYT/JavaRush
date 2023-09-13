@@ -93,20 +93,10 @@ test {
     useJUnitPlatform()
 }
 
-task JRMobile(type: Test) {
+task UITest(type: Test) {
     useJUnitPlatform {
-        includeTags "JRMobile"
+        includeTags "UITest"
     }
 }
 
-task JRUI(type: Test) {
-    useJUnitPlatform {
-        includeTags ("JRUI")
-    }
-}
 
-task JRApi(type: Test){
-    useJUnitPlatform{
-        includeTags("JRApi")
-    }
-}
