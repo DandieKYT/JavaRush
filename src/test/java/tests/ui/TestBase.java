@@ -1,17 +1,24 @@
 package tests.ui;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.WebDriverRunner;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import config.WebConfig;
 import help.Attach;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.*;
 
 import java.util.Map;
+
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 
 public class TestBase extends Attach {
@@ -27,6 +34,7 @@ String f = "2";
     @BeforeAll
     static void setUp() {
         Configuration.browserSize = webConfig.browserSize();
+        WebDriverManager.chromedriver().setup();
         Configuration.pageLoadStrategy = webConfig.pageLoadStrategy();
         Configuration.baseUrl = webConfig.BaseUrl();
         Configuration.browser = webConfig.browser();
@@ -41,13 +49,22 @@ String f = "2";
 
         Configuration.browserCapabilities = capabilities;
     }
+    @BeforeEach
+    void addListener() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
+                .screenshots(false)
+                .savePageSource(true)
+        );
+        closeWebDriver();
+    }
+
 
     @AfterEach
     void attachemts() {
-        attach.browserLogs();
-        attach.attachScreenshot();
-        attach.pageSource();
-        attach.addVideo();
+        Attach.browserConsoleLogs();
+        Attach.screenshotAs("Last screenshot");
+        Attach.addVideo();
+        Attach.pageSource();
     }
 
 }

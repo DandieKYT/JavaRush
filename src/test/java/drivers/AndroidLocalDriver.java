@@ -23,6 +23,7 @@ public class AndroidLocalDriver implements WebDriverProvider {
         UiAutomator2Options options = new UiAutomator2Options();
         options.merge(capabilities);
 
+
         options.setAutomationName(ANDROID_UIAUTOMATOR2)
                 .setPlatformName(ANDROID)
                 .setPlatformVersion(mobile.PlatformVersion())

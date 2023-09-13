@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -20,11 +21,16 @@ public class SocialGroupsPage {
 
     public SocialGroupsPage youtubeButton() {
         step("Открытие страницы на YouTube", () -> {
-            scrollToButton.scrollIntoView(true);
+//            scrollToButton.scrollIntoView(true);
+            Selenide.actions().sendKeys(Keys.PAGE_DOWN).perform();
+            Selenide.actions().sendKeys(Keys.PAGE_DOWN).perform();
+            Selenide.actions().sendKeys(Keys.PAGE_DOWN).perform();
+            Selenide.actions().sendKeys(Keys.PAGE_DOWN).perform();
+            Selenide.actions().sendKeys(Keys.PAGE_DOWN).perform();
             youtubeButton.click();
             Selenide.switchTo().window(1);
         });
-        return null;
+        return this;
     }
     public SocialGroupsPage checkOutYoutubeTitle() {
         step("Проверка заголовка на YouTube", () -> {
@@ -32,7 +38,7 @@ public class SocialGroupsPage {
             Selenide.closeWindow();
             Selenide.switchTo().window(0);
         });
-        return null;
+        return this;
     }
     public SocialGroupsPage telegramButton() {
         step("Открытие страницы в Telegram", () -> {
@@ -40,7 +46,7 @@ public class SocialGroupsPage {
             telegramButton.click();
             Selenide.switchTo().window(1);
         });
-        return null;
+        return this;
     }
     public SocialGroupsPage checkOutTelegramTitle() {
         step("Проверка заголовка на Telegram", () -> {
@@ -49,18 +55,18 @@ public class SocialGroupsPage {
             Selenide.closeWindow();
             Selenide.switchTo().window(0);
         });
-        return null;
+        return this;
     }
     public SocialGroupsPage closeCookie() {
         step("Закрытие куки", () -> {
             closeCookie.click();
         });
-        return null;
+        return this;
     }
     public SocialGroupsPage acceptCookieYT() {
         step("Закрытие куки ютуба", () -> {
             acceptCookieYT.click();
         });
-        return null;
+        return this;
     }
 }

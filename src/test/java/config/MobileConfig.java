@@ -6,7 +6,7 @@ import org.aeonbits.owner.Config;
 })
 public interface MobileConfig extends Config {
     @Key("AppPackage")
-    @DefaultValue("ru.ozon.app.android")
+    @DefaultValue("com.hitechrush.jaxarush")
     String AppPackage ();
 
     @Key("AppActivity")

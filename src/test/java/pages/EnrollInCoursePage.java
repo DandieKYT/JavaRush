@@ -18,13 +18,13 @@ public class EnrollInCoursePage {
             openJavaUniversity.click();
             Selenide.switchTo().window(1);
         });
-        return null;
+        return this;
     }
     public EnrollInCoursePage clickButtonEnrollToCourse() {
         step("Нажатие на кнопку \"Записаться на курс\"", () -> {
             clickButtonEnrollToCourse.click();
         });
-        return null;
+        return this;
     }
     public EnrollInCoursePage checkoutForm() {
         step("Проверка заголовка анкеты\"Записаться на курс\"", () -> {
@@ -32,7 +32,7 @@ public class EnrollInCoursePage {
            Selenide.closeWindow();
            Selenide.switchTo().window(0);
         });
-        return null;
+        return this;
     }
 
 }

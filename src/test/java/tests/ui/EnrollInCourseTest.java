@@ -9,8 +9,8 @@ public class EnrollInCourseTest extends TestBase{
     @Test
     public void javaCourse(){
         basePage.openPage();
-        coursePage.openJavaUniversity();
-        coursePage.clickButtonEnrollToCourse();
-        coursePage.checkoutForm();
+        coursePage.openJavaUniversity()
+        .clickButtonEnrollToCourse()
+        .checkoutForm();
     }
 }

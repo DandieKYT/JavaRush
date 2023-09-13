@@ -21,8 +21,8 @@ public class ReviewsAndAboutUsTest extends TestBase {
     @DisplayName("Открытие страниц Отзывы/О нас")
     public void productsAndCompany(String param, String expectedText) {
         basePage.openPage();
-        reviewsAndAboutUsPage.openTitle(param);
-        reviewsAndAboutUsPage.checkTitle(expectedText);
+        reviewsAndAboutUsPage.openTitle(param)
+        .checkTitle(expectedText);
     }
 
 }

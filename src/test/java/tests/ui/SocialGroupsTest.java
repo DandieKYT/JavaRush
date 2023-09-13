@@ -10,14 +10,23 @@ public class SocialGroupsTest extends TestBase {
 
     @DisplayName("Открытие страницы сайта в социальных группах")
     @Test
-    public void telegramTest(){
+    public void telegramTest() {
         basePage.openPage();
-        groupsPage.closeCookie();
-        groupsPage.telegramButton();
-        groupsPage.checkOutTelegramTitle();
-        basePage.openPage();
-        groupsPage.youtubeButton();
-        groupsPage.acceptCookieYT();
-        groupsPage.checkOutYoutubeTitle();
+        groupsPage
+                .closeCookie()
+                .telegramButton()
+                .checkOutTelegramTitle();
     }
+
+    @Test
+    public void youTubeTest() {
+        basePage.openPage();
+        groupsPage
+                .closeCookie()
+                .youtubeButton()
+                .acceptCookieYT()
+                .checkOutYoutubeTitle();
+    }
+
+
 }
