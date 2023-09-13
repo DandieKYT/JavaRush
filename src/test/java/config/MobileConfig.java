@@ -10,7 +10,7 @@ public interface MobileConfig extends Config {
     String AppPackage ();
 
     @Key("AppActivity")
-    @DefaultValue("ru.ozon.app.android.ui.start.PreStartActivity")
+    @DefaultValue("ru.javarush.android.ui.main.MainActivity")
     String AppActivity();
 
     @Key("deviceName")
