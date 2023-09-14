@@ -28,6 +28,7 @@ public class TestBase extends Attach {
     BasePage basePage = new BasePage();
     ReviewsAndAboutUsPage reviewsAndAboutUsPage = new ReviewsAndAboutUsPage();
     EnrollInCoursePage coursePage = new EnrollInCoursePage();
+    ForTest forTest = new ForTest();
     Attach attach = new Attach();
 int a = 2;
 String f = "2";
@@ -37,9 +38,9 @@ String f = "2";
         WebDriverManager.chromedriver().setup();
         Configuration.pageLoadStrategy = webConfig.pageLoadStrategy();
         Configuration.baseUrl = webConfig.BaseUrl();
-        Configuration.browser = webConfig.browser();
-        Configuration.browserVersion = webConfig.browserVersion();
-        Configuration.remote = webConfig.remoteUrl();
+//        Configuration.browser = webConfig.browser();
+//        Configuration.browserVersion = webConfig.browserVersion();
+//        Configuration.remote = webConfig.remoteUrl();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
