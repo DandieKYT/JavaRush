@@ -14,7 +14,8 @@ import static com.codeborne.selenide.Selenide.$x;
 
 @Tag("UITest")
 public class StartLearningTest extends TestBase {
-    public SelenideElement page = $x("(//div[contains(@class,'progress-bar progress-bar--basic svelte')])");
+
+
     @Test
     @DisplayName("Создание аккаунта в JAVA-Rush")
     public void startLearnJava() {
@@ -40,13 +41,10 @@ public class StartLearningTest extends TestBase {
                 .blackPictureClick()
                 .notNowButton()
                 .xpInProgrammingYes()
-                .testBeginButton()
-                .checkPageLoad();
-                 {
-                for (int i = 0; i <= page ; i++) {
-                    $x("//*[contains(@class,'radio-button radio-button--basic svelte')]").click();
-                    $(".btn").click();
+                .testBeginButton();
+        learningPage.randomCheck();
                 }
-        }
-    }
-}
+            }
+
+
+
