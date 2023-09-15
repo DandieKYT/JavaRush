@@ -12,7 +12,7 @@ import static io.qameta.allure.Allure.step;
 
 public class StartLearningPage {
     private SelenideElement
-            checkPageLoad = $x("//*[contains(@class, 'svelte-jm04sj')]"),
+            checkPageLoad= $x("//div[contains(text(), 'Цикл выведет числа от 1 до 10 включительно в примере:')]"),
             startLearnButton = $x("//*[@id='button_menu_start_learning_unauthorized_user']"),
             beginLearnButton = $x("//*[@id='id_button_jr_welcome_start_learning_1']"),
             russianLanguageButton = $x("//*[@id='todo_add']"),
@@ -26,6 +26,13 @@ public class StartLearningPage {
             profileName = $(".my-profile-card__name"),
             checkOutResult = $x("//div[text()='Ваш персональный курс готов']");
 
+    public StartLearningPage checkPageLoad() {
+        step("Проверка загрузки страницы'", () -> {
+            checkPageLoad.shouldBe(visible);
+        });
+        return this;
+    }
+
     public StartLearningPage startLearnButton() {
         step("Нажатие на кнопку 'Начать обучение'", () -> {
             startLearnButton.click();
@@ -35,6 +42,7 @@ public class StartLearningPage {
     public StartLearningPage testBeginButton() {
         step("Нажатие на кнопку 'Начать'", () -> {
             testBeginButton.click();
+            Selenide.sleep(5000);
         });
         return this;
     }
@@ -103,12 +111,6 @@ public class StartLearningPage {
     public StartLearningPage xpInProgrammingYes() {
         step("Нажатие на кнопку проверить уровень знаний", () -> {
             xpInProgrammingYes.click();
-        });
-        return this;
-    }
-    public StartLearningPage checkPageLoad() {
-        step("Проверка видимости элемента JavaRush", () -> {
-            checkPageLoad.shouldBe(visible);
         });
         return this;
     }

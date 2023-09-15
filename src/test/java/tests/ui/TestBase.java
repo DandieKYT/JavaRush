@@ -38,9 +38,9 @@ String f = "2";
         WebDriverManager.chromedriver().setup();
         Configuration.pageLoadStrategy = webConfig.pageLoadStrategy();
         Configuration.baseUrl = webConfig.BaseUrl();
-//        Configuration.browser = webConfig.browser();
-//        Configuration.browserVersion = webConfig.browserVersion();
-//        Configuration.remote = webConfig.remoteUrl();
+        Configuration.browser = webConfig.browser();
+        Configuration.browserVersion = webConfig.browserVersion();
+        Configuration.remote = webConfig.remoteUrl();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
