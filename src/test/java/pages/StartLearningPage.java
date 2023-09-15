@@ -12,20 +12,37 @@ import static io.qameta.allure.Allure.step;
 
 public class StartLearningPage {
     private SelenideElement
+            checkPageLoad= $x("//div[contains(text(), 'Цикл выведет числа от 1 до 10 включительно в примере:')]"),
             startLearnButton = $x("//*[@id='button_menu_start_learning_unauthorized_user']"),
             beginLearnButton = $x("//*[@id='id_button_jr_welcome_start_learning_1']"),
             russianLanguageButton = $x("//*[@id='todo_add']"),
             qaButton = $x("//*[@id='id_button_jr_welcome_choose_qa']"),
             blackPictureClick = $x("//*[@id='id_button_jr_welcome_light_theme']/picture"),
             notNowButton = $x("//*[@id='id_button_jr_welcome_sign_up_not_now']"),
+            testBeginButton = $x("//*[@id='id_button_jr_welcome_start_testing']"),
+            xpInProgrammingYes = $x("//*[@id='id_button_jr_welcome_determine_my_level']"),
             xpInProgrammingNo = $x("//*[@id='id_button_jr_welcome_start_from_scratch']"),
             getButtonLearn = $x("//*[@id='id_button_jr_welcome_get_course']"),
             profileName = $(".my-profile-card__name"),
             checkOutResult = $x("//div[text()='Ваш персональный курс готов']");
 
+    public StartLearningPage checkPageLoad() {
+        step("Проверка загрузки страницы'", () -> {
+            checkPageLoad.shouldBe(visible);
+        });
+        return this;
+    }
+
     public StartLearningPage startLearnButton() {
         step("Нажатие на кнопку 'Начать обучение'", () -> {
             startLearnButton.click();
+        });
+        return this;
+    }
+    public StartLearningPage testBeginButton() {
+        step("Нажатие на кнопку 'Начать'", () -> {
+            testBeginButton.click();
+            Selenide.sleep(5000);
         });
         return this;
     }
@@ -59,7 +76,7 @@ public class StartLearningPage {
     }
 
     public StartLearningPage notNowButton() {
-        step("Нажатие на кнопку \"Не сейчас\"", () -> {
+        step("Нажатие на кнопку 'Не сейчас' ", () -> {
             notNowButton.click();
         });
         return this;
@@ -88,6 +105,12 @@ public class StartLearningPage {
     public StartLearningPage profileName() {
         step("Проверка созданного профиля",  () -> {
             profileName.shouldBe(visible);
+        });
+        return this;
+    }
+    public StartLearningPage xpInProgrammingYes() {
+        step("Нажатие на кнопку проверить уровень знаний", () -> {
+            xpInProgrammingYes.click();
         });
         return this;
     }
