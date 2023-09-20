@@ -40,9 +40,8 @@ public class StartLearningPage {
 
     public void randomCheck() {
         if (nextButton.has(visible)) {
-            for (int i = 0; i >= pageElementQA; i++) {
-
-//                radioButton
+            for (int i = 0; pageElementQA.isEmpty(); i++) {
+                radioButton.get(getRandomNumber()).click();
                 nextButton.click();
             }
         }

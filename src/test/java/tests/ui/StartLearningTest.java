@@ -8,8 +8,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.*;
 
 
 @Tag("UITest")
@@ -42,6 +41,7 @@ public class StartLearningTest extends TestBase {
                 .notNowButton()
                 .xpInProgrammingYes()
                 .testBeginButton();
+        sleep(5000);
         learningPage.randomCheck();
                 }
             }
