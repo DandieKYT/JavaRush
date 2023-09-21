@@ -41,8 +41,8 @@ public class StartLearningTest extends TestBase {
                 .notNowButton()
                 .xpInProgrammingYes()
                 .testBeginButton();
-        sleep(5000);
         learningPage.randomCheck();
+        learningPage.checkOutResult();
                 }
             }
 

@@ -1,9 +1,6 @@
 package pages;
 
-import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.*;
 
 import java.util.Collections;
 import java.util.Random;
@@ -17,10 +14,12 @@ public class StartLearningPage {
             startLearnButton = $x("//*[@id='button_menu_start_learning_unauthorized_user']"),
             beginLearnButton = $x("//*[@id='id_button_jr_welcome_start_learning_1']"),
             russianLanguageButton = $x("//*[@id='todo_add']"),
+            checkoutLoad = $x("//div[text() ='Создается ваш персональный курс']"),
+            loader = $x("//*[contains(@class, 'last-step-loading')]"),
             qaButton = $x("//*[@id='id_button_jr_welcome_choose_qa']"),
             blackPictureClick = $x("//*[@id='id_button_jr_welcome_light_theme']/picture"),
             notNowButton = $x("//*[@id='id_button_jr_welcome_sign_up_not_now']"),
-            testBeginButton = $("#id_button_jr_welcome_start_testing"),
+            testBeginButton = $x("//*[@id='id_button_jr_welcome_start_testing']"),
             xpInProgrammingYes = $x("//*[@id='id_button_jr_welcome_determine_my_level']"),
             xpInProgrammingNo = $x("//*[@id='id_button_jr_welcome_start_from_scratch']"),
             getButtonLearn = $x("//*[@id='id_button_jr_welcome_get_course']"),
@@ -30,21 +29,29 @@ public class StartLearningPage {
 
     private final ElementsCollection
             radioButton = $$x("//*[contains(@class,'radio-button radio-button--basic svelte')]"),
-            pageElementQA = $$x("//div[contains(@class,'progress-bar progress-bar--basic svelte')]");
+            pageElementQA = $$x("//*[contains(@class,'progress-bar__step')]");
 
 
     public static int getRandomNumber() {
         Random random = new Random();
-        return random.nextInt(4) + 1;
+        return random.nextInt(5);
     }
 
+
     public void randomCheck() {
-        if (nextButton.has(visible)) {
-            for (int i = 0; pageElementQA.isEmpty(); i++) {
-                radioButton.get(getRandomNumber()).click();
-                nextButton.click();
+        step("Цикл", () ->{
+            nextButton.shouldBe((visible).because("Не видна кнопка 'Далее'"));
+            if  (radioButton.size() > 1 && nextButton.has(visible)){
+                int count = pageElementQA.size();
+                for (int i = 0; i < count; i++) {
+                    sleep(1000);
+                    Configuration.pageLoadStrategy = "eager";
+                    radioButton.get(getRandomNumber()).click();
+                    nextButton.click();
+                }
+
             }
-        }
+        });
     }
 
 
@@ -64,8 +71,8 @@ public class StartLearningPage {
 
     public StartLearningPage testBeginButton() {
         step("Нажатие на кнопку 'Начать'", () -> {
-            testBeginButton.click();
-            Selenide.open("https://javarush.com/welcome/quiz");
+            testBeginButton.shouldBe((visible).because("Не получилось набрать")).click();
+            refresh();
         });
         return this;
     }
@@ -113,7 +120,15 @@ public class StartLearningPage {
         return this;
     }
 
+
     public StartLearningPage checkOutResult() {
+        step("Проверка заголовка об успешном создании курса", () -> {
+            checkoutLoad.shouldBe((visible).because("Прогресс не начался"));
+        });
+        step("Проверка заголовка об успешном создании курса", () -> {
+            loader.shouldBe((visible).because("Прогресс не начался"));
+            sleep(10000);
+        });
         step("Проверка заголовка об успешном создании курса", () -> {
             checkOutResult.shouldBe(text("Ваш персональный курс готов"));
         });
