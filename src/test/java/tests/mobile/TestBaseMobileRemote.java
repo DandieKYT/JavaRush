@@ -11,13 +11,13 @@ import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import pagesMobile.AuthenticationPage;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestBaseMobileRemote {
-
-    Attach attachment = new Attach();
+    AuthenticationPage auth = new AuthenticationPage();
 
     static MobileConfig mobile = ConfigFactory.create(MobileConfig.class, System.getProperties());
     @BeforeAll
