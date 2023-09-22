@@ -8,13 +8,13 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.*;
 
 
 @Tag("UITest")
 public class StartLearningTest extends TestBase {
-    public SelenideElement page = $x("(//div[contains(@class,'progress-bar progress-bar--basic svelte')])");
+
+
     @Test
     @DisplayName("Создание аккаунта в JAVA-Rush")
     public void startLearnJava() {
@@ -40,13 +40,11 @@ public class StartLearningTest extends TestBase {
                 .blackPictureClick()
                 .notNowButton()
                 .xpInProgrammingYes()
-                .testBeginButton()
-                .checkPageLoad();
-                 {
-                for (int i = 0; i <= page ; i++) {
-                    $x("//*[contains(@class,'radio-button radio-button--basic svelte')]").click();
-                    $(".btn").click();
+                .testBeginButton();
+        learningPage.randomCheck();
+        learningPage.checkOutResult();
                 }
-        }
-    }
-}
+            }
+
+
+
