@@ -54,14 +54,6 @@ public class StartLearningPage {
         });
     }
 
-
-//    public StartLearningPage checkPageLoad() {
-//        step("Проверка загрузки страницы'", () -> {
-//            nextButton.shouldBe(visible);
-//        });
-//        return this;
-//    }
-
     public StartLearningPage startLearnButton() {
         step("Нажатие на кнопку 'Начать обучение'", () -> {
             startLearnButton.click();
