@@ -18,7 +18,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class TestBaseMobileRemote {
     QuizPage quizPage = new QuizPage();
     AuthenticationPage auth = new AuthenticationPage();
-
     static MobileConfig mobile = ConfigFactory.create(MobileConfig.class, System.getProperties());
     @BeforeAll
     static void beforeAll() {

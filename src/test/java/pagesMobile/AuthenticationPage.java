@@ -15,6 +15,13 @@ public class AuthenticationPage {
             loginKey = $(AppiumBy.id("com.hitechrush.jaxarush:id/secretKeyEditText")),
             loginButton = $(AppiumBy.id("com.hitechrush.jaxarush:id/loginButton"));
 
+    public void loginBySecretKey(){
+                signInLink();
+                secretKeyLink();
+                loginKey();
+                loginButton();
+    }
+
     public AuthenticationPage signInLink() {
         step("Нажатие на ссылку 'Sign In'", () -> {
             signInLink.click();
