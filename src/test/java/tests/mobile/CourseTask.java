@@ -36,7 +36,8 @@ public class CourseTask extends TestBaseMobileRemote {
         $$(AppiumBy.className("android.widget.ImageButton")).get(0).click();//Нажимаеи назад
 
         $$(AppiumBy.className("android.widget.ImageButton")).get(0).click();//Нажимаем на разделы
-        $$(AppiumBy.id(String.format("com.hitechrush.jaxarush:id/%s", param))).get(2).click();
+        courseTaskPage.tag.find(Condition.text(param)).click();
+//        $$(AppiumBy.id(String.format("com.hitechrush.jaxarush:id/%s", param))).get(2).click();
         $(AppiumBy.id("com.hitechrush.jaxarush:id/toolbarTitle")).shouldBe(Condition.text(expectedText));
 
     }

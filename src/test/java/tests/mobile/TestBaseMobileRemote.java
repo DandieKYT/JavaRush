@@ -10,6 +10,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import pagesMobile.AuthenticationPage;
+import pagesMobile.CourseTaskPage;
 import pagesMobile.QuizPage;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
@@ -18,6 +19,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class TestBaseMobileRemote {
     QuizPage quizPage = new QuizPage();
     AuthenticationPage auth = new AuthenticationPage();
+    CourseTaskPage courseTaskPage = new CourseTaskPage();
     static MobileConfig mobile = ConfigFactory.create(MobileConfig.class, System.getProperties());
     @BeforeAll
     static void beforeAll() {
