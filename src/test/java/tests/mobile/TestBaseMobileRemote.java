@@ -4,19 +4,19 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.MobileConfig;
 import drivers.AndroidLocalDriver;
-import drivers.BrowserstackDriver;
-import help.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import pagesMobile.AuthenticationPage;
+import pagesMobile.QuizPage;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestBaseMobileRemote {
+    QuizPage quizPage = new QuizPage();
     AuthenticationPage auth = new AuthenticationPage();
 
     static MobileConfig mobile = ConfigFactory.create(MobileConfig.class, System.getProperties());
