@@ -2,6 +2,7 @@ package tests.mobile;
 
 import com.codeborne.selenide.Selenide;
 import io.appium.java_client.AppiumBy;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -10,6 +11,7 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class AuthTest extends TestBaseMobileRemote {
     @Test
+    @DisplayName("Прохождение опроса без теста")
     void checkoutTest() {
         auth.startButton()
                 .secondStartButton()
@@ -23,6 +25,7 @@ public class AuthTest extends TestBaseMobileRemote {
     }
 
     @Test
+    @DisplayName("Прохождение опроса с тестом")
     void testWithTest() {
         auth.startButton()
                 .secondStartButton()
