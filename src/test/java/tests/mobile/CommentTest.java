@@ -1,0 +1,40 @@
+package tests.mobile;
+
+import io.appium.java_client.AppiumBy;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+import org.testng.Assert;
+
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
+import static pagesMobile.Generations.generationRandomName;
+@Tag("Mobile")
+public class CommentTest extends TestBaseMobileRemote {
+    String name, text;
+@Test
+    public void commTest(){
+    stepsForApp();
+    $(AppiumBy.id("com.hitechrush.jaxarush:id/commentsButton")).click();//нажимем на кнопку коментарии
+    name = generationRandomName();
+    sleep(3000);
+    $(AppiumBy.id("com.hitechrush.jaxarush:id/addCommentFab")).click(); // нажимаем добавить комент
+    $(AppiumBy.id("com.hitechrush.jaxarush:id/addCommentText")).click();
+    $(AppiumBy.id("com.hitechrush.jaxarush:id/addCommentText")).sendKeys(name);
+    $(AppiumBy.id("com.hitechrush.jaxarush:id/send")).click();
+    text = comment.checkoutText.get(1).getText();
+    Assert.assertEquals(text, name);
+
+    
+
+
+}
+    private void stepsForApp() {
+        auth.signInLink()
+                .secretKeyLink()
+                .loginKey()
+                .loginButton()
+//                .closeBanner()
+                .closeSecondBanner()
+                .openLesson();
+    }
+}

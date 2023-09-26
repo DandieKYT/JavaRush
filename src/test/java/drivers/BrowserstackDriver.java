@@ -13,7 +13,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class BrowserstackDriver implements WebDriverProvider {
-    protected static final MobileConfig mobile = ConfigFactory.create(MobileConfig.class);
+    protected static final MobileConfig mobile = ConfigFactory.create(MobileConfig.class, System.getProperties());
     @Nonnull
     @Override
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
@@ -33,9 +33,9 @@ public class BrowserstackDriver implements WebDriverProvider {
         mutableCapabilities.setCapability("os_version", mobile.PlatformVersion());
 
         // Set other BrowserStack capabilities
-        mutableCapabilities.setCapability("project", "OZON");
+        mutableCapabilities.setCapability("project", "Java Rush");
         mutableCapabilities.setCapability("build", "browserstack-build-1");
-        mutableCapabilities.setCapability("name", "first_test");
+        mutableCapabilities.setCapability("name", "Mobile");
 
         // Initialise the remote Webdriver using BrowserStack remote URL
         // and desired capabilities defined above
