@@ -1,11 +1,13 @@
 package tests.mobile;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
+@Tag("Mobile")
 
 public class CourseTask extends TestBaseMobileRemote {
     @CsvSource(value = {
