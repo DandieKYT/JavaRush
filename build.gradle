@@ -76,14 +76,16 @@ dependencies {
             'org.testng:testng:7.1.0'
     )
 }
-tasks.withType(Test) {
-    useJUnitPlatform()
 
-    testLogging {
-        lifecycle {
-            events "started", "skipped", "failed", "standard_error", "standard_out"
-            exceptionFormat "short"
+    task UITest(type: Test) {
+        useJUnitPlatform {
+            includeTags "UITest"
+        }
+        task Mobile(type: Test) {
+            useJUnitPlatform {
+                includeTags "Mobile"
+            }
         }
     }
-}
+
 
