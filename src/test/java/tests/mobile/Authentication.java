@@ -14,6 +14,5 @@ public class Authentication extends TestBaseMobileRemote {
                 .secretKeyLink()
                 .loginKey()
                 .loginButton();
-        Selenide.sleep(5000);
     }
 }
