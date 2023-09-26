@@ -1,26 +1,30 @@
 package tests.mobile;
 
-import com.codeborne.selenide.Condition;
 import io.appium.java_client.AppiumBy;
-import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.testng.Assert;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 import static pagesMobile.Generations.generationRandomName;
 @Tag("Mobile")
 public class CommentTest extends TestBaseMobileRemote {
+    String name, text;
 @Test
     public void commTest(){
-    String name = generationRandomName();
     stepsForApp();
     $(AppiumBy.id("com.hitechrush.jaxarush:id/commentsButton")).click();//нажимем на кнопку коментарии
+    name = generationRandomName();
     sleep(3000);
     $(AppiumBy.id("com.hitechrush.jaxarush:id/addCommentFab")).click(); // нажимаем добавить комент
     $(AppiumBy.id("com.hitechrush.jaxarush:id/addCommentText")).click();
-    $(AppiumBy.id("com.hitechrush.jaxarush:id/addCommentText")).sendKeys("12314");
+    $(AppiumBy.id("com.hitechrush.jaxarush:id/addCommentText")).sendKeys(name);
     $(AppiumBy.id("com.hitechrush.jaxarush:id/send")).click();
-    $$(AppiumBy.className("android.view.View")).get(0).equals("1112314");
+    text = comment.checkoutText.get(1).getText();
+    Assert.assertEquals(text, name);
+
+    
 
 
 }
@@ -29,7 +33,7 @@ public class CommentTest extends TestBaseMobileRemote {
                 .secretKeyLink()
                 .loginKey()
                 .loginButton()
-                .closeBanner()
+//                .closeBanner()
                 .closeSecondBanner()
                 .openLesson();
     }

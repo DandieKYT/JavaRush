@@ -41,6 +41,6 @@ public interface MobileConfig extends Config {
     String remoteMobileUrl();
 
     @Key("app")
-    @DefaultValue("bs://aeafb14cd38d3e07fe23e50468cf6bf41b0310a7")
+    @DefaultValue("bs://e419dbfb40e54d220185272240105ffaa284e395")
     String app();
 }
