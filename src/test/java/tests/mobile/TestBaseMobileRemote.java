@@ -17,6 +17,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class TestBaseMobileRemote {
     QuizPage quizPage = new QuizPage();
+    AddLikeCommentPage addLikeCommentPage = new AddLikeCommentPage();
     AuthenticationPage auth = new AuthenticationPage();
     CourseTaskPage courseTaskPage = new CourseTaskPage();
     AddLikeLessonPage addLikeLessonPage = new AddLikeLessonPage();
