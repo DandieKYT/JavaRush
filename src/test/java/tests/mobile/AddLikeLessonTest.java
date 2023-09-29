@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class AddLikeLessonTest extends TestBaseMobileRemote {
+public class AddLikeLessonTest extends TestBaseMobile {
    String countLike;
     @Test
     @DisplayName("Добавление лайка на страницу лекции")
@@ -19,7 +19,7 @@ public class AddLikeLessonTest extends TestBaseMobileRemote {
         $(AppiumBy.id("com.hitechrush.jaxarush:id/itemLikeDesc")).click();
         countLike = addLikeLessonPage.count.getText();
         int secondLikeInt = Integer.parseInt(countLike);
-        if (likeInt < secondLikeInt) {
+        if (secondLikeInt - likeInt == 1) {
             $(AppiumBy.id("com.hitechrush.jaxarush:id/likesButton")).click();
         }
         else {
