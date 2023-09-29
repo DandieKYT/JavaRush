@@ -16,6 +16,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class TestBaseMobile {
     QuizPage quizPage = new QuizPage();
+    AddLikeLessonPage addLikeLessonPage = new AddLikeLessonPage();
     AuthenticationPage auth = new AuthenticationPage();
     CourseTaskPage courseTaskPage = new CourseTaskPage();
     Generations gen = new Generations();
