@@ -23,6 +23,8 @@ public class CommentTest extends TestBaseMobileRemote {
     $(AppiumBy.id("com.hitechrush.jaxarush:id/send")).click();
     text = comment.checkoutText.get(1).getText();
     Assert.assertEquals(text, name);
+    $(AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"JavaRush\"])[2]")).click();
+    $(AppiumBy.id("com.hitechrush.jaxarush:id/deleteButton")).click();
 
     
 
@@ -33,7 +35,7 @@ public class CommentTest extends TestBaseMobileRemote {
                 .secretKeyLink()
                 .loginKey()
                 .loginButton()
-//                .closeBanner()
+                .closeBanner()
                 .closeSecondBanner()
                 .openLesson();
     }

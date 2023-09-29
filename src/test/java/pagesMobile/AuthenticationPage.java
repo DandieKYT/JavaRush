@@ -54,16 +54,12 @@ public AuthenticationPage navigateMenu() {
             for (int i = 0; i < 4; i++){
                 closeSecondBanner.click();
             }
-//            closeSecondBanner.click();
-//            closeSecondBanner.click();
-//            closeSecondBanner.click();
-//            closeSecondBanner.click();
         });
         return this;
     }
     public AuthenticationPage closeBanner() {
         step("Закртие баннера", () -> {
-            closeBanner.click();
+                closeBanner.click();
         });
         return this;
     }
