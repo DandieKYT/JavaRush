@@ -20,6 +20,8 @@ public class AddLikeTest extends TestBaseMobileRemote {
         $(AppiumBy.id("com.hitechrush.jaxarush:id/addCommentText")).click();
         $(AppiumBy.id("com.hitechrush.jaxarush:id/addCommentText")).sendKeys("TEST_LIKE");
         $(AppiumBy.id("com.hitechrush.jaxarush:id/send")).click();
+        $(AppiumBy.id("com.hitechrush.jaxarush:id/likesCount")).shouldBe(Condition.text("1"));
+
         $(AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"JavaRush\"])[2]")).click();
         $(AppiumBy.id("com.hitechrush.jaxarush:id/itemLikeDesc")).click();
         $(AppiumBy.id("com.hitechrush.jaxarush:id/likesCount")).shouldBe(Condition.text("1"));
