@@ -17,6 +17,7 @@ public class AddLikeLessonTest extends TestBaseMobileRemote {
         $(AppiumBy.id("com.hitechrush.jaxarush:id/likesButton")).click();
         $(AppiumBy.id("com.hitechrush.jaxarush:id/itemLikeDesc")).click();
         addLikeLessonPage.count.shouldNotBe(Condition.text(countLike));
+        $(AppiumBy.id("com.hitechrush.jaxarush:id/likesButton")).click();
     }
 
 
