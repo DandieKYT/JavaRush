@@ -7,9 +7,9 @@ import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
 public class AddLikeLessonPage {
-    String count, countLike;
+    String countLike;
     int secondLikeInt, firstLike;
-    public SelenideElement
+    private final SelenideElement
 
             likeCheck = $(AppiumBy.id("com.hitechrush.jaxarush:id/lectureLikesCount")),
             likeButton = $(AppiumBy.id("com.hitechrush.jaxarush:id/likesButton")),
@@ -19,7 +19,7 @@ public class AddLikeLessonPage {
     public AddLikeLessonPage checkValue() {
         step("Получение количества лайков", () -> {
             countLike = likeCheck.getText();
-            int firstLike = Integer.parseInt(countLike);
+             firstLike = Integer.parseInt(countLike);
         });
         return this;
     }
@@ -40,7 +40,7 @@ public class AddLikeLessonPage {
     public AddLikeLessonPage secondValueLike() {
         step("Подтверждение лайка", () -> {
             countLike = likeCheck.getText();
-            int secondLikeInt = Integer.parseInt(countLike);
+             secondLikeInt = Integer.parseInt(countLike);
         });
         return this;
     }

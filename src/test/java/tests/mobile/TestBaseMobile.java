@@ -16,12 +16,12 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class TestBaseMobile {
     QuizPage quizPage = new QuizPage();
-    AddLikeLessonPage addLikeLessonPage = new AddLikeLessonPage();
+    AddLikeCommentPage addLikeCommentPage = new AddLikeCommentPage();
     AuthenticationPage auth = new AuthenticationPage();
     CourseTaskPage courseTaskPage = new CourseTaskPage();
+    AddLikeLessonPage addLikeLessonPage = new AddLikeLessonPage();
     Generations gen = new Generations();
     CommentPage comment = new CommentPage();
-    Attach attachment = new Attach();
     @BeforeAll
     static void beforeAll() {
         Configuration.browser = AndroidLocalDriver.class.getName();
