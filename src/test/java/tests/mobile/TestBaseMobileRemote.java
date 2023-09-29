@@ -24,7 +24,7 @@ public class TestBaseMobileRemote {
     static MobileConfig mobile = ConfigFactory.create(MobileConfig.class, System.getProperties());
     @BeforeAll
     static void beforeAll() {
-        Configuration.browser = AndroidLocalDriver.class.getName();
+        Configuration.browser = BrowserstackDriver.class.getName();
         Configuration.browserSize = null;
         Configuration.baseUrl = mobile.remoteMobileUrl();
     }
