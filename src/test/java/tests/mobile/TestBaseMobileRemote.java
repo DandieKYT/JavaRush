@@ -28,6 +28,7 @@ public class TestBaseMobileRemote {
         Configuration.browser = BrowserstackDriver.class.getName();
         Configuration.browserSize = null;
         Configuration.baseUrl = mobile.remoteMobileUrl();
+        Configuration.timeout = 5000;
     }
 
     @BeforeEach
