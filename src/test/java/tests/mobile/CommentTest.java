@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
 import static pagesMobile.Generations.generationRandomName;
 @Tag("Mobile")
-public class CommentTest extends TestBaseMobile {
+public class CommentTest extends TestBaseMobileRemote {
     String name, text;
 @Test
     public void commTest(){
