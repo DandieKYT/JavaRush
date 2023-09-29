@@ -1,5 +1,6 @@
 package tests.mobile;
 
+import com.codeborne.selenide.Condition;
 import io.appium.java_client.AppiumBy;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -21,8 +22,13 @@ public class CommentTest extends TestBaseMobileRemote {
     $(AppiumBy.id("com.hitechrush.jaxarush:id/addCommentText")).click();
     $(AppiumBy.id("com.hitechrush.jaxarush:id/addCommentText")).sendKeys(name);
     $(AppiumBy.id("com.hitechrush.jaxarush:id/send")).click();
-    text = comment.checkoutText.get(0).getText();
+    $(AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"JavaRush\"])[2]")).click();
+    $(AppiumBy.id("com.hitechrush.jaxarush:id/editButton")).click();
+    text = comment.checkoutText.getText();
     Assert.assertEquals(text, name);
+    $(AppiumBy.id("com.hitechrush.jaxarush:id/send")).click();
+
+    $(AppiumBy.id("com.hitechrush.jaxarush:id/userDisplayName")).shouldBe(Condition.text("KYT"));
     $(AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"JavaRush\"])[2]")).click();
     $(AppiumBy.id("com.hitechrush.jaxarush:id/deleteButton")).click();
 

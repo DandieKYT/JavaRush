@@ -19,6 +19,7 @@ public class TestBaseMobileRemote {
     QuizPage quizPage = new QuizPage();
     AuthenticationPage auth = new AuthenticationPage();
     CourseTaskPage courseTaskPage = new CourseTaskPage();
+    AddLikeLessonPage addLikeLessonPage = new AddLikeLessonPage();
     Generations gen = new Generations();
     CommentPage comment = new CommentPage();
     static MobileConfig mobile = ConfigFactory.create(MobileConfig.class, System.getProperties());
