@@ -22,6 +22,7 @@ public class AddLikeLessonTest extends TestBaseMobileRemote {
         if (likeInt < secondLikeInt) {
             $(AppiumBy.id("com.hitechrush.jaxarush:id/likesButton")).click();
         }
+
     }
 
 
