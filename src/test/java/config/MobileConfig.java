@@ -29,11 +29,11 @@ public interface MobileConfig extends Config {
     String PlatformVersion();
 
     @Key("username")
-    @DefaultValue("dandiekyt_fmCgsX")
+    @DefaultValue("kyt_KDTEhc")
     String username();
 
     @Key("passwordKey")
-    @DefaultValue("aUkbVXswGV3k2ybtE1Wr")
+    @DefaultValue("4HmhpfFFuodHVHxQdmJs")
     String passwordKey();
 
     @Key("remoteMobileUrl")
@@ -41,6 +41,6 @@ public interface MobileConfig extends Config {
     String remoteMobileUrl();
 
     @Key("app")
-    @DefaultValue("bs://e419dbfb40e54d220185272240105ffaa284e395")
+    @DefaultValue("bs://e65b43379ef19addcdc3f1b1b3f93cace245d6c3")
     String app();
 }
