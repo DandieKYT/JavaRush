@@ -22,6 +22,10 @@ allure{
     }
 }
 
+
+
+
+
 repositories {
     mavenCentral()
     compileJava {
@@ -88,8 +92,6 @@ tasks.withType(Test) {//благодаря этой строчке переда�
     }
 }
 
-
-
 test {
     systemProperty "chromeoptions.prefs", "init.accept_languages=ru"
     useJUnitPlatform()
@@ -98,6 +100,11 @@ test {
 task UITest(type: Test) {
     useJUnitPlatform {
         includeTags "UITest"
+    }
+}
+task Mobile(type: Test) {
+    useJUnitPlatform {
+        includeTags "Mobile"
     }
 }
 
