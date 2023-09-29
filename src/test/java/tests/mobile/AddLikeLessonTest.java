@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class AddLikeLessonTest extends TestBaseMobileRemote {
+public class AddLikeLessonTest extends TestBaseMobile {
    String countLike;
     @Test
     @DisplayName("Добавление лайка на страницу лекции")
