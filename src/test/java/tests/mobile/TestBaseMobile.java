@@ -9,14 +9,17 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import pagesMobile.QuizPage;
+import pagesMobile.*;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestBaseMobile {
-
-    QuizPage auth = new QuizPage();
+    QuizPage quizPage = new QuizPage();
+    AuthenticationPage auth = new AuthenticationPage();
+    CourseTaskPage courseTaskPage = new CourseTaskPage();
+    Generations gen = new Generations();
+    CommentPage comment = new CommentPage();
     Attach attachment = new Attach();
     @BeforeAll
     static void beforeAll() {
