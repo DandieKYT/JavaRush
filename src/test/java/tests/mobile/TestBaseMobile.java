@@ -31,6 +31,7 @@ public class TestBaseMobile {
         open();
     }
 
+
     @AfterEach
     void afterEach() {
         closeWebDriver();
