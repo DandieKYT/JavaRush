@@ -22,6 +22,7 @@ public class TestBaseMobileRemote {
     CourseTaskPage courseTaskPage = new CourseTaskPage();
     AddLikeLessonPage addLikeLessonPage = new AddLikeLessonPage();
     Generations gen = new Generations();
+    FontPage font = new FontPage();
     CommentPage comment = new CommentPage();
     static MobileConfig mobile = ConfigFactory.create(MobileConfig.class, System.getProperties());
     @BeforeAll

@@ -5,6 +5,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import drivers.AndroidLocalDriver;
 
 import help.Attach;
+import help.PhoneManagerHelper;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -19,6 +20,8 @@ public class TestBaseMobile {
     AddLikeCommentPage addLikeCommentPage = new AddLikeCommentPage();
     AuthenticationPage auth = new AuthenticationPage();
     CourseTaskPage courseTaskPage = new CourseTaskPage();
+    FontPage font = new FontPage();
+    PhoneManagerHelper managerHelper = new PhoneManagerHelper();
     AddLikeLessonPage addLikeLessonPage = new AddLikeLessonPage();
     Generations gen = new Generations();
     CommentPage comment = new CommentPage();

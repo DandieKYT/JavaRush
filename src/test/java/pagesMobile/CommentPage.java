@@ -13,7 +13,7 @@ import static pagesMobile.Generations.generationRandomName;
 
 public class CommentPage {
     String name, text;
-    public  SelenideElement
+    private final   SelenideElement
             checkoutText = $(AppiumBy.id("com.hitechrush.jaxarush:id/addCommentText")),
             commentButton =$(AppiumBy.id("com.hitechrush.jaxarush:id/commentsButton")),
             addComment =  $(AppiumBy.id("com.hitechrush.jaxarush:id/addCommentFab")),
