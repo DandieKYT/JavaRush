@@ -18,15 +18,6 @@ public class Specification {
     private static final String BASE_PATCH = "/api/1.0";
     public static RequestSpecification requestSpec =
             with()
-//                    .header("javarush.user.id", "3348689")
-//                    .cookies("JSESSIONID" , "569249ab-f542-4e61-8a0e-0d6f0cf0fa2f",
-//                            "javarush.user.id", "3348689")
-                    .cookies(
-
-                            "javarush.user.id","3348689",
-                            "JSESSIONID","569249ab-f542-4e61-8a0e-0d6f0cf0fa2f"
-
-                    )
                     .baseUri(BASE_URL)
                     .basePath(BASE_PATCH)
                     .log().all()

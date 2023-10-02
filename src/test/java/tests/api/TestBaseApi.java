@@ -12,9 +12,6 @@ import pages.StartLearningPage;
 
 public class TestBaseApi {
     protected static final WebConfig webConfig = ConfigFactory.create(WebConfig.class);
-    BasePage basePage = new BasePage();
-
-    StartLearningPage learningPage = new StartLearningPage();
 
     @BeforeAll
     static void setUp() {
@@ -25,20 +22,5 @@ public class TestBaseApi {
         Configuration.baseUrl = "https://javarush.com";
         RestAssured.baseURI = "https://javarush.com";
 
-    }
-    @BeforeEach
-    void startTest(){
-        basePage.openPage();
-        learningPage.startLearnButton();
-        learningPage.beginLearnButton();
-        learningPage.russianLanguageButton();
-        learningPage.qaButton();
-        learningPage.blackPictureClick();
-        learningPage.notNowButton();
-        learningPage.xpInProgrammingNo();
-        learningPage.checkOutResult();
-        learningPage.getButtonLearn();
-        basePage.openPage();
-        learningPage.profileName();
     }
 }

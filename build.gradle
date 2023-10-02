@@ -107,5 +107,10 @@ task Mobile(type: Test) {
         includeTags "Mobile"
     }
 }
+task API(type: Test) {
+    useJUnitPlatform {
+        includeTags "API"
+    }
+}
 
 
