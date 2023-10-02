@@ -1,5 +1,6 @@
 package tests.api;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -12,6 +13,7 @@ import static specs.Specification.responseSpec;
 public class GamesApiTest {
 
     @Test
+    @DisplayName("Сапер")
     void minesweeperTest() {
         given(requestSpec)
                 .when()
@@ -25,6 +27,7 @@ public class GamesApiTest {
 
     }
     @Test
+    @DisplayName("Змейка")
     void snakeTest() {
         given(requestSpec)
                 .when()
@@ -37,5 +40,20 @@ public class GamesApiTest {
                 .statusCode(200);
 
     }
+    @Test
+    @DisplayName("2048")
+    void twoThousandFortyEightTest() {
+        given(requestSpec)
+                .when()
+                .get("/rest/projects/projectcom.javarush.games.game2048")
+                .then()
+                .spec(responseSpec)
+                .body("videoUrl", is ("https://www.youtube.com/embed/WbNfczSAiNc"))
+                .body("title", is ("2048"))
+                .body("status", is("AVAILABLE"))
+                .statusCode(200);
+
+    }
+
 
 }
