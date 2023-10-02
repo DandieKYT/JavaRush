@@ -5,7 +5,8 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import io.appium.java_client.AppiumBy;
-import org.testng.Assert;
+import org.junit.jupiter.api.Assertions;
+
 
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
@@ -66,7 +67,7 @@ public class CommentPage {
     public CommentPage checkoutComment() {
         step("Проверка что коментарий соответсвует написанному ранее", () -> {
             text = checkoutText.getText();
-            Assert.assertEquals(text, name);
+            Assertions.assertEquals(text, name);
         });
         return this;
     }

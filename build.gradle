@@ -38,41 +38,42 @@ compileTestJava{
 }
 
 def
-        restAssuredVersion = "5.3.0",
+        webDriverManagerVersion = "5.0.3",
+        allureJunitVersion = "2.18.1",
+        assertjCoreVersion = "3.23.1",
+        restAssuredVersion = "5.3.2",
+        slf4jSimpleVersion = "2.0.7",
+        commonsIoVersion = "2.11.0",
+        javaFakerVersion = "1.0.2",
         selenideVersion = "6.13.0",
         jacksonVersion = "2.14.2",
+        lombokVersion = "1.18.22",
+        allureVersion = "2.21.0",
         appiumVersion = "8.4.0",
-        slf4jVersion = "2.0.7",
+        ownerVersion = "1.0.4",
         junitVersion = "5.8.2",
         restAssured = "4.5.1"
 
 dependencies {
     testImplementation (
+            "io.github.bonigarcia:webdrivermanager:$webDriverManagerVersion",
+            "io.rest-assured:json-schema-validator:5.3.2",
+            "io.qameta.allure:allure-rest-assured:2.21.0",
+            "io.qameta.allure:allure-junit5:2.18.1",
+            "io.qameta.allure:allure-selenide:$allureVersion",
+            "io.rest-assured:rest-assured:4.5.1",
+            "io.appium:java-client:$appiumVersion",
             "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
-            "io.github.bonigarcia:webdrivermanager:5.0.3",
-            "io.rest-assured:json-schema-validator:$restAssuredVersion",
             "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
+            "com.github.javafaker:javafaker:$javaFakerVersion",
+            "com.codeborne:selenide:$selenideVersion",
             "org.junit.jupiter:junit-jupiter-api:$junitVersion",
             "org.junit.jupiter:junit-jupiter:$junitVersion",
-            "io.rest-assured:rest-assured:$restAssured",
-            "com.codeborne:selenide:$selenideVersion",
-            "org.slf4j:slf4j-simple:$slf4jVersion",
-            "io.appium:java-client:$appiumVersion",
-            "org.assertj:assertj-core:3.23.1",
-            "org.aeonbits.owner:owner:1.0.4",
-            'com.github.javafaker:javafaker:1.0.2',
-            "io.github.bonigarcia:webdrivermanager:5.5.0",
-            "org.slf4j:slf4j-simple:2.0.6",
-            "commons-io:commons-io:2.11.0"
-    )
-    implementation (
-            "io.github.bonigarcia:webdrivermanager:5.0.3",
-            "io.qameta.allure:allure-selenide:2.19.0",
-            "org.junit.jupiter:junit-jupiter:5.8.1",
-            "org.projectlombok:lombok:1.18.22",
-            "org.aeonbits.owner:owner:1.0.4",
-            "com.codeborne:selenide:6.12.3",
-            "org.testng:testng:7.1.0"
+            "org.assertj:assertj-core:$assertjCoreVersion",
+            "org.slf4j:slf4j-simple:$slf4jSimpleVersion",
+            "org.projectlombok:lombok:$lombokVersion",
+            "org.aeonbits.owner:owner:$ownerVersion",
+            "commons-io:commons-io:$commonsIoVersion"
     )
 }
 

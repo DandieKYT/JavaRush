@@ -17,7 +17,7 @@ public class GamesApiTest {
     void minesweeperTest() {
         given(requestSpec)
                 .when()
-                .get("/rest/projects/projectcom.javarush.games.minesweeper")
+                .get("/projects/projectcom.javarush.games.minesweeper")
                 .then()
                 .spec(responseSpec)
                 .body("title", is ("Сапер"))
@@ -31,7 +31,7 @@ public class GamesApiTest {
     void snakeTest() {
         given(requestSpec)
                 .when()
-                .get("/rest/projects/projectcom.javarush.games.snake")
+                .get("/projects/projectcom.javarush.games.snake")
                 .then()
                 .spec(responseSpec)
                 .body("videoUrl", is ("https://www.youtube.com/embed/4oykArMtDOI"))
@@ -45,7 +45,7 @@ public class GamesApiTest {
     void twoThousandFortyEightTest() {
         given(requestSpec)
                 .when()
-                .get("/rest/projects/projectcom.javarush.games.game2048")
+                .get("/projects/projectcom.javarush.games.game2048")
                 .then()
                 .spec(responseSpec)
                 .body("videoUrl", is ("https://www.youtube.com/embed/WbNfczSAiNc"))
