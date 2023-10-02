@@ -4,7 +4,8 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import io.appium.java_client.AppiumBy;
-import org.testng.Assert;
+import org.junit.jupiter.api.Assertions;
+
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
@@ -94,7 +95,7 @@ public AuthenticationPage navigateMenu() {
             name = generationRandomName();
         });
         step("Генерация рандомного текста", () -> {
-            Assert.assertEquals((name),text(name));
+            Assertions.assertEquals((name),text(name));
         });
         return this;
     }

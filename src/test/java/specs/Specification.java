@@ -14,12 +14,11 @@ import static io.restassured.http.ContentType.JSON;
 
 public class Specification {
     private static final AuthConfig authConfig = ConfigFactory.create(AuthConfig.class);
-    private static final String BASE_URL = "https://javarush.com";
-    private static final String BASE_PATCH = "/api/1.0";
+    private static final String BASE_URL = "https://javarush.com/api/1.0/rest";
+    private static final String BASE_PATCH = "/api/1.0/rest";
     public static RequestSpecification requestSpec =
             with()
                     .baseUri(BASE_URL)
-                    .basePath(BASE_PATCH)
                     .log().all()
                     .contentType(JSON);
 
@@ -27,4 +26,16 @@ public class Specification {
             .log(STATUS)
             .log(BODY)
             .build();
+    public static RequestSpecification usersSpec =
+            with()
+                    .baseUri(BASE_URL)
+                    .basePath("/users")
+                    .log().all()
+                    .contentType(JSON);
+    public static RequestSpecification discussionsSpec =
+            with()
+                    .baseUri(BASE_URL)
+                    .basePath("/discussions")
+                    .log().all()
+                    .contentType(JSON);
 }
