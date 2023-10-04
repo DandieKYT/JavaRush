@@ -7,9 +7,9 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 import static specs.Specification.discussionsSpec;
 import static specs.Specification.intershipSpec;
 
-public class IntershipTest {
+public class ShemesTest {
     @Test
-    public void intership(){
+    public void intershipTest(){
         given()
                 .spec(intershipSpec)
                 .when()
@@ -18,7 +18,7 @@ public class IntershipTest {
                 .body(matchesJsonSchemaInClasspath("schemes/intership.json"));
     }
     @Test
-    public void intership2(){
+    public void project1Test(){
         given()
                 .spec(discussionsSpec)
                 .when()
