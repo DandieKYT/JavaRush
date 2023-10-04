@@ -13,7 +13,7 @@ import static specs.Specification.responseSpec;
 public class GamesApiTest {
 
     @Test
-    @DisplayName("Сапер")
+    @DisplayName("Проврка названия, урла, статуса на странице игры 'Сапер'")
     void minesweeperTest() {
         given(requestSpec)
                 .when()
@@ -27,7 +27,7 @@ public class GamesApiTest {
 
     }
     @Test
-    @DisplayName("Змейка")
+    @DisplayName("Проврка названия, урла, статуса на странице игры 'Змейка'")
     void snakeTest() {
         given(requestSpec)
                 .when()
@@ -41,7 +41,7 @@ public class GamesApiTest {
 
     }
     @Test
-    @DisplayName("2048")
+    @DisplayName("Проврка названия, урла, статуса на странице '2048'")
     void twoThousandFortyEightTest() {
         given(requestSpec)
                 .when()
