@@ -7,6 +7,7 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.aeonbits.owner.ConfigFactory;
 
+import static help.CustomApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.with;
 import static io.restassured.filter.log.LogDetail.BODY;
 import static io.restassured.filter.log.LogDetail.STATUS;
@@ -19,6 +20,8 @@ public class Specification {
     public static RequestSpecification requestSpec =
             with()
                     .baseUri(BASE_URL)
+                    .filter(withCustomTemplates())
+                    .basePath(BASE_PATCH)
                     .log().all()
                     .contentType(JSON);
 
@@ -29,13 +32,22 @@ public class Specification {
     public static RequestSpecification usersSpec =
             with()
                     .baseUri(BASE_URL)
+                    .filter(withCustomTemplates())
                     .basePath("/users")
                     .log().all()
                     .contentType(JSON);
     public static RequestSpecification discussionsSpec =
             with()
                     .baseUri(BASE_URL)
+                    .filter(withCustomTemplates())
                     .basePath("/discussions")
+                    .log().all()
+                    .contentType(JSON);
+    public static RequestSpecification intershipSpec =
+            with()
+                    .baseUri(BASE_URL)
+                    .filter(withCustomTemplates())
+                    .basePath("/articles")
                     .log().all()
                     .contentType(JSON);
 }
