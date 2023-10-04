@@ -38,7 +38,6 @@ public class GamesApiTest {
                 .body("title", is ("Змейка"))
                 .body("status", is("AVAILABLE"))
                 .statusCode(200);
-
     }
     @Test
     @DisplayName("Проврка названия, урла, статуса на странице '2048'")
