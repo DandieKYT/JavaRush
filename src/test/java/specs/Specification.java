@@ -36,6 +36,13 @@ public class Specification {
                     .basePath("/users")
                     .log().all()
                     .contentType(JSON);
+    public static RequestSpecification gamesSpec =
+            with()
+                    .baseUri(BASE_URL)
+                    .filter(withCustomTemplates())
+                    .basePath("/projects")
+                    .log().all()
+                    .contentType(JSON);
     public static RequestSpecification discussionsSpec =
             with()
                     .baseUri(BASE_URL)
