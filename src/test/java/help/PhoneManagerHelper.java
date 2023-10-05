@@ -17,30 +17,17 @@ public class PhoneManagerHelper {
     }
 
     @Step("Загрузить медиафайл [{mediaClasspath}] на телефон")
-    // https://www.browserstack.com/docs/app-automate/appium/advanced-features/test-with-sample-data#use-pre-loaded-media-files
     public static void uploadMedia(String mediaClasspath) {
         File file = new File("src/test/resources/media", mediaClasspath);
         if (!file.exists())
             throw new RuntimeException("File by path [" + file.getAbsoluteFile() + "] don't exist");
 
-        // ToDo добавить обработку: android or ios
+
         try {
             ((AndroidDriver) WebDriverRunner.getWebDriver()).pushFile("/sdcard/Download/" + file.getName(), file);
         } catch (IOException e) {
             throw new RuntimeException("Error during upload media file");
         }
-    }
-
-    @Step("Добавить заглушку: во время съемки на камеру отдавать заглушку")
-    // https://www.browserstack.com/docs/app-automate/appium/advanced-features/camera-image-injection#1-how-browserstack-enables-camera-testing
-    public static void addCameraImageInject(String imagePath) {
-     //   String mediaId = BrowserstackApi.uploadImage(imagePath);
-
-//        AppiumDriver driver = (AppiumDriver) WebDriverRunner.getWebDriver();
-//        String script = String.format("browserstack_executor: " +
-//                "{\"action\":\"cameraImageInjection\", " +
-   //             "\"arguments\": {\"imageUrl\" : \"%s\"}}", mediaId);
-     //   driver.executeScript(script);
     }
 
     @Step("Свайп справа налево")
