@@ -1,58 +1,62 @@
 package tests.api;
 
+import models.Games;
+import org.assertj.core.api.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.is;
-import static specs.Specification.requestSpec;
-import static specs.Specification.responseSpec;
+import static specs.Specification.*;
 
 @Tag("API")
 public class GamesApiTest {
 
     @Test
-    @DisplayName("Сапер")
+    @DisplayName("Проверка названия, урла, статуса на странице игры 'Сапер'")
     void minesweeperTest() {
-        given(requestSpec)
+        Games data = given()
+                .spec(gamesSpec)
                 .when()
-                .get("/projects/projectcom.javarush.games.minesweeper")
+                .get("/projectcom.javarush.games.minesweeper")
                 .then()
                 .spec(responseSpec)
-                .body("title", is ("Сапер"))
-                .body("videoUrl", is ("https://www.youtube.com/embed/zF-xllunn2M"))
-                .body("status", is("AVAILABLE"))
-                .statusCode(200);
+                .extract().as(Games.class);
+        Assertions.assertEquals("https://www.youtube.com/embed/zF-xllunn2M", data.videoUrl);
+        Assertions.assertEquals("Сапер", data.title);
+        Assertions.assertEquals("AVAILABLE", data.status);
 
     }
     @Test
-    @DisplayName("Змейка")
+    @DisplayName("Проверка названия, урла, статуса на странице игры 'Змейка'")
     void snakeTest() {
-        given(requestSpec)
+        Games data = given()
+                .spec(gamesSpec)
                 .when()
-                .get("/projects/projectcom.javarush.games.snake")
+                .get("/projectcom.javarush.games.snake")
                 .then()
                 .spec(responseSpec)
-                .body("videoUrl", is ("https://www.youtube.com/embed/4oykArMtDOI"))
-                .body("title", is ("Змейка"))
-                .body("status", is("AVAILABLE"))
-                .statusCode(200);
+                .extract().as(Games.class);
+        Assertions.assertEquals("https://www.youtube.com/embed/4oykArMtDOI", data.videoUrl);
+        Assertions.assertEquals("Змейка", data.title);
+        Assertions.assertEquals("AVAILABLE", data.status);
 
     }
     @Test
-    @DisplayName("2048")
+    @DisplayName("Проверка названия, урла, статуса на странице '2048'")
     void twoThousandFortyEightTest() {
-        given(requestSpec)
+        Games data = given()
+                .spec(gamesSpec)
                 .when()
-                .get("/projects/projectcom.javarush.games.game2048")
+                .get("/projectcom.javarush.games.game2048")
                 .then()
                 .spec(responseSpec)
-                .body("videoUrl", is ("https://www.youtube.com/embed/WbNfczSAiNc"))
-                .body("title", is ("2048"))
-                .body("status", is("AVAILABLE"))
-                .statusCode(200);
-
+                .extract().as(Games.class);
+        Assertions.assertEquals("https://www.youtube.com/embed/WbNfczSAiNc", data.videoUrl);
+        Assertions.assertEquals("2048", data.title);
+        Assertions.assertEquals("AVAILABLE", data.status);
     }
 
 
