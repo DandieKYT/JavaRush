@@ -27,8 +27,7 @@ public class ShemesTest {
                 .when()
                 .get("/project1")
                 .then()
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemes/project1.json"));
+                .body(matchesJsonSchemaInClasspath("schemes/project1.json"));
     }
-
 }
 
