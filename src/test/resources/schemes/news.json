@@ -12,7 +12,7 @@
           "type": ["string", "null"]
         },
         "title": {
-          "type": "string"
+          "type": ["string", "null"]
         },
         "description": {
           "type": "string"
@@ -39,16 +39,16 @@
               "type": "string"
             },
             "position": {
-              "type": "string"
+              "type": ["string", "null"]
             },
             "job": {
-              "type": "string"
+              "type": ["string", "null"]
             },
             "country": {
-              "type": "string"
+              "type": ["string", "null"]
             },
             "city": {
-              "type": "string"
+              "type": ["string", "null"]
             },
             "level": {
               "type": "integer"
@@ -60,7 +60,7 @@
               "type": "string"
             },
             "publicStatusMessage": {
-              "type": "string"
+              "type": ["string", "null"]
             }
           },
           "required": [
