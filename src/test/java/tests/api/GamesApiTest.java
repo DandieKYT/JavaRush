@@ -12,7 +12,8 @@ import static org.hamcrest.Matchers.is;
 import static specs.Specification.*;
 
 @Tag("API")
-public class GamesApiTest {
+public class
+GamesApiTest {
 
     @Test
     @DisplayName("Проверка названия, урла, статуса на странице игры 'Сапер'")

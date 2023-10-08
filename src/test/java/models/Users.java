@@ -7,24 +7,29 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Users {
 
-    public int id,
-            level,
-            rating,
-            userId;
+    public int id;
 
-    public String key,
-            pictureUrl,
-            displayName,
-            country,
-            city,
-            publicStatus,
-            position;
+    public int userId;
 
-    public Object job,
-            subscription,
-            badge,
-            publicStatusMessage;
+    public String key;
 
-    public boolean isFriend;
+    public String pictureUrl;
 
+    public String displayName;
+
+    public Object position;
+
+    public Object job;
+
+    public String country;
+
+    public Object city;
+
+    public int level;
+
+    public int rating;
+
+    public String publicStatus;
+
+    public Object publicStatusMessage;
 }

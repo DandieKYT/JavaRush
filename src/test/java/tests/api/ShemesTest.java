@@ -16,6 +16,7 @@ public class ShemesTest {
                 .when()
                 .get("/articlecom.javarush.article.about.internship")
                 .then()
+                .spec(responseSpec)
                 .body(matchesJsonSchemaInClasspath("schemes/article.json"));
     }
 
@@ -26,6 +27,7 @@ public class ShemesTest {
                 .when()
                 .get("/project1")
                 .then()
+                .spec(responseSpec)
                 .body(matchesJsonSchemaInClasspath("schemes/project1.json"));
     }
     @Test
@@ -35,6 +37,7 @@ public class ShemesTest {
                 .when()
                 .get()
                 .then()
+                .spec(responseSpec)
                 .body(matchesJsonSchemaInClasspath("schemes/news.json"));
     }
     @Test
@@ -44,6 +47,7 @@ public class ShemesTest {
                 .when()
                 .get()
                 .then()
+                .spec(responseSpec)
                 .body(matchesJsonSchemaInClasspath("schemes/quizzes.json"));
     }
     @Test
@@ -53,6 +57,7 @@ public class ShemesTest {
                 .when()
                 .get()
                 .then()
+                .spec(responseSpec)
                 .body(matchesJsonSchemaInClasspath("schemes/projects.json"));
     }
 }
