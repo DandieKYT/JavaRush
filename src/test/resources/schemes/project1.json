@@ -1,10 +1,40 @@
 {
-  "id": 299532,
-  "likes": {
-    "count": 432,
-    "status": null
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "likes": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer"
+        },
+        "status": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "count",
+        "status"
+      ]
+    },
+    "type": {
+      "type": "string"
+    },
+    "userDiscussionInfo": {
+      "type": "null"
+    },
+    "rating": {
+      "type": "number"
+    }
   },
-  "type": "PROJECT",
-  "userDiscussionInfo": null,
-  "rating": 4.465116279069767
+  "required": [
+    "id",
+    "likes",
+    "type",
+    "userDiscussionInfo",
+    "rating"
+  ]
 }
