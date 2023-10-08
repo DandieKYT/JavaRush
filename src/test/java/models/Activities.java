@@ -17,5 +17,5 @@ public class Activities {
 
     public long time;
 
-    public Users users;
+    public Users user;
 }
