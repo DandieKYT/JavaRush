@@ -29,6 +29,27 @@ public class Specification {
             .log(STATUS)
             .log(BODY)
             .build();
+    public static RequestSpecification projectSpec =
+            with()
+                    .baseUri(BASE_URL)
+                    .filter(withCustomTemplates())
+                    .basePath("/projects")
+                    .log().all()
+                    .contentType(JSON);
+    public static RequestSpecification quizzesSpec =
+            with()
+                    .baseUri(BASE_URL)
+                    .filter(withCustomTemplates())
+                    .basePath("/quizzes")
+                    .log().all()
+                    .contentType(JSON);
+    public static RequestSpecification newsSpec =
+            with()
+                    .baseUri(BASE_URL)
+                    .filter(withCustomTemplates())
+                    .basePath("/news")
+                    .log().all()
+                    .contentType(JSON);
     public static RequestSpecification usersSpec =
             with()
                     .baseUri(BASE_URL)

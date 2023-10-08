@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "key": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "questId": {
+          "type": "integer"
+        },
+        "level": {
+          "type": "integer"
+        },
+        "lesson": {
+          "type": "integer"
+        },
+        "reward": {
+          "type": "integer"
+        },
+        "maxAttemptsCount": {
+          "type": "null"
+        },
+        "maxSessionDuration": {
+          "type": "null"
+        },
+        "retryInterval": {
+          "type": "null"
+        },
+        "expirationTime": {
+          "type": "null"
+        },
+        "anonymousAllowed": {
+          "type": "boolean"
+        },
+        "questionsCount": {
+          "type": "integer"
+        },
+        "rating": {
+          "type": "number"
+        },
+        "visibilityStatus": {
+          "type": "string"
+        },
+        "pictureUrl": {
+          "type": "string"
+        },
+        "userQuizInfo": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "resultStatus": {
+              "type": "null"
+            },
+            "attempt": {
+              "type": "null"
+            },
+            "duration": {
+              "type": "null"
+            },
+            "questionsTotalCount": {
+              "type": "null"
+            },
+            "questionsVoteCount": {
+              "type": "null"
+            },
+            "questionsPassedCount": {
+              "type": "null"
+            },
+            "updatedTime": {
+              "type": "null"
+            },
+            "currentQuestionIndex": {
+              "type": "null"
+            },
+            "result": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "status",
+            "resultStatus",
+            "attempt",
+            "duration",
+            "questionsTotalCount",
+            "questionsVoteCount",
+            "questionsPassedCount",
+            "updatedTime",
+            "currentQuestionIndex",
+            "result"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "key",
+        "type",
+        "title",
+        "description",
+        "questId",
+        "level",
+        "lesson",
+        "reward",
+        "maxAttemptsCount",
+        "maxSessionDuration",
+        "retryInterval",
+        "expirationTime",
+        "anonymousAllowed",
+        "questionsCount",
+        "rating",
+        "visibilityStatus",
+        "pictureUrl",
+        "userQuizInfo"
+      ]
+    }
+  ]
+}
