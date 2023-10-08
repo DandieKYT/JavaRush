@@ -1,104 +1,26 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "id": {
-      "type": "integer"
-    },
-    "key": {
-      "type": "string"
-    },
-    "referenceKey": {
-      "type": "string"
-    },
-    "type": {
-      "type": "string"
-    },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "type": "string"
-    },
-    "content": {
-      "type": "string"
-    },
-    "user": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "integer"
-        },
-        "userId": {
-          "type": "integer"
-        },
-        "key": {
-          "type": "string"
-        },
-        "pictureUrl": {
-          "type": "string"
-        },
-        "displayName": {
-          "type": "string"
-        },
-        "position": {
-          "type": "string"
-        },
-        "job": {
-          "type": "string"
-        },
-        "country": {
-          "type": "string"
-        },
-        "city": {
-          "type": "string"
-        },
-        "level": {
-          "type": "integer"
-        },
-        "rating": {
-          "type": "integer"
-        },
-        "publicStatus": {
-          "type": "string"
-        },
-        "publicStatusMessage": {
-          "type": "null"
-        }
-      },
-      "required": [
-        "id",
-        "userId",
-        "key",
-        "pictureUrl",
-        "displayName",
-        "position",
-        "job",
-        "country",
-        "city",
-        "level",
-        "rating",
-        "publicStatus",
-        "publicStatusMessage"
-      ]
-    },
-    "visibilityStatus": {
-      "type": "string"
-    },
-    "language": {
-      "type": "string"
-    }
+  "id": 30,
+  "key": "com.javarush.article.about.internship",
+  "referenceKey": "com.javarush.article.about.internship",
+  "type": "ARTICLE",
+  "title": "Стажировка JavaRush — ваша первая работа",
+  "description": "Получить первую работу ох как непросто. Даже если вы усердно занимались, прошли все уровни обучения на JavaRush, перешерстили десяток тематических книг и знаете весь Java Core от и до, вы не застрахованы от того, что рекрутер не поверит в ваше резюме. Просто потому, что эти ребята хотят видеть в команде...",
+  "content": "<p>Получить первую работу ох как непросто. Даже если вы усердно занимались, прошли все уровни обучения на JavaRush, перешерстили десяток тематических книг и знаете весь Java Core от и до, вы не застрахованы от того, что рекрутер не поверит в ваше резюме. Просто потому, что эти ребята хотят видеть в команде людей с реальным практическим опытом. </p>\n\n<p>Что же теперь делать? Как преодолеть ситуацию «чтобы получить опыт, нужен опыт»? Все не так плохо: «хакнуть» систему можно! Причем легально, без нарушения законов и общественных норм или лжи. </p>\n\n<p>Есть несколько способов это сделать, один из них — пройти <span class=\"text-bold\">обновленную стажировку JavaRush</span> (Стажировку JavaRush 2.0). На ней вы:</p>\n\n<ul>\n<li>освоите все технологии, которые IT-компании ожидают увидеть в вашем резюме;</li>\n<li>напишете 8 крутых проектов для вашего GitHub портфолио;</li>\n<li>пройдете усиленную подготовку по поиску первой работы в IT. </li>\n</ul>\n\n<a href=\"https://forms.kommo.com/rrxlxrv\" target=\"_blank\"><img data-max-width=\"1080\" data-id=\"d3c596c7-b15c-4125-a6a5-ab15074f28e2\" src=\"https://cdn.javarush.com/images/article/d3c596c7-b15c-4125-a6a5-ab15074f28e2/original.png\" alt=\"\"></a>\n\n<h2>Что такое стажировка JavaRush</h2>\n\n<p>По сути, стажировка JavaRush и есть самая настоящая работа программистом, только обучающая. Наполненность и уровень проектов, которые вы напишете, можно смело приравнять к работе стажером, интерном, и даже джуном в реальной компании. </p>\n\n<p>По формату она все-таки ближе к комфортному обучению, чем к хардкорной работе: онлайн-занятия с ментором дважды в неделю, домашние задания, написание проектов под присмотром наставника. </p>\n\n<p>Набор на стажировку проводится раз в месяц. Вы можете присоединиться к ней в любой момент: для этого нужно только пройти 30 уровней основного курса JavaRush. </p>\n\n<h2>Что вы изучите </h2>\n\n<p>Все, что поможет вам стать востребованным разработчиком. Работу с инструментами для тестирования (JUnit), сборки Java-проектов (Maven), сервлеты, контейнеры сервлетов (Tomcat). Пул web-технологий, необходимых для backend- и fullstack-разработчиков. Работу с базами данных (MySQL), их создание, проектирование и т.д.; использование Hibernate, JDBC. Фреймворки Spring и Spring Boot. </p>\n\n<p>Кроме того, вы прокачаете софт-скиллы, работая над проектами в группах и с ментором. А еще – узнаете, как подготовиться к поиску работы и получить крутой оффер.</p>\n\n<h2>Какие проекты появятся в вашем GitHub портфолио</h2>\n\n<ol>\n<li><span class=\"text-bold\">Десктопная 2D-игра.</span> Вы создадите исполняемый JAR-файл с игрой на JavaFX через графический движок от JavaRush.</li>\n<li><span class=\"text-bold\">Админпанель для управления MMO-игрой.</span> Вы поработаете над созданием UI для CRUD бэкенда, используя HTML, CSS, JS, jQuery. </li>\n<li><span class=\"text-bold\">Игра “Крестики-нолики”.</span> Проект, который вы напишете, используя сервлеты и JSP.\n<li><span class=\"text-bold\">Текстовый квест.</span> Maven проект, в котором вы поработаете с сервлетами, jsp, jstl, а также Tomcat. </li>\n<li><span class=\"text-bold\">Проект на Hibernate.</span> Вы напишете альтернативную реализацию слоя репозитория с использованием Hibernate. </li>\n<li><span class=\"text-bold\">Проект по работе с базами данных + Hibernate.</span> Вы поработаете с разными технологиями (MySQL, Hibernate, Redis, Docker) в рамках проекта по оптимизации работы с запросами к реляционной БД MySQL.</li>\n<li><span class=\"text-bold\">To-do list.</span> Вы разработаете программу — список задач, в котором можно просматривать задачи, добавлять новые, редактировать и удалять существующие. В этом проекте используются Maven, MySQL, Hibernate, Spring, Spring MVC, Thymeleaf.docker.</li>\n<li><span class=\"text-bold\">JiraRush — доска задач.</span> Это финальный проект по разработке доски задач, по аналогии с Jira или Trello. Готовый продукт поможет отслеживать любую активность — от ведения проекта до передачи списка покупок. </li>\n</ol>\n\n<p>Используемые технологии: </p>\n\n<ul>\n<li>Spring Boot</li>\n<li>Spring JPA</li>\n<li>Hibernate</li>\n<li>PostgreSQL</li>\n<li>Liquibase (система управления версиями БД, в основном ее структурой)</li>\n<li>Spring Security</li>\n<li>Spring MVC</li>\n<li>Thymeleaf</li>\n<li>jQuery</li>\n<li>Swagger (документирование API)</li>\n<li>Caffeine (кэш)</li>\n<li>Lombok</li>\n<li>Mapstruct (мапперы для преобразования между entity & DTO)</li>\n<li>Spring Test</li>\n<li>JUnit</li>\n</ul>\n\n<p>Это относительно большой, работающий проект, который отличается от предыдущих. Его не нужно писать с нуля: вы будете вносить изменения в код, добавлять новый функционал, настраивать инфраструктуру. Именно с таким видом задач вы будете, в основном, сталкиваться на будущей работе.</p>\n\n<h2>План занятий на стажировке</h2>\n\n<jr-widget-collapse>\n        <jr-collapse-head>\n            <h4 class=\"panel-title\"><span class=\"text-corporate\"><span class=\"text-bold\">МОДУЛЬ “JAVA PROFESSIONAL”</span></span></h4>\n        </jr-collapse-head>\n        <jr-collapse-body>\n<ol>\n<li>Сборка мусора и типы ссылок в Java. </li>\n<li>Паттерны проектирования.</li>\n<li>Методологии разработки.</li>\n<li>Основы Maven. Установка Maven, управление зависимостями, виды Maven-репозиториев, сборка Java-проекта.</li>\n<li>Работа с Guava, Apache Commons Collections.</li>\n<li>Работа с JUnit.</li>\n<li>Mockito.</li>\n<li>Логирование.</li>\n<li>Как устроена сеть. Сетевая модель.</li>\n<li>Архитектура ПО. Клиент-серверная архитектура и ее составляющие, трехуровневая архитектура, архитектурные шаблоны.</li>\n<li>Протоколы HTTP/HTTPS. Протокол передачи данных, HTTP-запросы и ответы, отличия HTTP и HTTPS, Cookies, Session.</li>\n<li>HTTP Client.</li>\n<li>Сервлеты, Java Servlet API.</li>\n<li>Контейнеры сервлетов: Tomcat, развертывание приложения, настройка сервера. </li>\n<li>Знакомство с MVC (Model-View-Controller). JSP.</li>\n<li>Знакомство с веб-сервисами.</li>\n</ol>\n</jr-collapse-body>\n    </jr-widget-collapse>\n\n<jr-widget-collapse>\n        <jr-collapse-head>\n            <h4 class=\"panel-title\"><span class=\"text-corporate\"><span class=\"text-bold\">МОДУЛЬ “БАЗЫ ДАННЫХ. HIBERNATE”</span></span></h4>\n        </jr-collapse-head>\n        <jr-collapse-body>\n<ol>\n<li>Введение в базы данных. Установка СУБД (MySQL). DDL, DML.</li>\n<li>Типы данных. Создание таблицы. Написание INSERT, SELECT, UPDATE, DELETE.</li>\n<li>Выбор данных.</li>\n<li>Транзакции БД.</li>\n<li>Проектирование баз данных.</li>\n<li>Работа с JDBC.</li>\n<li>ORM. Hibernate.</li>\n<li>Hibernate. Отношения ONETO, MANYTO, и т. д.</li>\n<li>Наследование Entity For ORM.</li>\n</ol>\n</jr-collapse-body>\n    </jr-widget-collapse>\n\n<jr-widget-collapse>\n        <jr-collapse-head>\n            <h4 class=\"panel-title\"><span class=\"text-corporate\"><span class=\"text-bold\">МОДУЛЬ “Spring + Spring Boot”</span></span></h4>\n        </jr-collapse-head>\n        <jr-collapse-body>\n<ol>\n<li>IOC, DI. Spring. Components. Beans.</li>\n<li>Основы модулей Spring. Spring Web MVC.</li>\n<li>Проектирование REST API.</li>\n<li>App Controller-Service-DAO.</li>\n<li>Spring ORM. @Transaction.</li>\n<li>Spring Test. AOP (Loging). </li>\n<li>Spring Security (Memory, DB).</li>\n<li>Spring Boot. Spring JPA.</li>\n</ol>\n</jr-collapse-body>\n    </jr-widget-collapse>\n\n<h2>Бонус: видеокурс о трудоустройстве в IT + live-консультация с HR-экспертом</h2>\n\n<p>По окончании стажировки каждый участник может посетить онлайн-вебинар с HR-экспертом JavaRush, чтобы получить рекомендации по улучшению своего резюме.</p>\n\n<p>Кроме этого, для вас открывается доступ к новому онлайн-курсу по тому, как найти работу в IT и построить успешную карьеру в разработке. </p>\n\n<img data-max-width=\"1080\" data-id=\"dd7e88f5-74db-4b2b-8b1a-881f42843802\" src=\"https://cdn.javarush.com/images/article/dd7e88f5-74db-4b2b-8b1a-881f42843802/original.png\" alt=\"\"><p><span class=\"text-bold\">Автор курса:</span> Андрей Латышев, Java Software Engineer с огромным опытом в разработке и менторинге по Java и карьерному развитию.  </p>\n\n<h3>Содержание видеокурса</h3>\n\n<ol>\n<li>Поиск вакансий. Инструменты и платформы для поиска работы. Как определить свою ценность. План действий при поиске работы.</li>\n<li>Как составить резюме. Стиль, основные компоненты, типичные ошибки новичка.</li>\n<li>Сопроводительное письмо. Структура и подготовка.</li>\n<li>LinkedIn. Как заполнить профиль, расширить сеть контактов, откликаться на вакансии.</li>\n<li>GitHub. Как оформить профиль и описать ваши проекты.</li>\n<li>Разбор разных этапов собеседования. Как подготовиться и чего ожидать от intro-звонка с HR, тестового задания или live-кодинга, team culture интервью, интервью с менеджером, оффера.</li>\n<li>Разбор “практики” интервью в топ-компаниях. Как проходят собеседования в Google.</li>\n<li>Чеклист по подготовке к собеседованиям.</li>\n</ol>\n\n<h2>Как попасть на стажировку</h2>\n\n<p>Все просто: нужно пройти онлайн-курс JavaRush до 30 уровня и оставить заявку на участие в стажировке. В отличие от предыдущего формата онлайн-стажировки, вам не нужно выполнять тестовое задание — приходите “с тем, что есть”, чтобы за несколько месяцев стать готовым “Strong Junior” Java-разработчиком.</p>\n\n<a href=\"https://forms.kommo.com/rrxlxrv\" target=\"_blank\"><img data-max-width=\"1080\" data-id=\"783274b8-4a27-4265-b0df-a2a832c49352\" src=\"https://cdn.javarush.com/images/article/783274b8-4a27-4265-b0df-a2a832c49352/original.png\" alt=\"\"></a>\n\n<p>После того, как мы обработаем вашу заявку, с вами свяжется менеджер JavaRush и ответит на любые вопросы, а также расскажет, когда вы сможете приступить к стажировке.</p>\n\n<h2>Как проходит стажировка</h2>\n\n<p>Стажировка состоит из трех модулей, каждый из которых включает занятия с ментором, домашнюю работу (теория + практика) и написание серьезных проектов для портфолио.</p>\n\n<p>Онлайн-занятия с ментором – опытным Java-разработчиком – проходят два раза в неделю, по полтора часа. Кроме того, вы можете общаться с ментором, кураторами проекта и другими “стажерами” в закрытом чате в Slack.  </p>\n\n<p>Ментор делает индивидуальный разбор каждого итогового проекта и дает подробные рекомендации по улучшению. Можете считать, что это ваш Senior-коллега/наставник на первой работе — только стресса гораздо меньше, а пользы от взаимодействия — столько же.</p>\n\n<h2>Что говорят об онлайн-стажировке ее участники</h2>\n\n<div class=\"qblock right\"><span class=\"text-bold\">Татьяна Карпенко</span>\n<p>Мне очень нравится, что в любой момент можно обратиться за помощью к ментору – в личных сообщениях или в общем чате, – и таким образом найти нужные ответы.</p>\n\n<p>Первые проекты поначалу казались мне сложными. Но у нас были факультативные занятия: нам не давали готовое решение, а постепенно направляли ход мыслей в правильное русло. Мы обсуждали структуру проекта, важные моменты, и это помогло понять, с чего нужно начать работу и на что обратить внимание. </p><div class=\"ava\" style=\"background-image:url(https://cdn.javarush.com/images/system/027962fa-b0ea-45e0-9f5c-712596cfd2a9/original.png);\"></div></div>\n\n<div class=\"qblock right\"><span class=\"text-bold\">Денис Дудник</span>\n<p>Ни в школе, ни в университете мне не было так интересно, как на JavaRush. У нас в группе был очень активный чат: мы много общались, обсуждали темы, уточняли нюансы. Безусловно, менторы помогали нам, давали дополнительные задания для особо желающих.</p>\n\n<p>Параллельно я написал свой проект – телеграм-бот на Spring. Окончание стажировки уже скоро, так что я готовлюсь к поиску работы: составляю резюме, добавляю рекрутеров в LinkedIn. Скоро начну рассылать резюме.</p><div class=\"ava\" style=\"background-image:url(https://cdn.javarush.com/images/system/f798e492-4d5f-4a65-be37-81716a48b92b/original.png);\"></div></div>",
+  "user": {
+    "id": 78,
+    "userId": 78,
+    "key": "vkontakte#185700601",
+    "pictureUrl": "https://cdn.javarush.com/images/avatar/78/original.png",
+    "displayName": "Зепп Бранниган",
+    "position": "Admin",
+    "job": "JavaRush",
+    "country": "",
+    "city": "",
+    "level": 41,
+    "rating": 158,
+    "publicStatus": "INTERNSHIP_COMPLETED",
+    "publicStatusMessage": null
   },
-  "required": [
-    "id",
-    "key",
-    "referenceKey",
-    "type",
-    "title",
-    "description",
-    "content",
-    "user",
-    "visibilityStatus",
-    "language"
-  ]
+  "visibilityStatus": "PUBLIC",
+  "language": "RUSSIAN"
 }

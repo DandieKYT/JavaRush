@@ -18,7 +18,6 @@ public class FontTest extends TestBaseMobile {
     stepsForApp();
     auth.navigateMenu();
         font.fontButton();
-        swipeFromRightToLeft();
         sleep(3000);
     }
     private void stepsForApp() {
@@ -34,13 +33,5 @@ public class FontTest extends TestBaseMobile {
 
 
     }
-    @Step("Свайп справа налево")
-    public static void swipeFromRightToLeft() {
-        AppiumDriver driver = (AppiumDriver) WebDriverRunner.getWebDriver();
 
-        Dimension dimension = driver.manage().window().getSize();
-        Point start = new Point((int) (dimension.width * 0.9), (int) (dimension.height * 0.9));
-        Point end = new Point((int) (dimension.width * 0.2), (int) (dimension.height * 0.1));
-        W3cActions.doSwipe(driver, start, end, 100);  //with duration 1s
-    }
 }
