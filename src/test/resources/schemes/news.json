@@ -9,7 +9,7 @@
           "type": "integer"
         },
         "type": {
-          "type": "string"
+          "type": ["string", "null"]
         },
         "title": {
           "type": "string"
