@@ -31,6 +31,7 @@ public class SomeTest {
                 .orElseThrow(() -> new AssertionError(""));
         String actualUserid = String.valueOf(actualActivities.getUsers().getUserId());
 
+
         assertThat(actualUserid).isEqualTo(expectedUserId);
 
     }
