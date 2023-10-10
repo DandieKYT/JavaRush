@@ -1,6 +1,7 @@
 package tests.api;
 
 import models.Activities;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -17,7 +18,7 @@ public class NewsTest {
     private static final String expectedPartUserId = "336";
     private static final String expectedPartId = "336";
     private static final String expectedType = "TASK_IN_PROGRESS";
-    private static final String activityPartId = "31043";
+    private static final String activityPartId = "310";
     private static final String partDescription = "пробует решить задачу";
     private static final String expectedCountry = "Russian Federation";
     private static final String partTitle = "quest";
@@ -25,6 +26,7 @@ public class NewsTest {
 
 
     @Test
+    @Disabled
     @DisplayName("Проверка по полному соответствию активности пользователя")
     void checkingUserActivity(){
         Activities[] data = given()

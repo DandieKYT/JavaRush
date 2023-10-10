@@ -41,7 +41,7 @@ public class UsersApiTest {
         Users data = given()
                 .spec(usersSpec)
                 .when()
-                .get("/user2209041")
+                .get("users/user2209041")
                 .then()
                 .spec(responseSpec)
                 .extract().as(Users.class);
