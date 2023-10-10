@@ -105,7 +105,7 @@ public class UsersApiTest {
     }
 
     @Test
-    @DisplayName("Проверка по частичному соответствию активности пользователя")
+    @DisplayName("Проверка соответсвия userID и ID")
     void checkingForPartDescription() {
         Users[] data = given()
                 .spec(usersSpec)
