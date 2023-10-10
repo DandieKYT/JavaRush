@@ -19,7 +19,6 @@ import static specs.Specification.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class UsersApiTest {
-    private static long expectedTime = Long.parseLong("1696865323000");
     private static final String expectedUserId = "332";
 
     @Test

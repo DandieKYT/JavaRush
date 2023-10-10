@@ -1,7 +1,6 @@
 package tests.api;
 
 import models.Activities;
-import models.Games;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +10,7 @@ import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 import static specs.Specification.*;
 
-public class SomeTest {
+public class NewsTest {
     private static final String expectedKey = "anonymous#3358758";
     private static final String expectedUserId = "3358758";
     private static final String expectedPartKey = "anonymous#336";
