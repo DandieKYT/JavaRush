@@ -14,17 +14,14 @@ import static io.restassured.filter.log.LogDetail.STATUS;
 import static io.restassured.http.ContentType.JSON;
 
 public class Specification {
-    private static final AuthConfig authConfig = ConfigFactory.create(AuthConfig.class);
     private static final String BASE_URL = "https://javarush.com/api/1.0/rest";
-    private static final String BASE_PATCH = "/api/1.0/rest";
+
     public static RequestSpecification requestSpec =
             with()
                     .baseUri(BASE_URL)
                     .filter(withCustomTemplates())
-                    .basePath(BASE_PATCH)
                     .log().all()
                     .contentType(JSON);
-
     public static ResponseSpecification responseSpec = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
@@ -54,9 +51,9 @@ public class Specification {
             with()
                     .baseUri(BASE_URL)
                     .filter(withCustomTemplates())
-                    .basePath("/users")
                     .log().all()
                     .contentType(JSON);
+
     public static RequestSpecification gamesSpec =
             with()
                     .baseUri(BASE_URL)

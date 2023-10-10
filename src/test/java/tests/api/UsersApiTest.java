@@ -1,19 +1,27 @@
 package tests.api;
 
+
 import models.Commentary;
 import models.SomeUser;
 import models.Users;
+import org.apache.commons.lang3.ArrayUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 import static io.restassured.RestAssured.given;
 
 
+import static org.assertj.core.api.InstanceOfAssertFactories.INTEGER;
 import static specs.Specification.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class UsersApiTest {
+    private static long expectedTime = Long.parseLong("1696865323000");
+    private static final String expectedUserId = "332";
+
     @Test
     @DisplayName("Проверка id пользователя")
     void searchUser() {
@@ -24,7 +32,7 @@ public class UsersApiTest {
                 .then()
                 .spec(responseSpec)
                 .extract().as(Users.class);
-        assertThat(3320682).isEqualTo(data.id);
+        assertThat(data.id).isEqualTo(3320682);
 
     }
 
@@ -38,9 +46,9 @@ public class UsersApiTest {
                 .then()
                 .spec(responseSpec)
                 .extract().as(Users.class);
-        assertThat(2209041).isEqualTo(data.id);
-        Assertions.assertEquals("Йошкар-ола", data.city);
-        Assertions.assertEquals("QA Automation Engineer", data.position);
+        assertThat(2209041).isEqualTo(data.getId());
+        Assertions.assertEquals("Йошкар-Ола", data.getCity());
+        Assertions.assertEquals("QA Automation Engineer", data.getPosition());
 
     }
 
@@ -71,9 +79,48 @@ public class UsersApiTest {
                 .then()
                 .spec(responseSpec)
                 .extract().as(SomeUser.class);
-        Assertions.assertEquals(30, data.id);
-        Assertions.assertEquals("com.javarush.article.about.internship", data.key);
-        Assertions.assertEquals("Admin", data.user.position);
-        Assertions.assertEquals("RUSSIAN", data.language);
+        Assertions.assertEquals(30, data.getId());
+        Assertions.assertEquals("com.javarush.article.about.internship", data.getKey());
+        Assertions.assertEquals("Admin", data.getUser().getPosition());
+        Assertions.assertEquals("RUSSIAN", data.getLanguage());
+    }
+
+    @Test
+    @DisplayName("Проверка по частичному соответствию активности пользователя")
+    void checkingForPartCountry() {
+        Users[] data = given()
+                .spec(usersSpec)
+                .when()
+                .get("?filter=ALL")
+                .then()
+                .spec(responseSpec)
+                .extract().as(Users[].class);
+        Users actualUsers = Arrays.stream(data)
+                .filter(users -> users.getCountry().contains("Россия")) //проверка по частичному соответсвию ключа
+                .findFirst()
+                .orElseThrow(() -> new AssertionError(""));
+        String actualKey = String.valueOf(actualUsers.getKey());
+
+        assertThat(actualKey).contains("anonymous#"); // проверка по частичному соответствию id
+    }
+
+    @Test
+    @DisplayName("Проверка по частичному соответствию активности пользователя")
+    void checkingForPartDescription() {
+        Users[] data = given()
+                .spec(usersSpec)
+                .when()
+                .get("/users?filter=ALL")
+                .then()
+                .spec(responseSpec)
+                .extract().as(Users[].class);
+        Users actualUsers = Arrays.stream(data)
+                .filter(users ->String.valueOf(users.getUserId()).contains(expectedUserId)) //проверка по частичному соответсвию ключа
+                .findFirst()
+                .orElseThrow(() -> new AssertionError(""));
+        Integer actualId = Integer.valueOf(actualUsers.getId());
+        Assertions.assertEquals(actualUsers.getUserId(),actualId ); // проверка по частичному соответствию id
+
     }
 }
+

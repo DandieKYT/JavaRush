@@ -22,6 +22,7 @@ public class SomeTest {
     private static final String partDescription = "пробует решить задачу";
     private static final String expectedCountry = "Russian Federation";
     private static final String partTitle = "quest";
+    private static long expectedTime = Long.parseLong("1696865323000");
 
 
     @Test
@@ -100,5 +101,4 @@ public class SomeTest {
 
         assertThat(actualDescription).contains(partDescription); // проверка по частичному соответствию id
     }
-
 }
