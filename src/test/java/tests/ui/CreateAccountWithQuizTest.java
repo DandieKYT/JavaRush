@@ -10,19 +10,18 @@ public class CreateAccountWithQuizTest extends TestBase {
     @Test
     @DisplayName("Создание аккаунта с прохождением теста")
     public void someTest() {
-        basePage.openPage();
-        learningPage.startLearnButton()
-                .beginLearnButton()
-                .russianLanguageButton()
-                .qaButton()
-                .blackPictureClick()
-                .notNowButton()
-                .xpInProgrammingYes()
-                .testBeginButton();
-        learningPage.randomCheck();
-        learningPage.checkOutResult();
-                }
-            }
+        learningStep.startLearnButton();
+        learningStep.beginLearnButton();
+        learningStep.russianLanguageButton();
+        learningStep.qaButton();
+        learningStep.blackPictureClick();
+        learningStep.notNowButton();
+        learningStep.xpInProgrammingYes();
+        learningStep.testBeginButton();
+        learningStep.randomCheck();
+        learningStep.checkOutResult();
+    }
+}
 
 
 

@@ -8,9 +8,8 @@ public class EnrollInCourseTest extends TestBase{
     @Test
     @DisplayName("Запись на курс по JAVA")
     public void javaCourse(){
-        basePage.openPage();
-        coursePage.openJavaUniversity()
-        .clickButtonEnrollToCourse()
-        .checkoutForm();
+        enrollInCourseStep.openJavaUniversity();
+        enrollInCourseStep.clickButtonEnrollToCourse();
+        enrollInCourseStep.checkoutForm();
     }
 }

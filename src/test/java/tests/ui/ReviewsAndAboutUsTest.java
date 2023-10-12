@@ -7,6 +7,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import static com.codeborne.selenide.Selenide.open;
+
 @Tag("UITest")
 public class ReviewsAndAboutUsTest extends TestBase {
 
@@ -20,9 +23,9 @@ public class ReviewsAndAboutUsTest extends TestBase {
     @ParameterizedTest
     @DisplayName("Открытие страниц Отзывы/О нас")
     public void productsAndCompany(String param, String expectedText) {
-        basePage.openPage();
-        reviewsAndAboutUsPage.openTitle(param)
-        .checkTitle(expectedText);
+        open("/");
+        reviewsAndAboutUsStep.opensTitle(param);
+        reviewsAndAboutUsStep.checksTitle(expectedText);
     }
 
 }

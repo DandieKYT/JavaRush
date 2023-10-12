@@ -11,10 +11,8 @@ public class TelegramTest extends TestBase {
     @DisplayName("Открытие страницы сайта в телеграм")
     @Test
     public void telegramTest() {
-        basePage.openPage();
-        groupsPage
-                .closeCookie()
-                .telegramButton()
-                .checkOutTelegramTitle();
+        groupsStep.closeCookie();
+        groupsStep.telegramButton();
+        groupsStep.checkOutTelegramTitle();
     }
 }

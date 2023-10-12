@@ -75,6 +75,24 @@ dependencies {
             "org.aeonbits.owner:owner:$ownerVersion",
             "commons-io:commons-io:$commonsIoVersion"
     )
+    implementation("io.github.bonigarcia:webdrivermanager:$webDriverManagerVersion",
+            "io.rest-assured:json-schema-validator:5.3.2",
+            "io.qameta.allure:allure-rest-assured:2.21.0",
+            "io.qameta.allure:allure-junit5:2.18.1",
+            "io.qameta.allure:allure-selenide:$allureVersion",
+            "io.rest-assured:rest-assured:4.5.1",
+            "io.appium:java-client:$appiumVersion",
+            "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
+            "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
+            "com.github.javafaker:javafaker:$javaFakerVersion",
+            "com.codeborne:selenide:$selenideVersion",
+            "org.junit.jupiter:junit-jupiter-api:$junitVersion",
+            "org.junit.jupiter:junit-jupiter:$junitVersion",
+            "org.assertj:assertj-core:$assertjCoreVersion",
+            "org.slf4j:slf4j-simple:$slf4jSimpleVersion",
+            "org.projectlombok:lombok:$lombokVersion",
+            "org.aeonbits.owner:owner:$ownerVersion",
+            "commons-io:commons-io:$commonsIoVersion")
 }
 
 tasks.withType(JavaCompile) {
@@ -101,6 +119,7 @@ test {
 task UITest(type: Test) {
     useJUnitPlatform {
         includeTags "UITest"
+        maxParallelForks = 25
     }
 }
 task Mobile(type: Test) {
