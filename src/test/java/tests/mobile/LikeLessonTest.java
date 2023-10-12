@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @Tag("Mobile")
-public class LikeLessonTest extends TestBaseMobileRemote {
+public class LikeLessonTest extends TestBaseMobile {
 
     @Test
     @DisplayName("Добавление лайка на страницу лекции")

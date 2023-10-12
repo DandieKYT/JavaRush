@@ -2,8 +2,10 @@ package help;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
+import config.WebConfig;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -19,6 +21,8 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
 public class Attach {
+
+    protected static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
     @Attachment(value = "{attachName}", type = "text/plain")
     public static String attachAsText(String attachName, String message) {
         return message;
@@ -42,22 +46,22 @@ public class Attach {
     }
 
     @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
-    public static String addVideo() {
+    public static String addVideoSelenoid() {
         return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
                 + getVideoUrl(getSessionId())
                 + "' type='video/mp4'></video></body></html>";
     }
 
-//    @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
-//    public static String addVideos(String sessionId) {
-//        return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
-//                + Browserstack.videoUrl(sessionId)
-//                + "' type='video/mp4'></video></body></html>";
-//    }
+    @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
+    public static String addVideo(String sessionId) {
+        return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
+                + BrowserStack.videoUrl(sessionId)
+                + "' type='video/mp4'></video></body></html>";
+    }
 
 
     public static URL getVideoUrl(String sessionId) {
-        String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId + ".mp4";
+        String videoUrl = config.videoUrl() + sessionId + ".mp4";
 
         try {
             return new URL(videoUrl);

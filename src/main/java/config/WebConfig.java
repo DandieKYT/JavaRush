@@ -6,29 +6,24 @@ import org.aeonbits.owner.Config;
         "classpath:test.properties"
 })
 public interface WebConfig extends Config {
+
     @Key("browser")
-    @DefaultValue("chrome")
-    String browser();
+    String getBrowser();
 
     @Key("browserVersion")
-    @DefaultValue("100.0")
-    String browserVersion();
+    String getBrowserVersion();
 
     @Key("browserSize")
-    @DefaultValue("1900x1080")
-    String browserSize();
+    String getBrowserSize();
 
-    @Key("remoteUrl")
-    @DefaultValue("https://user1:1234@selenoid.autotests.cloud/wd/hub")
-    String remoteUrl();
+    @Key("videoUrl")
+    String videoUrl();
 
-    @Key("pageLoadStrategy")
-    @DefaultValue("eager")
-    String pageLoadStrategy();
-
-    @Key("BaseUrl")
+    @Key("baseUrl")
     @DefaultValue("https://javarush.com")
     String BaseUrl();
+
+    String getBaseUrl();
 
     @Key("false")
     @DefaultValue("isRemote")
