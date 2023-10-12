@@ -4,6 +4,7 @@ import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
 import org.openqa.selenium.Keys;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static ui.pages.SocialGroupsPage.*;
 
@@ -46,6 +47,8 @@ public class SocialGroupsStep {
 
     @Step("Закрытие куки ютуба")
     public void acceptCookieYT() {
-        acceptCookieYT.click();
+        if (acceptCookieYT.has(visible)) {
+            acceptCookieYT.click();
+        }
     }
 }

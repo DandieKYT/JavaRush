@@ -6,6 +6,8 @@ import io.qameta.allure.Step;
 
 import java.util.Random;
 
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static ui.pages.StartLearningPage.*;
 
@@ -18,8 +20,8 @@ public class StartLearningStep {
 
     @Step("Цикл")
     public void randomCheck() {
-        nextButton.shouldBe((Condition.visible).because("Не видна кнопка 'Далее'"));
-        if (radioButton.size() > 1 && nextButton.has(Condition.visible)) {
+        nextButton.shouldBe((visible).because("Не видна кнопка 'Далее'"));
+        if (radioButton.size() > 1 && nextButton.has(visible)) {
             int count = pageElementQA.size();
             for (int i = 0; i < count; i++) {
                 sleep(1000);
@@ -38,7 +40,7 @@ public class StartLearningStep {
 
     @Step("Нажатие на кнопку 'Начать'")
     public void testBeginButton() {
-        testBeginButton.shouldBe((Condition.visible).because("Не получилось набрать")).click();
+        testBeginButton.shouldBe((visible).because("Не получилось набрать")).click();
         refresh();
     }
 
@@ -70,15 +72,14 @@ public class StartLearningStep {
     @Step("Нажатие на кнопку 'Нет'")
     public void xpInProgrammingNo() {
         xpInProgrammingNo.click();
-        sleep(10000);
     }
 
     @Step("Проверка о успешном создании курса")
     public void checkOutResult() {
-        checkoutLoad.shouldBe((Condition.visible).because("Прогресс не начался"));
-        loader.shouldBe((Condition.visible).because("Прогресс не начался"));
+        checkoutLoad.shouldBe((visible).because("Прогресс не начался"));
+        loader.shouldBe((visible).because("Прогресс не продолжился"));
         sleep(10000);
-        checkOutResult.shouldBe(Condition.text("Ваш персональный курс готов"));
+        checkOutResult.shouldBe(text("Ваш персональный курс готов"));
     }
 
     @Step("Нажатие на кнопку Получить")
@@ -88,7 +89,7 @@ public class StartLearningStep {
 
     @Step("Проверка созданного профиля")
     public void profileName() {
-        profileName.shouldBe(Condition.visible);
+        profileName.shouldBe(visible);
     }
 
     @Step("Нажатие на кнопку проверить уровень знаний")

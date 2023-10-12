@@ -1,12 +1,11 @@
 package tests.api;
 
-import io.restassured.module.jsv.JsonSchemaValidator;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
-import static specs.Specification.*;
+import static api.specs.Specification.*;
 
 public class ShemesTest {
     @Test

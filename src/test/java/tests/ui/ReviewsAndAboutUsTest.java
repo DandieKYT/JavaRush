@@ -11,15 +11,15 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static com.codeborne.selenide.Selenide.open;
 
 @Tag("UITest")
+@Owner("Кудрявцев Даниил")
+@Feature("Автотесты для UI")
+@Story("Раздел Отзывы/О нас")
 public class ReviewsAndAboutUsTest extends TestBase {
 
     @CsvSource(value = {
             "Отзывы,      Отзывы",
             "О нас,     О JavaRush",
     })
-    @Owner("Kudryavtsev")
-    @Feature("Открытие страниц Отзывы/О нас")
-    @Story("Открытие страниц Отзывы/О нас и проверка их содержимого")
     @ParameterizedTest
     @DisplayName("Открытие страниц Отзывы/О нас")
     public void productsAndCompany(String param, String expectedText) {
@@ -27,5 +27,4 @@ public class ReviewsAndAboutUsTest extends TestBase {
         reviewsAndAboutUsStep.opensTitle(param);
         reviewsAndAboutUsStep.checksTitle(expectedText);
     }
-
 }

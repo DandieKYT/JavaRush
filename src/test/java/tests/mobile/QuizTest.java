@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @Tag("Mobile")
-public class QuizTest extends TestBaseMobileRemote {
+public class QuizTest extends TestBaseMobile {
     @Test
     @DisplayName("Прохождение опроса с тестом")
     void quizForQa() {

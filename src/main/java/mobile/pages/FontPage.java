@@ -1,4 +1,4 @@
-package pagesMobile;
+package mobile.pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;

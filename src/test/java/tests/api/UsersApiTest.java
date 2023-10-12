@@ -1,10 +1,9 @@
 package tests.api;
 
 
-import models.Commentary;
-import models.SomeUser;
-import models.Users;
-import org.apache.commons.lang3.ArrayUtils;
+import api.models.Commentary;
+import api.models.SomeUser;
+import api.models.Users;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,8 +13,7 @@ import java.util.Arrays;
 import static io.restassured.RestAssured.given;
 
 
-import static org.assertj.core.api.InstanceOfAssertFactories.INTEGER;
-import static specs.Specification.*;
+import static api.specs.Specification.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class UsersApiTest {

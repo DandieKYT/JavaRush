@@ -12,7 +12,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import ui.pages.*;
 import ui.steps.*;
 
 import java.util.Map;
@@ -35,7 +34,7 @@ public class TestBase extends Attach {
         Configuration.baseUrl = webConfig.BaseUrl();
         Configuration.browser = webConfig.browser();
         Configuration.browserVersion = webConfig.browserVersion();
-        Configuration.remote = webConfig.remoteUrl();
+//        Configuration.remote = webConfig.remoteUrl();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(

@@ -20,13 +20,14 @@ public class CommentTest extends TestBaseMobile {
                 .commentOptions()
                 .deleteComment();
     }
+
     private void stepsForApp() {
-        auth.signInLink()
-                .secretKeyLink()
-                .loginKey()
-                .loginButton()
-                .closeBanner()
-                .closeSecondBanner()
-                .openLesson();
+        auth.signInLink();
+        auth.secretKeyLink();
+        auth.loginKey();
+        auth.loginButton();
+        auth.closeBanner();
+        auth.closeSecondBanner();
+        auth.openLesson();
     }
 }

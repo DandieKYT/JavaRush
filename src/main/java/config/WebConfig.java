@@ -3,7 +3,7 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:config/test.properties"
+        "classpath:test.properties"
 })
 public interface WebConfig extends Config {
     @Key("browser")
@@ -29,4 +29,8 @@ public interface WebConfig extends Config {
     @Key("BaseUrl")
     @DefaultValue("https://javarush.com")
     String BaseUrl();
+
+    @Key("false")
+    @DefaultValue("isRemote")
+    String isRemote();
 }

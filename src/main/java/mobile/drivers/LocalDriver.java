@@ -1,4 +1,4 @@
-package drivers;
+package mobile.drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
 import config.MobileConfig;
@@ -15,8 +15,8 @@ import java.net.URL;
 import static io.appium.java_client.remote.AutomationName.ANDROID_UIAUTOMATOR2;
 import static io.appium.java_client.remote.MobilePlatform.ANDROID;
 
-public class AndroidLocalDriver implements WebDriverProvider {
-    protected static final MobileConfig mobile = ConfigFactory.create(MobileConfig.class);
+public class LocalDriver implements WebDriverProvider {
+     static  MobileConfig mobile = ConfigFactory.create(MobileConfig.class, System.getProperties());
     @Nonnull
     @Override
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {

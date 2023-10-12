@@ -1,8 +1,6 @@
-package pagesMobile;
+package mobile.pages;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import io.appium.java_client.AppiumBy;
 import org.junit.jupiter.api.Assertions;
@@ -10,7 +8,6 @@ import org.junit.jupiter.api.Assertions;
 
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
-import static pagesMobile.Generations.generationRandomName;
 
 public class CommentPage {
     String name, text;
@@ -28,7 +25,7 @@ public class CommentPage {
     public CommentPage commentButton() {
         step("Открытие коментариев", () -> {
             commentButton.click();
-            name = generationRandomName();
+            name = Generations.generationRandomName();
             sleep(3000);
         });
         return this;

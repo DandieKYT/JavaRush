@@ -1,7 +1,6 @@
 package tests.api;
 
-import models.Games;
-import org.assertj.core.api.Assert;
+import api.models.Games;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -12,7 +11,7 @@ import java.util.Arrays;
 import static io.restassured.RestAssured.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.is;
-import static specs.Specification.*;
+import static api.specs.Specification.*;
 
 @Tag("API")
 public class

@@ -1,6 +1,5 @@
-package pagesMobile;
+package mobile.pages;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.appium.java_client.AppiumBy;

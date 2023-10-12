@@ -1,4 +1,4 @@
-package pagesMobile;
+package mobile.pages;
 
 import com.github.javafaker.Faker;
 

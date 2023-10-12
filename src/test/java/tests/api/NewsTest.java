@@ -1,6 +1,6 @@
 package tests.api;
 
-import models.Activities;
+import api.models.Activities;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
-import static specs.Specification.*;
+import static api.specs.Specification.*;
 
 public class NewsTest {
     private static final String expectedKey = "anonymous#3358758";

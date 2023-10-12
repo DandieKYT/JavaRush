@@ -7,9 +7,10 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
+
 @Tag("Mobile")
 
-public class CourseTask extends TestBaseMobileRemote {
+public class CourseTask extends TestBaseMobile {
     @CsvSource(value = {
             "course,      Java course",
             "tasks,             Tasks",
@@ -26,13 +27,13 @@ public class CourseTask extends TestBaseMobileRemote {
     }
 
     private void stepsForApp() {
-        auth.signInLink()
-                .secretKeyLink()
-                .loginKey()
-                .loginButton()
-                .closeBanner()
-                .closeSecondBanner()
-                .openLesson()
-                .goBackButton();
+        auth.signInLink();
+        auth.secretKeyLink();
+        auth.loginKey();
+        auth.loginButton();
+        auth.closeBanner();
+        auth.closeSecondBanner();
+        auth.openLesson();
+        auth.goBackButton();
     }
 }

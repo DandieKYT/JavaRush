@@ -130,6 +130,7 @@ task Mobile(type: Test) {
 task API(type: Test) {
     useJUnitPlatform {
         includeTags "API"
+        maxParallelForks = 25
     }
 }
 

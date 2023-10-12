@@ -1,11 +1,8 @@
-package specs;
+package api.specs;
 
-import authentication.Authentication;
-import config.AuthConfig;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import org.aeonbits.owner.ConfigFactory;
 
 import static help.CustomApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.with;

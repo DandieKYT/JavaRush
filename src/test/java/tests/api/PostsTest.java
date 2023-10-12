@@ -1,6 +1,6 @@
 package tests.api;
 
-import models.Tasks;
+import api.models.Tasks;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
 import static io.restassured.RestAssured.given;
-import static specs.Specification.*;
+import static api.specs.Specification.*;
 
 public class PostsTest {
     private static final String idJavaSyntax = "857";

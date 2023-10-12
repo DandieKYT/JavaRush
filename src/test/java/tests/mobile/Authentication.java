@@ -6,13 +6,13 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @Tag("Mobile")
-public class Authentication extends TestBaseMobileRemote {
+public class Authentication extends TestBaseMobile {
     @Test
     @DisplayName("Авторизация по секретному ключу")
-    public void loginBySecretKey(){
-        auth.signInLink()
-                .secretKeyLink()
-                .loginKey()
-                .loginButton();
+    public void loginBySecretKey() {
+        auth.signInLink();
+        auth.secretKeyLink();
+        auth.loginKey();
+        auth.loginButton();
     }
 }

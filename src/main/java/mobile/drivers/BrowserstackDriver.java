@@ -1,4 +1,4 @@
-package drivers;
+package mobile.drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
 import config.MobileConfig;
