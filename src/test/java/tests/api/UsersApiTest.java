@@ -27,7 +27,7 @@ public class UsersApiTest {
         Users data = given()
                 .spec(usersSpec)
                 .when()
-                .get("/user3320682")
+                .get("users/user3320682")
                 .then()
                 .spec(responseSpec)
                 .extract().as(Users.class);
@@ -90,7 +90,7 @@ public class UsersApiTest {
         Users[] data = given()
                 .spec(usersSpec)
                 .when()
-                .get("?filter=ALL")
+                .get("users?filter=ALL")
                 .then()
                 .spec(responseSpec)
                 .extract().as(Users[].class);
