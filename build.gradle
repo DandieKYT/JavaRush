@@ -38,7 +38,7 @@ compileTestJava{
 }
 
 def
-        webDriverManagerVersion = "5.0.3",
+        webDriverManagerVersion = "5.5.0",
         allureJunitVersion = "2.18.1",
         assertjCoreVersion = "3.23.1",
         restAssuredVersion = "5.3.2",
