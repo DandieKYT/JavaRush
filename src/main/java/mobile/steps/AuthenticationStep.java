@@ -66,7 +66,6 @@ public void navigateMenu() {
 
     @Step("Ввод ключа авторизации")
     public void loginKey(String token) {
-
             loginKey.sendKeys(token);
     }
 

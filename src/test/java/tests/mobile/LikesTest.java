@@ -1,5 +1,6 @@
 package tests.mobile;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -14,10 +15,12 @@ public class LikesTest extends TestBaseMobile {
         likeCommentStep.addComment();
         likeCommentStep.addSomeText();
         likeCommentStep.sendComment();
-        likeCommentStep.checkOutLike();
+        int countFirst = likeCommentStep.checkOutLike();
         likeCommentStep.addLike();
         likeCommentStep.secondAddLike();
-        likeCommentStep.secondCheckoutLike();
+        int countSecond = likeCommentStep.secondCheckoutLike();
+        Assertions.assertEquals(1, countSecond - countFirst);
+        likeCommentStep.deleteComm();
     }
 
     @Test
