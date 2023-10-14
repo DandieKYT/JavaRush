@@ -3,6 +3,8 @@ package tests.mobile;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static tests.mobile.Common.stepsForApp;
+
 public class LikesTest extends TestBaseMobile {
     @Test
     @DisplayName("Добавление лайка на коментарий")
@@ -17,6 +19,7 @@ public class LikesTest extends TestBaseMobile {
         likeCommentStep.secondAddLike();
         likeCommentStep.secondCheckoutLike();
     }
+
     @Test
     @DisplayName("Добавление лайка на страницу лекции")
     public void addLikeLesson() {
@@ -26,15 +29,5 @@ public class LikesTest extends TestBaseMobile {
         likeLessonStep.clickOnLike();
         likeLessonStep.secondValueLike();
         likeLessonStep.checkoutLikes();
-    }
-
-    private void stepsForApp() {
-        auth.signInLink();
-        auth.secretKeyLink();
-        auth.loginKey();
-        auth.loginButton();
-        auth.closeBanner();
-        auth.closeSecondBanner();
-        auth.openLesson();
     }
 }

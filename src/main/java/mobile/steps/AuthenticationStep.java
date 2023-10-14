@@ -1,9 +1,12 @@
 package mobile.steps;
 
 import com.codeborne.selenide.SelenideElement;
+import config.MobileConfig;
+import config.WebConfig;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Step;
 import mobile.pages.Generations;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.Assertions;
 
 import static com.codeborne.selenide.Condition.*;
@@ -14,18 +17,8 @@ import static mobile.pages.AuthenticationPage.*;
 
 public class AuthenticationStep {
     String name;
-//    private final SelenideElement
-//            signInLink = $(AppiumBy.id("com.hitechrush.jaxarush:id/enterTextViewLink")),
-//            secretKeyLink = $(AppiumBy.id("com.hitechrush.jaxarush:id/changeLoginFragment")),
-//            loginKey = $(AppiumBy.id("com.hitechrush.jaxarush:id/secretKeyEditText")),
-//            loginButton = $(AppiumBy.id("com.hitechrush.jaxarush:id/loginButton")),
-//            closeBanner = $(AppiumBy.id("com.hitechrush.jaxarush:id/bannerCloseButton")),
-//            closeSecondBanner = $(AppiumBy.id("com.hitechrush.jaxarush:id/iconTeacher")),
-//            openLesson = $(AppiumBy.xpath("(//android.widget.ImageView[@content-desc=\"JavaRush\"])[3]")),
-//            goBackButton = $(AppiumBy.xpath("//android.widget.ImageButton[@content-desc=\"Navigate up\"]"));
-//
 
-//    private final ElementsCollection
+
 
     @Step("Переход назад")
 public void navigateMenu() {
@@ -72,8 +65,9 @@ public void navigateMenu() {
     }
 
     @Step("Ввод ключа авторизации")
-    public void loginKey() {
-            loginKey.sendKeys("bdf08485-1a39-4a48-8a52-9c5d7a89e0ac");
+    public void loginKey(String token) {
+
+            loginKey.sendKeys(token);
     }
 
     @Step("Нажатие на кнопку 'Sign in'")

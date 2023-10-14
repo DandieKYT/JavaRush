@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
+import static tests.mobile.Common.stepsForApp;
 
 @Tag("Mobile")
 
@@ -23,17 +24,5 @@ public class CourseTask extends TestBaseMobile {
         auth.navigateMenu();
         courseTask.tag(param);
         courseTask.checkTitle(expectedText);
-
-
-    }
-
-    private void stepsForApp() {
-        auth.signInLink();
-        auth.secretKeyLink();
-        auth.loginKey();
-        auth.loginButton();
-        auth.closeBanner();
-        auth.closeSecondBanner();
-        auth.openLesson();
     }
 }

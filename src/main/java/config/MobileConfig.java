@@ -35,4 +35,7 @@ public interface MobileConfig extends Config {
 
     @Key("app")
     String app();
+
+    @Key("loginKey")
+    String getLoginKey();
 }

@@ -21,6 +21,7 @@ public class GetCourseTest extends TestBaseMobile {
         quizStep.randomCheck();
         quizStep.checkoutCourse();
     }
+
     @Test
     @DisplayName("Прохождение опроса без теста с получением курса")
     void takingASurveyWithoutATestAndReceivingACourse() {
