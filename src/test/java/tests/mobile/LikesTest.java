@@ -3,7 +3,7 @@ package tests.mobile;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class LikeCommentTest extends TestBaseMobile {
+public class LikesTest extends TestBaseMobile {
     @Test
     @DisplayName("Добавление лайка на коментарий")
     public void likeTest() {
@@ -16,6 +16,16 @@ public class LikeCommentTest extends TestBaseMobile {
         likeCommentStep.addLike();
         likeCommentStep.secondAddLike();
         likeCommentStep.secondCheckoutLike();
+    }
+    @Test
+    @DisplayName("Добавление лайка на страницу лекции")
+    public void addLikeLesson() {
+        stepsForApp();
+        likeLessonStep.checkValue();
+        likeLessonStep.likeButton();
+        likeLessonStep.clickOnLike();
+        likeLessonStep.secondValueLike();
+        likeLessonStep.checkoutLikes();
     }
 
     private void stepsForApp() {

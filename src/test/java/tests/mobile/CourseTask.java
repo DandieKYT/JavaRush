@@ -19,6 +19,7 @@ public class CourseTask extends TestBaseMobile {
     @DisplayName("Открытие разделов Course/Java и проверка их содержимого")
     public void checkCourseTask(String param, String expectedText) {
         stepsForApp();
+        auth.goBackButton();
         auth.navigateMenu();
         courseTask.tag(param);
         courseTask.checkTitle(expectedText);
@@ -34,6 +35,5 @@ public class CourseTask extends TestBaseMobile {
         auth.closeBanner();
         auth.closeSecondBanner();
         auth.openLesson();
-        auth.goBackButton();
     }
 }
