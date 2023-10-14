@@ -9,16 +9,16 @@ public class QuizTest extends TestBaseMobile {
     @Test
     @DisplayName("Прохождение опроса с тестом")
     void quizForQa() {
-        quizPage.startButton()
-                .secondStartButton()
-                .languageRussian()
-                .qaButton()
-                .literaryStyle()
-                .motivationNo()
-                .lightTheme()
-                .experienceYes()
-                .startQuiz();
-            quizPage.randomCheck();
-            quizPage.checkoutCourse();
+        quizStep.startButton();
+        quizStep.secondStartButton();
+        quizStep.languageRussian();
+        quizStep.qaButton();
+        quizStep.literaryStyle();
+        quizStep.motivationNo();
+        quizStep.lightTheme();
+        quizStep.experienceYes();
+        quizStep.startQuiz();
+        quizStep.randomCheck();
+        quizStep.checkoutCourse();
     }
 }

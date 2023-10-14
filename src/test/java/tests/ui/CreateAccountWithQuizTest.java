@@ -17,16 +17,16 @@ public class CreateAccountWithQuizTest extends TestBase {
     @Test
     @DisplayName("Создание аккаунта с прохождением теста")
     public void someTest() {
-        learningStep.startLearnButton();
-        learningStep.beginLearnButton();
-        learningStep.russianLanguageButton();
-        learningStep.qaButton();
-        learningStep.blackPictureClick();
-        learningStep.notNowButton();
-        learningStep.xpInProgrammingYes();
-        learningStep.testBeginButton();
-        learningStep.randomCheck();
-        learningStep.checkOutResult();
+        learnStep.startLearnButton();
+        learnStep.beginLearnButton();
+        learnStep.russianLanguageButton();
+        learnStep.qaButton();
+        learnStep.blackPictureClick();
+        learnStep.notNowButton();
+        learnStep.xpInProgrammingYes();
+        learnStep.testBeginButton();
+        learnStep.randomCheck();
+        learnStep.checkOutResult();
     }
 }
 

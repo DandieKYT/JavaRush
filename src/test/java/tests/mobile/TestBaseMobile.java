@@ -8,8 +8,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import mobile.drivers.BrowserstackDriver;
 import mobile.drivers.LocalDriver;
 import mobile.pages.*;
-import mobile.steps.AuthenticationStep;
-import mobile.steps.LikeLessonStep;
+import mobile.steps.*;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -22,15 +21,14 @@ public class TestBaseMobile {
 
     protected static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
     static boolean isRemote = Boolean.parseBoolean(System.getProperty("isRemote", config.isRemote()));
-    QuizPage quizPage = new QuizPage();
-    LikeCommentPage likeCommentPage = new LikeCommentPage();
+    QuizStep quizStep = new QuizStep();
+    LikeCommentStep likeCommentStep = new LikeCommentStep();
     AuthenticationStep auth = new AuthenticationStep();
-    CourseTaskPage courseTaskPage = new CourseTaskPage();
-    FontPage font = new FontPage();
+    CourseTaskStep courseTask = new CourseTaskStep();
     PhoneManagerHelper managerHelper = new PhoneManagerHelper();
     LikeLessonStep likeLessonStep = new LikeLessonStep();
     Generations gen = new Generations();
-    CommentPage comment = new CommentPage();
+    CommentStep comment = new CommentStep();
     @BeforeAll
     static void beforeAll() {
         Configuration.browser = LocalDriver.class.getName();

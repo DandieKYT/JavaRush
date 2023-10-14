@@ -8,13 +8,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import ui.steps.*;
@@ -29,9 +26,9 @@ public class TestBase extends Attach {
     protected static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
     static String remoteUrl = System.getProperty("selenoid");
     static boolean isRemote = Boolean.parseBoolean(System.getProperty("isRemote", config.isRemote()));
-    static WebConfig webConfig = ConfigFactory.create(WebConfig.class, System.getProperties());
+
     SocialGroupsStep groupsStep = new SocialGroupsStep();
-    StartLearningStep learningStep = new StartLearningStep();
+    StartLearningStep learnStep = new StartLearningStep();
     ReviewsAndAboutUsStep reviewsAndAboutUsStep = new ReviewsAndAboutUsStep();
     EnrollInCourseStep enrollInCourseStep = new EnrollInCourseStep();
     SearchStep searchStep = new SearchStep();

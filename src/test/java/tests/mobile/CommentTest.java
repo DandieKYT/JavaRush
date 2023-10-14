@@ -8,17 +8,17 @@ public class CommentTest extends TestBaseMobile {
     @Test
     public void commTest() {
         stepsForApp();
-        comment.commentButton()
-                .addComment()
-                .inputComment()
-                .sendComment()
-                .commentOptions()
-                .editComment()
-                .checkoutComment()
-                .sendComment()
-                .authorComment()
-                .commentOptions()
-                .deleteComment();
+        comment.commentButton();
+        comment.addComment();
+        comment.inputComment();
+        comment.sendComment();
+        comment.commentOptions();
+        comment.editComment();
+        comment.checkoutComment();
+        comment.sendComment();
+        comment.authorComment();
+        comment.commentOptions();
+        comment.deleteComment();
     }
 
     private void stepsForApp() {

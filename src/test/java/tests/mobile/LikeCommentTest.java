@@ -8,14 +8,14 @@ public class LikeCommentTest extends TestBaseMobile {
     @DisplayName("Добавление лайка на коментарий")
     public void likeTest() {
         stepsForApp();
-        likeCommentPage.commentButton()
-                .addComment()
-                .addSomeText()
-                .sendComment()
-                .checkOutLike()
-                .addLike()
-                .secondAddLike()
-                .secondCheckoutLike();
+        likeCommentStep.commentButton();
+        likeCommentStep.addComment();
+        likeCommentStep.addSomeText();
+        likeCommentStep.sendComment();
+        likeCommentStep.checkOutLike();
+        likeCommentStep.addLike();
+        likeCommentStep.secondAddLike();
+        likeCommentStep.secondCheckoutLike();
     }
 
     private void stepsForApp() {

@@ -19,9 +19,9 @@ public class CourseTask extends TestBaseMobile {
     @DisplayName("Открытие разделов Course/Java и проверка их содержимого")
     public void checkCourseTask(String param, String expectedText) {
         stepsForApp();
-        auth.navigateMenu();//Нажимаем на разделы
-        courseTaskPage.tag(param)
-                .checkTitle(expectedText);
+        auth.navigateMenu();
+        courseTask.tag(param);
+        courseTask.checkTitle(expectedText);
 
 
     }
