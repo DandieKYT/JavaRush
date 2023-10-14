@@ -93,6 +93,7 @@ dependencies {
             "org.projectlombok:lombok:$lombokVersion",
             "org.aeonbits.owner:owner:$ownerVersion",
             "commons-io:commons-io:$commonsIoVersion")
+
 }
 
 tasks.withType(JavaCompile) {
