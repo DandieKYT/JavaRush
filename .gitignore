@@ -2,5 +2,5 @@
 /.gradle
 /allure-results
 /build
-*.properties
+src/test/resources/test.properties
 
