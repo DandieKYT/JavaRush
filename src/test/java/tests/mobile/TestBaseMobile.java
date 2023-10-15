@@ -17,10 +17,9 @@ import org.junit.jupiter.api.BeforeEach;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
+
 public class TestBaseMobile {
 
-    protected static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
-    static boolean isRemote = Boolean.parseBoolean(System.getProperty("isRemote", config.isRemote()));
     QuizStep quizStep = new QuizStep();
     LikeCommentStep likeCommentStep = new LikeCommentStep();
     AuthenticationStep auth = new AuthenticationStep();
@@ -32,10 +31,6 @@ public class TestBaseMobile {
     @BeforeAll
     static void beforeAll() {
         Configuration.browser = LocalDriver.class.getName();
-        if (isRemote){
-            Configuration.browser = BrowserstackDriver.class.getName();
-        }
-        Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize = null;
         Configuration.timeout = 5000;
     }

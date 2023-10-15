@@ -6,6 +6,7 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import ui.steps.StartLearningStep;
 
 @Tag("UITest")
 @Owner("Кудрявцев Даниил")
@@ -15,7 +16,7 @@ public class CreateAccountTest extends TestBase {
 
     @Test
     @DisplayName("Создание аккаунта в JAVA-Rush")
-    public void startLearnJava() {
+    public  void startLearnJava() {
         learnStep.startLearnButton();
         learnStep.beginLearnButton();
         learnStep.russianLanguageButton();

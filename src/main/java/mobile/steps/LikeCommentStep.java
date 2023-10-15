@@ -57,7 +57,6 @@ public class LikeCommentStep {
         addLike.click();
         deleteComment.click();
     }
-
         public static int parse () {
             String getParse = checkLikeValue.getText();
             Integer.parseInt(getParse);
