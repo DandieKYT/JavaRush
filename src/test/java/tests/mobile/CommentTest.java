@@ -14,14 +14,14 @@ public class CommentTest extends TestBaseMobile {
     public void commTest() {
         stepsForApp();
         comment.commentButton();
-        String name = Generations.generationRandomText();
+        String expectedComm = Generations.generationRandomText();
         comment.addComment();
-        comment.inputComment(name);
+        comment.inputComment(expectedComm);
         comment.sendComment();
         comment.commentOptions();
         comment.editComment();
-        String text = comment.getTexts();
-        Assertions.assertEquals(text, name);
+        String actualComm = comment.getTexts();
+        Assertions.assertEquals(actualComm, expectedComm);
         comment.sendComment();
         comment.authorComment();
         comment.commentOptions();

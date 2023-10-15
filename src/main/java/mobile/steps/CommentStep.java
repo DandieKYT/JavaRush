@@ -2,58 +2,58 @@ package mobile.steps;
 
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
+import mobile.pages.CommentPage;
 
 import static com.codeborne.selenide.Selenide.sleep;
-import static io.qameta.allure.Allure.step;
-import static mobile.pages.CommentPage.*;
+
+
 
 public class CommentStep {
-
+    CommentPage commentPage = new CommentPage();
     @Step("Открытие коментариев")
     public void commentButton() {
-        commentButton.click();
+        commentPage.commentButton.click();
         sleep(3000);
     }
 
     @Step("Добавляем коментарий")
     public void addComment() {
-        addComment.click();
+        commentPage.addComment.click();
     }
 
     @Step("Генерируем текст комментария")
-    public void inputComment(String name) {
-        inputComment.click();
-        inputComment.sendKeys();
+    public void inputComment(String actual) {
+        commentPage.inputComment.click();
+        commentPage.inputComment.sendKeys(actual);
     }
 
     @Step("Нажатие на кнопку отправить")
     public void sendComment() {
-        sendComment.click();
+        commentPage.sendComment.click();
     }
 
     @Step("Открываем опции комментария")
     public void commentOptions() {
-        commentOptions.click();
+        commentPage.commentOptions.click();
     }
 
     @Step("Нажатите на кнопку редактировать")
     public void editComment() {
-        editComment.click();
+        commentPage.editComment.click();
     }
 
     @Step("Проверка автора комментария")
     public void authorComment() {
-        authorComment.shouldBe(Condition.text("KYT"));
+        commentPage.authorComment.shouldBe(Condition.text("KYT"));
     }
 
     @Step("Удаление комментария")
     public void deleteComment() {
-        deleteComment.click();
+        commentPage.deleteComment.click();
     }
 
-    public static String getTexts() {
-        checkoutText.getText();
-        return checkoutText.getText();
+    public String getTexts() {
+        return commentPage.checkoutText.getText();
     }
 }
 
