@@ -1,12 +1,7 @@
 package mobile.steps;
 
-import com.codeborne.selenide.SelenideElement;
-import config.MobileConfig;
-import config.WebConfig;
-import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Step;
-import mobile.pages.Generations;
-import org.aeonbits.owner.ConfigFactory;
+import help.Generations;
 import org.junit.jupiter.api.Assertions;
 
 import static com.codeborne.selenide.Condition.*;
@@ -76,7 +71,7 @@ public void navigateMenu() {
 
     @Step("Генерация рандомного текста")
     public void someText() {
-            name = Generations.generationRandomName();
+            name = Generations.generationRandomText();
             Assertions.assertEquals((name),text(name));
     }
 }

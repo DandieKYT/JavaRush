@@ -24,19 +24,14 @@ public class LikeCommentStep {
     }
 
     @Step("Написание текста коментария")
-    public void addSomeText() {
+    public void addSomeText(String textComm) {
         addSomeText.click();
-        addSomeText.sendKeys("TEST_LIKE");
+        addSomeText.sendKeys(textComm);
     }
 
     @Step("Отправка коментария")
     public void sendComment() {
         sendComment.click();
-    }
-
-    @Step("Получение количества лайков")
-    public static int checkOutLike() {
-        return parse();
     }
 
     @Step("Нажатие на кнопку лайка")
@@ -49,15 +44,12 @@ public class LikeCommentStep {
         secondAddLike.click();
     }
 
-    @Step("Проверка что количество лайков прибавилось на 1")
-    public static int secondCheckoutLike() {
-        return parse();
-    }
+    @Step("Удаление комментария")
     public void deleteComm () {
-        addLike.click();
         deleteComment.click();
     }
-        public static int parse () {
+    @Step("Получение количества лайков")
+        public  int parse () {
             String getParse = checkLikeValue.getText();
             Integer.parseInt(getParse);
             return Integer.parseInt(getParse);

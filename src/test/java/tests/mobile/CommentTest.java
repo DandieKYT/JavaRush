@@ -1,6 +1,6 @@
 package tests.mobile;
 
-import mobile.pages.Generations;
+import help.Generations;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -14,7 +14,7 @@ public class CommentTest extends TestBaseMobile {
     public void commTest() {
         stepsForApp();
         comment.commentButton();
-        String name = Generations.generationRandomName();
+        String name = Generations.generationRandomText();
         comment.addComment();
         comment.inputComment(name);
         comment.sendComment();

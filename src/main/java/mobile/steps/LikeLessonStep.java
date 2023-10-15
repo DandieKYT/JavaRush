@@ -7,11 +7,6 @@ import static mobile.pages.LikeLessonPage.*;
 
 public class LikeLessonStep {
 
-    @Step("Получение количества лайков")
-    public  static int checkValue() {
-            return parse();
-    }
-
     @Step("Нажатие на кнопку лайка")
     public void likeButton() {
             likeButton.click();
@@ -22,12 +17,8 @@ public class LikeLessonStep {
             clickOnLike.click();
     }
 
-    @Step("Подтверждение лайка")
-    public static int secondValueLike() {
-            return parse();
-    }
-
-    public static int parse () {
+    @Step("Получение количества лайков")
+    public int parse () {
         String getParse = checkLikeValue.getText();
         Integer.parseInt(getParse);
         return Integer.parseInt(getParse);

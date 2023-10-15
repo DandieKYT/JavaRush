@@ -1,13 +1,11 @@
-package mobile.pages;
+package help;
 
 import com.github.javafaker.Faker;
 
 public class Generations {
     public static
-    String generationRandomName() {
+    String generationRandomText() {
         Faker faker = new Faker();
         return faker.name().firstName();
     }
-
-
 }
