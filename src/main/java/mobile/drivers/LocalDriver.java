@@ -1,7 +1,7 @@
 package mobile.drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import config.MobileConfig;
+import config.BrowserstackConfig;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import org.aeonbits.owner.ConfigFactory;
@@ -16,7 +16,7 @@ import static io.appium.java_client.remote.AutomationName.ANDROID_UIAUTOMATOR2;
 import static io.appium.java_client.remote.MobilePlatform.ANDROID;
 
 public class LocalDriver implements WebDriverProvider {
-     static  MobileConfig mobile = ConfigFactory.create(MobileConfig.class, System.getProperties());
+     static BrowserstackConfig mobile = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
     @Nonnull
     @Override
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
@@ -26,10 +26,10 @@ public class LocalDriver implements WebDriverProvider {
 
         options.setAutomationName(ANDROID_UIAUTOMATOR2)
                 .setPlatformName(ANDROID)
-                .setPlatformVersion(mobile.PlatformVersion())
+                .setPlatformVersion(mobile.osVersion())
                 .setDeviceName(mobile.deviceName())
-                .setAppPackage(mobile.AppPackage())
-                .setAppActivity(mobile.AppActivity());
+                .setAppPackage(mobile.appPackage())
+                .setAppActivity(mobile.appActivity());
 
         return new AndroidDriver(getAppiumServerUrl(), options);
     }

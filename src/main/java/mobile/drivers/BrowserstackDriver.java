@@ -1,7 +1,7 @@
 package mobile.drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import config.MobileConfig;
+import config.BrowserstackConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
@@ -13,7 +13,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class BrowserstackDriver implements WebDriverProvider {
-    protected static final MobileConfig mobile = ConfigFactory.create(MobileConfig.class, System.getProperties());
+     static BrowserstackConfig config = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
     @Nonnull
     @Override
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
@@ -22,15 +22,15 @@ public class BrowserstackDriver implements WebDriverProvider {
         mutableCapabilities.merge(capabilities);
 
         // Set your access credentials
-        mutableCapabilities.setCapability("browserstack.user", mobile.username());
-        mutableCapabilities.setCapability("browserstack.key", mobile.passwordKey());
+        mutableCapabilities.setCapability("browserstack.user", config.username());
+        mutableCapabilities.setCapability("browserstack.key", config.passwordKey());
 
         // Set URL of the application under test
-        mutableCapabilities.setCapability("app", mobile.app());
+        mutableCapabilities.setCapability("app", config.app());
 
         // Specify device and os_version for testing
-        mutableCapabilities.setCapability("device", mobile.deviceName());
-        mutableCapabilities.setCapability("os_version", mobile.PlatformVersion());
+        mutableCapabilities.setCapability("device", config.deviceName());
+        mutableCapabilities.setCapability("os_version", config.osVersion());
 
         // Set other BrowserStack capabilities
         mutableCapabilities.setCapability("project", "Java Rush");
@@ -41,7 +41,7 @@ public class BrowserstackDriver implements WebDriverProvider {
         // and desired capabilities defined above
         try {
             return new RemoteWebDriver(
-                    new URL(mobile.remoteMobileUrl()), mutableCapabilities);
+                    new URL(config.remoteMobileUrl()), mutableCapabilities);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

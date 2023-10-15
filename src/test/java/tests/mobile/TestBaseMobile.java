@@ -26,9 +26,7 @@ public class TestBaseMobile {
     LikeCommentStep likeCommentStep = new LikeCommentStep();
     AuthenticationStep auth = new AuthenticationStep();
     CourseTaskStep courseTask = new CourseTaskStep();
-    PhoneManagerHelper managerHelper = new PhoneManagerHelper();
     LikeLessonStep likeLessonStep = new LikeLessonStep();
-    Generations gen = new Generations();
     CommentStep comment = new CommentStep();
     @BeforeAll
     static void beforeAll() {

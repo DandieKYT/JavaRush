@@ -5,24 +5,7 @@ import org.aeonbits.owner.Config;
 @Config.Sources({
         "classpath:test.properties"
 })
-public interface MobileConfig extends Config {
-    @Key("AppPackage")
-    String AppPackage ();
-
-    @Key("AppActivity")
-    String AppActivity();
-
-    @Key("deviceName")
-    String deviceName();
-
-    @Key("platformName")
-    String platformName();
-
-    @Key("url")
-    String url();
-
-    @Key("PlatformVersion")
-    String PlatformVersion();
+public interface BrowserstackConfig extends Config {
 
     @Key("username")
     String username();
@@ -35,6 +18,24 @@ public interface MobileConfig extends Config {
 
     @Key("app")
     String app();
+
+    @Key("deviceName")
+    String deviceName();
+
+    @Key("osVersion")
+    String osVersion();
+
+    @Key("url")
+    String url();
+
+    @Key("platformName")
+    String platformName();
+
+    @Key("appPackage")
+    String appPackage();
+
+    @Key("appActivity")
+    String appActivity();
 
     @Key("loginKey")
     String getLoginKey();
