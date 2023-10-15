@@ -10,9 +10,6 @@ import static com.codeborne.selenide.Selenide.sleep;
 import static mobile.pages.LikeCommentPage.*;
 
 public class LikeCommentStep {
-    String countLike;
-    int firstLike, secondCheckoutLike;
-
 
     @Step("Нажатие на кнопку коментария")
     public void commentButton() {
@@ -40,8 +37,6 @@ public class LikeCommentStep {
     @Step("Получение количества лайков")
     public static int checkOutLike() {
         return parse();
-//            countLike = checkLikeValue.getText();
-//            firstLike = Integer.parseInt(countLike);
     }
 
     @Step("Нажатие на кнопку лайка")

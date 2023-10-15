@@ -27,10 +27,11 @@ public class LikesTest extends TestBaseMobile {
     @DisplayName("Добавление лайка на страницу лекции")
     public void addLikeLesson() {
         stepsForApp();
-        likeLessonStep.checkValue();
+        int countFirst = likeLessonStep.checkValue();
         likeLessonStep.likeButton();
         likeLessonStep.clickOnLike();
-        likeLessonStep.secondValueLike();
-        likeLessonStep.checkoutLikes();
+        int countSecond = likeLessonStep.secondValueLike();
+        Assertions.assertEquals(1, countSecond - countFirst);
+        likeLessonStep.likeButton();
     }
 }
