@@ -1,19 +1,28 @@
 package tests.ui;
 
-import com.codeborne.selenide.Selenide;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static tests.ui.Common.stepsForWebApp;
+import static com.codeborne.selenide.Selenide.refresh;
 
 
 public class LoadImageProfileTest extends TestBase {
     @Test
     @DisplayName("Загрузка картинки в профиль")
     public void imageProfileTest(){
-        stepsForWebApp();
-        Selenide.refresh();
+        learnStep.startLearnButton();
+        learnStep.beginLearnButton();
+        learnStep.russianLanguageButton();
+        learnStep.qaButton();
+        learnStep.blackPictureClick();
+        learnStep.notNowButton();
+        learnStep.xpInProgrammingNo();
+        learnStep.checkOutResult();
+        refresh();
+
 
 
     }
 }
+
