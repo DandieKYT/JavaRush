@@ -15,8 +15,6 @@ public class ImageTest extends TestBase {
         stepsForWebApp();
         refresh();
         refresh();
-        $x("//a[contains(text(),'Сообщество')]").hover();
-        $x("(//button[@class='sidebar-group-head__collapse'])[2]").click();
         loadImageProfileStep.openSettings();
         sleep(3000);
     }
