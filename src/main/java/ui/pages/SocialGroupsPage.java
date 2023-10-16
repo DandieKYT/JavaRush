@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$x;
 import static io.qameta.allure.Allure.step;
 
 public class SocialGroupsPage {
-    public final static SelenideElement closeCookie = $x("//button[@class='button button--sm-wide button--apply']");
+    public final static SelenideElement closeCookie = $x("//button[text()='Принять и закрыть']");
     public final static SelenideElement scrollToButton = $x("//img[@alt='Google Play']");
     public final static SelenideElement acceptCookieYT = $x("//*[@aria-label='Accept all']");
     public final static SelenideElement youtubeButton = $x("//*[contains(@class, 'footer-soc__link--youtube')]");

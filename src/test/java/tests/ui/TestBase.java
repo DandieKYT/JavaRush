@@ -12,6 +12,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import ui.steps.*;
@@ -36,6 +37,7 @@ public class TestBase extends Attach {
     @BeforeAll
     static void setUp() {
         WebDriverManager.chromedriver().setup();
+
         Configuration.baseUrl = System.getProperty("baseUrl", config.getBaseUrl());
         Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize = System.getProperty("browserSize", config.getBrowserSize());
