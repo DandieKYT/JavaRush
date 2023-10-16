@@ -26,5 +26,13 @@ public class StartLearningPage {
     public static final ElementsCollection radioButton = $$x("//*[contains(@class,'radio-button radio-button--basic svelte')]");
     public static final ElementsCollection pageElementQA = $$x("//*[contains(@class,'progress-bar__step')]");
 
+    public static final SelenideElement getCourseButton = $x("//*[@id='id_button_jr_welcome_get_course']");
+
+    public static final SelenideElement emailInput = $x("//*[contains(@class, 'register-form')]/div/input");
+
+    public static final SelenideElement passwordInput = $x("//*[contains(@class, 'register-form')]/div[2]/input");
+
+    public static final SelenideElement createAccount = $x("//*[contains(@class, 'register-form')]/div[3]");
+
 
 }

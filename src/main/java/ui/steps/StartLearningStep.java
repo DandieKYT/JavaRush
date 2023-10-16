@@ -97,4 +97,21 @@ public class StartLearningStep {
         xpInProgrammingYes.click();
         sleep(2000);
     }
+    @Step("Нажатие на кнопку 'Получить'")
+    public void getCourseButton(){
+        getCourseButton.click();
+        sleep(4000);
+    }
+    @Step("Ввод email")
+    public void emailInput(){
+        emailInput.setValue("Test@mail.ru");
+    }
+    @Step("Ввод password")
+    public void passwordInput(){
+        passwordInput.setValue("Test4321");
+    }
+    @Step("Нажатие на кнопку 'Создать аккаунт''")
+    public void createAccount(){
+        createAccount.click();
+    }
 }

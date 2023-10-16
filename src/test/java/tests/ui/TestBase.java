@@ -26,7 +26,7 @@ public class TestBase extends Attach {
     protected static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
     static String remoteUrl = System.getProperty("selenoid");
     static boolean isRemote = Boolean.parseBoolean(System.getProperty("isRemote", config.isRemote()));
-
+    LoadImageProfileStep loadImageProfileStep = new LoadImageProfileStep();
     SocialGroupsStep groupsStep = new SocialGroupsStep();
     StartLearningStep learnStep = new StartLearningStep();
     ReviewsAndAboutUsStep reviewsAndAboutUsStep = new ReviewsAndAboutUsStep();
