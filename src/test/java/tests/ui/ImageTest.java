@@ -1,21 +1,28 @@
 package tests.ui;
 
+import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.*;
 import static ui.Common.stepsForWebApp;
 
-@Tag("UI")
+@Tag("UITest")
 public class ImageTest extends TestBase {
     @Test
-    public void imageProfileUpload(){
+    public void imageProfileUpload() throws Exception{
         open("/");
         groupsStep.closeCookie();
         stepsForWebApp();
         refresh();
-        refresh();
+        WebDriverRunner.getWebDriver().manage().window().fullscreen();
+        sleep(5000);
         loadImageProfileStep.openSettings();
-        sleep(3000);
+        loadImageProfileStep.clickAvatarImage();
+        loadImageProfileStep.uploadPhoto();
+        loadImageProfileStep.savePhoto();
+        loadImageProfileStep.checkResult();
+
+
     }
 }
