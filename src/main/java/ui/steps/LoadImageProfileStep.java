@@ -13,9 +13,7 @@ public class LoadImageProfileStep {
     @Step("Открытие вкладки 'Настройки'")
     public void openSettings(){
         WebDriverRunner.getWebDriver().manage().window().fullscreen();
-        sleep(4000);
         clickImage.click();
-        sleep(3000);
         bookmarks.scrollTo();
         settings.click();
     }
