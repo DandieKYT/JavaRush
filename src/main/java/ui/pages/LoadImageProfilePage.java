@@ -1,6 +1,5 @@
 package ui.pages;
 
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -13,6 +12,8 @@ public class LoadImageProfilePage {
     public static final SelenideElement clickProfilePhoto = $x("//*[contains(@class, 'avatar-upload-button')]");
     public static final SelenideElement uploadPhoto = $x("//*[@id='me-profile-upload-ava']");
     public static final SelenideElement savePhoto = $x("//*[contains(@class, 'button--success')]");
-    public static final SelenideElement checkResult = $x("//*[contains(@class, 'jr-modal__body')]");
+    public static final SelenideElement checkUploadPhoto = $x("//*[contains(@class, 'loader__label ng-star-inserted')]");
+    public static final SelenideElement saveChanges = $x("//*[contains(@class, 'button--schedule')]");
+    public static final SelenideElement checkSuccesfullChanges = $x("//div[@class='alert-notification__text']");
 
 }

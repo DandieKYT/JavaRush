@@ -1,6 +1,5 @@
 package ui.steps;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Step;
 
@@ -9,6 +8,7 @@ import java.util.Random;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
+import static help.Generations.generationRandomText;
 import static ui.pages.StartLearningPage.*;
 
 public class StartLearningStep {
@@ -104,14 +104,15 @@ public class StartLearningStep {
     }
     @Step("Ввод email")
     public void emailInput(){
-        emailInput.setValue("Test@mail.ru");
+        emailInput.setValue(generationRandomText() + "@mail.ru");
     }
     @Step("Ввод password")
     public void passwordInput(){
-        passwordInput.setValue("Test4321");
+        passwordInput.setValue(generationRandomText() + "1245");
     }
     @Step("Нажатие на кнопку 'Создать аккаунт''")
     public void createAccount(){
         createAccount.click();
     }
+
 }

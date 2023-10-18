@@ -21,7 +21,9 @@ public class ImageTest extends TestBase {
         loadImageProfileStep.clickAvatarImage();
         loadImageProfileStep.uploadPhoto();
         loadImageProfileStep.savePhoto();
-        loadImageProfileStep.checkResult();
+        loadImageProfileStep.checkUploadPhoto();
+        loadImageProfileStep.saveChanges();
+        loadImageProfileStep.checkChanges();
 
 
     }
