@@ -32,6 +32,7 @@ public class LoadImageProfileStep {
     }
     @Step("Проверка загрузки фотографии")
     public void checkUploadPhoto(){
+        sleep(2000);
         checkUploadPhoto.should(visible);
     }
     @Step("Нажатие на кнопку 'Сохранить изменения'")
@@ -40,6 +41,6 @@ public class LoadImageProfileStep {
     }
     @Step("Проверка надписи об успешном сохранении изменений")
     public void checkChanges(){
-        checkSuccesfullChanges.should(text("Личные данные сохранены"));
+        checkSuccessFullChanges.should(text("Личные данные сохранены"));
     }
 }

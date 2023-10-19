@@ -20,8 +20,8 @@ public class ImageTest extends TestBase {
         loadImageProfileStep.openSettings();
         loadImageProfileStep.clickAvatarImage();
         loadImageProfileStep.uploadPhoto();
-        loadImageProfileStep.savePhoto();
         loadImageProfileStep.checkUploadPhoto();
+        loadImageProfileStep.savePhoto();
         loadImageProfileStep.saveChanges();
         loadImageProfileStep.checkChanges();
 
