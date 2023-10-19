@@ -25,12 +25,12 @@ public class TestBase extends Attach {
     protected static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
     static String remoteUrl = System.getProperty("selenoid");
     static boolean isRemote = Boolean.parseBoolean(System.getProperty("isRemote", config.isRemote()));
-    LoadImageProfileStep loadImageProfileStep = new LoadImageProfileStep();
-    SocialGroupsStep socialGroupsStep = new SocialGroupsStep();
-    StartLearningStep startLearnStep = new StartLearningStep();
+    UploadImageToProfileStep uploadImageToProfileStep = new UploadImageToProfileStep();
+    OpenSocialGroupsStep openSocialGroupsStep = new OpenSocialGroupsStep();
+    CreateAccountStep startLearnStep = new CreateAccountStep();
     ReviewsAndAboutUsStep reviewsAndAboutUsStep = new ReviewsAndAboutUsStep();
-    EnrollInCourseStep enrollInCourseStep = new EnrollInCourseStep();
-    SearchStep searchStep = new SearchStep();
+    EnrollInCourseJavaStep enrollInCourseJavaStep = new EnrollInCourseJavaStep();
+    SearchUsersStep searchUsersStep = new SearchUsersStep();
 
     @BeforeAll
     static void setUp() {

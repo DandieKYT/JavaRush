@@ -2,53 +2,53 @@ package ui.steps;
 
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Step;
-import ui.pages.LoadImageProfilePage;
+import ui.pages.UploadImageToProfilePage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.sleep;
 
-public class LoadImageProfileStep {
+public class UploadImageToProfileStep {
 
-    LoadImageProfilePage loadImageProfilePage = new LoadImageProfilePage();
+    UploadImageToProfilePage uploadImageToProfilePage = new UploadImageToProfilePage();
 
     @Step("Открытие вкладки 'Настройки'")
     public void openSettings() {
         WebDriverRunner.getWebDriver().manage().window().fullscreen();
         sleep(2000);
-        loadImageProfilePage.clickImage.click();
-        loadImageProfilePage.bookmarks.scrollTo();
-        loadImageProfilePage.settings.click();
+        uploadImageToProfilePage.clickImage.click();
+        uploadImageToProfilePage.bookmarks.scrollTo();
+        uploadImageToProfilePage.settings.click();
     }
 
     @Step("Нажатие на фотографию профиля")
     public void clickAvatarImage() {
-        loadImageProfilePage.clickProfilePhoto.click();
+        uploadImageToProfilePage.clickProfilePhoto.click();
     }
 
     @Step("Загрузка фотографии")
     public void uploadPhoto() {
-        loadImageProfilePage.uploadPhoto.uploadFromClasspath("testFilePhoto.jpg");
+        uploadImageToProfilePage.uploadPhoto.uploadFromClasspath("testFilePhoto.jpg");
     }
 
     @Step("Сохранение фотографии профиля")
     public void savePhoto() {
-        loadImageProfilePage.savePhoto.click();
+        uploadImageToProfilePage.savePhoto.click();
     }
 
     @Step("Проверка загрузки фотографии")
     public void checkUploadPhoto() {
         sleep(2000);
-        loadImageProfilePage.checkUploadPhoto.should(visible);
+        uploadImageToProfilePage.checkUploadPhoto.should(visible);
     }
 
     @Step("Нажатие на кнопку 'Сохранить изменения'")
     public void saveChanges() {
-        loadImageProfilePage.saveChanges.click();
+        uploadImageToProfilePage.saveChanges.click();
     }
 
     @Step("Проверка надписи об успешном сохранении изменений")
     public void checkChanges() {
-        loadImageProfilePage.checkSuccessFullChanges.should(text("Личные данные сохранены"));
+        uploadImageToProfilePage.checkSuccessFullChanges.should(text("Личные данные сохранены"));
     }
 }

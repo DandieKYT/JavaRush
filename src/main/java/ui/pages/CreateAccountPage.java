@@ -5,7 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class StartLearningPage {
+public class CreateAccountPage {
 
     public final SelenideElement startLearnButton = $x("//*[@id='button_menu_start_learning_unauthorized_user']");
     public final SelenideElement beginLearnButton = $x("//*[@id='id_button_jr_welcome_start_learning_1']");

@@ -13,17 +13,17 @@ public class UploadImageToProfileTest extends TestBase {
     @Test
     public void imageProfileUpload() throws Exception {
         open("/");
-        socialGroupsStep.closeCookie();
+        openSocialGroupsStep.closeCookie();
         stepsForWebApp();
         refresh();
         WebDriverRunner.getWebDriver().manage().window().fullscreen();
         sleep(5000);
-        loadImageProfileStep.openSettings();
-        loadImageProfileStep.clickAvatarImage();
-        loadImageProfileStep.uploadPhoto();
-        loadImageProfileStep.checkUploadPhoto();
-        loadImageProfileStep.savePhoto();
-        loadImageProfileStep.saveChanges();
-        loadImageProfileStep.checkChanges();
+        uploadImageToProfileStep.openSettings();
+        uploadImageToProfileStep.clickAvatarImage();
+        uploadImageToProfileStep.uploadPhoto();
+        uploadImageToProfileStep.checkUploadPhoto();
+        uploadImageToProfileStep.savePhoto();
+        uploadImageToProfileStep.saveChanges();
+        uploadImageToProfileStep.checkChanges();
     }
 }

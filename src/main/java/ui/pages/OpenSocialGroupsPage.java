@@ -4,7 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-public class SocialGroupsPage {
+public class OpenSocialGroupsPage {
 
     public final SelenideElement closeCookie = $x("//button[text()='Принять и закрыть']");
     public final SelenideElement scrollToButton = $x("//img[@alt='Google Play']");

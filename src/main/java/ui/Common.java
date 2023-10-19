@@ -1,10 +1,10 @@
 package ui;
 
-import ui.steps.StartLearningStep;
+import ui.steps.CreateAccountStep;
 
 public class Common {
 
-    static StartLearningStep learnStep = new StartLearningStep();
+    static CreateAccountStep learnStep = new CreateAccountStep();
 
     public static void stepsForWebApp() {
         learnStep.startLearnButton();

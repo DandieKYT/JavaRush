@@ -2,29 +2,29 @@ package ui.steps;
 
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
-import ui.pages.SearchPage;
+import ui.pages.SearchUsersPage;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.sleep;
 
-public class SearchStep {
+public class SearchUsersStep {
 
-    SearchPage searchPage = new SearchPage();
+    SearchUsersPage searchUsersPage = new SearchUsersPage();
 
     @Step("Открытие вкладки 'Пользователи'")
     public void user() {
         open("/");
-        searchPage.users.click();
+        searchUsersPage.users.click();
     }
 
     @Step("Поиск пользователя под ником 'Dandie KYT'")
     public void searchUser() {
-        searchPage.searchUser.setValue("Dandie KYT").pressEnter();
+        searchUsersPage.searchUser.setValue("Dandie KYT").pressEnter();
         sleep(5000);
     }
 
     @Step("Проверка результата поиска")
     public void checkoutResult() {
-        searchPage.checkoutResult.shouldBe(Condition.text("Dandie KYT"));
+        searchUsersPage.checkoutResult.shouldBe(Condition.text("Dandie KYT"));
     }
 }

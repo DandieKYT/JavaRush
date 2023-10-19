@@ -5,7 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
-public class LoadImageProfilePage {
+public class UploadImageToProfilePage {
 
     public final SelenideElement settings = $("a.sidebar-nav-link[href='/settings']");
     public final SelenideElement clickImage = $x("//jr-icon[@class='sidebar-nav__toggle-icon']//*[name()='svg']");
