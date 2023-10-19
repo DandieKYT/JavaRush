@@ -16,6 +16,4 @@ public class LikeCommentPage {
     public final SelenideElement addLike = $(AppiumBy.id("com.hitechrush.jaxarush:id/commentLike"));
     public final SelenideElement secondAddLike = $(AppiumBy.id("com.hitechrush.jaxarush:id/itemLikeDesc"));
     public final SelenideElement deleteComment = $(AppiumBy.id("com.hitechrush.jaxarush:id/deleteButton"));
-
-
 }
