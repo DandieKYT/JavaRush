@@ -4,9 +4,9 @@ import io.qameta.allure.Step;
 import mobile.pages.LikeCommentPage;
 import mobile.pages.LikeLessonPage;
 
-import static mobile.pages.LikeLessonPage.*;
 
 public class LikeLessonStep {
+
     LikeLessonPage likeLessonPage = new LikeLessonPage();
     LikeCommentPage likeCommentPage = new LikeCommentPage();
 
@@ -21,7 +21,7 @@ public class LikeLessonStep {
     }
 
     @Step("Получение количества лайков")
-    public int parse () {
+    public int parse() {
         String getParse = likeCommentPage.checkLikeValue.getText();
         Integer.parseInt(getParse);
         return Integer.parseInt(getParse);

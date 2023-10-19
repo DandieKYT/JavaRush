@@ -10,7 +10,6 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static help.Generations.generationRandomText;
-import static ui.pages.StartLearningPage.*;
 
 public class StartLearningStep {
 
@@ -111,5 +110,4 @@ public class StartLearningStep {
     public void createAccount() {
         startLearningPage.createAccount.click();
     }
-
 }

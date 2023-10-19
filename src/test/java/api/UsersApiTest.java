@@ -10,13 +10,12 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static io.restassured.RestAssured.given;
-
-
 import static api.specs.Specification.*;
+import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class UsersApiTest {
+
     private static final String expectedUserId = "332";
 
     @Test
@@ -62,7 +61,7 @@ public class UsersApiTest {
         assertThat(932598).isEqualTo(data.id);
         Assertions.assertEquals(0, data.likes.count);
         Assertions.assertEquals(4, data.owner.level);
-        Assertions.assertEquals(false, data.attributes.answer);
+        Assertions.assertFalse(data.attributes.answer);
         Assertions.assertEquals("anonymous#2167660", data.getOwner().key);
     }
 
@@ -112,11 +111,11 @@ public class UsersApiTest {
                 .spec(responseSpec)
                 .extract().as(Users[].class);
         Users actualUsers = Arrays.stream(data)
-                .filter(users ->String.valueOf(users.getUserId()).contains(expectedUserId)) //проверка по частичному соответсвию ключа
+                .filter(users -> String.valueOf(users.getUserId()).contains(expectedUserId)) //проверка по частичному соответсвию ключа
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
         Integer actualId = Integer.valueOf(actualUsers.getId());
-        Assertions.assertEquals(actualUsers.getUserId(),actualId ); // проверка по частичному соответствию id
+        Assertions.assertEquals(actualUsers.getUserId(), actualId); // проверка по частичному соответствию id
 
     }
 }

@@ -10,6 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class ReviewsAndAboutUsStep {
 
     ReviewsAndAboutUsPage reviewsAndAboutUsPage = new ReviewsAndAboutUsPage();
+
     @Step("Открытие вкладки")
     public void opensTitle(String param) {
         open("/");

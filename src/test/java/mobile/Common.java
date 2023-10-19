@@ -5,8 +5,10 @@ import mobile.steps.AuthenticationStep;
 import org.aeonbits.owner.ConfigFactory;
 
 public class Common {
+
     static AuthenticationStep auth = new AuthenticationStep();
-     static BrowserstackConfig config = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
+    static BrowserstackConfig config = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
+
     public static void stepsForApp() {
         auth.signInLink();
         auth.secretKeyLink();

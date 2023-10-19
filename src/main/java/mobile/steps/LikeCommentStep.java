@@ -3,12 +3,8 @@ package mobile.steps;
 
 import io.qameta.allure.Step;
 import mobile.pages.LikeCommentPage;
-import org.junit.jupiter.api.Assertions;
-
 
 import static com.codeborne.selenide.Selenide.sleep;
-
-import static mobile.pages.LikeCommentPage.*;
 
 public class LikeCommentStep {
 
@@ -19,7 +15,6 @@ public class LikeCommentStep {
         likeCommentPage.commentButton.click();
         sleep(3000);
     }
-
 
     @Step("Добавление комментария")
     public void addComment() {
@@ -48,14 +43,15 @@ public class LikeCommentStep {
     }
 
     @Step("Удаление комментария")
-    public void deleteComm () {
+    public void deleteComm() {
         likeCommentPage.deleteComment.click();
     }
+
     @Step("Получение количества лайков")
-        public  int parse () {
-            String getParse = likeCommentPage.checkLikeValue.getText();
-            Integer.parseInt(getParse);
-            return Integer.parseInt(getParse);
-        }
+    public int parse() {
+        String getParse = likeCommentPage.checkLikeValue.getText();
+        Integer.parseInt(getParse);
+        return Integer.parseInt(getParse);
     }
+}
 

@@ -8,14 +8,14 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static io.restassured.RestAssured.*;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.hamcrest.Matchers.is;
 import static api.specs.Specification.*;
+import static io.restassured.RestAssured.given;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @Tag("API")
 public class
 GamesApiTest {
+
     private static final String keyMinesweeper = "com.javarush.games.minesweeper";
     private static final String expectedDescriptionMinesweeper = "Сапер";
 
@@ -34,6 +34,7 @@ GamesApiTest {
         Assertions.assertEquals("AVAILABLE", data.status);
 
     }
+
     @Test
     @DisplayName("Проверка названия, урла, статуса на странице игры 'Змейка'")
     void snakeTest() {
@@ -49,6 +50,7 @@ GamesApiTest {
         Assertions.assertEquals("AVAILABLE", data.status);
 
     }
+
     @Test
     @DisplayName("Проверка названия, урла, статуса на странице '2048'")
     void twoThousandFortyEightTest() {
@@ -63,9 +65,10 @@ GamesApiTest {
         Assertions.assertEquals("2048", data.title);
         Assertions.assertEquals("AVAILABLE", data.status);
     }
+
     @Test
     @DisplayName("Проверка названия игры по id")
-    void checkingForIdGame(){
+    void checkingForIdGame() {
         Games[] data = given()
                 .spec(projectSpec)
                 .when()
@@ -81,6 +84,4 @@ GamesApiTest {
 
         assertThat(actualDescription).contains(expectedDescriptionMinesweeper); // проверка по частичному соответствию id
     }
-
-
 }

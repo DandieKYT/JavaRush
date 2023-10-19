@@ -6,14 +6,24 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SomeUser {
+
     public int id;
+
     public String key;
+
     public String referenceKey;
+
     public String type;
+
     public String title;
+
     public String description;
+
     public String content;
+
     public Users user;
+
     public String visibilityStatus;
+
     public String language;
 }

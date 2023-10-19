@@ -7,7 +7,6 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class LikeLessonPage {
 
-    public final SelenideElement likeCheck = $(AppiumBy.id("com.hitechrush.jaxarush:id/lectureLikesCount"));
     public final SelenideElement likeButton = $(AppiumBy.id("com.hitechrush.jaxarush:id/likesButton"));
     public final SelenideElement clickOnLike = $(AppiumBy.id("com.hitechrush.jaxarush:id/itemLikeDesc"));
 }

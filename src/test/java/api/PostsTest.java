@@ -7,8 +7,9 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
+import static api.specs.Specification.requestSpec;
+import static api.specs.Specification.responseSpec;
 import static io.restassured.RestAssured.given;
-import static api.specs.Specification.*;
 
 public class PostsTest {
     private static final String idJavaSyntax = "857";
@@ -17,6 +18,7 @@ public class PostsTest {
     private static final String levelTaskLastDigit = "2";
     private static final String expectJavaSyntax = "Java Syntax Pro";
     private static final String titleFollowingAnAd = "Я по объявлению…";
+
     @Test
     @DisplayName("Проверка соответсвия userID и ID")
     void checkingTitleByIdJavaSyntax() {
@@ -28,13 +30,14 @@ public class PostsTest {
                 .spec(responseSpec)
                 .extract().as(Tasks[].class);
         Tasks actualTasks = Arrays.stream(data)
-                .filter(tasks ->String.valueOf(tasks.getId()).contains(idJavaSyntax)) //проверка по частичному соответсвию ключа
+                .filter(tasks -> String.valueOf(tasks.getId()).contains(idJavaSyntax)) //проверка по частичному соответсвию ключа
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
         String actualTitle = String.valueOf(actualTasks.quest.getTitle());
-        Assertions.assertEquals(expectJavaSyntax, actualTitle ); // проверка по частичному соответствию id
+        Assertions.assertEquals(expectJavaSyntax, actualTitle); // проверка по частичному соответствию id
 
     }
+
     @Test
     @DisplayName("Проверка id по названию урока")
     void checkingIdByTittleLesson() {
@@ -46,13 +49,14 @@ public class PostsTest {
                 .spec(responseSpec)
                 .extract().as(Tasks[].class);
         Tasks actualTasks = Arrays.stream(data)
-                .filter(tasks ->tasks.getTitle().contains(titleFollowingAnAd)) //проверка по частичному соответсвию ключа
+                .filter(tasks -> tasks.getTitle().contains(titleFollowingAnAd)) //проверка по частичному соответсвию ключа
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
         String actualId = String.valueOf(actualTasks.getId());
-        Assertions.assertEquals(adFollowingAnAd, actualId ); // проверка по частичному соответствию id
+        Assertions.assertEquals(adFollowingAnAd, actualId); // проверка по частичному соответствию id
 
     }
+
     @Test
     @DisplayName("Проверка id по названию урока")
     void checkingLevel() {
@@ -64,11 +68,11 @@ public class PostsTest {
                 .spec(responseSpec)
                 .extract().as(Tasks[].class);
         Tasks actualTasks = Arrays.stream(data)
-                .filter(tasks ->String.valueOf(tasks.getId()).contains(lastDigitNumberId)) //проверка по частичному соответсвию ключа
+                .filter(tasks -> String.valueOf(tasks.getId()).contains(lastDigitNumberId)) //проверка по частичному соответсвию ключа
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
         String actualLevel = String.valueOf(actualTasks.getQuest().getLevel());
-        Assertions.assertEquals(levelTaskLastDigit, actualLevel ); // проверка по частичному соответствию id
+        Assertions.assertEquals(levelTaskLastDigit, actualLevel); // проверка по частичному соответствию id
 
     }
 }

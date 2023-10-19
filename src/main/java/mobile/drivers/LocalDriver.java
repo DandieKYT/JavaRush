@@ -16,7 +16,17 @@ import static io.appium.java_client.remote.AutomationName.ANDROID_UIAUTOMATOR2;
 import static io.appium.java_client.remote.MobilePlatform.ANDROID;
 
 public class LocalDriver implements WebDriverProvider {
-     static BrowserstackConfig mobile = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
+
+    static BrowserstackConfig mobile = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
+
+    public static URL getAppiumServerUrl() {
+        try {
+            return new URL(mobile.url());
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     @Nonnull
     @Override
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
@@ -33,14 +43,4 @@ public class LocalDriver implements WebDriverProvider {
 
         return new AndroidDriver(getAppiumServerUrl(), options);
     }
-
-    public static URL getAppiumServerUrl() {
-        try {
-            return new URL(mobile.url());
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-//
 }

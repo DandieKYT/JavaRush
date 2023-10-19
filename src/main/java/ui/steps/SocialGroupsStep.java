@@ -7,7 +7,6 @@ import ui.pages.SocialGroupsPage;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
-import static ui.pages.SocialGroupsPage.*;
 
 public class SocialGroupsStep {
 

@@ -5,12 +5,10 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
-
 @Tag("Mobile")
 
 public class CourseTask extends TestBaseMobile {
+
     @CsvSource(value = {
             "course,      Java course",
             "tasks,             Tasks",

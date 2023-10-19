@@ -3,7 +3,9 @@ package ui;
 import ui.steps.StartLearningStep;
 
 public class Common {
-   static StartLearningStep learnStep = new StartLearningStep();
+
+    static StartLearningStep learnStep = new StartLearningStep();
+
     public static void stepsForWebApp() {
         learnStep.startLearnButton();
         learnStep.beginLearnButton();

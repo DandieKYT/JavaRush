@@ -1,45 +1,43 @@
 package mobile.steps;
 
-import io.qameta.allure.Step;
 import help.Generations;
+import io.qameta.allure.Step;
 import mobile.pages.AuthenticationPage;
 import org.junit.jupiter.api.Assertions;
 
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
-import static io.qameta.allure.Allure.step;
-import static mobile.pages.AuthenticationPage.*;
 
 public class AuthenticationStep {
-    String name;
 
+    String name;
     AuthenticationPage authenticationPage = new AuthenticationPage();
+
     @Step("Переход назад")
-public void navigateMenu() {
+    public void navigateMenu() {
         authenticationPage.goBackButton.click();
-}
+    }
 
     @Step("Переход назад два раза")
     public void goBackButton() {
-            for (int i = 0; i < 2; i++){
-                authenticationPage.goBackButton.shouldBe((visible).because("Картинка не прогрузилась"));
-                authenticationPage.goBackButton.click();
-            }
+        for (int i = 0; i < 2; i++) {
+            authenticationPage.goBackButton.shouldBe((visible).because("Картинка не прогрузилась"));
+            authenticationPage.goBackButton.click();
+        }
     }
 
     @Step("Открытие первого урока")
     public void openLesson() {
-             for (int i = 0; i < 2; i++){
-                 authenticationPage.openLesson.click();
-            }
+        for (int i = 0; i < 2; i++) {
+            authenticationPage.openLesson.click();
+        }
     }
 
     @Step("Закрытие второго баннера")
     public void closeSecondBanner() {
-            for (int i = 0; i < 4; i++){
-                authenticationPage.closeSecondBanner.click();
-            }
+        for (int i = 0; i < 4; i++) {
+            authenticationPage.closeSecondBanner.click();
+        }
     }
 
     @Step("Закрытие баннера")
@@ -49,7 +47,7 @@ public void navigateMenu() {
 
     @Step("Нажатие на ссылку 'Sign In'")
     public void signInLink() {
-            sleep(1000);
+        sleep(1000);
         authenticationPage.signInLink.shouldBe(exist);
         authenticationPage.signInLink.click();
     }
@@ -71,7 +69,7 @@ public void navigateMenu() {
 
     @Step("Генерация рандомного текста")
     public void someText() {
-            name = Generations.generationRandomText();
-            Assertions.assertEquals((name),text(name));
+        name = Generations.generationRandomText();
+        Assertions.assertEquals((name), text(name));
     }
 }

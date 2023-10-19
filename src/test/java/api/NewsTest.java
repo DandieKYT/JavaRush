@@ -7,11 +7,13 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
+import static api.specs.Specification.newsSpec;
+import static api.specs.Specification.responseSpec;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
-import static api.specs.Specification.*;
 
 public class NewsTest {
+
     private static final String expectedKey = "anonymous#3358758";
     private static final String expectedUserId = "3358758";
     private static final String expectedPartKey = "anonymous#336";
@@ -22,13 +24,13 @@ public class NewsTest {
     private static final String partDescription = "пробует решить задачу";
     private static final String expectedCountry = "Russian Federation";
     private static final String partTitle = "quest";
-    private static long expectedTime = Long.parseLong("1696865323000");
+    private static final long expectedTime = Long.parseLong("1696865323000");
 
 
     @Test
     @Disabled
     @DisplayName("Проверка по полному соответствию активности пользователя")
-    void checkingUserActivity(){
+    void checkingUserActivity() {
         Activities[] data = given()
                 .spec(newsSpec)
                 .when()
@@ -48,7 +50,7 @@ public class NewsTest {
 
     @Test
     @DisplayName("Проверка по частичному соответствию активности пользователя")
-    void checkingForPartialMatchingOfUser(){
+    void checkingForPartialMatchingOfUser() {
         Activities[] data = given()
                 .spec(newsSpec)
                 .when()
@@ -66,9 +68,10 @@ public class NewsTest {
         assertThat(foundUserId).contains(expectedPartUserId); // проверка по частичному соответствию id
 
     }
+
     @Test
     @DisplayName("Проверка по частичному соответствию активности пользователя")
-    void checkingForExpectedType(){
+    void checkingForExpectedType() {
         Activities[] data = given()
                 .spec(newsSpec)
                 .when()
@@ -84,9 +87,10 @@ public class NewsTest {
 
         assertThat(activityId).contains(activityPartId); // проверка по частичному соответствию id
     }
+
     @Test
     @DisplayName("Проверка по частичному соответствию активности пользователя")
-    void checkingForPartDescription(){
+    void checkingForPartDescription() {
         Activities[] data = given()
                 .spec(newsSpec)
                 .when()

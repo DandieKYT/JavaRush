@@ -10,12 +10,11 @@ import java.util.Random;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.sleep;
-import static io.qameta.allure.Allure.step;
-import static mobile.pages.QuizPage.*;
 
 public class QuizStep {
 
     QuizPage quizPage = new QuizPage();
+
     public static int getRandomNumber() {
         Random random = new Random();
         return random.nextInt(5);
@@ -34,7 +33,7 @@ public class QuizStep {
 
     @Step("Проверка создания курса")
     public void checkoutCourse() {
-            Selenide.sleep(11000);
+        Selenide.sleep(11000);
         quizPage.checkoutCourse.shouldBe(text("Ваш персональный курс готов"));
     }
 
@@ -76,7 +75,7 @@ public class QuizStep {
     @Step("Нажатие на кнопку 'Нет'")
     public void experienceNo() {
         quizPage.experienceNo.click();
-            sleep(2000);
+        sleep(2000);
     }
 
     @Step("Проверка заголовка страницы")
@@ -92,6 +91,6 @@ public class QuizStep {
     @Step("Проверка заголовка страницы")
     public void startQuiz() {
         quizPage.startQuiz.click();
-            Selenide.sleep(2000);
+        Selenide.sleep(2000);
     }
 }

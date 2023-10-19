@@ -1,7 +1,6 @@
 package ui;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.WebConfig;
 import help.Attach;
@@ -13,9 +12,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
 import ui.steps.*;
 
 import java.util.Map;
@@ -57,15 +54,6 @@ public class TestBase extends Attach {
 
     }
 
-    @BeforeEach
-    void addListener() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
-                .screenshots(false)
-                .savePageSource(true)
-        );
-        closeWebDriver();
-    }
-
     @AfterAll
     static void addAttachments() {
         Attach.pageSource();
@@ -74,6 +62,15 @@ public class TestBase extends Attach {
         if (isRemote) {
             Attach.addVideoSelenoid();
         }
+    }
+
+    @BeforeEach
+    void addListener() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
+                .screenshots(false)
+                .savePageSource(true)
+        );
+        closeWebDriver();
     }
 }
 

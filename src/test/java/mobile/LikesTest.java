@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import static help.Generations.generationRandomText;
 
 public class LikesTest extends TestBaseMobile {
+
     @Test
     @DisplayName("Добавление лайка на коментарий")
     public void likeToComment() {

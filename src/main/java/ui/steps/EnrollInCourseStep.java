@@ -5,10 +5,10 @@ import ui.pages.EnrollInCoursePage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
-import static ui.pages.EnrollInCoursePage.*;
 
 public class EnrollInCourseStep {
     EnrollInCoursePage enrollInCoursePage = new EnrollInCoursePage();
+
     @Step("Открытие вкладки Java-университет")
     public void openJavaUniversity() {
         open("/");

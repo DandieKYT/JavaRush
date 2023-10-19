@@ -15,7 +15,7 @@ public class CreateAccountTest extends TestBase {
 
     @Test
     @DisplayName("Создание аккаунта в JAVA-Rush")
-    public  void startLearnJava() {
+    public void startLearnJava() {
         learnStep.startLearnButton();
         learnStep.beginLearnButton();
         learnStep.russianLanguageButton();

@@ -9,8 +9,9 @@ import static ui.Common.stepsForWebApp;
 
 @Tag("UITest")
 public class ImageTest extends TestBase {
+
     @Test
-    public void imageProfileUpload() throws Exception{
+    public void imageProfileUpload() throws Exception {
         open("/");
         groupsStep.closeCookie();
         stepsForWebApp();
@@ -24,7 +25,5 @@ public class ImageTest extends TestBase {
         loadImageProfileStep.savePhoto();
         loadImageProfileStep.saveChanges();
         loadImageProfileStep.checkChanges();
-
-
     }
 }

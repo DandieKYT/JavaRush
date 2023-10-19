@@ -2,12 +2,12 @@ package api;
 
 import org.junit.jupiter.api.Test;
 
-import static io.restassured.RestAssured.given;
-import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
-import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static api.specs.Specification.*;
+import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 public class ShemesTest {
+
     @Test
     public void intershipTest() {
         given()
@@ -29,6 +29,7 @@ public class ShemesTest {
                 .spec(responseSpec)
                 .body(matchesJsonSchemaInClasspath("schemes/project1.json"));
     }
+
     @Test
     public void newsTest() {
         given()
@@ -39,6 +40,7 @@ public class ShemesTest {
                 .spec(responseSpec)
                 .body(matchesJsonSchemaInClasspath("schemes/news.json"));
     }
+
     @Test
     public void quizzesTest() {
         given()
@@ -49,6 +51,7 @@ public class ShemesTest {
                 .spec(responseSpec)
                 .body(matchesJsonSchemaInClasspath("schemes/quizzes.json"));
     }
+
     @Test
     public void projectsTest() {
         given()

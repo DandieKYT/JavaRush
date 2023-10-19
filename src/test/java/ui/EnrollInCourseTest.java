@@ -11,11 +11,11 @@ import org.junit.jupiter.api.Test;
 @Owner("Кудрявцев Даниил")
 @Feature("Автотесты для UI")
 @Story("Раздел курс по Java")
-public class EnrollInCourseTest extends TestBase{
+public class EnrollInCourseTest extends TestBase {
 
     @Test
     @DisplayName("Запись на курс по JAVA")
-    public void enrollInCourse(){
+    public void enrollInCourse() {
         enrollInCourseStep.openJavaUniversity();
         enrollInCourseStep.clickButtonEnrollToCourse();
         enrollInCourseStep.checkoutForm();

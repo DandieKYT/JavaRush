@@ -1,4 +1,5 @@
 package help;
+
 import com.codeborne.selenide.WebDriverRunner;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -77,7 +78,7 @@ public class PhoneManagerHelper {
     @Step("Нажатие на рейтинге 5")
     public static void tapByCoordinates(int x, int y) {
         AppiumDriver driver = (AppiumDriver) WebDriverRunner.getWebDriver();
-        Point center = new Point(x,y);
+        Point center = new Point(x, y);
         W3cActions.doTap(driver, center, 0);
     }
 }

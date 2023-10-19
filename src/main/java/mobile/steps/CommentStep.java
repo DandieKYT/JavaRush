@@ -7,9 +7,10 @@ import mobile.pages.CommentPage;
 import static com.codeborne.selenide.Selenide.sleep;
 
 
-
 public class CommentStep {
+
     CommentPage commentPage = new CommentPage();
+
     @Step("Открытие коментариев")
     public void commentButton() {
         commentPage.commentButton.click();

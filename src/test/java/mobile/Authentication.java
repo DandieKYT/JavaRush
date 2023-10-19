@@ -8,7 +8,9 @@ import org.junit.jupiter.api.Test;
 
 @Tag("Mobile")
 public class Authentication extends TestBaseMobile {
+
     static BrowserstackConfig config = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
+
     @Test
     @DisplayName("Авторизация по секретному ключу")
     public void loginBySecretKey() {

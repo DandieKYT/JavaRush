@@ -15,9 +15,10 @@ public class Commentary {
     public Owner owner;
 
     public Likes likes;
+
     @Data
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static class Owner{
+    public static class Owner {
         public int id, userId, level, rating;
         public String key, pictureUrl, displayName, publicStatus;
         public Object position, job, country, city, publicStatusMessage,
@@ -30,10 +31,10 @@ public class Commentary {
         public int count;
         public Object status;
     }
+
     @Data
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static class Attributes{
+    public static class Attributes {
         public boolean answer, useful;
     }
-
 }

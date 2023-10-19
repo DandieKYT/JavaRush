@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 @Tag("Mobile")
 public class CommentTest extends TestBaseMobile {
+
     @Test
     public void commTest() {
         Common.stepsForApp();

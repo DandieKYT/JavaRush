@@ -6,10 +6,11 @@ import ui.pages.SearchPage;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.sleep;
-import static ui.pages.SearchPage.*;
 
 public class SearchStep {
+
     SearchPage searchPage = new SearchPage();
+
     @Step("Открытие вкладки 'Пользователи'")
     public void user() {
         open("/");
@@ -19,7 +20,7 @@ public class SearchStep {
     @Step("Поиск пользователя под ником 'Dandie KYT'")
     public void searchUser() {
         searchPage.searchUser.setValue("Dandie KYT").pressEnter();
-            sleep(5000);
+        sleep(5000);
     }
 
     @Step("Проверка результата поиска")

@@ -3,9 +3,11 @@ package mobile;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+
 //
 @Tag("Mobile")
 public class GetCourseTest extends TestBaseMobile {
+
     @Test
     @DisplayName("Прохождение опроса для QA с последующим получением курса")
     void takingTheQASurveyAndThenReceivingTheCourse() {

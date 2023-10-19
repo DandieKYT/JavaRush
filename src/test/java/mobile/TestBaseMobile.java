@@ -3,8 +3,6 @@ package mobile;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.WebConfig;
-import help.Generations;
-import help.PhoneManagerHelper;
 import io.qameta.allure.selenide.AllureSelenide;
 import mobile.drivers.BrowserstackDriver;
 import mobile.drivers.LocalDriver;
@@ -28,10 +26,11 @@ public class TestBaseMobile {
     CourseTaskStep courseTask = new CourseTaskStep();
     LikeLessonStep likeLessonStep = new LikeLessonStep();
     CommentStep comment = new CommentStep();
+
     @BeforeAll
     static void beforeAll() {
         Configuration.browser = LocalDriver.class.getName();
-        if (isRemote){
+        if (isRemote) {
             Configuration.browser = BrowserstackDriver.class.getName();
         }
         Configuration.pageLoadStrategy = "eager";
@@ -44,7 +43,6 @@ public class TestBaseMobile {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         open();
     }
-
 
     @AfterEach
     void afterEach() {
