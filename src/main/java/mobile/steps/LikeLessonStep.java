@@ -1,28 +1,26 @@
 package mobile.steps;
 
 import io.qameta.allure.Step;
-import mobile.pages.LikeCommentPage;
-import mobile.pages.LikeLessonPage;
+import mobile.pages.LikePage;
 
 
 public class LikeLessonStep {
 
-    LikeLessonPage likeLessonPage = new LikeLessonPage();
-    LikeCommentPage likeCommentPage = new LikeCommentPage();
+    LikePage likePage = new LikePage();
 
     @Step("Нажатие на кнопку лайка")
     public void likeButton() {
-        likeLessonPage.likeButton.click();
+        likePage.likeButton.click();
     }
 
     @Step("Подтверждение лайка")
     public void clickOnLike() {
-        likeLessonPage.clickOnLike.click();
+        likePage.clickOnLike.click();
     }
 
     @Step("Получение количества лайков")
     public int parse() {
-        String getParse = likeCommentPage.checkLikeValue.getText();
+        String getParse = likePage.checkLikeValue.getText();
         Integer.parseInt(getParse);
         return Integer.parseInt(getParse);
     }

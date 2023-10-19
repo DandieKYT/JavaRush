@@ -2,12 +2,14 @@ package mobile;
 
 import help.Generations;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @Tag("Mobile")
 public class CommentTest extends TestBaseMobile {
 
+    @DisplayName("Добавление коментария и проверка его автора и текста")
     @Test
     public void commTest() {
         Common.stepsForApp();

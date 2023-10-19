@@ -7,7 +7,7 @@ import io.appium.java_client.AppiumBy;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class QuizPage {
+public class CreateAccountPage {
 
     public final ElementsCollection startButton = $$(AppiumBy.id("com.hitechrush.jaxarush:id/start"));
     public final ElementsCollection secondStartButton = $$(AppiumBy.id("com.hitechrush.jaxarush:id/startQuiz1"));

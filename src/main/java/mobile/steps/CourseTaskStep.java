@@ -1,22 +1,22 @@
 package mobile.steps;
 
 import io.qameta.allure.Step;
-import mobile.pages.CourseTaskPage;
+import mobile.pages.OpenCourseTaskPage;
 
 import static com.codeborne.selenide.Condition.text;
 
 
 public class CourseTaskStep {
 
-    CourseTaskPage courseTaskPage = new CourseTaskPage();
+    OpenCourseTaskPage openCourseTaskPage = new OpenCourseTaskPage();
 
     @Step("Открытие вкладки")
     public void tag(String param) {
-        courseTaskPage.tag.find(text(param)).click();
+        openCourseTaskPage.tag.find(text(param)).click();
     }
 
     @Step("Проверка содержимого вкладки")
     public void checkTitle(String expectedText) {
-        courseTaskPage.checkTitle.shouldBe(text(expectedText));
+        openCourseTaskPage.checkTitle.shouldBe(text(expectedText));
     }
 }

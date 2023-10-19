@@ -2,54 +2,54 @@ package mobile.steps;
 
 
 import io.qameta.allure.Step;
-import mobile.pages.LikeCommentPage;
+import mobile.pages.LikePage;
 
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class LikeCommentStep {
 
-    LikeCommentPage likeCommentPage = new LikeCommentPage();
+    LikePage likePage = new LikePage();
 
     @Step("Нажатие на кнопку коментария")
     public void commentButton() {
-        likeCommentPage.commentButton.click();
+        likePage.commentButton.click();
         sleep(3000);
     }
 
     @Step("Добавление комментария")
     public void addComment() {
-        likeCommentPage.addComment.click();
+        likePage.addComment.click();
     }
 
     @Step("Написание текста коментария")
     public void addSomeText(String textComm) {
-        likeCommentPage.addSomeText.click();
-        likeCommentPage.addSomeText.sendKeys(textComm);
+        likePage.addSomeText.click();
+        likePage.addSomeText.sendKeys(textComm);
     }
 
     @Step("Отправка коментария")
     public void sendComment() {
-        likeCommentPage.sendComment.click();
+        likePage.sendComment.click();
     }
 
     @Step("Нажатие на кнопку лайка")
     public void addLike() {
-        likeCommentPage.addLike.click();
+        likePage.addLike.click();
     }
 
     @Step("Добавление лайка коментарию")
     public void secondAddLike() {
-        likeCommentPage.secondAddLike.click();
+        likePage.secondAddLike.click();
     }
 
     @Step("Удаление комментария")
     public void deleteComm() {
-        likeCommentPage.deleteComment.click();
+        likePage.deleteComment.click();
     }
 
     @Step("Получение количества лайков")
     public int parse() {
-        String getParse = likeCommentPage.checkLikeValue.getText();
+        String getParse = likePage.checkLikeValue.getText();
         Integer.parseInt(getParse);
         return Integer.parseInt(getParse);
     }
