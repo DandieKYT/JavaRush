@@ -14,7 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @Tag("API")
 public class
-GamesApiTest {
+CheckGamesResponseTest {
 
     private static final String keyMinesweeper = "com.javarush.games.minesweeper";
     private static final String expectedDescriptionMinesweeper = "Сапер";

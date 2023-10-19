@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static ui.Common.stepsForWebApp;
 
 @Tag("UITest")
-public class ImageTest extends TestBase {
+public class UploadImageToProfileTest extends TestBase {
 
     @Test
     public void imageProfileUpload() throws Exception {

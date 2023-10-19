@@ -6,7 +6,7 @@ import static api.specs.Specification.*;
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
-public class ShemesTest {
+public class ShemesResponseTest {
 
     @Test
     public void intershipTest() {

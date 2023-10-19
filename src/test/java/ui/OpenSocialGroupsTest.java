@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 @Owner("Кудрявцев Даниил")
 @Story("Переход в соц сети")
 @Feature("Автотесты для UI")
-public class SocialGroupTest extends TestBase {
+public class OpenSocialGroupsTest extends TestBase {
 
     @Test
     @DisplayName("Открытие страницы сайта в телеграм")

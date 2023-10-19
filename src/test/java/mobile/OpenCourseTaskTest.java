@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 @Tag("Mobile")
 
-public class CourseTask extends TestBaseMobile {
+public class OpenCourseTaskTest extends TestBaseMobile {
 
     @CsvSource(value = {
             "course,      Java course",

@@ -10,14 +10,14 @@ import org.junit.jupiter.api.Test;
 @Tag("UITest")
 @Owner("Кудрявцев Даниил")
 @Feature("Автотесты для UI")
-@Story("Раздел курс по Java")
-public class EnrollInCourseTest extends TestBase {
+@Story("Поиск в разделе 'Пользователи'")
+public class SearchUsersTest extends TestBase {
 
     @Test
-    @DisplayName("Запись на курс по JAVA")
-    public void enrollInCourse() {
-        enrollInCourseStep.openJavaUniversity();
-        enrollInCourseStep.clickButtonEnrollToCourse();
-        enrollInCourseStep.checkoutForm();
+    @DisplayName("Поиск пользователя по имени")
+    public void searchUser() {
+        searchStep.user();
+        searchStep.searchUser();
+        searchStep.checkoutResult();
     }
 }

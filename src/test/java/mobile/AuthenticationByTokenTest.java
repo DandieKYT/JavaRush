@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @Tag("Mobile")
-public class Authentication extends TestBaseMobile {
+public class AuthenticationByTokenTest extends TestBaseMobile {
 
     static BrowserstackConfig config = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
 

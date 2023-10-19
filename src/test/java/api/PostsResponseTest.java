@@ -11,7 +11,7 @@ import static api.specs.Specification.requestSpec;
 import static api.specs.Specification.responseSpec;
 import static io.restassured.RestAssured.given;
 
-public class PostsTest {
+public class PostsResponseTest {
     private static final String idJavaSyntax = "857";
     private static final String adFollowingAnAd = "1132";
     private static final String lastDigitNumberId = "3920";
