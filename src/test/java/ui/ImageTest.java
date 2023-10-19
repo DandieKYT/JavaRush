@@ -13,7 +13,7 @@ public class ImageTest extends TestBase {
     @Test
     public void imageProfileUpload() throws Exception {
         open("/");
-        groupsStep.closeCookie();
+        socialGroupsStep.closeCookie();
         stepsForWebApp();
         refresh();
         WebDriverRunner.getWebDriver().manage().window().fullscreen();

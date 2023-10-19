@@ -22,10 +22,10 @@ public class TestBaseMobile {
     static boolean isRemote = Boolean.parseBoolean(System.getProperty("isRemote", config.isRemote()));
     QuizStep quizStep = new QuizStep();
     LikeCommentStep likeCommentStep = new LikeCommentStep();
-    AuthenticationStep auth = new AuthenticationStep();
+    AuthenticationStep authenticationStep = new AuthenticationStep();
     CourseTaskStep courseTask = new CourseTaskStep();
     LikeLessonStep likeLessonStep = new LikeLessonStep();
-    CommentStep comment = new CommentStep();
+    CommentStep commentStep = new CommentStep();
 
     @BeforeAll
     static void beforeAll() {

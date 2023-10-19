@@ -14,9 +14,9 @@ public class Authentication extends TestBaseMobile {
     @Test
     @DisplayName("Авторизация по секретному ключу")
     public void loginBySecretKey() {
-        auth.signInLink();
-        auth.secretKeyLink();
-        auth.loginKey(config.getLoginKey());
-        auth.loginButton();
+        authenticationStep.signInLink();
+        authenticationStep.secretKeyLink();
+        authenticationStep.loginKey(config.getLoginKey());
+        authenticationStep.loginButton();
     }
 }

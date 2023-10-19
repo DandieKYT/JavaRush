@@ -17,8 +17,8 @@ public class CourseTask extends TestBaseMobile {
     @DisplayName("Открытие разделов Course/Java и проверка их содержимого")
     public void checkCourseTask(String param, String expectedText) {
         Common.stepsForApp();
-        auth.goBackButton();
-        auth.navigateMenu();
+        authenticationStep.goBackButton();
+        authenticationStep.navigateMenu();
         courseTask.tag(param);
         courseTask.checkTitle(expectedText);
     }

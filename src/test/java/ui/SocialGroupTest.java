@@ -16,17 +16,17 @@ public class SocialGroupTest extends TestBase {
     @Test
     @DisplayName("Открытие страницы сайта в телеграм")
     public void telegramTest() {
-        groupsStep.closeCookie();
-        groupsStep.telegramButton();
-        groupsStep.checkOutTelegramTitle();
+        socialGroupsStep.closeCookie();
+        socialGroupsStep.telegramButton();
+        socialGroupsStep.checkOutTelegramTitle();
     }
 
     @Test
     @DisplayName("Открытие страницы сайта в YouTube")
     public void youTubeTest() {
-        groupsStep.closeCookie();
-        groupsStep.youtubeButton();
-        groupsStep.acceptCookieYT();
-        groupsStep.checkOutYoutubeTitle();
+        socialGroupsStep.closeCookie();
+        socialGroupsStep.youtubeButton();
+        socialGroupsStep.acceptCookieYT();
+        socialGroupsStep.checkOutYoutubeTitle();
     }
 }

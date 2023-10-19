@@ -26,8 +26,8 @@ public class TestBase extends Attach {
     static String remoteUrl = System.getProperty("selenoid");
     static boolean isRemote = Boolean.parseBoolean(System.getProperty("isRemote", config.isRemote()));
     LoadImageProfileStep loadImageProfileStep = new LoadImageProfileStep();
-    SocialGroupsStep groupsStep = new SocialGroupsStep();
-    StartLearningStep learnStep = new StartLearningStep();
+    SocialGroupsStep socialGroupsStep = new SocialGroupsStep();
+    StartLearningStep startLearnStep = new StartLearningStep();
     ReviewsAndAboutUsStep reviewsAndAboutUsStep = new ReviewsAndAboutUsStep();
     EnrollInCourseStep enrollInCourseStep = new EnrollInCourseStep();
     SearchStep searchStep = new SearchStep();

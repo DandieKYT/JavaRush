@@ -11,18 +11,18 @@ public class CommentTest extends TestBaseMobile {
     @Test
     public void commTest() {
         Common.stepsForApp();
-        comment.commentButton();
+        commentStep.commentButton();
         String expectedComm = Generations.generationRandomText();
-        comment.addComment();
-        comment.inputComment(expectedComm);
-        comment.sendComment();
-        comment.commentOptions();
-        comment.editComment();
-        String actualComm = comment.getTexts();
+        commentStep.addComment();
+        commentStep.inputComment(expectedComm);
+        commentStep.sendComment();
+        commentStep.commentOptions();
+        commentStep.editComment();
+        String actualComm = commentStep.getTexts();
         Assertions.assertEquals(actualComm, expectedComm);
-        comment.sendComment();
-        comment.authorComment();
-        comment.commentOptions();
-        comment.deleteComment();
+        commentStep.sendComment();
+        commentStep.authorComment();
+        commentStep.commentOptions();
+        commentStep.deleteComment();
     }
 }

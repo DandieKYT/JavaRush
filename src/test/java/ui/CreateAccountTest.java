@@ -16,13 +16,13 @@ public class CreateAccountTest extends TestBase {
     @Test
     @DisplayName("Создание аккаунта в JAVA-Rush")
     public void startLearnJava() {
-        learnStep.startLearnButton();
-        learnStep.beginLearnButton();
-        learnStep.russianLanguageButton();
-        learnStep.qaButton();
-        learnStep.blackPictureClick();
-        learnStep.notNowButton();
-        learnStep.xpInProgrammingNo();
-        learnStep.checkOutResult();
+        startLearnStep.startLearnButton();
+        startLearnStep.beginLearnButton();
+        startLearnStep.russianLanguageButton();
+        startLearnStep.qaButton();
+        startLearnStep.blackPictureClick();
+        startLearnStep.notNowButton();
+        startLearnStep.xpInProgrammingNo();
+        startLearnStep.checkOutResult();
     }
 }
