@@ -3,6 +3,7 @@ package api;
 import api.models.Activities;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -11,7 +12,7 @@ import static api.specs.Specification.newsSpec;
 import static api.specs.Specification.responseSpec;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
-
+@Tag("API")
 public class NewsResponseTest {
 
     private static final String expectedKey = "anonymous#3358758";
@@ -28,27 +29,6 @@ public class NewsResponseTest {
 
 
     @Test
-    @Disabled
-    @DisplayName("Проверка по полному соответствию активности пользователя")
-    void checkingUserActivity() {
-        Activities[] data = given()
-                .spec(newsSpec)
-                .when()
-                .get()
-                .then()
-                .spec(responseSpec)
-                .extract().as(Activities[].class);
-        Activities actualActivities = Arrays.stream(data)
-                .filter(activities -> activities.getUser().getKey().equals(expectedKey)) //проверка по полному соответсвию ключа
-                .findFirst()
-                .orElseThrow(() -> new AssertionError(""));
-
-        String actualUserid = String.valueOf(actualActivities.getUser().getUserId());
-
-        assertThat(actualUserid).isEqualTo(expectedUserId); // проверка пр полному соотвествию id
-    }
-
-    @Test
     @DisplayName("Проверка по частичному соответствию активности пользователя")
     void checkingForPartialMatchingOfUser() {
         Activities[] data = given()
@@ -59,13 +39,13 @@ public class NewsResponseTest {
                 .spec(responseSpec)
                 .extract().as(Activities[].class);
         Activities actualActivities = Arrays.stream(data)
-                .filter(activities -> activities.getUser().getKey().contains(expectedPartKey)) //проверка по частичному соответсвию ключа
+                .filter(activities -> activities.getUser().getKey().contains(expectedPartKey))
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
 
         String foundUserId = String.valueOf(actualActivities.getUser().getUserId());
 
-        assertThat(foundUserId).contains(expectedPartUserId); // проверка по частичному соответствию id
+        assertThat(foundUserId).contains(expectedPartUserId);
 
     }
 
@@ -80,12 +60,12 @@ public class NewsResponseTest {
                 .spec(responseSpec)
                 .extract().as(Activities[].class);
         Activities actualActivities = Arrays.stream(data)
-                .filter(activities -> activities.getType().contains(expectedType)) //проверка по частичному соответсвию ключа
+                .filter(activities -> activities.getType().contains(expectedType))
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
         String activityId = String.valueOf(actualActivities.getId());
 
-        assertThat(activityId).contains(activityPartId); // проверка по частичному соответствию id
+        assertThat(activityId).contains(activityPartId);
     }
 
     @Test
@@ -99,11 +79,11 @@ public class NewsResponseTest {
                 .spec(responseSpec)
                 .extract().as(Activities[].class);
         Activities actualActivities = Arrays.stream(data)
-                .filter(activities -> activities.getType().equals(expectedType)) //проверка по частичному соответсвию ключа
+                .filter(activities -> activities.getType().equals(expectedType))
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
         String actualDescription = String.valueOf(actualActivities.getDescription());
 
-        assertThat(actualDescription).contains(partDescription); // проверка по частичному соответствию id
+        assertThat(actualDescription).contains(partDescription);
     }
 }

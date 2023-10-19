@@ -30,11 +30,11 @@ public class PostsResponseTest {
                 .spec(responseSpec)
                 .extract().as(Tasks[].class);
         Tasks actualTasks = Arrays.stream(data)
-                .filter(tasks -> String.valueOf(tasks.getId()).contains(idJavaSyntax)) //проверка по частичному соответсвию ключа
+                .filter(tasks -> String.valueOf(tasks.getId()).contains(idJavaSyntax))
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
         String actualTitle = String.valueOf(actualTasks.quest.getTitle());
-        Assertions.assertEquals(expectJavaSyntax, actualTitle); // проверка по частичному соответствию id
+        Assertions.assertEquals(expectJavaSyntax, actualTitle);
 
     }
 
@@ -49,11 +49,11 @@ public class PostsResponseTest {
                 .spec(responseSpec)
                 .extract().as(Tasks[].class);
         Tasks actualTasks = Arrays.stream(data)
-                .filter(tasks -> tasks.getTitle().contains(titleFollowingAnAd)) //проверка по частичному соответсвию ключа
+                .filter(tasks -> tasks.getTitle().contains(titleFollowingAnAd))
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
         String actualId = String.valueOf(actualTasks.getId());
-        Assertions.assertEquals(adFollowingAnAd, actualId); // проверка по частичному соответствию id
+        Assertions.assertEquals(adFollowingAnAd, actualId);
 
     }
 
@@ -68,11 +68,11 @@ public class PostsResponseTest {
                 .spec(responseSpec)
                 .extract().as(Tasks[].class);
         Tasks actualTasks = Arrays.stream(data)
-                .filter(tasks -> String.valueOf(tasks.getId()).contains(lastDigitNumberId)) //проверка по частичному соответсвию ключа
+                .filter(tasks -> String.valueOf(tasks.getId()).contains(lastDigitNumberId))
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
         String actualLevel = String.valueOf(actualTasks.getQuest().getLevel());
-        Assertions.assertEquals(levelTaskLastDigit, actualLevel); // проверка по частичному соответствию id
+        Assertions.assertEquals(levelTaskLastDigit, actualLevel);
 
     }
 }

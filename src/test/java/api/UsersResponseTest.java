@@ -6,6 +6,7 @@ import api.models.SomeUser;
 import api.models.Users;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -13,6 +14,7 @@ import java.util.Arrays;
 import static api.specs.Specification.*;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
+@Tag("API")
 
 public class UsersResponseTest {
 
@@ -20,7 +22,7 @@ public class UsersResponseTest {
 
     @Test
     @DisplayName("Проверка id пользователя")
-    void searchUser() {
+    void checkUserById() {
         Users data = given()
                 .spec(usersSpec)
                 .when()
@@ -50,7 +52,7 @@ public class UsersResponseTest {
 
     @Test
     @DisplayName("Проверка коментария")
-    void searchUr() {
+    void checkCommentary() {
         Commentary data = given()
                 .spec(discussionsSpec)
                 .when()
@@ -67,7 +69,7 @@ public class UsersResponseTest {
 
     @Test
     @DisplayName("Проверка профиля пользователя")
-    void searchUrsdg() {
+    void checkUserProfile() {
         SomeUser data = given()
                 .spec(requestSpec)
                 .when()
@@ -92,12 +94,12 @@ public class UsersResponseTest {
                 .spec(responseSpec)
                 .extract().as(Users[].class);
         Users actualUsers = Arrays.stream(data)
-                .filter(users -> users.getCountry().contains("Россия")) //проверка по частичному соответсвию ключа
+                .filter(users -> users.getCountry().contains("Россия"))
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
         String actualKey = String.valueOf(actualUsers.getKey());
 
-        assertThat(actualKey).contains("anonymous#"); // проверка по частичному соответствию id
+        assertThat(actualKey).contains("anonymous#");
     }
 
     @Test
@@ -111,12 +113,11 @@ public class UsersResponseTest {
                 .spec(responseSpec)
                 .extract().as(Users[].class);
         Users actualUsers = Arrays.stream(data)
-                .filter(users -> String.valueOf(users.getUserId()).contains(expectedUserId)) //проверка по частичному соответсвию ключа
+                .filter(users -> String.valueOf(users.getUserId()).contains(expectedUserId))
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
         Integer actualId = Integer.valueOf(actualUsers.getId());
-        Assertions.assertEquals(actualUsers.getUserId(), actualId); // проверка по частичному соответствию id
-
+        Assertions.assertEquals(actualUsers.getUserId(), actualId);
     }
 }
 

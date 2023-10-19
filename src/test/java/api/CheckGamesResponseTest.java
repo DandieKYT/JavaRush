@@ -21,7 +21,7 @@ CheckGamesResponseTest {
 
     @Test
     @DisplayName("Проверка названия, урла, статуса на странице игры 'Сапер'")
-    void minesweeperTest() {
+    void checkMinesweeperTest() {
         Games data = given()
                 .spec(gamesSpec)
                 .when()
@@ -37,7 +37,7 @@ CheckGamesResponseTest {
 
     @Test
     @DisplayName("Проверка названия, урла, статуса на странице игры 'Змейка'")
-    void snakeTest() {
+    void checkSnakeTest() {
         Games data = given()
                 .spec(gamesSpec)
                 .when()
@@ -53,7 +53,7 @@ CheckGamesResponseTest {
 
     @Test
     @DisplayName("Проверка названия, урла, статуса на странице '2048'")
-    void twoThousandFortyEightTest() {
+    void checkTwoThousandFortyEightTest() {
         Games data = given()
                 .spec(gamesSpec)
                 .when()
@@ -82,6 +82,6 @@ CheckGamesResponseTest {
                 .orElseThrow(() -> new AssertionError(""));
         String actualDescription = String.valueOf(actualGames.getDescription());
 
-        assertThat(actualDescription).contains(expectedDescriptionMinesweeper); // проверка по частичному соответствию id
+        assertThat(actualDescription).contains(expectedDescriptionMinesweeper);
     }
 }

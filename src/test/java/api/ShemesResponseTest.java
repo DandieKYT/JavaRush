@@ -9,7 +9,7 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 public class ShemesResponseTest {
 
     @Test
-    public void intershipTest() {
+    public void checkIntershipShemesTest() {
         given()
                 .spec(intershipSpec)
                 .when()
@@ -20,7 +20,7 @@ public class ShemesResponseTest {
     }
 
     @Test
-    public void project1Test() {
+    public void checkProject1ShemesTest() {
         given()
                 .spec(discussionsSpec)
                 .when()
@@ -31,7 +31,7 @@ public class ShemesResponseTest {
     }
 
     @Test
-    public void newsTest() {
+    public void checkNewsShemesTest() {
         given()
                 .spec(newsSpec)
                 .when()
@@ -42,7 +42,7 @@ public class ShemesResponseTest {
     }
 
     @Test
-    public void quizzesTest() {
+    public void checkQuizzesShemesTest() {
         given()
                 .spec(quizzesSpec)
                 .when()
@@ -53,7 +53,7 @@ public class ShemesResponseTest {
     }
 
     @Test
-    public void projectsTest() {
+    public void checkProjectsShemesTest() {
         given()
                 .spec(projectSpec)
                 .when()
