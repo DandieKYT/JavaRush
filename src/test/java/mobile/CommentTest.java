@@ -11,7 +11,7 @@ public class CommentTest extends TestBaseMobile {
 
     @DisplayName("Добавление коментария и проверка его автора и текста")
     @Test
-    public void commTest() {
+    public void addCommAndDelete() {
         Common.stepsForApp();
         commentStep.commentButton();
         String expectedComm = Generations.generationRandomText();

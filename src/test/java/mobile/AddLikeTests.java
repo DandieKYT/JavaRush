@@ -10,7 +10,7 @@ public class AddLikeTests extends TestBaseMobile {
 
     @Test
     @DisplayName("Добавление лайка на коментарий")
-    public void likeToComment() {
+    public void addLikeToComment() {
         Common.stepsForApp();
         likeCommentStep.commentButton();
         likeCommentStep.addComment();
@@ -28,7 +28,7 @@ public class AddLikeTests extends TestBaseMobile {
 
     @Test
     @DisplayName("Добавление лайка на страницу лекции")
-    public void addLikeLesson() {
+    public void addLikeToLesson() {
         Common.stepsForApp();
         int countFirst = likeLessonStep.parse();
         likeLessonStep.likeButton();

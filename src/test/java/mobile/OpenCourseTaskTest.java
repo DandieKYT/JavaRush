@@ -15,11 +15,11 @@ public class OpenCourseTaskTest extends TestBaseMobile {
     })
     @ParameterizedTest
     @DisplayName("Открытие разделов Course/Java и проверка их содержимого")
-    public void checkCourseTask(String param, String expectedText) {
+    public void checkoutCourseTaskPages(String param, String expectedText) {
         Common.stepsForApp();
         authenticationStep.goBackButton();
         authenticationStep.navigateMenu();
-        courseTask.tag(param);
-        courseTask.checkTitle(expectedText);
+        courseTaskStep.tag(param);
+        courseTaskStep.checkTitle(expectedText);
     }
 }

@@ -27,7 +27,7 @@ public class TestBase extends Attach {
     static boolean isRemote = Boolean.parseBoolean(System.getProperty("isRemote", config.isRemote()));
     UploadImageToProfileStep uploadImageToProfileStep = new UploadImageToProfileStep();
     OpenSocialGroupsStep openSocialGroupsStep = new OpenSocialGroupsStep();
-    CreateAccountStep startLearnStep = new CreateAccountStep();
+    CreateAccountStep createAccountStep = new CreateAccountStep();
     ReviewsAndAboutUsStep reviewsAndAboutUsStep = new ReviewsAndAboutUsStep();
     EnrollInCourseJavaStep enrollInCourseJavaStep = new EnrollInCourseJavaStep();
     SearchUsersStep searchUsersStep = new SearchUsersStep();

@@ -23,7 +23,7 @@ public class TestBaseMobile {
     CreateAccountStep createAccountStep = new CreateAccountStep();
     LikeCommentStep likeCommentStep = new LikeCommentStep();
     AuthenticationStep authenticationStep = new AuthenticationStep();
-    CourseTaskStep courseTask = new CourseTaskStep();
+    CourseTaskStep courseTaskStep = new CourseTaskStep();
     LikeLessonStep likeLessonStep = new LikeLessonStep();
     CommentStep commentStep = new CommentStep();
 
