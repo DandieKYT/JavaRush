@@ -3,8 +3,7 @@ package ui.steps;
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Step;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static ui.pages.LoadImageProfilePage.*;
 
@@ -33,7 +32,7 @@ public class LoadImageProfileStep {
     @Step("Проверка загрузки фотографии")
     public void checkUploadPhoto(){
         sleep(2000);
-        checkUploadPhoto.should(visible);
+        checkUploadPhoto.shouldHave(attribute("src", "https://javarush.com/api/1.0/rest/me/pictures-private/avatar-source?cache=1"));
     }
     @Step("Нажатие на кнопку 'Сохранить изменения'")
     public void saveChanges(){
