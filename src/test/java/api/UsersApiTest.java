@@ -1,4 +1,4 @@
-package tests.api;
+package api;
 
 
 import api.models.Commentary;

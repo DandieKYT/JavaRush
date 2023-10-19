@@ -1,4 +1,4 @@
-package tests.ui;
+package ui;
 
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;

@@ -14,6 +14,8 @@ import static io.qameta.allure.Allure.step;
 import static mobile.pages.QuizPage.*;
 
 public class QuizStep {
+
+    QuizPage quizPage = new QuizPage();
     public static int getRandomNumber() {
         Random random = new Random();
         return random.nextInt(5);
@@ -21,75 +23,75 @@ public class QuizStep {
 
     @Step("Цикл")
     public void randomCheck() {
-        int count = pageElementQA.size();
+        int count = quizPage.pageElementQA.size();
         for (int i = 0; i < count; i++) {
             sleep(1000);
             Configuration.pageLoadStrategy = "eager";
-            radioButton.get(getRandomNumber()).click();
-            nextButton.click();
+            quizPage.radioButton.get(getRandomNumber()).click();
+            quizPage.nextButton.click();
         }
     }
 
     @Step("Проверка создания курса")
     public void checkoutCourse() {
             Selenide.sleep(11000);
-            checkoutCourse.shouldBe(text("Ваш персональный курс готов"));
+        quizPage.checkoutCourse.shouldBe(text("Ваш персональный курс готов"));
     }
 
     @Step("Нажатие кнопки старт")
     public void startButton() {
-            startButton.get(0).click();
+        quizPage.startButton.get(0).click();
     }
 
     @Step("Нажатие кнопки старт")
     public void secondStartButton() {
-            secondStartButton.get(0).click();
+        quizPage.secondStartButton.get(0).click();
     }
 
     @Step("Выбор русского языка")
     public void languageRussian() {
-            languageRussian.get(0).click();
+        quizPage.languageRussian.get(0).click();
     }
 
     @Step("Выбор направления QA")
     public void qaButton() {
-            qaButton.click();
+        quizPage.qaButton.click();
     }
 
     @Step("Выбор литературного стиля повествования")
     public void literaryStyle() {
-            literaryStyle.click();
+        quizPage.literaryStyle.click();
     }
 
     @Step("Нажатие на кнопку 'Нет'")
     public void motivationNo() {
-            motivationNo.click();
+        quizPage.motivationNo.click();
     }
 
     @Step("Выбор светлой темы")
     public void lightTheme() {
-            lightTheme.click();
+        quizPage.lightTheme.click();
     }
 
     @Step("Нажатие на кнопку 'Нет'")
     public void experienceNo() {
-            experienceNo.click();
+        quizPage.experienceNo.click();
             sleep(2000);
     }
 
     @Step("Проверка заголовка страницы")
     public void checkoutTitle() {
-            checkoutTitle.get(1).shouldHave(Condition.text("Создание аккаунта"));
+        quizPage.checkoutTitle.get(1).shouldHave(Condition.text("Создание аккаунта"));
     }
 
     @Step("Проверка заголовка страницы")
     public void experienceYes() {
-            experienceYes.click();
+        quizPage.experienceYes.click();
     }
 
     @Step("Проверка заголовка страницы")
     public void startQuiz() {
-            startQuiz.click();
+        quizPage.startQuiz.click();
             Selenide.sleep(2000);
     }
 }

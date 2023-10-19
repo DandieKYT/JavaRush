@@ -1,4 +1,4 @@
-package tests.mobile;
+package mobile;
 
 import config.BrowserstackConfig;
 import mobile.steps.AuthenticationStep;

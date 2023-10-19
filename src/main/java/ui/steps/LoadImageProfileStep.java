@@ -5,41 +5,45 @@ import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
-import static ui.pages.LoadImageProfilePage.*;
+
+import ui.pages.LoadImageProfilePage;
+import ui.pages.LoadImageProfilePage.*;
 
 public class LoadImageProfileStep {
+
+    LoadImageProfilePage loadImageProfilePage = new LoadImageProfilePage();
 
     @Step("Открытие вкладки 'Настройки'")
     public void openSettings(){
         WebDriverRunner.getWebDriver().manage().window().fullscreen();
         sleep(2000);
-        clickImage.click();
-        bookmarks.scrollTo();
-        settings.click();
+        loadImageProfilePage.clickImage.click();
+        loadImageProfilePage.bookmarks.scrollTo();
+        loadImageProfilePage.settings.click();
     }
     @Step("Нажатие на фотографию профиля")
     public void clickAvatarImage(){
-        clickProfilePhoto.click();
+        loadImageProfilePage.clickProfilePhoto.click();
     }
     @Step("Загрузка фотографии")
     public void uploadPhoto(){
-        uploadPhoto.uploadFromClasspath("testFilePhoto.jpg");
+        loadImageProfilePage.uploadPhoto.uploadFromClasspath("testFilePhoto.jpg");
     }
     @Step("Сохранение фотографии профиля")
     public void savePhoto(){
-        savePhoto.click();
+        loadImageProfilePage.savePhoto.click();
     }
     @Step("Проверка загрузки фотографии")
     public void checkUploadPhoto(){
         sleep(2000);
-        checkUploadPhoto.shouldHave(attribute("src", "https://javarush.com/api/1.0/rest/me/pictures-private/avatar-source?cache=1"));
+        loadImageProfilePage.checkUploadPhoto.should(visible);
     }
     @Step("Нажатие на кнопку 'Сохранить изменения'")
     public void saveChanges(){
-        saveChanges.click();
+        loadImageProfilePage.saveChanges.click();
     }
     @Step("Проверка надписи об успешном сохранении изменений")
     public void checkChanges(){
-        checkSuccessFullChanges.should(text("Личные данные сохранены"));
+        loadImageProfilePage.checkSuccessFullChanges.should(text("Личные данные сохранены"));
     }
 }

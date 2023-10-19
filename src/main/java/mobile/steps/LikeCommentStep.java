@@ -2,6 +2,7 @@ package mobile.steps;
 
 
 import io.qameta.allure.Step;
+import mobile.pages.LikeCommentPage;
 import org.junit.jupiter.api.Assertions;
 
 
@@ -11,46 +12,48 @@ import static mobile.pages.LikeCommentPage.*;
 
 public class LikeCommentStep {
 
+    LikeCommentPage likeCommentPage = new LikeCommentPage();
+
     @Step("Нажатие на кнопку коментария")
     public void commentButton() {
-        commentButton.click();
+        likeCommentPage.commentButton.click();
         sleep(3000);
     }
 
 
     @Step("Добавление комментария")
     public void addComment() {
-        addComment.click();
+        likeCommentPage.addComment.click();
     }
 
     @Step("Написание текста коментария")
     public void addSomeText(String textComm) {
-        addSomeText.click();
-        addSomeText.sendKeys(textComm);
+        likeCommentPage.addSomeText.click();
+        likeCommentPage.addSomeText.sendKeys(textComm);
     }
 
     @Step("Отправка коментария")
     public void sendComment() {
-        sendComment.click();
+        likeCommentPage.sendComment.click();
     }
 
     @Step("Нажатие на кнопку лайка")
     public void addLike() {
-        addLike.click();
+        likeCommentPage.addLike.click();
     }
 
     @Step("Добавление лайка коментарию")
     public void secondAddLike() {
-        secondAddLike.click();
+        likeCommentPage.secondAddLike.click();
     }
 
     @Step("Удаление комментария")
     public void deleteComm () {
-        deleteComment.click();
+        likeCommentPage.deleteComment.click();
     }
     @Step("Получение количества лайков")
         public  int parse () {
-            String getParse = checkLikeValue.getText();
+            String getParse = likeCommentPage.checkLikeValue.getText();
             Integer.parseInt(getParse);
             return Integer.parseInt(getParse);
         }

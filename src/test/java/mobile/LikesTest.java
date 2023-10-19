@@ -1,18 +1,16 @@
-package tests.mobile;
+package mobile;
 
-import help.Generations;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static help.Generations.generationRandomText;
-import static tests.mobile.Common.stepsForApp;
 
 public class LikesTest extends TestBaseMobile {
     @Test
     @DisplayName("Добавление лайка на коментарий")
     public void likeToComment() {
-        stepsForApp();
+        Common.stepsForApp();
         likeCommentStep.commentButton();
         likeCommentStep.addComment();
         String actualComm = generationRandomText();
@@ -30,7 +28,7 @@ public class LikesTest extends TestBaseMobile {
     @Test
     @DisplayName("Добавление лайка на страницу лекции")
     public void addLikeLesson() {
-        stepsForApp();
+        Common.stepsForApp();
         int countFirst = likeLessonStep.parse();
         likeLessonStep.likeButton();
         likeLessonStep.clickOnLike();

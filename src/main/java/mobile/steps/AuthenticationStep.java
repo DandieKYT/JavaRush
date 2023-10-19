@@ -2,6 +2,7 @@ package mobile.steps;
 
 import io.qameta.allure.Step;
 import help.Generations;
+import mobile.pages.AuthenticationPage;
 import org.junit.jupiter.api.Assertions;
 
 import static com.codeborne.selenide.Condition.*;
@@ -13,60 +14,59 @@ import static mobile.pages.AuthenticationPage.*;
 public class AuthenticationStep {
     String name;
 
-
-
+    AuthenticationPage authenticationPage = new AuthenticationPage();
     @Step("Переход назад")
 public void navigateMenu() {
-            goBackButton.click();
+        authenticationPage.goBackButton.click();
 }
 
     @Step("Переход назад два раза")
     public void goBackButton() {
             for (int i = 0; i < 2; i++){
-                goBackButton.shouldBe((visible).because("Картинка не прогрузилась"));
-                goBackButton.click();
+                authenticationPage.goBackButton.shouldBe((visible).because("Картинка не прогрузилась"));
+                authenticationPage.goBackButton.click();
             }
     }
 
     @Step("Открытие первого урока")
     public void openLesson() {
              for (int i = 0; i < 2; i++){
-                 openLesson.click();
+                 authenticationPage.openLesson.click();
             }
     }
 
     @Step("Закрытие второго баннера")
     public void closeSecondBanner() {
             for (int i = 0; i < 4; i++){
-                closeSecondBanner.click();
+                authenticationPage.closeSecondBanner.click();
             }
     }
 
     @Step("Закрытие баннера")
     public void closeBanner() {
-                closeBanner.click();
+        authenticationPage.closeBanner.click();
     }
 
     @Step("Нажатие на ссылку 'Sign In'")
     public void signInLink() {
             sleep(1000);
-            signInLink.shouldBe(exist);
-            signInLink.click();
+        authenticationPage.signInLink.shouldBe(exist);
+        authenticationPage.signInLink.click();
     }
 
     @Step("Нажатие на ссылку 'Sign in using secret key'")
     public void secretKeyLink() {
-            secretKeyLink.click();
+        authenticationPage.secretKeyLink.click();
     }
 
     @Step("Ввод ключа авторизации")
     public void loginKey(String token) {
-            loginKey.sendKeys(token);
+        authenticationPage.loginKey.sendKeys(token);
     }
 
     @Step("Нажатие на кнопку 'Sign in'")
     public void loginButton() {
-            loginButton.click();
+        authenticationPage.loginButton.click();
     }
 
     @Step("Генерация рандомного текста")

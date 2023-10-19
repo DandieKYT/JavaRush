@@ -1,4 +1,4 @@
-package tests.mobile;
+package mobile;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;

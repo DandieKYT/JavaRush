@@ -1,4 +1,4 @@
-package tests.ui;
+package ui;
 
 import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.Tag;

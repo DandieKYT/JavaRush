@@ -9,8 +9,7 @@ import static io.qameta.allure.Allure.step;
 
 public class SearchPage {
 
-    public final static SelenideElement users = $x("//div[text()='Пользователи']");
-    public final static SelenideElement searchUser = $x("//*[contains(@class, 'filter__container')]/div/jr-section-search-panel/div/div/div/input");
-    public final static SelenideElement checkoutResult = $x("//div[text()='Dandie KYT']");
-
+    public final SelenideElement users = $x("//div[text()='Пользователи']");
+    public final SelenideElement searchUser = $x("//input[@formcontrolname='query']");
+    public final SelenideElement checkoutResult = $x("//div[text()='Dandie KYT']");
 }

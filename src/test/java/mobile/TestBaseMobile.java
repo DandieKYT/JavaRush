@@ -1,4 +1,4 @@
-package tests.mobile;
+package mobile;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;

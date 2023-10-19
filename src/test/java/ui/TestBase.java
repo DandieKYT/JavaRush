@@ -1,4 +1,4 @@
-package tests.ui;
+package ui;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
