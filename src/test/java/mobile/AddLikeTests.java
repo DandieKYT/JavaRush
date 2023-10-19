@@ -2,10 +2,11 @@ package mobile;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static help.Generations.generationRandomText;
-
+@Tag("Mobile")
 public class AddLikeTests extends TestBaseMobile {
 
     @Test

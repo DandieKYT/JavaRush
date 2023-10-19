@@ -3,7 +3,9 @@ package mobile;
 import config.BrowserstackConfig;
 import mobile.steps.AuthenticationStep;
 import org.aeonbits.owner.ConfigFactory;
+import org.junit.jupiter.api.Tag;
 
+@Tag("Mobile")
 public class Common {
 
     static AuthenticationStep auth = new AuthenticationStep();
