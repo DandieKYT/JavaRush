@@ -7,6 +7,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.*;
 
 public class StartLearningPage {
+
     public final SelenideElement startLearnButton = $x("//*[@id='button_menu_start_learning_unauthorized_user']");
     public final SelenideElement beginLearnButton = $x("//*[@id='id_button_jr_welcome_start_learning_1']");
     public final SelenideElement russianLanguageButton = $x("//*[@id='todo_add']");
@@ -30,6 +31,4 @@ public class StartLearningPage {
 
     public final ElementsCollection radioButton = $$x("//*[contains(@class,'radio-button') and contains(@class,'radio-button--basic') and contains(@class,'svelte')]");
     public final ElementsCollection pageElementQA = $$x("//*[contains(@class,'progress-bar__step')]");
-
-
 }

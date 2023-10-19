@@ -15,6 +15,5 @@ public class ReviewsAndAboutUsPage {
 
     public final SelenideElement checkTitle(String expectedText) {
         return $((byTagAndText("h1", (expectedText))));
-
     }
 }
