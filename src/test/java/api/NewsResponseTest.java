@@ -15,17 +15,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Tag("API")
 public class NewsResponseTest {
 
-    private static final String expectedKey = "anonymous#3358758";
-    private static final String expectedUserId = "3358758";
     private static final String expectedPartKey = "anonymous#336";
     private static final String expectedPartUserId = "336";
-    private static final String expectedPartId = "336";
     private static final String expectedType = "TASK_IN_PROGRESS";
-    private static final String activityPartId = "310";
+    private static final String activityPartId = "311";
     private static final String partDescription = "пробует решить задачу";
-    private static final String expectedCountry = "Russian Federation";
-    private static final String partTitle = "quest";
-    private static final long expectedTime = Long.parseLong("1696865323000");
 
 
     @Test
