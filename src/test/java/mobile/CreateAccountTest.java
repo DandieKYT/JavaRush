@@ -1,11 +1,17 @@
 package mobile;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 
 @Tag("Mobile")
+@Owner("Кудрявцев Даниил")
+@Feature("Автотесты для Mobile")
+@Story("Создание аккаунта")
 public class CreateAccountTest extends TestBaseMobile {
 
     @Test

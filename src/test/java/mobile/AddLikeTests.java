@@ -1,5 +1,8 @@
 package mobile;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -7,6 +10,9 @@ import org.junit.jupiter.api.Test;
 
 import static help.Generations.generationRandomText;
 @Tag("Mobile")
+@Owner("Кудрявцев Даниил")
+@Feature("Автотесты для Mobile")
+@Story("Добавление лайка")
 public class AddLikeTests extends TestBaseMobile {
 
     @Test
