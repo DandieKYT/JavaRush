@@ -84,7 +84,7 @@ public class UsersResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка пользователей из России, частичного ключа")
+    @DisplayName("Проверка пользователей из России и их частичного ключа")
     void checkingForPartCountry() {
         Users[] data = given()
                 .spec(usersSpec)
@@ -103,7 +103,7 @@ public class UsersResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка соответсвия userID и ID")
+    @DisplayName("Проверка соответствия userID и ID")
     void checkingForPartDescription() {
         Users[] data = given()
                 .spec(usersSpec)
