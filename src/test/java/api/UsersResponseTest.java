@@ -35,7 +35,7 @@ public class UsersResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка города и профессии пользователя")
+    @DisplayName("Проверка города, профессии и id пользователя")
     void searchUserMaria() {
         Users data = given()
                 .spec(usersSpec)
@@ -51,7 +51,7 @@ public class UsersResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка коментария")
+    @DisplayName("Проверка id, лайков, владельца комментария, ответов на комментарий и ключа пользователя")
     void checkCommentary() {
         Commentary data = given()
                 .spec(discussionsSpec)
@@ -68,7 +68,7 @@ public class UsersResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка профиля пользователя")
+    @DisplayName("Проверка id, ключа, места работы и языка в профиле пользователя")
     void checkUserProfile() {
         SomeUser data = given()
                 .spec(requestSpec)
@@ -84,7 +84,7 @@ public class UsersResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка по частичному соответствию активности пользователя")
+    @DisplayName("Проверка пользователей из России, частичного ключа")
     void checkingForPartCountry() {
         Users[] data = given()
                 .spec(usersSpec)

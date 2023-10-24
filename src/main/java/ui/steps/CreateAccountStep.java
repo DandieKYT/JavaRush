@@ -15,25 +15,6 @@ public class CreateAccountStep {
 
     CreateAccountPage createAccountPage = new CreateAccountPage();
 
-    public static int getRandomNumber() {
-        Random random = new Random();
-        return random.nextInt(5);
-    }
-
-    @Step("Цикл")
-    public void randomCheck() {
-        createAccountPage.nextButton.shouldBe((visible).because("Не видна кнопка 'Далее'"));
-        if (createAccountPage.radioButton.size() > 1 && createAccountPage.nextButton.has(visible)) {
-            int count = createAccountPage.pageElementQA.size();
-            for (int i = 0; i < count; i++) {
-                sleep(1000);
-                Configuration.pageLoadStrategy = "eager";
-                createAccountPage.radioButton.get(getRandomNumber()).click();
-                createAccountPage.nextButton.click();
-            }
-        }
-    }
-
     @Step("Нажатие на кнопку 'Начать обучение'")
     public void startLearnButton() {
         open("/");

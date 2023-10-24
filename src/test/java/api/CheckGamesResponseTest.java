@@ -26,7 +26,7 @@ CheckGamesResponseTest {
     private static final String expectedDescriptionMinesweeper = "Сапер";
 
     @Test
-    @DisplayName("Проверка названия, урла, статуса на странице игры 'Сапер'")
+    @DisplayName("Проверка title, url, status на странице игры 'Сапер'")
     void checkMinesweeperTest() {
         Games data = given()
                 .spec(gamesSpec)
@@ -42,7 +42,7 @@ CheckGamesResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка названия, урла, статуса на странице игры 'Змейка'")
+    @DisplayName("Проверка title, url, status на странице игры 'Змейка'")
     void checkSnakeTest() {
         Games data = given()
                 .spec(gamesSpec)
@@ -58,7 +58,7 @@ CheckGamesResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка названия, урла, статуса на странице '2048'")
+    @DisplayName("Проверка title, url, status на странице '2048'")
     void checkTwoThousandFortyEightTest() {
         Games data = given()
                 .spec(gamesSpec)
@@ -73,7 +73,7 @@ CheckGamesResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка названия игры по id")
+    @DisplayName("Проверка названия игры 'Сапер' по id")
     void checkingForIdGame() {
         Games[] data = given()
                 .spec(projectSpec)

@@ -13,6 +13,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import ui.pages.MainPage;
 import ui.steps.*;
 
 import java.util.Map;
@@ -25,6 +26,9 @@ public class TestBase extends Attach {
     protected static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
     static String remoteUrl = System.getProperty("selenoid");
     static boolean isRemote = Boolean.parseBoolean(System.getProperty("isRemote", config.isRemote()));
+
+    MainPageSteps mainPageSteps = new MainPageSteps();
+    QuizStep quizStep = new QuizStep();
     UploadImageToProfileStep uploadImageToProfileStep = new UploadImageToProfileStep();
     OpenSocialGroupsStep openSocialGroupsStep = new OpenSocialGroupsStep();
     CreateAccountStep createAccountStep = new CreateAccountStep();

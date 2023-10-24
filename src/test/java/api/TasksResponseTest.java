@@ -18,7 +18,7 @@ import static io.restassured.RestAssured.given;
 @Owner("Кудрявцев Даниил")
 @Story("Проверка ст")
 @Feature("Автотесты для API")
-public class PostsResponseTest {
+public class TasksResponseTest {
     private static final String idJavaSyntax = "857";
     private static final String expectIdAdFollowingAnAd = "1132";
     private static final String lastDigitNumberId = "3920";

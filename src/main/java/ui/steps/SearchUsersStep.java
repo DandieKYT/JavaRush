@@ -11,12 +11,6 @@ public class SearchUsersStep {
 
     SearchUsersPage searchUsersPage = new SearchUsersPage();
 
-    @Step("Открытие вкладки 'Пользователи'")
-    public void user() {
-        open("/");
-        searchUsersPage.users.click();
-    }
-
     @Step("Поиск пользователя под ником 'Dandie KYT'")
     public void searchUser() {
         searchUsersPage.searchUser.setValue("Dandie KYT").pressEnter();

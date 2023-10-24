@@ -16,7 +16,7 @@ public class CreateAccountTest extends TestBase {
     @Test
     @DisplayName("Создание аккаунта в JAVA-Rush")
     public void createAccount() {
-        createAccountStep.startLearnButton();
+        mainPageSteps.startLearnButton();
         createAccountStep.beginLearnButton();
         createAccountStep.russianLanguageButton();
         createAccountStep.qaButton();
@@ -29,7 +29,7 @@ public class CreateAccountTest extends TestBase {
     @Test
     @DisplayName("Создание аккаунта с прохождением теста")
     public void createAccountWithQuiz() {
-        createAccountStep.startLearnButton();
+        mainPageSteps.startLearnButton();
         createAccountStep.beginLearnButton();
         createAccountStep.russianLanguageButton();
         createAccountStep.qaButton();
@@ -37,7 +37,7 @@ public class CreateAccountTest extends TestBase {
         createAccountStep.notNowButton();
         createAccountStep.xpInProgrammingYes();
         createAccountStep.testBeginButton();
-        createAccountStep.randomCheck();
+        quizStep.randomCheck();
         createAccountStep.checkOutResult();
     }
 }
