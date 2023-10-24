@@ -13,29 +13,29 @@ public class AddLikeTests extends TestBaseMobile {
     @DisplayName("Добавление лайка на коментарий")
     public void addLikeToComment() {
         Common.stepsForApp();
-        likeCommentStep.commentButton();
-        likeCommentStep.addComment();
+        commentStep.commentButton();
+        commentStep.addComment();
         String actualComm = generationRandomText();
-        likeCommentStep.addSomeText(actualComm);
-        likeCommentStep.sendComment();
-        int countFirst = likeCommentStep.parse();
-        likeCommentStep.addLike();
-        likeCommentStep.secondAddLike();
-        int countSecond = likeCommentStep.parse();
+        commentStep.addSomeText(actualComm);
+        commentStep.sendComment();
+        int countFirst = commentStep.parse();
+        commentStep.addLike();
+        commentStep.secondAddLike();
+        int countSecond = commentStep.parse();
         Assertions.assertEquals(1, countSecond - countFirst);
-        likeCommentStep.addLike();
-        likeCommentStep.deleteComm();
+        commentStep.addLike();
+        commentStep.deleteComment();
     }
 
     @Test
     @DisplayName("Добавление лайка на страницу лекции")
     public void addLikeToLesson() {
         Common.stepsForApp();
-        int countFirst = likeLessonStep.parse();
-        likeLessonStep.likeButton();
-        likeLessonStep.clickOnLike();
-        int countSecond = likeLessonStep.parse();
+        int countFirst = lessonStep.parse();
+        lessonStep.likeButton();
+        lessonStep.clickOnLike();
+        int countSecond = lessonStep.parse();
         Assertions.assertEquals(1, countSecond - countFirst);
-        likeLessonStep.likeButton();
+        lessonStep.likeButton();
     }
 }

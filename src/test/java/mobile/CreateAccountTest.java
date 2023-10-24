@@ -19,8 +19,8 @@ public class CreateAccountTest extends TestBaseMobile {
         createAccountStep.motivationNo();
         createAccountStep.lightTheme();
         createAccountStep.experienceYes();
-        createAccountStep.startQuiz();
-        createAccountStep.randomCheck();
+        quizStep.startQuiz();
+        quizStep.randomCheck();
         createAccountStep.checkoutCourse();
     }
 

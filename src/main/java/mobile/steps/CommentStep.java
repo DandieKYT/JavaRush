@@ -56,5 +56,28 @@ public class CommentStep {
     public String getTexts() {
         return commentPage.checkoutText.getText();
     }
+
+    @Step("Написание текста коментария")
+    public void addSomeText(String textComm) {
+        commentPage.addSomeText.click();
+        commentPage.addSomeText.sendKeys(textComm);
+    }
+
+    @Step("Нажатие на кнопку лайка")
+    public void addLike() {
+        commentPage.addLike.click();
+    }
+
+    @Step("Добавление лайка коментарию")
+    public void secondAddLike() {
+        commentPage.secondAddLike.click();
+    }
+
+    @Step("Получение количества лайков")
+    public int parse() {
+        String getParse = commentPage.checkLikeValue.getText();
+        Integer.parseInt(getParse);
+        return Integer.parseInt(getParse);
+    }
 }
 

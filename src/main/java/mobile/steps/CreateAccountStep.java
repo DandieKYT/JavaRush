@@ -15,21 +15,6 @@ public class CreateAccountStep {
 
     CreateAccountPage createAccountPage = new CreateAccountPage();
 
-    public static int getRandomNumber() {
-        Random random = new Random();
-        return random.nextInt(5);
-    }
-
-    @Step("Цикл")
-    public void randomCheck() {
-        int count = createAccountPage.pageElementQA.size();
-        for (int i = 0; i < count; i++) {
-            sleep(1000);
-            Configuration.pageLoadStrategy = "eager";
-            createAccountPage.radioButton.get(getRandomNumber()).click();
-            createAccountPage.nextButton.click();
-        }
-    }
 
     @Step("Проверка создания курса")
     public void checkoutCourse() {
@@ -88,9 +73,5 @@ public class CreateAccountStep {
         createAccountPage.experienceYes.click();
     }
 
-    @Step("Проверка заголовка страницы")
-    public void startQuiz() {
-        createAccountPage.startQuiz.click();
-        Selenide.sleep(2000);
-    }
+
 }

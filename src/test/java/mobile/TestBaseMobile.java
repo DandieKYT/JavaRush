@@ -6,6 +6,7 @@ import config.WebConfig;
 import io.qameta.allure.selenide.AllureSelenide;
 import mobile.drivers.BrowserstackDriver;
 import mobile.drivers.LocalDriver;
+import mobile.pages.QuizPage;
 import mobile.steps.*;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
@@ -20,11 +21,12 @@ public class TestBaseMobile {
 
     protected static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
     static boolean isRemote = Boolean.parseBoolean(System.getProperty("isRemote", config.isRemote()));
+
+    QuizStep quizStep = new QuizStep();
     CreateAccountStep createAccountStep = new CreateAccountStep();
-    LikeCommentStep likeCommentStep = new LikeCommentStep();
     AuthenticationStep authenticationStep = new AuthenticationStep();
     CourseTaskStep courseTaskStep = new CourseTaskStep();
-    LikeLessonStep likeLessonStep = new LikeLessonStep();
+    LessonStep lessonStep = new LessonStep();
     CommentStep commentStep = new CommentStep();
 
     @BeforeAll
