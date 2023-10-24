@@ -12,8 +12,7 @@ public class UploadImageToProfileTest extends TestBase {
 
     @Test
     public void imageProfileUpload() throws Exception {
-        open("/");
-        openSocialGroupsStep.closeCookie();
+        mainPageSteps.closeCookie();
         stepsForWebApp();
         refresh();
         WebDriverRunner.getWebDriver().manage().window().fullscreen();

@@ -1,10 +1,10 @@
 package ui.steps;
 
 import io.qameta.allure.Step;
+import org.openqa.selenium.Keys;
 import ui.pages.MainPage;
 
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.switchTo;
+import static com.codeborne.selenide.Selenide.*;
 
 public class MainPageSteps {
     MainPage mainPage = new MainPage();
@@ -24,6 +24,24 @@ public class MainPageSteps {
     public void openJavaUniversity() {
         open("/");
         mainPage.openJavaUniversity.click();
+        switchTo().window(1);
+    }
+
+    @Step("Закрытие куки")
+    public void closeCookie() {
+        open("/");
+        mainPage.closeCookie.click();
+    }
+    @Step("Открытие страницы в Telegram")
+    public void telegramButton() {
+        mainPage.scrollToButton.scrollIntoView(true);
+        mainPage.telegramButton.click();
+        switchTo().window(1);
+    }
+    @Step("Открытие страницы на YouTube")
+    public void youtubeButton() {
+        actions().sendKeys(Keys.PAGE_DOWN).perform();
+        mainPage.youtubeButton.click();
         switchTo().window(1);
     }
 }

@@ -16,16 +16,16 @@ public class OpenSocialGroupsTest extends TestBase {
     @Test
     @DisplayName("Открытие страницы сайта в телеграм")
     public void openTelegramPageTest() {
-        openSocialGroupsStep.closeCookie();
-        openSocialGroupsStep.telegramButton();
+        mainPageSteps.closeCookie();
+        mainPageSteps.telegramButton();
         openSocialGroupsStep.checkOutTelegramTitle();
     }
 
     @Test
     @DisplayName("Открытие страницы сайта в YouTube")
     public void openYouTubePageTest() {
-        openSocialGroupsStep.closeCookie();
-        openSocialGroupsStep.youtubeButton();
+        mainPageSteps.closeCookie();
+        mainPageSteps.youtubeButton();
         openSocialGroupsStep.acceptCookieYT();
         openSocialGroupsStep.checkOutYoutubeTitle();
     }
