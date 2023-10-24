@@ -36,7 +36,7 @@ public class CreateAccountTest extends TestBase {
         createAccountStep.blackPictureClick();
         createAccountStep.notNowButton();
         createAccountStep.xpInProgrammingYes();
-        createAccountStep.testBeginButton();
+        quizStep.testBeginButton();
         quizStep.randomCheck();
         createAccountStep.checkOutResult();
     }

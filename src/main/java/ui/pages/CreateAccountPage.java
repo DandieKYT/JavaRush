@@ -15,7 +15,6 @@ public class CreateAccountPage {
     public final SelenideElement qaButton = $x("//*[@id='id_button_jr_welcome_choose_qa']");
     public final SelenideElement blackPictureClick = $x("//*[@id='id_button_jr_welcome_light_theme']/picture");
     public final SelenideElement notNowButton = $x("//*[@id='id_button_jr_welcome_sign_up_not_now']");
-    public final SelenideElement testBeginButton = $x("//*[@id='id_button_jr_welcome_start_testing']");
     public final SelenideElement xpInProgrammingYes = $x("//*[@id='id_button_jr_welcome_determine_my_level']");
     public final SelenideElement xpInProgrammingNo = $x("//*[@id='id_button_jr_welcome_start_from_scratch']");
     public final SelenideElement getButtonLearn = $x("//*[@id='id_button_jr_welcome_get_course']");

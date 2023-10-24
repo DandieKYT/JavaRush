@@ -21,11 +21,7 @@ public class CreateAccountStep {
         createAccountPage.startLearnButton.click();
     }
 
-    @Step("Нажатие на кнопку 'Начать'")
-    public void testBeginButton() {
-        createAccountPage.testBeginButton.shouldBe((visible).because("Не получилось набрать")).click();
-        refresh();
-    }
+
 
     @Step("Нажатие на кнопку 'Начать'")
     public void beginLearnButton() {
