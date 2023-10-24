@@ -16,7 +16,7 @@ public class EnrollInCourseToJavaTest extends TestBase {
     @Test
     @DisplayName("Запись на курс по JAVA")
     public void enrollInCourseToJava() {
-        mainPageSteps.openJavaUniversity();
+        sideBarSteps.openJavaUniversity();
         enrollInCourseJavaStep.clickButtonEnrollToCourse();
         enrollInCourseJavaStep.checkoutForm();
     }

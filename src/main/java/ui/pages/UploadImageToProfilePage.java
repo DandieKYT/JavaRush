@@ -7,9 +7,6 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class UploadImageToProfilePage {
 
-    public final SelenideElement settings = $("a.sidebar-nav-link[href='/settings']");
-    public final SelenideElement clickImage = $x("//jr-icon[@class='sidebar-nav__toggle-icon']//*[name()='svg']");
-    public final SelenideElement bookmarks = $x("//div[contains(text(),'Поддержка')]");
     public final SelenideElement clickProfilePhoto = $x("//*[contains(@class, 'avatar-upload-button')]");
     public final SelenideElement uploadPhoto = $x("//*[@id='me-profile-upload-ava']");
     public final SelenideElement savePhoto = $x("//*[contains(@class, 'button--success')]");

@@ -12,15 +12,6 @@ public class UploadImageToProfileStep {
 
     UploadImageToProfilePage uploadImageToProfilePage = new UploadImageToProfilePage();
 
-    @Step("Открытие вкладки 'Настройки'")
-    public void openSettings() {
-        WebDriverRunner.getWebDriver().manage().window().fullscreen();
-        sleep(2000);
-        uploadImageToProfilePage.clickImage.click();
-        uploadImageToProfilePage.bookmarks.scrollTo();
-        uploadImageToProfilePage.settings.click();
-    }
-
     @Step("Нажатие на фотографию профиля")
     public void clickAvatarImage() {
         uploadImageToProfilePage.clickProfilePhoto.click();

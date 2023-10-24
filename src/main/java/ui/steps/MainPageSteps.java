@@ -20,19 +20,6 @@ public class MainPageSteps {
         mainPage.startLearnButton.click();
     }
 
-    @Step("Открытие вкладки 'Пользователи'")
-    public void user() {
-        open("/");
-        mainPage.users.click();
-    }
-
-    @Step("Открытие вкладки Java-университет")
-    public void openJavaUniversity() {
-        open("/");
-        mainPage.openJavaUniversity.click();
-        switchTo().window(1);
-    }
-
     @Step("Закрытие куки")
     public void closeCookie() {
         open("/");

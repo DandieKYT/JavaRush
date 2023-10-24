@@ -17,7 +17,7 @@ public class UploadImageToProfileTest extends TestBase {
         refresh();
         WebDriverRunner.getWebDriver().manage().window().fullscreen();
         sleep(5000);
-        uploadImageToProfileStep.openSettings();
+        sideBarSteps.openSettings();
         uploadImageToProfileStep.clickAvatarImage();
         uploadImageToProfileStep.uploadPhoto();
         uploadImageToProfileStep.checkUploadPhoto();
