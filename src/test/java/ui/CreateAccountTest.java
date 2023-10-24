@@ -25,4 +25,19 @@ public class CreateAccountTest extends TestBase {
         createAccountStep.xpInProgrammingNo();
         createAccountStep.checkOutResult();
     }
+
+    @Test
+    @DisplayName("Создание аккаунта с прохождением теста")
+    public void createAccountWithQuiz() {
+        createAccountStep.startLearnButton();
+        createAccountStep.beginLearnButton();
+        createAccountStep.russianLanguageButton();
+        createAccountStep.qaButton();
+        createAccountStep.blackPictureClick();
+        createAccountStep.notNowButton();
+        createAccountStep.xpInProgrammingYes();
+        createAccountStep.testBeginButton();
+        createAccountStep.randomCheck();
+        createAccountStep.checkOutResult();
+    }
 }
