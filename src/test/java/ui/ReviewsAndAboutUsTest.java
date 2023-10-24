@@ -23,7 +23,7 @@ public class ReviewsAndAboutUsTest extends TestBase {
     @ParameterizedTest
     @DisplayName("Открытие страниц Отзывы/О нас")
     public void openReviewsAndAboutUsPages(String param, String expectedText) {
-        open("/");
+        mainPageSteps.openPage();
         reviewsAndAboutUsStep.opensTitle(param);
         reviewsAndAboutUsStep.checksTitle(expectedText);
     }
