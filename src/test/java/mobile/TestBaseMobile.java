@@ -6,7 +6,6 @@ import config.WebConfig;
 import io.qameta.allure.selenide.AllureSelenide;
 import mobile.drivers.BrowserstackDriver;
 import mobile.drivers.LocalDriver;
-import mobile.pages.QuizPage;
 import mobile.steps.*;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
@@ -25,7 +24,7 @@ public class TestBaseMobile {
     QuizStep quizStep = new QuizStep();
     CreateAccountStep createAccountStep = new CreateAccountStep();
     AuthenticationStep authenticationStep = new AuthenticationStep();
-    CourseTaskStep courseTaskStep = new CourseTaskStep();
+    SideBarStep sideBarStep = new SideBarStep();
     LessonStep lessonStep = new LessonStep();
     CommentStep commentStep = new CommentStep();
 

@@ -18,7 +18,7 @@ public class OpenCourseTaskTest extends TestBaseMobile {
         Common.stepsForApp();
         authenticationStep.goBackButton();
         authenticationStep.navigateMenu();
-        courseTaskStep.tag(param);
-        courseTaskStep.checkTitle(expectedText);
+        sideBarStep.tag(param);
+        sideBarStep.checkTitle(expectedText);
     }
 }

@@ -7,7 +7,7 @@ import io.appium.java_client.AppiumBy;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class OpenCourseTaskPage {
+public class SideBarMenuPage {
 
     public final ElementsCollection
             tag = $$(AppiumBy.className("android.widget.CheckedTextView"));
