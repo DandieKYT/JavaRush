@@ -13,7 +13,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import ui.pages.MainPage;
 import ui.steps.*;
 
 import java.util.Map;
@@ -29,10 +28,10 @@ public class TestBase extends Attach {
     SideBarSteps sideBarSteps = new SideBarSteps();
     MainPageSteps mainPageSteps = new MainPageSteps();
     QuizStep quizStep = new QuizStep();
-    UploadImageToProfileStep uploadImageToProfileStep = new UploadImageToProfileStep();
-    OpenSocialGroupsStep openSocialGroupsStep = new OpenSocialGroupsStep();
+    ProfileSettingsStep profileSettingsStep = new ProfileSettingsStep();
+    SocialGroupsStep socialGroupsStep = new SocialGroupsStep();
     CreateAccountStep createAccountStep = new CreateAccountStep();
-    ReviewsAndAboutUsStep reviewsAndAboutUsStep = new ReviewsAndAboutUsStep();
+    HeaderStep headerStep = new HeaderStep();
     EnrollInCourseJavaStep enrollInCourseJavaStep = new EnrollInCourseJavaStep();
     SearchUsersStep searchUsersStep = new SearchUsersStep();
 

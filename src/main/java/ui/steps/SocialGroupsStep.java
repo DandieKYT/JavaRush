@@ -2,27 +2,26 @@ package ui.steps;
 
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
-import org.openqa.selenium.Keys;
-import ui.pages.OpenSocialGroupsPage;
+import ui.pages.SocialGroupsPage;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
-public class OpenSocialGroupsStep {
+public class SocialGroupsStep {
 
-    OpenSocialGroupsPage openSocialGroupsPage = new OpenSocialGroupsPage();
+    SocialGroupsPage socialGroupsPage = new SocialGroupsPage();
 
 
     @Step("Проверка заголовка на YouTube")
     public void checkOutYoutubeTitle() {
-        openSocialGroupsPage.checkOutYoutubeTitle.shouldHave(Condition.text("JavaRush"));
+        socialGroupsPage.checkOutYoutubeTitle.shouldHave(Condition.text("JavaRush"));
         closeWindow();
         switchTo().window(0);
     }
 
     @Step("Проверка заголовка на Telegram")
     public void checkOutTelegramTitle() {
-        openSocialGroupsPage.checkOutTelegramTitle.shouldBe(Condition.text("JavaRush"));
+        socialGroupsPage.checkOutTelegramTitle.shouldBe(Condition.text("JavaRush"));
         sleep(1000);
         closeWindow();
         switchTo().window(0);
@@ -32,8 +31,8 @@ public class OpenSocialGroupsStep {
 
     @Step("Закрытие куки ютуба")
     public void acceptCookieYT() {
-        if (openSocialGroupsPage.acceptCookieYT.has(visible)) {
-            openSocialGroupsPage.acceptCookieYT.click();
+        if (socialGroupsPage.acceptCookieYT.has(visible)) {
+            socialGroupsPage.acceptCookieYT.click();
         }
     }
 }

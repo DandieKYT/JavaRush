@@ -1,24 +1,24 @@
 package ui.steps;
 
 import io.qameta.allure.Step;
-import ui.pages.ReviewsAndAboutUsPage;
+import ui.pages.MainPage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 
 
-public class ReviewsAndAboutUsStep {
+public class HeaderStep {
 
-    ReviewsAndAboutUsPage reviewsAndAboutUsPage = new ReviewsAndAboutUsPage();
+    MainPage mainPage = new MainPage();
 
     @Step("Открытие вкладки")
     public void opensTitle(String param) {
         open("/");
-        reviewsAndAboutUsPage.openTitle(param).click();
+        mainPage.openTitle(param).click();
     }
 
     @Step("Проверка содержимого вкладки")
     public void checksTitle(String expectedText) {
-        reviewsAndAboutUsPage.checkTitle(expectedText).shouldBe(text(expectedText));
+        mainPage.checkTitle(expectedText).shouldBe(text(expectedText));
     }
 }

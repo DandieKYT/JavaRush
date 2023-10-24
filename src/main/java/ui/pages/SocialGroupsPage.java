@@ -4,7 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-public class OpenSocialGroupsPage {
+public class SocialGroupsPage {
 
     public final SelenideElement acceptCookieYT = $x("//*[@aria-label='Accept all']");
 

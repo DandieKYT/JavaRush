@@ -24,7 +24,7 @@ public class ReviewsAndAboutUsTest extends TestBase {
     @DisplayName("Открытие страниц Отзывы/О нас")
     public void openReviewsAndAboutUsPages(String param, String expectedText) {
         mainPageSteps.openPage();
-        reviewsAndAboutUsStep.opensTitle(param);
-        reviewsAndAboutUsStep.checksTitle(expectedText);
+        headerStep.opensTitle(param);
+        headerStep.checksTitle(expectedText);
     }
 }

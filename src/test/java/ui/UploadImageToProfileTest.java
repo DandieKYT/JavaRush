@@ -18,11 +18,11 @@ public class UploadImageToProfileTest extends TestBase {
         WebDriverRunner.getWebDriver().manage().window().fullscreen();
         sleep(5000);
         sideBarSteps.openSettings();
-        uploadImageToProfileStep.clickAvatarImage();
-        uploadImageToProfileStep.uploadPhoto();
-        uploadImageToProfileStep.checkUploadPhoto();
-        uploadImageToProfileStep.savePhoto();
-        uploadImageToProfileStep.saveChanges();
-        uploadImageToProfileStep.checkChanges();
+        profileSettingsStep.clickAvatarImage();
+        profileSettingsStep.uploadPhoto();
+        profileSettingsStep.checkUploadPhoto();
+        profileSettingsStep.savePhoto();
+        profileSettingsStep.saveChanges();
+        profileSettingsStep.checkChanges();
     }
 }

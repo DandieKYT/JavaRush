@@ -5,7 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
-public class UploadImageToProfilePage {
+public class ProfileSettingsPage {
 
     public final SelenideElement clickProfilePhoto = $x("//*[contains(@class, 'avatar-upload-button')]");
     public final SelenideElement uploadPhoto = $x("//*[@id='me-profile-upload-ava']");

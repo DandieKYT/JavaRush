@@ -18,7 +18,7 @@ public class OpenSocialGroupsTest extends TestBase {
     public void openTelegramPageTest() {
         mainPageSteps.closeCookie();
         mainPageSteps.telegramButton();
-        openSocialGroupsStep.checkOutTelegramTitle();
+        socialGroupsStep.checkOutTelegramTitle();
     }
 
     @Test
@@ -26,7 +26,7 @@ public class OpenSocialGroupsTest extends TestBase {
     public void openYouTubePageTest() {
         mainPageSteps.closeCookie();
         mainPageSteps.youtubeButton();
-        openSocialGroupsStep.acceptCookieYT();
-        openSocialGroupsStep.checkOutYoutubeTitle();
+        socialGroupsStep.acceptCookieYT();
+        socialGroupsStep.checkOutYoutubeTitle();
     }
 }
