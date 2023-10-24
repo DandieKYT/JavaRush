@@ -1,6 +1,9 @@
 package api;
 
 import api.models.Activities;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -13,6 +16,9 @@ import static api.specs.Specification.responseSpec;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 @Tag("API")
+@Owner("Кудрявцев Даниил")
+@Story("Проверка страницы активности пользователей")
+@Feature("Автотесты для API")
 public class NewsResponseTest {
 
     private static final String expectedPartKey = "anonymous#336";

@@ -1,6 +1,9 @@
 package api;
 
 import api.models.Games;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -13,6 +16,9 @@ import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @Tag("API")
+@Owner("Кудрявцев Даниил")
+@Story("Проверка страницы игр через API")
+@Feature("Автотесты для API")
 public class
 CheckGamesResponseTest {
 
