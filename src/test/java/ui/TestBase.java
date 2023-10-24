@@ -28,7 +28,7 @@ public class TestBase extends Attach {
     SideBarSteps sideBarSteps = new SideBarSteps();
     MainPageSteps mainPageSteps = new MainPageSteps();
     QuizStep quizStep = new QuizStep();
-    ProfileSettingsStep profileSettingsStep = new ProfileSettingsStep();
+    UserSettingsStep userSettingsStep = new UserSettingsStep();
     SocialGroupsStep socialGroupsStep = new SocialGroupsStep();
     CreateAccountStep createAccountStep = new CreateAccountStep();
     HeaderStep headerStep = new HeaderStep();

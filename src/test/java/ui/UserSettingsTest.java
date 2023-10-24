@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static ui.Common.stepsForWebApp;
 
 @Tag("UITest")
-public class UploadImageToProfileTest extends TestBase {
+public class UserSettingsTest extends TestBase {
 
     @Test
     public void imageProfileUpload() throws Exception {
@@ -18,11 +18,11 @@ public class UploadImageToProfileTest extends TestBase {
         WebDriverRunner.getWebDriver().manage().window().fullscreen();
         sleep(5000);
         sideBarSteps.openSettings();
-        profileSettingsStep.clickAvatarImage();
-        profileSettingsStep.uploadPhoto();
-        profileSettingsStep.checkUploadPhoto();
-        profileSettingsStep.savePhoto();
-        profileSettingsStep.saveChanges();
-        profileSettingsStep.checkChanges();
+        userSettingsStep.clickAvatarImage();
+        userSettingsStep.uploadPhoto();
+        userSettingsStep.checkUploadPhoto();
+        userSettingsStep.savePhoto();
+        userSettingsStep.saveChanges();
+        userSettingsStep.checkChanges();
     }
 }
