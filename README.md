@@ -51,9 +51,17 @@
 <code><a href = "https://git-scm.com/">![This is an image](/design/icons/git.png)</a></code>
 <code><a href = "https://github.com/">![This is an image](/design/icons/GitHub.png)</a></code>
 <code><a href = "https://developer.chrome.com/docs/devtools/">![This is an image](/design/icons/devtools.png)</a></code>
-  <a href="https://developer.android.com/studio"><code><img width="5%" title="Android_Studio" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Android_Studio_Icon_3.6.svg"></code></a>
-</p>
 
+
+<code><a href = "https://notepad-plus-plus.org/">![This is an image](/design/icons/notepad.png)</a></code>
+<code><a href = "https://www.mysql.com/">![This is an image](/design/icons/sql.png)</a></code>
+<code><a href = "https://ru.wikipedia.org/wiki/HTML">![This is an image](/design/icons/html.png)</a></code>
+<code><a href = "https://ru.wikipedia.org/wiki/CSS">![This is an image](/design/icons/css.png)</a></code>
+<code><a href = "https://www.browserstack.com/">![This is an image](/design/icons/browserstack.png)</a></code>
+<code><a href = "https://appium.io/docs/en/2.0/">![This is an image](/design/icons/appium.png)</a></code>
+<code><a href = "https://developer.android.com/studio">![This is an image](/design/icons/androidstudio.png)</a></code>
+<code><a href = "https://rest-assured.io//">![This is an image](/design/icons/Rest-Assured.png)</a></code>
+</br>
 <a name="Description"><h2>Описаниe</h2></a>
 Автотесты в этом проекте написаны на `Java` с использованием `Selenide`.\
 `Gradle` - для автоматической системы сборки.  \
