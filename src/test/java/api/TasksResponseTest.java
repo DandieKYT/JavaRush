@@ -16,7 +16,7 @@ import static api.specs.Specification.responseSpec;
 import static io.restassured.RestAssured.given;
 @Tag("API")
 @Owner("Кудрявцев Даниил")
-@Story("Проверка ст")
+@Story("Проверка страницы лекций")
 @Feature("Автотесты для API")
 public class TasksResponseTest {
     private static final String idJavaSyntax = "857";
