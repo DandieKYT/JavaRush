@@ -1,4 +1,4 @@
-# UI, API и Mobile автотесты для сайта [STEAM](https://store.steampowered.com/) — онлайн-сервиса цифрового распространения компьютерных игр и программ, разработанного и поддерживаемого компанией Valve.
+# UI, API и Mobile автотесты для сайта [Java-Rush](https://javarush.com/) — практический онлайн-курс по обучению Java.
 <img alt="GIPHY" src="/design/icons/STEAM.png">
 
 # <a name="TableOfContents">Содержание страницы</a>
