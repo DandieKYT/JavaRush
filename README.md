@@ -1,5 +1,6 @@
 # UI, API и Mobile автотесты для сайта [Java-Rush](https://javarush.com/) — практический онлайн-курс по обучению Java.
-<img alt="GIPHY" src="/design/icons/STEAM.png">
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/308965b1-f5b0-415d-a34b-140a6f7b8db5)
+
 
 # <a name="TableOfContents">Содержание страницы</a>
 + [:trophy: Инструменты и технологии](#MyToolsAndTechnologies)
