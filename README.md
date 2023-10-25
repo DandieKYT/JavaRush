@@ -78,7 +78,7 @@
 .
 
 <a name="Project"><h2>Проект</h2></a>
-<a href="https://javarush.com/"><code><img width="5%" title="Steam" src="https://javarush.com/assets/images/site/logo/sidebar-jr-logo.svg"></code></a> Проект по автоматизации тестирования для Java-Rush, — практический онлайн-курс по обучению Java. :star2:
+<a href="https://javarush.com/"><code><img width="5%" title="Steam" src="https://yt3.googleusercontent.com/ytc/APkrFKYPRuYZhFR5vGnF2c6htR6815HiRYLmhikCqrjR7w=s900-c-k-c0x00ffffff-no-rj"></code></a> Проект по автоматизации тестирования для Java-Rush, — практический онлайн-курс по обучению Java. :star2:
 
 <a name="ImplementedСhecks"><h2>:heavy_check_mark:  Реализованные проверки:</h2></a>
 <a id="cases-ui"></a>UI-кейсы:
