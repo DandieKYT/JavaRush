@@ -42,7 +42,6 @@ public class TasksResponseTest {
                 .orElseThrow(() -> new AssertionError(""));
         String actualTitle = String.valueOf(actualTasks.quest.getTitle());
         Assertions.assertEquals(expectTitleJavaSyntax, actualTitle);
-
     }
 
     @Test
@@ -61,7 +60,6 @@ public class TasksResponseTest {
                 .orElseThrow(() -> new AssertionError(""));
         String actualId = String.valueOf(actualTasks.getId());
         Assertions.assertEquals(expectIdAdFollowingAnAd, actualId);
-
     }
 
     @Test
@@ -80,6 +78,5 @@ public class TasksResponseTest {
                 .orElseThrow(() -> new AssertionError(""));
         String actualLevel = String.valueOf(actualTasks.getQuest().getLevel());
         Assertions.assertEquals(levelTaskLastDigit, actualLevel);
-
     }
 }
