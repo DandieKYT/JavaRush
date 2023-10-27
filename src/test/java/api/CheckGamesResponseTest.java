@@ -38,7 +38,6 @@ CheckGamesResponseTest {
         Assertions.assertEquals("https://www.youtube.com/embed/zF-xllunn2M", data.videoUrl);
         Assertions.assertEquals("Сапер", data.title);
         Assertions.assertEquals("AVAILABLE", data.status);
-
     }
 
     @Test
@@ -54,7 +53,6 @@ CheckGamesResponseTest {
         Assertions.assertEquals("https://www.youtube.com/embed/4oykArMtDOI", data.videoUrl);
         Assertions.assertEquals("Змейка", data.title);
         Assertions.assertEquals("AVAILABLE", data.status);
-
     }
 
     @Test
@@ -87,7 +85,6 @@ CheckGamesResponseTest {
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
         String actualDescription = String.valueOf(actualGames.getDescription());
-
         assertThat(actualDescription).contains(expectedDescriptionMinesweeper);
     }
 }

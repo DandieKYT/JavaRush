@@ -27,7 +27,6 @@ public class NewsResponseTest {
     private static final String activityPartId = "311";
     private static final String partDescription = "пробует решить задачу";
 
-
     @Test
     @DisplayName("Проверка по частичному соответствию активности пользователя")
     void checkingForPartialMatchingOfUser() {
@@ -42,11 +41,8 @@ public class NewsResponseTest {
                 .filter(activities -> activities.getUser().getKey().contains(expectedPartKey))
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
-
         String foundUserId = String.valueOf(actualActivities.getUser().getUserId());
-
         assertThat(foundUserId).contains(expectedPartUserId);
-
     }
 
     @Test
@@ -64,7 +60,6 @@ public class NewsResponseTest {
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
         String activityId = String.valueOf(actualActivities.getId());
-
         assertThat(activityId).contains(activityPartId);
     }
 
@@ -83,7 +78,6 @@ public class NewsResponseTest {
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
         String actualDescription = String.valueOf(actualActivities.getDescription());
-
         assertThat(actualDescription).contains(partDescription);
     }
 }

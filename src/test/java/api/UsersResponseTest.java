@@ -31,7 +31,6 @@ public class UsersResponseTest {
                 .spec(responseSpec)
                 .extract().as(Users.class);
         assertThat(data.id).isEqualTo(3320682);
-
     }
 
     @Test
@@ -47,7 +46,6 @@ public class UsersResponseTest {
         assertThat(2209041).isEqualTo(data.getId());
         Assertions.assertEquals("Йошкар-Ола", data.getCity());
         Assertions.assertEquals("QA Automation Engineer", data.getPosition());
-
     }
 
     @Test
@@ -98,7 +96,6 @@ public class UsersResponseTest {
                 .findFirst()
                 .orElseThrow(() -> new AssertionError(""));
         String actualKey = String.valueOf(actualUsers.getKey());
-
         assertThat(actualKey).contains("anonymous#");
     }
 
