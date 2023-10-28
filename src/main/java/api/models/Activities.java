@@ -10,10 +10,9 @@ public class Activities {
     public int id;
 
     public String type;
+    public String description;
 
     public Object title;
-
-    public String description;
 
     public long time;
 
