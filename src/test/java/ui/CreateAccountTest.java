@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
 public class CreateAccountTest extends TestBase {
 
     @Test
-    @DisplayName("Создание аккаунта в JAVA-Rush")
+    @DisplayName("Создание аккаунта без прохождения теста")
     public void createAccount() {
         mainPageSteps.startLearnButton();
         createAccountStep.beginLearnButton();

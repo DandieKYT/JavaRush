@@ -10,14 +10,15 @@ import org.junit.jupiter.api.Test;
 import static api.specs.Specification.*;
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+
 @Tag("API")
 @Owner("Кудрявцев Даниил")
-@Story("Проверка json-scheme")
+@Story("Открытие json-scheme")
 @Feature("Автотесты для API")
-public class ShemesResponseTest {
+public class ShemeResponseTest {
 
     @Test
-    @DisplayName("Проверка json схемы Стажировка в Java-Rush")
+    @DisplayName("Открытие страницы 'Стажировка в Java-Rush'")
     public void checkIntershipShemesTest() {
         given()
                 .spec(intershipSpec)
@@ -29,7 +30,7 @@ public class ShemesResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка json схемы Project1")
+    @DisplayName("Открытие страницы Project1")
     public void checkProject1ShemesTest() {
         given()
                 .spec(discussionsSpec)
@@ -41,7 +42,7 @@ public class ShemesResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка json схемы страницы активностей")
+    @DisplayName("Открытие страницы активностей")
     public void checkNewsShemesTest() {
         given()
                 .spec(newsSpec)
@@ -53,7 +54,7 @@ public class ShemesResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка json схемы лекций")
+    @DisplayName("Открытие страницы лекций")
     public void checkQuizzesShemesTest() {
         given()
                 .spec(quizzesSpec)
@@ -65,7 +66,7 @@ public class ShemesResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка json схемы страницы 'Игры'")
+    @DisplayName("Открытие страницы 'Игры'")
     public void checkProjectsShemesTest() {
         given()
                 .spec(projectSpec)

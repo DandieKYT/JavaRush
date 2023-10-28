@@ -6,7 +6,6 @@ import ui.pages.MainPage;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.open;
 
-
 public class HeaderStep {
 
     MainPage mainPage = new MainPage();

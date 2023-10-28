@@ -9,11 +9,12 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static help.Generations.generationRandomText;
+
 @Tag("Mobile")
+@Story("Лайк")
 @Owner("Кудрявцев Даниил")
 @Feature("Автотесты для Mobile")
-@Story("Добавление лайка")
-public class AddLikeTests extends TestBaseMobile {
+public class LikeTests extends TestBaseMobile {
 
     @Test
     @DisplayName("Добавление лайка на коментарий")

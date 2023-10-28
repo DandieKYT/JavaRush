@@ -9,9 +9,9 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 @Tag("Mobile")
+@Story("Боковое меню")
 @Owner("Кудрявцев Даниил")
 @Feature("Автотесты для Mobile")
-@Story("Боковое меню")
 public class OpenCourseTaskTest extends TestBaseMobile {
 
     @CsvSource(value = {
@@ -22,8 +22,8 @@ public class OpenCourseTaskTest extends TestBaseMobile {
     @DisplayName("Открытие разделов Course/Java и проверка их содержимого")
     public void checkoutCourseTaskPages(String param, String expectedText) {
         Common.stepsForApp();
-        authenticationStep.goBackButton();
-        authenticationStep.navigateMenu();
+        authorizationStep.goBackButton();
+        authorizationStep.navigateMenu();
         sideBarStep.tag(param);
         sideBarStep.checkTitle(expectedText);
     }

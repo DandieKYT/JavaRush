@@ -44,7 +44,6 @@ public class TestBase extends Attach {
         Configuration.browser = System.getProperty("browser", config.getBrowser());
         Configuration.remote = System.getProperty("selenoid");
         Configuration.browserVersion = System.getProperty("browserVersion", config.getBrowserVersion());
-
         if (isRemote) {
             Configuration.remote = remoteUrl;
             DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -54,7 +53,6 @@ public class TestBase extends Attach {
             ));
             Configuration.browserCapabilities = capabilities;
         }
-
     }
 
     @AfterAll

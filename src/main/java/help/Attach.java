@@ -55,7 +55,6 @@ public class Attach {
                 + "' type='video/mp4'></video></body></html>";
     }
 
-
     public static URL getVideoUrl(String sessionId) {
         String videoUrl = config.videoUrl() + sessionId + ".mp4";
 

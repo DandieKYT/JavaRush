@@ -7,6 +7,7 @@ import ui.pages.MainPage;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPageSteps {
+
     MainPage mainPage = new MainPage();
 
     @Step("Открытие главной страницы")

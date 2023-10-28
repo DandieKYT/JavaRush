@@ -7,7 +7,9 @@ import ui.pages.SideBarPage;
 import static com.codeborne.selenide.Selenide.*;
 
 public class SideBarSteps {
+
     SideBarPage sideBarPage = new SideBarPage();
+
     @Step("Открытие вкладки Java-университет")
     public void openJavaUniversity() {
         open("/");

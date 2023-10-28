@@ -4,7 +4,6 @@ import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
 import ui.pages.SearchUsersPage;
 
-import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class SearchUsersStep {

@@ -11,7 +11,6 @@ public class SocialGroupsStep {
 
     SocialGroupsPage socialGroupsPage = new SocialGroupsPage();
 
-
     @Step("Проверка заголовка на YouTube")
     public void checkOutYoutubeTitle() {
         socialGroupsPage.checkOutYoutubeTitle.shouldHave(Condition.text("JavaRush"));
@@ -26,8 +25,6 @@ public class SocialGroupsStep {
         closeWindow();
         switchTo().window(0);
     }
-
-
 
     @Step("Закрытие куки ютуба")
     public void acceptCookieYT() {

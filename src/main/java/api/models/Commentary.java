@@ -6,6 +6,7 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Commentary {
+
     public int id;
     public long time;
     public String message, status, visibilityStatus;

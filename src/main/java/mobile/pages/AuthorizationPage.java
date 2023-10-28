@@ -5,7 +5,7 @@ import io.appium.java_client.AppiumBy;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class AuthenticationPage {
+public class AuthorizationPage {
 
     public final SelenideElement signInLink = $(AppiumBy.id("com.hitechrush.jaxarush:id/enterTextViewLink"));
     public final SelenideElement secretKeyLink = $(AppiumBy.id("com.hitechrush.jaxarush:id/changeLoginFragment"));

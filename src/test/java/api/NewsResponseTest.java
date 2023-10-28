@@ -14,20 +14,21 @@ import static api.specs.Specification.newsSpec;
 import static api.specs.Specification.responseSpec;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
+
 @Tag("API")
 @Owner("Кудрявцев Даниил")
-@Story("Проверка страницы активности пользователей")
 @Feature("Автотесты для API")
+@Story("Активности пользователей")
 public class NewsResponseTest {
 
     private static final String expectedPartKey = "anonymous#336";
     private static final String expectedPartUserId = "336";
     private static final String expectedType = "TASK_IN_PROGRESS";
-    private static final String activityPartId = "311";
+    private static final String activityPartId = "31";
     private static final String partDescription = "пробует решить задачу";
 
     @Test
-    @DisplayName("Проверка по частичному соответствию активности пользователя")
+    @DisplayName("Проверка по частичному соответствию ключа пользователя")
     void checkingForPartialMatchingOfUser() {
         Activities[] data = given()
                 .spec(newsSpec)
@@ -45,7 +46,7 @@ public class NewsResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка по частичному соответствию активности пользователя")
+    @DisplayName("Проверка по частичному соответствию статуса решения задачи")
     void checkingForExpectedType() {
         Activities[] data = given()
                 .spec(newsSpec)
@@ -63,7 +64,7 @@ public class NewsResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка по частичному соответствию активности пользователя")
+    @DisplayName("Проверка по частичному соответствию статуса решения задачи")
     void checkingForPartDescription() {
         Activities[] data = given()
                 .spec(newsSpec)

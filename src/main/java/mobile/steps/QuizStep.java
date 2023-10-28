@@ -10,7 +10,9 @@ import java.util.Random;
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class QuizStep {
+
     QuizPage quizPage = new QuizPage();
+
     @Step("Проверка заголовка страницы")
     public void startQuiz() {
         quizPage.startQuiz.click();

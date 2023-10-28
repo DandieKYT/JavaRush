@@ -9,12 +9,12 @@ import org.junit.jupiter.api.Test;
 
 @Tag("UITest")
 @Owner("Кудрявцев Даниил")
-@Story("Переход в соц сети")
+@Story("Социальные сети")
 @Feature("Автотесты для UI")
 public class OpenSocialGroupsTest extends TestBase {
 
     @Test
-    @DisplayName("Открытие страницы сайта в телеграм")
+    @DisplayName("Открытие страницы сайта в Telegram")
     public void openTelegramPageTest() {
         mainPageSteps.closeCookie();
         mainPageSteps.telegramButton();

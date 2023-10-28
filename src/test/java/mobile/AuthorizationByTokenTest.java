@@ -12,17 +12,17 @@ import org.junit.jupiter.api.Test;
 @Tag("Mobile")
 @Owner("Кудрявцев Даниил")
 @Feature("Автотесты для Mobile")
-@Story("Аутентификация")
-public class AuthenticationByTokenTest extends TestBaseMobile {
+@Story("Авторизация")
+public class AuthorizationByTokenTest extends TestBaseMobile {
 
     static BrowserstackConfig config = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
 
     @Test
     @DisplayName("Авторизация по секретному ключу")
     public void loginBySecretKey() {
-        authenticationStep.signInLink();
-        authenticationStep.secretKeyLink();
-        authenticationStep.loginKey(config.getLoginKey());
-        authenticationStep.loginButton();
+        authorizationStep.signInLink();
+        authorizationStep.secretKeyLink();
+        authorizationStep.loginKey(config.getLoginKey());
+        authorizationStep.loginButton();
     }
 }

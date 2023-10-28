@@ -13,7 +13,6 @@ import java.io.IOException;
 public class PhoneManagerHelper {
     @Step("Получить значение из буфера обмена")
     public static String getClipboardValue() {
-        // ToDo добавить обработку: android or ios
         return ((AndroidDriver) WebDriverRunner.getWebDriver()).getClipboardText();
     }
 
@@ -22,8 +21,6 @@ public class PhoneManagerHelper {
         File file = new File("src/test/resources/media", mediaClasspath);
         if (!file.exists())
             throw new RuntimeException("File by path [" + file.getAbsoluteFile() + "] don't exist");
-
-
         try {
             ((AndroidDriver) WebDriverRunner.getWebDriver()).pushFile("/sdcard/Download/" + file.getName(), file);
         } catch (IOException e) {

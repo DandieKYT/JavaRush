@@ -1,9 +1,11 @@
 package api;
 
-
 import api.models.Commentary;
 import api.models.SomeUser;
 import api.models.Users;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -14,8 +16,11 @@ import java.util.Arrays;
 import static api.specs.Specification.*;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
-@Tag("API")
 
+@Tag("API")
+@Owner("Кудрявцев Даниил")
+@Story("Пользователи")
+@Feature("Автотесты для API")
 public class UsersResponseTest {
 
     private static final String expectedUserId = "332";

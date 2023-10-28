@@ -32,15 +32,12 @@ public class LocalDriver implements WebDriverProvider {
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
         UiAutomator2Options options = new UiAutomator2Options();
         options.merge(capabilities);
-
-
         options.setAutomationName(ANDROID_UIAUTOMATOR2)
                 .setPlatformName(ANDROID)
                 .setPlatformVersion(mobile.osVersion())
                 .setDeviceName(mobile.deviceName())
                 .setAppPackage(mobile.appPackage())
                 .setAppActivity(mobile.appActivity());
-
         return new AndroidDriver(getAppiumServerUrl(), options);
     }
 }

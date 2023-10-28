@@ -15,7 +15,6 @@ public class CreateAccountStep {
 
     CreateAccountPage createAccountPage = new CreateAccountPage();
 
-
     @Step("Проверка создания курса")
     public void checkoutCourse() {
         Selenide.sleep(11000);
@@ -72,6 +71,4 @@ public class CreateAccountStep {
     public void experienceYes() {
         createAccountPage.experienceYes.click();
     }
-
-
 }

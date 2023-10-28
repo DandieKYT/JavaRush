@@ -14,11 +14,13 @@ import java.util.Arrays;
 import static api.specs.Specification.requestSpec;
 import static api.specs.Specification.responseSpec;
 import static io.restassured.RestAssured.given;
+
 @Tag("API")
+@Story("Занятия")
 @Owner("Кудрявцев Даниил")
-@Story("Проверка страницы лекций")
 @Feature("Автотесты для API")
 public class TasksResponseTest {
+
     private static final String idJavaSyntax = "857";
     private static final String expectIdAdFollowingAnAd = "1132";
     private static final String lastDigitNumberId = "3920";

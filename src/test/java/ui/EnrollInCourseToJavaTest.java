@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 @Tag("UITest")
 @Owner("Кудрявцев Даниил")
 @Feature("Автотесты для UI")
-@Story("Раздел курс по Java")
+@Story("Раздел 'Java-университет'")
 public class EnrollInCourseToJavaTest extends TestBase {
 
     @Test

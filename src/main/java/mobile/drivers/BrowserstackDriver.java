@@ -23,24 +23,18 @@ public class BrowserstackDriver implements WebDriverProvider {
 
         mutableCapabilities.merge(capabilities);
 
-        // Set your access credentials
         mutableCapabilities.setCapability("browserstack.user", config.username());
         mutableCapabilities.setCapability("browserstack.key", config.passwordKey());
 
-        // Set URL of the application under test
         mutableCapabilities.setCapability("app", config.app());
 
-        // Specify device and os_version for testing
         mutableCapabilities.setCapability("device", config.deviceName());
         mutableCapabilities.setCapability("os_version", config.osVersion());
 
-        // Set other BrowserStack capabilities
         mutableCapabilities.setCapability("project", "Java Rush");
         mutableCapabilities.setCapability("build", "browserstack-Java Rush-1");
         mutableCapabilities.setCapability("name", "Mobile");
 
-        // Initialise the remote Webdriver using BrowserStack remote URL
-        // and desired capabilities defined above
         try {
             return new RemoteWebDriver(
                     new URL(config.remoteMobileUrl()), mutableCapabilities);

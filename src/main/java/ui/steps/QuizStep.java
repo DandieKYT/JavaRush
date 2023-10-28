@@ -13,10 +13,12 @@ import static com.codeborne.selenide.Selenide.sleep;
 public class QuizStep {
 
     QuizPage quizPage= new QuizPage();
+
     public static int getRandomNumber() {
         Random random = new Random();
         return random.nextInt(5);
     }
+
     @Step("Цикл")
     public void randomCheck() {
         quizPage.nextButton.shouldBe((visible).because("Не видна кнопка 'Далее'"));
@@ -30,6 +32,7 @@ public class QuizStep {
             }
         }
     }
+
     @Step("Нажатие на кнопку 'Начать'")
     public void testBeginButton() {
         quizPage.testBeginButton.shouldBe((visible).because("Не получилось набрать")).click();

@@ -14,8 +14,6 @@ public class CreateAccountPage {
     public final ElementsCollection languageRussian = $$(AppiumBy.className("android.widget.LinearLayout"));
     public final ElementsCollection checkoutTitle = $$(AppiumBy.id("com.hitechrush.jaxarush:id/authHeaderTitle"));
 
-
-
     public final SelenideElement qaButton = $(AppiumBy.id("com.hitechrush.jaxarush:id/qaEngineer"));
     public final SelenideElement literaryStyle = $(AppiumBy.id("com.hitechrush.jaxarush:id/plotStyleCard"));
     public final SelenideElement motivationNo = $(AppiumBy.id("com.hitechrush.jaxarush:id/motivationNoCard"));

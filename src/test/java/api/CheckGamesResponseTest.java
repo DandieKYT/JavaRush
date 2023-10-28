@@ -16,17 +16,16 @@ import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @Tag("API")
+@Story("Игры")
 @Owner("Кудрявцев Даниил")
-@Story("Проверка страницы игр через API")
 @Feature("Автотесты для API")
-public class
-CheckGamesResponseTest {
+public class CheckGamesResponseTest {
 
     private static final String keyMinesweeper = "com.javarush.games.minesweeper";
     private static final String expectedDescriptionMinesweeper = "Сапер";
 
     @Test
-    @DisplayName("Проверка title, url, status на странице игры 'Сапер'")
+    @DisplayName("Открытие страницы игры 'Сапер'")
     void checkMinesweeperTest() {
         Games data = given()
                 .spec(gamesSpec)
@@ -41,7 +40,7 @@ CheckGamesResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка title, url, status на странице игры 'Змейка'")
+    @DisplayName("Открытие страницы игры 'Змейка'")
     void checkSnakeTest() {
         Games data = given()
                 .spec(gamesSpec)
@@ -56,7 +55,7 @@ CheckGamesResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка title, url, status на странице '2048'")
+    @DisplayName("Открытие страницы игры '2048'")
     void checkTwoThousandFortyEightTest() {
         Games data = given()
                 .spec(gamesSpec)
@@ -71,7 +70,7 @@ CheckGamesResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка названия игры 'Сапер' по id")
+    @DisplayName("Проверка по id названия игры 'Сапер'")
     void checkingForIdGame() {
         Games[] data = given()
                 .spec(projectSpec)

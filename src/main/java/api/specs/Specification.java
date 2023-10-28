@@ -11,6 +11,7 @@ import static io.restassured.filter.log.LogDetail.STATUS;
 import static io.restassured.http.ContentType.JSON;
 
 public class Specification {
+
     private static final String BASE_URL = "https://javarush.com/api/1.0/rest";
 
     public static RequestSpecification requestSpec =
@@ -19,10 +20,12 @@ public class Specification {
                     .filter(withCustomTemplates())
                     .log().all()
                     .contentType(JSON);
+
     public static ResponseSpecification responseSpec = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
             .build();
+
     public static RequestSpecification projectSpec =
             with()
                     .baseUri(BASE_URL)
@@ -30,6 +33,7 @@ public class Specification {
                     .basePath("/projects")
                     .log().all()
                     .contentType(JSON);
+
     public static RequestSpecification quizzesSpec =
             with()
                     .baseUri(BASE_URL)
@@ -37,6 +41,7 @@ public class Specification {
                     .basePath("/quizzes")
                     .log().all()
                     .contentType(JSON);
+
     public static RequestSpecification newsSpec =
             with()
                     .baseUri(BASE_URL)
@@ -44,6 +49,7 @@ public class Specification {
                     .basePath("/news")
                     .log().all()
                     .contentType(JSON);
+
     public static RequestSpecification usersSpec =
             with()
                     .baseUri(BASE_URL)
@@ -58,6 +64,7 @@ public class Specification {
                     .basePath("/projects")
                     .log().all()
                     .contentType(JSON);
+
     public static RequestSpecification discussionsSpec =
             with()
                     .baseUri(BASE_URL)
@@ -65,6 +72,7 @@ public class Specification {
                     .basePath("/discussions")
                     .log().all()
                     .contentType(JSON);
+
     public static RequestSpecification intershipSpec =
             with()
                     .baseUri(BASE_URL)

@@ -12,12 +12,12 @@ import org.junit.jupiter.api.Test;
 @Tag("Mobile")
 @Owner("Кудрявцев Даниил")
 @Feature("Автотесты для Mobile")
-@Story("Страница комментарии")
+@Story("Страница комментариев")
 public class CommentTest extends TestBaseMobile {
 
     @DisplayName("Добавление коментария и проверка его автора и текста")
     @Test
-    public void addCommAndDelete() {
+    public void addCommentAndCheckoutAuthorAndText() {
         Common.stepsForApp();
         commentStep.commentButton();
         String expectedComm = Generations.generationRandomText();

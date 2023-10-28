@@ -23,7 +23,6 @@ public interface WebConfig extends Config {
     @DefaultValue("https://javarush.com")
     String getBaseUrl();
 
-
     @Key("false")
     @DefaultValue("isRemote")
     String isRemote();

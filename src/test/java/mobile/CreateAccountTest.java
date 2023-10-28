@@ -7,11 +7,10 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-
 @Tag("Mobile")
 @Owner("Кудрявцев Даниил")
-@Feature("Автотесты для Mobile")
 @Story("Создание аккаунта")
+@Feature("Автотесты для Mobile")
 public class CreateAccountTest extends TestBaseMobile {
 
     @Test

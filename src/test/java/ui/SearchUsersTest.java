@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 @Tag("UITest")
 @Owner("Кудрявцев Даниил")
 @Feature("Автотесты для UI")
-@Story("Поиск в разделе 'Пользователи'")
+@Story("Раздел 'Пользователи'")
 public class SearchUsersTest extends TestBase {
 
     @Test

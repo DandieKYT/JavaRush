@@ -11,7 +11,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 @Tag("UITest")
 @Owner("Кудрявцев Даниил")
 @Feature("Автотесты для UI")
-@Story("Раздел Отзывы/О нас")
+@Story("Разделы 'Отзывы/О нас'")
 public class ReviewsAndAboutUsTest extends TestBase {
 
     @CsvSource(value = {

@@ -3,8 +3,8 @@ package mobile.steps;
 import io.qameta.allure.Step;
 import mobile.pages.LessonPage;
 
-
 public class LessonStep {
+
     LessonPage lessonPage = new LessonPage();
 
     @Step("Нажатие на кнопку лайка")

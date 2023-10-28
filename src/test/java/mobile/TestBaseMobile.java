@@ -15,15 +15,13 @@ import org.junit.jupiter.api.BeforeEach;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
-
 public class TestBaseMobile {
 
     protected static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
     static boolean isRemote = Boolean.parseBoolean(System.getProperty("isRemote", config.isRemote()));
-
     QuizStep quizStep = new QuizStep();
     CreateAccountStep createAccountStep = new CreateAccountStep();
-    AuthenticationStep authenticationStep = new AuthenticationStep();
+    AuthorizationStep authorizationStep = new AuthorizationStep();
     SideBarStep sideBarStep = new SideBarStep();
     LessonStep lessonStep = new LessonStep();
     CommentStep commentStep = new CommentStep();
