@@ -119,7 +119,7 @@ test {
 
 task UI(type: Test) {
     useJUnitPlatform {
-        includeTags "UITest"
+        includeTags "UI"
         maxParallelForks = 25
     }
 }
