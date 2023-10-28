@@ -1,14 +1,23 @@
 package api;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static api.specs.Specification.*;
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
-
+@Tag("API")
+@Owner("Кудрявцев Даниил")
+@Story("Проверка json-scheme")
+@Feature("Автотесты для API")
 public class ShemesResponseTest {
 
     @Test
+    @DisplayName("Проверка json схемы Стажировка в Java-Rush")
     public void checkIntershipShemesTest() {
         given()
                 .spec(intershipSpec)
@@ -20,6 +29,7 @@ public class ShemesResponseTest {
     }
 
     @Test
+    @DisplayName("Проверка json схемы Project1")
     public void checkProject1ShemesTest() {
         given()
                 .spec(discussionsSpec)
@@ -31,6 +41,7 @@ public class ShemesResponseTest {
     }
 
     @Test
+    @DisplayName("Проверка json схемы страницы активностей")
     public void checkNewsShemesTest() {
         given()
                 .spec(newsSpec)
@@ -42,6 +53,7 @@ public class ShemesResponseTest {
     }
 
     @Test
+    @DisplayName("Проверка json схемы лекций")
     public void checkQuizzesShemesTest() {
         given()
                 .spec(quizzesSpec)
@@ -53,6 +65,7 @@ public class ShemesResponseTest {
     }
 
     @Test
+    @DisplayName("Проверка json схемы страницы 'Игры'")
     public void checkProjectsShemesTest() {
         given()
                 .spec(projectSpec)
