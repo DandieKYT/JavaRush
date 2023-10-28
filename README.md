@@ -27,8 +27,6 @@
     + [Страница с тестами из Launches в Allure TestOps](#Integration_Allure_TestOps3)
 + [:bar_chart: Примеры сборок в Browserstack](#Integration_Brawserstack)
   + [Экран с результатами запуска тестов](#Integration_Brawserstack)
-+ [:chart_with_upwards_trend: Интеграция с Jira](#Integration_Jira)
-+ [Страница с задачей в Jira](#Page_Jira)
 + [:iphone: Отчет в Telegram](#Telegram)
 + [:movie_camera: Видео примеры прохождения тестов](#Video)
     + [Пример запуска тестов через selenoid](#Video1)
