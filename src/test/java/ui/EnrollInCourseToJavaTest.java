@@ -7,7 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-@Tag("UITest")
+@Tag("UI")
 @Owner("Кудрявцев Даниил")
 @Feature("Автотесты для UI")
 @Story("Раздел 'Java-университет'")

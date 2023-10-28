@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.refresh;
 import static com.codeborne.selenide.Selenide.sleep;
 import static ui.Common.stepsForWebApp;
 
-@Tag("UITest")
+@Tag("UI")
 @Owner("Кудрявцев Даниил")
 @Feature("Автотесты для UI")
 @Story("Настройки пользователя")

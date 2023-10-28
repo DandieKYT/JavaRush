@@ -117,7 +117,7 @@ test {
     useJUnitPlatform()
 }
 
-task UITest(type: Test) {
+task UI(type: Test) {
     useJUnitPlatform {
         includeTags "UITest"
         maxParallelForks = 25
