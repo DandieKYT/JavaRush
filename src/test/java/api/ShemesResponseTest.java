@@ -74,6 +74,7 @@ public class ShemesResponseTest {
                 .then()
                 .spec(responseSpec)
                 .body(matchesJsonSchemaInClasspath("schemes/projects.json"));
+
     }
 }
 
