@@ -4,7 +4,7 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
-import static help.CustomApiListener.withCustomTemplates;
+import static helpApi.CustomApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.with;
 import static io.restassured.filter.log.LogDetail.BODY;
 import static io.restassured.filter.log.LogDetail.STATUS;
@@ -47,13 +47,6 @@ public class Specification {
                     .baseUri(BASE_URL)
                     .filter(withCustomTemplates())
                     .basePath("/news")
-                    .log().all()
-                    .contentType(JSON);
-
-    public static RequestSpecification usersSpec =
-            with()
-                    .baseUri(BASE_URL)
-                    .filter(withCustomTemplates())
                     .log().all()
                     .contentType(JSON);
 

@@ -9,12 +9,12 @@ public class Activities {
 
     public int id;
 
+    public long time;
+
     public String type;
     public String description;
 
     public Object title;
-
-    public long time;
 
     public Users user;
 }

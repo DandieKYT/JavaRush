@@ -1,6 +1,6 @@
 package mobile;
 
-import help.Generations;
+import helpMobile.Generations;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;

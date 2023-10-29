@@ -1,9 +1,7 @@
 package mobile.steps;
 
-import help.Generations;
 import io.qameta.allure.Step;
 import mobile.pages.AuthorizationPage;
-import org.junit.jupiter.api.Assertions;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.sleep;

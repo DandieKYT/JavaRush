@@ -1,4 +1,4 @@
-package help;
+package helpUI;
 
 import com.github.javafaker.Faker;
 

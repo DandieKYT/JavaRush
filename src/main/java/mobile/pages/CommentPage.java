@@ -7,7 +7,6 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class CommentPage {
 
-    public final SelenideElement checkLikeValue = $(AppiumBy.id("com.hitechrush.jaxarush:id/likesCount"));
     public final SelenideElement checkoutText = $(AppiumBy.id("com.hitechrush.jaxarush:id/addCommentText"));
     public final SelenideElement commentButton = $(AppiumBy.id("com.hitechrush.jaxarush:id/commentsButton"));
     public final SelenideElement addComment = $(AppiumBy.id("com.hitechrush.jaxarush:id/addCommentFab"));
@@ -18,6 +17,4 @@ public class CommentPage {
     public final SelenideElement authorComment = $(AppiumBy.id("com.hitechrush.jaxarush:id/userDisplayName"));
     public final SelenideElement deleteComment = $(AppiumBy.id("com.hitechrush.jaxarush:id/deleteButton"));
     public final SelenideElement addSomeText = $(AppiumBy.id("com.hitechrush.jaxarush:id/addCommentText"));
-    public final SelenideElement addLike = $(AppiumBy.id("com.hitechrush.jaxarush:id/commentLike"));
-    public final SelenideElement secondAddLike = $(AppiumBy.id("com.hitechrush.jaxarush:id/itemLikeDesc"));
 }

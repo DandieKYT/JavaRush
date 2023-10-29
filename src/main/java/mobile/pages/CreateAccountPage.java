@@ -21,5 +21,4 @@ public class CreateAccountPage {
     public final SelenideElement experienceNo = $(AppiumBy.id("com.hitechrush.jaxarush:id/experienceNo"));
     public final SelenideElement experienceYes = $(AppiumBy.id("com.hitechrush.jaxarush:id/experienceYes"));
     public final SelenideElement checkoutCourse = $(AppiumBy.className("android.widget.TextView"));
-
 }

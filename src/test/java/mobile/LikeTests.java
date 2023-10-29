@@ -8,7 +8,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static help.Generations.generationRandomText;
+import static helpMobile.Generations.generationRandomText;
 
 @Tag("Mobile")
 @Story("Лайк")
@@ -25,12 +25,12 @@ public class LikeTests extends TestBaseMobile {
         String actualComm = generationRandomText();
         commentStep.addSomeText(actualComm);
         commentStep.sendComment();
-        int countFirst = commentStep.parse();
-        commentStep.addLike();
-        commentStep.secondAddLike();
-        int countSecond = commentStep.parse();
+        int countFirst = likeStep.parse();
+        likeStep.addLike();
+        likeStep.secondAddLike();
+        int countSecond = likeStep.parse();
         Assertions.assertEquals(1, countSecond - countFirst);
-        commentStep.addLike();
+        likeStep.addLike();
         commentStep.deleteComment();
     }
 
@@ -38,11 +38,11 @@ public class LikeTests extends TestBaseMobile {
     @DisplayName("Добавление лайка на страницу лекции")
     public void addLikeToLesson() {
         Common.stepsForApp();
-        int countFirst = lessonStep.parse();
-        lessonStep.likeButton();
-        lessonStep.clickOnLike();
-        int countSecond = lessonStep.parse();
+        int countFirst = likeStep.parse();
+        likeStep.likeButton();
+        likeStep.clickOnLike();
+        int countSecond = likeStep.parse();
         Assertions.assertEquals(1, countSecond - countFirst);
-        lessonStep.likeButton();
+        likeStep.likeButton();
     }
 }

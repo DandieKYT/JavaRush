@@ -29,7 +29,7 @@ public class UsersResponseTest {
     @DisplayName("Проверка id пользователя")
     void checkUserById() {
         Users data = given()
-                .spec(usersSpec)
+                .spec(requestSpec)
                 .when()
                 .get("users/user3320682")
                 .then()
@@ -42,7 +42,7 @@ public class UsersResponseTest {
     @DisplayName("Проверка города, профессии и id пользователя")
     void searchUserMaria() {
         Users data = given()
-                .spec(usersSpec)
+                .spec(requestSpec)
                 .when()
                 .get("users/user2209041")
                 .then()
@@ -90,7 +90,7 @@ public class UsersResponseTest {
     @DisplayName("Проверка пользователей из России и их частичного ключа")
     void checkingForPartCountry() {
         Users[] data = given()
-                .spec(usersSpec)
+                .spec(requestSpec)
                 .when()
                 .get("users?filter=ALL")
                 .then()
@@ -108,7 +108,7 @@ public class UsersResponseTest {
     @DisplayName("Проверка соответствия userID и ID")
     void checkingForPartDescription() {
         Users[] data = given()
-                .spec(usersSpec)
+                .spec(requestSpec)
                 .when()
                 .get("/users?filter=ALL")
                 .then()

@@ -8,28 +8,18 @@ import lombok.Data;
 public class Users {
 
     public int id;
-
     public int userId;
-
-    public String key;
-
-    public String pictureUrl;
-
-    public String displayName;
-
-    public Object position;
-
-    public Object job;
-
-    public String country;
-
-    public Object city;
-
     public int level;
-
     public int rating;
 
+    public String key;
+    public String pictureUrl;
+    public String displayName;
+    public String country;
     public String publicStatus;
 
+    public Object position;
+    public Object job;
+    public Object city;
     public Object publicStatusMessage;
 }

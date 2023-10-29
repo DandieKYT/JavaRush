@@ -23,8 +23,8 @@ public class TestBaseMobile {
     CreateAccountStep createAccountStep = new CreateAccountStep();
     AuthorizationStep authorizationStep = new AuthorizationStep();
     SideBarStep sideBarStep = new SideBarStep();
-    LessonStep lessonStep = new LessonStep();
     CommentStep commentStep = new CommentStep();
+    LikeStep likeStep = new LikeStep();
 
     @BeforeAll
     static void beforeAll() {

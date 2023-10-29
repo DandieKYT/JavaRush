@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.sleep;
-import static help.Generations.generationRandomText;
+import static helpUI.Generations.generationRandomText;
 
 public class CreateAccountStep {
 
