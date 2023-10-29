@@ -31,9 +31,8 @@ public class TestBase extends Attach {
     UserSettingsStep userSettingsStep = new UserSettingsStep();
     SocialGroupsStep socialGroupsStep = new SocialGroupsStep();
     CreateAccountStep createAccountStep = new CreateAccountStep();
-    HeaderStep headerStep = new HeaderStep();
     EnrollInCourseJavaStep enrollInCourseJavaStep = new EnrollInCourseJavaStep();
-    SearchUsersStep searchUsersStep = new SearchUsersStep();
+
 
     @BeforeAll
     static void setUp() {

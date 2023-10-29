@@ -3,17 +3,18 @@ package mobile;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.WebConfig;
+import helpMobile.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import mobile.drivers.BrowserstackDriver;
 import mobile.drivers.LocalDriver;
 import mobile.steps.*;
 import org.aeonbits.owner.ConfigFactory;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
-import static com.codeborne.selenide.Selenide.closeWebDriver;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class TestBaseMobile {
 
@@ -25,6 +26,7 @@ public class TestBaseMobile {
     SideBarStep sideBarStep = new SideBarStep();
     CommentStep commentStep = new CommentStep();
     LikeStep likeStep = new LikeStep();
+    Attach attach = new Attach();
 
     @BeforeAll
     static void beforeAll() {
@@ -44,7 +46,11 @@ public class TestBaseMobile {
     }
 
     @AfterEach
-    void afterEach() {
+    public void afterEach() {
+        String sessionId = sessionId().toString();
         closeWebDriver();
+        helpMobile.Attach.addVideo(sessionId);
     }
+
+
 }

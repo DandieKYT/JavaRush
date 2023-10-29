@@ -1,13 +1,11 @@
 package ui.pages;
 
-import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class CreateAccountPage {
 
-    public final SelenideElement startLearnButton = $x("//*[@id='button_menu_start_learning_unauthorized_user']");
     public final SelenideElement beginLearnButton = $x("//*[@id='id_button_jr_welcome_start_learning_1']");
     public final SelenideElement russianLanguageButton = $x("//*[@id='todo_add']");
     public final SelenideElement checkoutLoad = $x("//div[text() ='Создается ваш персональный курс']");

@@ -22,7 +22,7 @@ public class ReviewsAndAboutUsTest extends TestBase {
     @DisplayName("Открытие страниц Отзывы/О нас")
     public void openReviewsAndAboutUsPages(String param, String expectedText) {
         mainPageSteps.openPage();
-        headerStep.opensTitle(param);
-        headerStep.checksTitle(expectedText);
+        mainPageSteps.opensTitle(param);
+        mainPageSteps.checksTitle(expectedText);
     }
 }

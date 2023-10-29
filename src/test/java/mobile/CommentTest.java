@@ -1,9 +1,10 @@
 package mobile;
 
-import helpMobile.Generations;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
+import mobile.steps.Common;
+import mobile.steps.GenerationStep;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -20,7 +21,7 @@ public class CommentTest extends TestBaseMobile {
     public void addCommentAndCheckoutAuthorAndText() {
         Common.stepsForApp();
         commentStep.commentButton();
-        String expectedComm = Generations.generationRandomText();
+        String expectedComm = GenerationStep.generationRandomText();
         commentStep.addComment();
         commentStep.inputComment(expectedComm);
         commentStep.sendComment();

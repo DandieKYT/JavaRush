@@ -8,6 +8,7 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class MainPage {
 
+
     public final SelenideElement startLearnButton = $x("//*[@id='button_menu_start_learning_unauthorized_user']");
     public final SelenideElement closeCookie = $x("//button[text()='Принять и закрыть']");
     public final SelenideElement telegramButton = $x("//*[contains(@class, 'footer-soc__link--telegram')]");

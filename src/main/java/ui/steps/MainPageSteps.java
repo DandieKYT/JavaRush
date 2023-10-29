@@ -4,6 +4,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.Keys;
 import ui.pages.MainPage;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPageSteps {
@@ -40,4 +41,15 @@ public class MainPageSteps {
         mainPage.youtubeButton.click();
         switchTo().window(1);
     }
+    @Step("Открытие вкладки")
+    public void opensTitle(String param) {
+        open("/");
+        mainPage.openTitle(param).click();
+    }
+
+    @Step("Проверка содержимого вкладки")
+    public void checksTitle(String expectedText) {
+        mainPage.checkTitle(expectedText).shouldBe(text(expectedText));
+    }
 }
+

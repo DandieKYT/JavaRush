@@ -5,19 +5,12 @@ import ui.pages.CreateAccountPage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.sleep;
-import static helpUI.Generations.generationRandomText;
+
 
 public class CreateAccountStep {
 
     CreateAccountPage createAccountPage = new CreateAccountPage();
-
-    @Step("Нажатие на кнопку 'Начать обучение'")
-    public void startLearnButton() {
-        open("/");
-        createAccountPage.startLearnButton.click();
-    }
 
     @Step("Нажатие на кнопку 'Начать'")
     public void beginLearnButton() {
@@ -67,16 +60,6 @@ public class CreateAccountStep {
     public void getCourseButton() {
         createAccountPage.getCourseButton.click();
         sleep(4000);
-    }
-
-    @Step("Ввод email")
-    public void emailInput() {
-        createAccountPage.emailInput.setValue(generationRandomText() + "@mail.ru");
-    }
-
-    @Step("Ввод password")
-    public void passwordInput() {
-        createAccountPage.passwordInput.setValue(generationRandomText() + "1245");
     }
 
     @Step("Нажатие на кнопку 'Создать аккаунт''")

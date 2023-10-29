@@ -3,12 +3,14 @@ package mobile;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
+import mobile.steps.Common;
+import mobile.steps.GenerationStep;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static helpMobile.Generations.generationRandomText;
+
 
 @Tag("Mobile")
 @Story("Лайк")
@@ -22,7 +24,7 @@ public class LikeTests extends TestBaseMobile {
         Common.stepsForApp();
         commentStep.commentButton();
         commentStep.addComment();
-        String actualComm = generationRandomText();
+        String actualComm = GenerationStep.generationRandomText();
         commentStep.addSomeText(actualComm);
         commentStep.sendComment();
         int countFirst = likeStep.parse();

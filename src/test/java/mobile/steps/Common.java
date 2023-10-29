@@ -1,4 +1,4 @@
-package mobile;
+package mobile.steps;
 
 import config.BrowserstackConfig;
 import io.qameta.allure.Feature;
