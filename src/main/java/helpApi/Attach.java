@@ -1,7 +1,7 @@
 package helpApi;
 
 import com.codeborne.selenide.Selenide;
-import config.WebConfig;
+import WebConfig.WebConfig;
 import helpMobile.BrowserStack;
 import io.qameta.allure.Attachment;
 import org.aeonbits.owner.ConfigFactory;

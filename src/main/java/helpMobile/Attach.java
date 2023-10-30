@@ -1,7 +1,7 @@
 package helpMobile;
 
 import com.codeborne.selenide.Selenide;
-import config.WebConfig;
+import WebConfig.WebConfig;
 import io.qameta.allure.Attachment;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.OutputType;

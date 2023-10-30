@@ -1,4 +1,4 @@
-package config;
+package WebConfig;
 
 import org.aeonbits.owner.Config;
 

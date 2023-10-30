@@ -2,14 +2,13 @@ package mobile;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import config.WebConfig;
+import WebConfig.WebConfig;
 import helpMobile.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import mobile.drivers.BrowserstackDriver;
 import mobile.drivers.LocalDriver;
 import mobile.steps.*;
 import org.aeonbits.owner.ConfigFactory;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;

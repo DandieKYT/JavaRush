@@ -1,6 +1,6 @@
 package mobile;
 
-import config.BrowserstackConfig;
+import MobileConfig.BrowserstackConfig;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;

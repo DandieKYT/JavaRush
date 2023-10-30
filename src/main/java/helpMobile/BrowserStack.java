@@ -1,6 +1,6 @@
 package helpMobile;
 
-import config.BrowserstackConfig;
+import MobileConfig.BrowserstackConfig;
 import org.aeonbits.owner.ConfigFactory;
 
 import static io.restassured.RestAssured.given;
