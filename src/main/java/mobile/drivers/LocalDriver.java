@@ -1,7 +1,7 @@
 package mobile.drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import MobileConfig.BrowserstackConfig;
+import mobile.config.BrowserstackConfig;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import org.aeonbits.owner.ConfigFactory;

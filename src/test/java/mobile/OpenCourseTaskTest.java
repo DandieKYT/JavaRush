@@ -3,7 +3,7 @@ package mobile;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
-import mobile.steps.Common;
+import mobile.steps.MobileCommonStep;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -22,7 +22,7 @@ public class OpenCourseTaskTest extends TestBaseMobile {
     @ParameterizedTest
     @DisplayName("Открытие разделов Course/Java и проверка их содержимого")
     public void checkoutCourseTaskPages(String param, String expectedText) {
-        Common.stepsForApp();
+        mobileCommonStep.stepsForApp();
         authorizationStep.goBackButton();
         authorizationStep.navigateMenu();
         sideBarStep.tag(param);

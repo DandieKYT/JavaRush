@@ -1,4 +1,4 @@
-package MobileConfig;
+package mobile.config;
 
 import org.aeonbits.owner.Config;
 

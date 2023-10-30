@@ -4,20 +4,14 @@ import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Step;
 import ui.pages.QuizPage;
 
-import java.util.Random;
-
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.refresh;
 import static com.codeborne.selenide.Selenide.sleep;
+import static help.GenerationData.getRandomNumber;
 
 public class QuizStep {
 
     QuizPage quizPage= new QuizPage();
-
-    public static int getRandomNumber() {
-        Random random = new Random();
-        return random.nextInt(5);
-    }
 
     @Step("Цикл")
     public void randomCheck() {

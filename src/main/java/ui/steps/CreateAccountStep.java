@@ -62,6 +62,15 @@ public class CreateAccountStep {
         sleep(4000);
     }
 
+    @Step("Ввод email")
+    public void emailInput(String email) {
+        createAccountPage.emailInput.setValue(email);
+    }
+
+    @Step("Ввод password")
+    public void passwordInput(String password) {
+        createAccountPage.passwordInput.setValue(password);
+    }
     @Step("Нажатие на кнопку 'Создать аккаунт''")
     public void createAccount() {
         createAccountPage.createAccount.click();

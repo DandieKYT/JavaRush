@@ -1,4 +1,4 @@
-package helpMobile;
+package mobile.help;
 
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.Point;

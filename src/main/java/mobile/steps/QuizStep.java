@@ -6,7 +6,7 @@ import io.qameta.allure.Step;
 import mobile.pages.QuizPage;
 
 import static com.codeborne.selenide.Selenide.sleep;
-import static mobile.steps.GenerationStep.getRandomNumber;
+import static help.GenerationData.getRandomNumber;
 
 public class QuizStep {
 

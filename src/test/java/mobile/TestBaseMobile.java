@@ -2,8 +2,7 @@ package mobile;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import WebConfig.WebConfig;
-import helpMobile.Attach;
+import ui.config.WebConfig;
 import io.qameta.allure.selenide.AllureSelenide;
 import mobile.drivers.BrowserstackDriver;
 import mobile.drivers.LocalDriver;
@@ -25,7 +24,7 @@ public class TestBaseMobile {
     SideBarStep sideBarStep = new SideBarStep();
     CommentStep commentStep = new CommentStep();
     LikeStep likeStep = new LikeStep();
-    Attach attach = new Attach();
+    MobileCommonStep mobileCommonStep = new MobileCommonStep();
 
     @BeforeAll
     static void beforeAll() {
@@ -48,8 +47,6 @@ public class TestBaseMobile {
     public void afterEach() {
         String sessionId = sessionId().toString();
         closeWebDriver();
-        helpMobile.Attach.addVideo(sessionId);
+        help.Attach.addVideo(sessionId);
     }
-
-
 }

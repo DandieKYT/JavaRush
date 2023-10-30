@@ -1,4 +1,4 @@
-package helpMobile;
+package mobile.help;
 
 import com.codeborne.selenide.WebDriverRunner;
 import io.appium.java_client.AppiumDriver;

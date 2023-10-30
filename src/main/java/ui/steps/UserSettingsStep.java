@@ -17,8 +17,8 @@ public class UserSettingsStep {
     }
 
     @Step("Загрузка фотографии")
-    public void uploadPhoto() {
-        profileSettingsPage.uploadPhoto.uploadFromClasspath("testFilePhoto.jpg");
+    public void uploadPhoto(String uploadPhoto) {
+        profileSettingsPage.uploadPhoto.uploadFromClasspath(uploadPhoto);
     }
 
     @Step("Сохранение фотографии профиля")

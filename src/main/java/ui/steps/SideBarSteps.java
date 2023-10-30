@@ -21,12 +21,14 @@ public class SideBarSteps {
     public void user() {
         open("/");
         sideBarPage.users.click();
+        sleep(2000);
     }
 
     @Step("Открытие вкладки 'Настройки'")
     public void openSettings() {
+        refresh();
+        sleep(5000);
         WebDriverRunner.getWebDriver().manage().window().fullscreen();
-        sleep(2000);
         sideBarPage.clickImage.click();
         sideBarPage.bookmarks.scrollTo();
         sideBarPage.settings.click();

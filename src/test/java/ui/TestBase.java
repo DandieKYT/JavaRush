@@ -2,8 +2,8 @@ package ui;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import WebConfig.WebConfig;
-import helpUI.Attach;
+import ui.config.WebConfig;
+import help.Attach;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
@@ -32,7 +32,8 @@ public class TestBase extends Attach {
     SocialGroupsStep socialGroupsStep = new SocialGroupsStep();
     CreateAccountStep createAccountStep = new CreateAccountStep();
     EnrollInCourseJavaStep enrollInCourseJavaStep = new EnrollInCourseJavaStep();
-
+    SearchUserStep searchUserStep = new SearchUserStep();
+    Common common = new Common();
 
     @BeforeAll
     static void setUp() {

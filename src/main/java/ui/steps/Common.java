@@ -1,17 +1,16 @@
 package ui.steps;
-import ui.pages.CreateAccountPage;
-import ui.steps.CreateAccountStep;
-import ui.steps.MainPageSteps;
 
-import static ui.steps.GenerationStep.generationRandomText;
+
+import static help.GenerationData.generationRandomText;
 
 public class Common {
 
     static CreateAccountStep learnStep = new CreateAccountStep();
     static MainPageSteps mainPageSteps = new MainPageSteps();
-    static CreateAccountPage createAccountPage = new CreateAccountPage();
 
-    public static void stepsForWebApp() {
+    String email = "@mail.ru";
+    String password = "1235";
+    public void stepsForWebApp() {
         mainPageSteps.startLearnButton();
         learnStep.beginLearnButton();
         learnStep.russianLanguageButton();
@@ -21,8 +20,8 @@ public class Common {
         learnStep.xpInProgrammingNo();
         learnStep.checkOutResult();
         learnStep.getCourseButton();
-        String email = String.valueOf(createAccountPage.emailInput.setValue(generationRandomText() + "@mail.ru"));
-        String password = String.valueOf(createAccountPage.passwordInput.setValue(generationRandomText() + "1245"));
+        learnStep.emailInput(generationRandomText() + email);
+        learnStep.passwordInput(generationRandomText() + password);
         learnStep.createAccount();
     }
 }

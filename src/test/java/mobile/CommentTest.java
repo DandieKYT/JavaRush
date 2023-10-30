@@ -3,12 +3,12 @@ package mobile;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
-import mobile.steps.Common;
-import mobile.steps.GenerationStep;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+
+import static help.GenerationData.generationRandomText;
 
 @Tag("Mobile")
 @Owner("Кудрявцев Даниил")
@@ -19,9 +19,9 @@ public class CommentTest extends TestBaseMobile {
     @DisplayName("Добавление коментария и проверка его автора и текста")
     @Test
     public void addCommentAndCheckoutAuthorAndText() {
-        Common.stepsForApp();
+        mobileCommonStep.stepsForApp();
         commentStep.commentButton();
-        String expectedComm = GenerationStep.generationRandomText();
+        String expectedComm = generationRandomText();
         commentStep.addComment();
         commentStep.inputComment(expectedComm);
         commentStep.sendComment();

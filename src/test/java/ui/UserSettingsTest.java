@@ -1,17 +1,11 @@
 package ui;
 
-import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import ui.pages.ProfileSettingsPage;
-
-import static com.codeborne.selenide.Selenide.refresh;
-import static com.codeborne.selenide.Selenide.sleep;
-import static ui.steps.Common.stepsForWebApp;
 
 @Tag("UI")
 @Owner("Кудрявцев Даниил")
@@ -19,18 +13,15 @@ import static ui.steps.Common.stepsForWebApp;
 @Story("Настройки пользователя")
 public class UserSettingsTest extends TestBase {
 
-    ProfileSettingsPage profileSettingsPage = new ProfileSettingsPage();
+    String photoName = "testFilePhoto.jpg";
     @Test
     @DisplayName("Загрузка картинки в профиль")
-    public void imageProfileUpload() throws Exception {
+    public void imageProfileUpload(){
         mainPageSteps.closeCookie();
-        stepsForWebApp();
-        refresh();
-        WebDriverRunner.getWebDriver().manage().window().fullscreen();
-        sleep(5000);
+        common.stepsForWebApp();
         sideBarSteps.openSettings();
         userSettingsStep.clickAvatarImage();
-        profileSettingsPage.uploadPhoto.uploadFromClasspath("testFilePhoto.jpg");
+        userSettingsStep.uploadPhoto(photoName);
         userSettingsStep.checkUploadPhoto();
         userSettingsStep.savePhoto();
         userSettingsStep.saveChanges();
