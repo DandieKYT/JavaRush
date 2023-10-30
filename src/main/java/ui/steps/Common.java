@@ -1,6 +1,5 @@
 package ui.steps;
 
-
 import static help.GenerationData.generationRandomText;
 
 public class Common {

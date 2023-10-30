@@ -5,7 +5,6 @@ import mobile.pages.SideBarMenuPage;
 
 import static com.codeborne.selenide.Condition.text;
 
-
 public class SideBarStep {
 
     SideBarMenuPage sideBarMenuPage = new SideBarMenuPage();

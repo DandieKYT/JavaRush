@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Test;
 
 import static help.GenerationData.generationRandomText;
 
-
 @Tag("Mobile")
 @Story("Лайк")
 @Owner("Кудрявцев Даниил")
