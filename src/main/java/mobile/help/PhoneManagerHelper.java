@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class PhoneManagerHelper {
+
     @Step("Получить значение из буфера обмена")
     public static String getClipboardValue() {
         return ((AndroidDriver) WebDriverRunner.getWebDriver()).getClipboardText();

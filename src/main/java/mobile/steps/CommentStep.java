@@ -6,7 +6,6 @@ import mobile.pages.CommentPage;
 
 import static com.codeborne.selenide.Selenide.sleep;
 
-
 public class CommentStep {
 
     CommentPage commentPage = new CommentPage();

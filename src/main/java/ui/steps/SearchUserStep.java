@@ -7,6 +7,7 @@ import ui.pages.SearchUsersPage;
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class SearchUserStep {
+
     SearchUsersPage searchUsersPage = new SearchUsersPage();
 
     @Step("Поиск пользователя под ником 'Dandie KYT'")
