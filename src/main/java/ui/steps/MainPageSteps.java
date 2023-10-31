@@ -41,6 +41,7 @@ public class MainPageSteps {
         mainPage.youtubeButton.click();
         switchTo().window(1);
     }
+
     @Step("Открытие вкладки")
     public void opensTitle(String param) {
         open("/");

@@ -11,7 +11,7 @@ import static help.GenerationData.getRandomNumber;
 
 public class QuizStep {
 
-    QuizPage quizPage= new QuizPage();
+    QuizPage quizPage = new QuizPage();
 
     @Step("Цикл")
     public void randomCheck() {

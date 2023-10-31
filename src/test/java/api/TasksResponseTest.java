@@ -21,12 +21,12 @@ import static io.restassured.RestAssured.given;
 @Feature("Автотесты для API")
 public class TasksResponseTest {
 
-    private static final String idJavaSyntax = "857";
-    private static final String expectIdAdFollowingAnAd = "1132";
-    private static final String lastDigitNumberId = "3920";
-    private static final String levelTaskLastDigit = "2";
-    private static final String expectTitleJavaSyntax = "Java Syntax Pro";
-    private static final String titleFollowingAnAd = "Я по объявлению…";
+    private final String idJavaSyntax = "857";
+    private final String expectIdAdFollowingAnAd = "1132";
+    private final String lastDigitNumberId = "3920";
+    private final String levelTaskLastDigit = "2";
+    private final String expectTitleJavaSyntax = "Java Syntax Pro";
+    private final String titleFollowingAnAd = "Я по объявлению…";
 
     @Test
     @DisplayName("Проверка названия урока 'Java Syntax Pro' по id")

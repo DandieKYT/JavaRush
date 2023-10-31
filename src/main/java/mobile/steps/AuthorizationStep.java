@@ -3,7 +3,8 @@ package mobile.steps;
 import io.qameta.allure.Step;
 import mobile.pages.AuthorizationPage;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.exist;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class AuthorizationStep {

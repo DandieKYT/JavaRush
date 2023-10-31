@@ -21,8 +21,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Feature("Автотесты для API")
 public class CheckGamesResponseTest {
 
-    private static final String keyMinesweeper = "com.javarush.games.minesweeper";
-    private static final String expectedDescriptionMinesweeper = "Сапер";
+    private final String keyMinesweeper = "com.javarush.games.minesweeper";
+    private final String expectedDescriptionMinesweeper = "Сапер";
 
     @Test
     @DisplayName("Открытие страницы игры 'Сапер'")

@@ -23,7 +23,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Feature("Автотесты для API")
 public class UsersResponseTest {
 
-    private static final String expectedUserId = "332";
+    private final String expectedUserId = "332";
 
     @Test
     @DisplayName("Проверка id пользователя")

@@ -21,11 +21,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Story("Активности пользователей")
 public class NewsResponseTest {
 
-    private static final String expectedPartKey = "anonymous#336";
-    private static final String expectedPartUserId = "336";
-    private static final String expectedType = "TASK_IN_PROGRESS";
-    private static final String activityPartId = "31";
-    private static final String partDescription = "пробует решить задачу";
+    private final String expectedPartKey = "anonymous#336";
+    private final String expectedPartUserId = "336";
+    private final String expectedType = "TASK_IN_PROGRESS";
+    private final String activityPartId = "31";
+    private final String partDescription = "пробует решить задачу";
 
     @Test
     @DisplayName("Проверка по частичному соответствию ключа пользователя")

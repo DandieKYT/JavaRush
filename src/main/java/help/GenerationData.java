@@ -9,6 +9,7 @@ public class GenerationData {
         Faker faker = new Faker();
         return faker.name().firstName();
     }
+
     public static int getRandomNumber() {
         Random random = new Random();
         return random.nextInt(5);

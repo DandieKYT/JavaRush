@@ -1,13 +1,13 @@
 package help;
 
 import com.codeborne.selenide.Selenide;
-import ui.config.WebConfig;
-import mobile.help.BrowserStack;
 import io.qameta.allure.Attachment;
+import mobile.help.BrowserStack;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import ui.config.WebConfig;
 
 import java.net.MalformedURLException;
 import java.net.URL;

@@ -1,9 +1,9 @@
 package mobile;
 
-import mobile.config.BrowserstackConfig;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
+import mobile.config.BrowserstackConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;

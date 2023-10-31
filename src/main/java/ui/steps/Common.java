@@ -9,6 +9,7 @@ public class Common {
 
     String email = "@mail.ru";
     String password = "1235";
+
     public void stepsForWebApp() {
         mainPageSteps.startLearnButton();
         learnStep.beginLearnButton();

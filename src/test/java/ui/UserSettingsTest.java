@@ -14,9 +14,10 @@ import org.junit.jupiter.api.Test;
 public class UserSettingsTest extends TestBase {
 
     String photoName = "testFilePhoto.jpg";
+
     @Test
     @DisplayName("Загрузка картинки в профиль")
-    public void imageProfileUpload(){
+    public void imageProfileUpload() {
         mainPageSteps.closeCookie();
         common.stepsForWebApp();
         sideBarSteps.openSettings();

@@ -17,6 +17,7 @@ public class MainPage {
     public final SelenideElement openTitle(String param) {
         return $(byTagAndText("a", (param)));
     }
+
     public final SelenideElement checkTitle(String expectedText) {
         return $((byTagAndText("h1", (expectedText))));
     }

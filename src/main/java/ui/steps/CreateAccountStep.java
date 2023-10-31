@@ -70,6 +70,7 @@ public class CreateAccountStep {
     public void passwordInput(String password) {
         createAccountPage.passwordInput.setValue(password);
     }
+
     @Step("Нажатие на кнопку 'Создать аккаунт''")
     public void createAccount() {
         createAccountPage.createAccount.click();

@@ -17,7 +17,7 @@ public class SearchUsersTest extends TestBase {
 
     @Test
     @DisplayName("Поиск пользователя по имени")
-    public void searchUserByName(){
+    public void searchUserByName() {
         sideBarSteps.user();
         searchUserStep.searchUser(expectedName);
         searchUserStep.checkoutResult(expectedName);
