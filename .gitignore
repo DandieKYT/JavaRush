@@ -2,3 +2,5 @@
 /.gradle
 /allure-results
 /build
+*.properties
+
