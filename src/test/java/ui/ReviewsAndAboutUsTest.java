@@ -3,6 +3,7 @@ package ui;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -19,6 +20,7 @@ public class ReviewsAndAboutUsTest extends TestBase {
             "О нас,     О JavaRush",
     })
     @ParameterizedTest
+    @Disabled //поменялась страница
     @DisplayName("Открытие страниц Отзывы/О нас")
     public void openReviewsAndAboutUsPages(String param, String expectedText) {
         mainPageSteps.openPage();

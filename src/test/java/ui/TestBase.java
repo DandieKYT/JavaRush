@@ -3,7 +3,7 @@ package ui;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import help.Attach;
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterAll;
@@ -37,7 +37,7 @@ public class TestBase extends Attach {
 
     @BeforeAll
     static void setUp() {
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
         Configuration.baseUrl = System.getProperty("baseUrl", config.getBaseUrl());
         Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize = System.getProperty("browserSize", config.getBrowserSize());
