@@ -18,7 +18,7 @@ public class UserSettingsTest extends TestBase {
     @Test
     @DisplayName("Загрузка картинки в профиль")
     public void imageProfileUpload() {
-        mainPageSteps.closeCookie();
+        mainPageSteps.openPage();
         common.stepsForWebApp();
         sideBarSteps.openSettings();
         userSettingsStep.clickAvatarImage();

@@ -8,14 +8,16 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class MainPage {
 
-    public final SelenideElement startLearnButton = $x("//*[@id='button_menu_start_learning_unauthorized_user']");
-    public final SelenideElement closeCookie = $x("//button[text()='Принять и закрыть']");
+    public final SelenideElement startLearnButton = $x("//*[contains(@class, 'header__start-d')]//span[text()='Начать обучение']");
     public final SelenideElement telegramButton = $x("//*[contains(@class, 'footer-soc__link--telegram')]");
     public final SelenideElement scrollToButton = $x("//img[@alt='Google Play']");
     public final SelenideElement youtubeButton = $x("//*[contains(@class, 'footer-soc__link--youtube')]");
 
     public final SelenideElement openTitle(String param) {
-        return $(byTagAndText("a", (param)));
+        return $x(String.format("(//a[contains(text(),'%s')])[position() > 1]", param));
+    }
+    public final SelenideElement openSecondTitle(String param) {
+        return $x(String.format("//a[text()='%s']", param));
     }
     public final SelenideElement checkTitle(String expectedText) {
         return $((byTagAndText("h1", (expectedText))));

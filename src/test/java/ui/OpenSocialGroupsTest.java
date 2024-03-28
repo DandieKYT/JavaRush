@@ -16,7 +16,7 @@ public class OpenSocialGroupsTest extends TestBase {
     @Test
     @DisplayName("Открытие страницы сайта в Telegram")
     public void openTelegramPageTest() {
-        mainPageSteps.closeCookie();
+        mainPageSteps.openPage();
         mainPageSteps.telegramButton();
         socialGroupsStep.checkOutTelegramTitle();
     }
@@ -24,7 +24,7 @@ public class OpenSocialGroupsTest extends TestBase {
     @Test
     @DisplayName("Открытие страницы сайта в YouTube")
     public void openYouTubePageTest() {
-        mainPageSteps.closeCookie();
+        mainPageSteps.openPage();
         mainPageSteps.youtubeButton();
         socialGroupsStep.acceptCookieYT();
         socialGroupsStep.checkOutYoutubeTitle();

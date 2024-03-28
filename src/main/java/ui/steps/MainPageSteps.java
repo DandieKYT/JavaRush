@@ -1,5 +1,6 @@
 package ui.steps;
 
+import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Step;
 import org.openqa.selenium.Keys;
 import ui.pages.MainPage;
@@ -20,12 +21,7 @@ public class MainPageSteps {
     public void startLearnButton() {
         open("/");
         mainPage.startLearnButton.click();
-    }
-
-    @Step("Закрытие куки")
-    public void closeCookie() {
-        open("/");
-        mainPage.closeCookie.click();
+        switchTo().window(1);
     }
 
     @Step("Открытие страницы в Telegram")
@@ -44,8 +40,12 @@ public class MainPageSteps {
 
     @Step("Открытие вкладки")
     public void opensTitle(String param) {
-        open("/");
-        mainPage.openTitle(param).click();
+        if (param.equals("О нас")){
+            mainPage.openSecondTitle(param).click();
+        }
+        else {
+            mainPage.openTitle(param).click();
+        }
     }
 
     @Step("Проверка содержимого вкладки")

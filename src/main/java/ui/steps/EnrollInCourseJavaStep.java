@@ -19,7 +19,5 @@ public class EnrollInCourseJavaStep {
     @Step("Проверка заголовка анкеты 'Записаться на курс'")
     public void checkoutForm() {
         enrollInCourseJavaPage.checkoutForm.shouldBe(text("Записаться на курс"));
-        closeWindow();
-        switchTo().window(0);
     }
 }

@@ -14,7 +14,6 @@ public class SideBarSteps {
     public void openJavaUniversity() {
         open("/");
         sideBarPage.openJavaUniversity.click();
-        switchTo().window(1);
     }
 
     @Step("Открытие вкладки 'Пользователи'")
