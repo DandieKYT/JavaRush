@@ -13,7 +13,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 @Feature("Автотесты для UI")
 @Story("Разделы 'Отзывы/О нас'")
 public class ReviewsAndAboutUsTest extends TestBase {
-    // TODO: 28.03.2024 исправить первую проверку про Отзывы 
     @CsvSource(value = {
             "Отзывы,      Отзывы",
             "О нас,     О JavaRush",

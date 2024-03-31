@@ -34,7 +34,7 @@ public class CheckGamesResponseTest {
                 .then()
                 .spec(responseSpec)
                 .extract().as(Games.class);
-        Assertions.assertEquals("https://www.youtube.com/embed/zF-xllunn2M", data.videoUrl);
+        Assertions.assertEquals("https://www.youtube.com/embed/M2Sz18mI1sU", data.videoUrl);
         Assertions.assertEquals("Сапер", data.title);
         Assertions.assertEquals("AVAILABLE", data.status);
     }
@@ -49,7 +49,7 @@ public class CheckGamesResponseTest {
                 .then()
                 .spec(responseSpec)
                 .extract().as(Games.class);
-        Assertions.assertEquals("https://www.youtube.com/embed/4oykArMtDOI", data.videoUrl);
+        Assertions.assertEquals("https://www.youtube.com/embed/Wjb5_7C3d4w", data.videoUrl);
         Assertions.assertEquals("Змейка", data.title);
         Assertions.assertEquals("AVAILABLE", data.status);
     }
@@ -64,7 +64,7 @@ public class CheckGamesResponseTest {
                 .then()
                 .spec(responseSpec)
                 .extract().as(Games.class);
-        Assertions.assertEquals("https://www.youtube.com/embed/WbNfczSAiNc", data.videoUrl);
+        Assertions.assertEquals("https://www.youtube.com/embed/XlBxKE4cibo", data.videoUrl);
         Assertions.assertEquals("2048", data.title);
         Assertions.assertEquals("AVAILABLE", data.status);
     }

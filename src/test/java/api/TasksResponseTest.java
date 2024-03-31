@@ -24,8 +24,8 @@ public class TasksResponseTest {
     private final String idJavaSyntax = "857";
     private final String expectIdAdFollowingAnAd = "1132";
     private final String lastDigitNumberId = "3920";
-    private final String levelTaskLastDigit = "2";
-    private final String expectTitleJavaSyntax = "Java Syntax Pro";
+    private final String levelTaskLastDigit = "1";
+    private final String expectTitleJavaSyntax = "Модуль 1. Java Syntax";
     private final String titleFollowingAnAd = "Я по объявлению…";
 
     @Test
