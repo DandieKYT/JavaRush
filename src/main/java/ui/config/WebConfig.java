@@ -12,6 +12,7 @@ public interface WebConfig extends Config {
     @Key("browserVersion")
     String getBrowserVersion();
 
+
     @Key("browserSize")
     String getBrowserSize();
 
