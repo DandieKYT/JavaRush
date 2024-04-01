@@ -37,7 +37,6 @@ public class TestBase extends Attach {
 
     @BeforeAll
     static void setUp() {
-//        WebDriverManager.chromedriver().setup();
         Configuration.baseUrl = System.getProperty("baseUrl", config.getBaseUrl());
         Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize = System.getProperty("browserSize", config.getBrowserSize());
