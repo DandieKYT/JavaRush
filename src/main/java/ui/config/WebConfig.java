@@ -15,6 +15,7 @@ public interface WebConfig extends Config {
     @Key("browserSize")
     String getBrowserSize();
 
+
     @Key("videoUrl")
     String videoUrl();
 
