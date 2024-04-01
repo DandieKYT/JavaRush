@@ -27,7 +27,6 @@ public class NewsResponseTest {
     private final String activityPartId = "33";
     private final String partDescription = "пробует решить задачу";
 
-
     @Test
     @DisplayName("Проверка по частичному соответствию ключа пользователя")
     void checkingForPartialMatchingOfUser() {
