@@ -1,6 +1,7 @@
 package ui.steps;
 
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.selector.ByTagAndText;
 import io.qameta.allure.Step;
 import org.openqa.selenium.Keys;
 import ui.pages.MainPage;
@@ -20,6 +21,7 @@ public class MainPageSteps {
     @Step("Нажатие на кнопку 'Начать обучение'")
     public void startLearnButton() {
         open("/");
+        $x("//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']").click();
         mainPage.startLearnButton.click();
         switchTo().window(1);
     }
