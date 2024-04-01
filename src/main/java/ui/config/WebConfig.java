@@ -9,7 +9,6 @@ public interface WebConfig extends Config {
 
     @Key("browser")
     String getBrowser();
-
     @Key("browserVersion")
     String getBrowserVersion();
 
