@@ -119,10 +119,11 @@
 :heavy_check_mark: Открытие разделов Course/Java и проверка их содержимого</br>
 
 
-<a name="buildInJenkins" href="https://jenkins.autotests.cloud/job/SteamProject/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/Students/job/DiplomaSteam/)<h2></a>
-- <a name="buildInJenkins1"><h5>Страница сборки job в [Jenkins](https://jenkins.autotests.cloud/job/Students/job/DiplomaSteam/178/)</h5></a>
+<a name="buildInJenkins" href="https://jenkins.autotests.cloud/job/JavaRush/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush/)<h2></a>
+- <a name="buildInJenkins1"><h5>Страница сборки job в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush/55/)</h5></a>
 
-![This is an image](design/pictures/jenkins1.png)
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/04b8b36b-a78a-47b5-93ea-4fe10cc7f549)
+
 
 - <a name="buildInJenkins2"><h5>Главный экран со списком job в [Jenkins](https://jenkins.autotests.cloud/job/Students/job/DiplomaSteam/)</h5></a>
 
