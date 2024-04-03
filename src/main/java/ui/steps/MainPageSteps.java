@@ -46,10 +46,12 @@ public class MainPageSteps {
     public void opensTitle(String param) {
         if (param.equals("Отзывы")){
             actions().sendKeys(Keys.PAGE_DOWN).perform();
+            sleep(3000);
             mainPage.openTitle(param).click();
         }
         else {
             actions().sendKeys(Keys.PAGE_DOWN).perform();
+            sleep(3000);
             mainPage.openSecondTitle(param).click();
         }
     }
