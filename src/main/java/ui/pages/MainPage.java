@@ -14,7 +14,7 @@ public class MainPage {
     public final SelenideElement youtubeButton = $x("//*[contains(@class, 'footer-soc__link--youtube')]");
 
     public final SelenideElement openTitle(String param) {
-        return $x(String.format("(//a[contains(text(),'%s')])[position() > 1]", param));
+        return $x(String.format("(//a[text()='%s'])[position() > 1]", param));
     }
     public final SelenideElement openSecondTitle(String param) {
         return $x(String.format("//a[text()='%s']", param));
