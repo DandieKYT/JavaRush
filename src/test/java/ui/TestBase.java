@@ -1,6 +1,7 @@
 package ui;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import help.Attach;
 //import io.github.bonigarcia.wdm.WebDriverManager;
@@ -18,6 +19,7 @@ import ui.steps.*;
 import java.util.Map;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 @Execution(ExecutionMode.CONCURRENT)
 public class TestBase extends Attach {

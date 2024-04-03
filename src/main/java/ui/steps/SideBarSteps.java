@@ -13,12 +13,14 @@ public class SideBarSteps {
     @Step("Открытие вкладки Java-университет")
     public void openJavaUniversity() {
         open("/");
+        WebDriverRunner.getWebDriver().manage().window().maximize();
         sideBarPage.openJavaUniversity.click();
     }
 
     @Step("Открытие вкладки 'Пользователи'")
     public void user() {
         open("/");
+        WebDriverRunner.getWebDriver().manage().window().maximize();
         sideBarPage.users.click();
         sleep(2000);
     }

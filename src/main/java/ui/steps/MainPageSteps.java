@@ -1,6 +1,7 @@
 package ui.steps;
 
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.selector.ByTagAndText;
 import io.qameta.allure.Step;
 import org.openqa.selenium.Keys;
@@ -16,12 +17,14 @@ public class MainPageSteps {
     @Step("Открытие главной страницы")
     public void openPage() {
         open("/");
+        WebDriverRunner.getWebDriver().manage().window().maximize();
     }
 
     @Step("Нажатие на кнопку 'Начать обучение'")
     public void startLearnButton() {
         open("/");
-        $x("//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']").click();
+        WebDriverRunner.getWebDriver().manage().window().maximize();
+      //  $x("//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']").click();
         mainPage.startLearnButton.click();
         switchTo().window(1);
     }
