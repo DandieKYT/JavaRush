@@ -1,5 +1,6 @@
 # UI, API и Mobile автотесты для сайта [Java-Rush](https://javarush.com/) — практический онлайн-курс по обучению Java.
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/308965b1-f5b0-415d-a34b-140a6f7b8db5)
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/cd08eb3b-22da-4c6e-819b-f9fc04ed6361)
+
 
 
 # <a name="TableOfContents">Содержание страницы</a>
