@@ -149,19 +149,19 @@
 ### <a id="console-ui"></a>Локальный запуск UI-тестов
 
 ```
-gradle clean steamUI
+gradle clean UI
 ```
 
 ### <a id="console-api"></a>Локальный запуск API-тестов
 
 ```
-gradle clean steamApi
+gradle clean Api
 ```
 
 ### <a id="console-mobile"></a>Локальный запуск Mobile-тестов
 
 ```
-gradle clean steamMobile
+gradle clean Mobile
 ```
 
 Удаленный запуск:
