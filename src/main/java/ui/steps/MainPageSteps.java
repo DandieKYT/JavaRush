@@ -24,7 +24,6 @@ public class MainPageSteps {
     public void startLearnButton() {
         open("/");
         WebDriverRunner.getWebDriver().manage().window().maximize();
-      //  $x("//*[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']").click();
         mainPage.startLearnButton.click();
         switchTo().window(1);
     }
@@ -46,9 +45,11 @@ public class MainPageSteps {
     @Step("Открытие вкладки")
     public void opensTitle(String param) {
         if (param.equals("Отзывы")){
+            actions().sendKeys(Keys.PAGE_DOWN).perform();
             mainPage.openTitle(param).click();
         }
         else {
+            actions().sendKeys(Keys.PAGE_DOWN).perform();
             mainPage.openSecondTitle(param).click();
         }
     }
