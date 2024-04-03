@@ -45,11 +45,11 @@ public class MainPageSteps {
 
     @Step("Открытие вкладки")
     public void opensTitle(String param) {
-        if (param.equals("О нас")){
-            mainPage.openSecondTitle(param).click();
+        if (param.equals("Отзывы")){
+            mainPage.openTitle(param).click();
         }
         else {
-            mainPage.openTitle(param).click();
+            mainPage.openSecondTitle(param).click();
         }
     }
 
