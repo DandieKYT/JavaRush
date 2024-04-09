@@ -44,7 +44,7 @@ def
         jacksonVersion = "2.14.2",
         lombokVersion = "1.18.22",
         allureVersion = "2.21.0",
-        appiumVersion = "8.4.0",
+        appiumVersion = "8.7.0",
         ownerVersion = "1.0.4",
         junitVersion = "5.8.2",
         restAssured = "4.5.1"
