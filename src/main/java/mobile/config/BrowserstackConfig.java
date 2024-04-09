@@ -7,10 +7,10 @@ import org.aeonbits.owner.Config;
 })
 public interface BrowserstackConfig extends Config {
 
-    @Key("username")
+    @Key("userName")
     String username();
 
-    @Key("passwordKey")
+    @Key("accessKey")
     String passwordKey();
 
     @Key("remoteMobileUrl")
