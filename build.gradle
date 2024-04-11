@@ -105,6 +105,7 @@ task UI(type: Test) {
     }
 }
 
+
 task Mobile(type: Test) {
     useJUnitPlatform {
         includeTags "Mobile"
