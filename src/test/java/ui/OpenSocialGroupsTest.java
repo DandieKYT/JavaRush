@@ -21,6 +21,7 @@ public class OpenSocialGroupsTest extends TestBase {
         socialGroupsStep.checkOutTelegramTitle();
     }
 
+
     @Test
     @DisplayName("Открытие страницы сайта в YouTube")
     public void openYouTubePageTest() {
