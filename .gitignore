@@ -3,4 +3,5 @@
 /allure-results
 /build
 *.properties
+*.json
 
