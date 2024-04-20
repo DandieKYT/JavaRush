@@ -22,10 +22,6 @@ allure{
     }
 }
 
-
-
-
-
 repositories {
     mavenCentral()
     compileJava {
@@ -38,43 +34,47 @@ compileTestJava{
 }
 
 def
-        webDriverManagerVersion = "5.0.3",
         allureJunitVersion = "2.18.1",
-        assertjCoreVersion = "3.23.1",
+        assertjCoreVersion = "3.24.2",
         restAssuredVersion = "5.3.2",
         slf4jSimpleVersion = "2.0.7",
         commonsIoVersion = "2.11.0",
         javaFakerVersion = "1.0.2",
-        selenideVersion = "6.13.0",
+        selenideVersion = "7.2.2",
         jacksonVersion = "2.14.2",
         lombokVersion = "1.18.22",
         allureVersion = "2.21.0",
-        appiumVersion = "8.4.0",
+        appiumVersion = "9.1.0",
         ownerVersion = "1.0.4",
         junitVersion = "5.8.2",
         restAssured = "4.5.1"
 
 dependencies {
     testImplementation (
-            "io.github.bonigarcia:webdrivermanager:$webDriverManagerVersion",
-            "io.rest-assured:json-schema-validator:5.3.2",
-            "io.qameta.allure:allure-rest-assured:2.21.0",
-            "io.qameta.allure:allure-junit5:2.18.1",
+            "org.junit.jupiter:junit-jupiter-api:$junitVersion",
+            "org.junit.jupiter:junit-jupiter:$junitVersion",
+            "org.assertj:assertj-core:$assertjCoreVersion",
+            "org.slf4j:slf4j-simple:$slf4jSimpleVersion",
+            "commons-io:commons-io:$commonsIoVersion"
+    )
+    implementation(
+            "io.rest-assured:json-schema-validator:$restAssuredVersion",
+            "io.qameta.allure:allure-rest-assured:$allureVersion",
+            "io.qameta.allure:allure-junit5:$allureJunitVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
-            "io.rest-assured:rest-assured:4.5.1",
+            "io.rest-assured:rest-assured:$restAssured",
             "io.appium:java-client:$appiumVersion",
             "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
             "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
             "com.github.javafaker:javafaker:$javaFakerVersion",
             "com.codeborne:selenide:$selenideVersion",
-            "org.junit.jupiter:junit-jupiter-api:$junitVersion",
-            "org.junit.jupiter:junit-jupiter:$junitVersion",
             "org.assertj:assertj-core:$assertjCoreVersion",
             "org.slf4j:slf4j-simple:$slf4jSimpleVersion",
             "org.projectlombok:lombok:$lombokVersion",
-            "org.aeonbits.owner:owner:$ownerVersion",
-            "commons-io:commons-io:$commonsIoVersion"
+            "org.aeonbits.owner:owner:$ownerVersion"
     )
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
 }
 
 tasks.withType(JavaCompile) {
@@ -98,19 +98,17 @@ test {
     useJUnitPlatform()
 }
 
-task UITest(type: Test) {
+task UI(type: Test) {
     useJUnitPlatform {
-        includeTags "UITest"
+        includeTags "UI"
+        maxParallelForks = 25
     }
 }
-task Mobile(type: Test) {
-    useJUnitPlatform {
-        includeTags "Mobile"
-    }
-}
+
 task API(type: Test) {
     useJUnitPlatform {
         includeTags "API"
+        maxParallelForks = 25
     }
 }
 

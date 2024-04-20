@@ -2,3 +2,6 @@
 /.gradle
 /allure-results
 /build
+*.properties
+*.json
+
