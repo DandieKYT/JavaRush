@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$x;
 public class CreateAccountPage {
 
     public final SelenideElement beginLearnButton = $x("//*[@id='id_button_jr_welcome_start_learning_1']");
-    public final SelenideElement russianLanguageButton = $x("//*[@id='todo_add']");
+    public final SelenideElement russianLanguageButton = $x("//div[text()='Русский']");
     public final SelenideElement checkoutLoad = $x("//div[text() ='Создается ваш персональный курс']");
     public final SelenideElement loader = $x("//*[contains(@class, 'last-step-loading')]");
     public final SelenideElement qaButton = $x("//*[@id='id_button_jr_welcome_choose_qa']");
