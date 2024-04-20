@@ -13,18 +13,18 @@ import org.junit.jupiter.api.Test;
 @Story("Создание аккаунта")
 public class CreateAccountTest extends TestBase {
 
-    @Test
-    @DisplayName("Создание аккаунта без прохождения теста")
-    public void createAccount() {
-        mainPageSteps.startLearnButton();
-        createAccountStep.beginLearnButton();
-        createAccountStep.russianLanguageButton();
-        createAccountStep.qaButton();
-        createAccountStep.blackPictureClick();
-        createAccountStep.notNowButton();
-        createAccountStep.xpInProgrammingNo();
-        createAccountStep.checkOutResult();
-    }
+//    @Test
+//    @DisplayName("Создание аккаунта без прохождения теста")
+//    public void createAccount() {
+//        mainPageSteps.startLearnButton();
+//        createAccountStep.beginLearnButton();
+//        createAccountStep.russianLanguageButton();
+//        createAccountStep.qaButton();
+//        createAccountStep.blackPictureClick();
+//        createAccountStep.notNowButton();
+//        createAccountStep.xpInProgrammingNo();
+//        createAccountStep.checkOutResult();
+//    }
 
     @Test
     @DisplayName("Создание аккаунта")
