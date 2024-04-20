@@ -43,10 +43,7 @@ public class CreateAccountStep {
 
     @Step("Проверка о успешном создании курса")
     public void checkOutResult() {
-        createAccountPage.checkoutLoad.shouldBe((visible).because("Прогресс не начался"));
-        createAccountPage.loader.shouldBe((visible).because("Прогресс не продолжился"));
-        sleep(10000);
-        createAccountPage.checkOutResult.shouldBe(text("Ваш персональный курс готов"));
+        createAccountPage.checkOutResult.shouldBe(text("Подтверди свой email-адрес"));
     }
 
     @Step("Нажатие на кнопку проверить уровень знаний")

@@ -27,17 +27,18 @@ public class CreateAccountTest extends TestBase {
     }
 
     @Test
-    @DisplayName("Создание аккаунта с прохождением теста")
+    @DisplayName("Создание аккаунта")
     public void createAccountWithQuiz() {
-        mainPageSteps.startLearnButton();
-        createAccountStep.beginLearnButton();
-        createAccountStep.russianLanguageButton();
-        createAccountStep.qaButton();
-        createAccountStep.blackPictureClick();
-        createAccountStep.notNowButton();
-        createAccountStep.xpInProgrammingYes();
-        quizStep.testBeginButton();
-        quizStep.randomCheck();
+//        mainPageSteps.startLearnButton();
+        common.stepsForWebApp();
+//        createAccountStep.beginLearnButton();
+//        createAccountStep.russianLanguageButton();
+//        createAccountStep.qaButton();
+//        createAccountStep.blackPictureClick();
+//        createAccountStep.notNowButton();
+//        createAccountStep.xpInProgrammingYes();
+//        quizStep.testBeginButton();
+//        quizStep.randomCheck();
         createAccountStep.checkOutResult();
     }
 }
