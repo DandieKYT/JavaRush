@@ -21,7 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Story("Активности пользователей")
 public class NewsResponseTest {
     private final String expectedPartKey = "anonymous#341";
-    private final String expectedPartUserId = "334";
+    private final String expectedPartUserId = "341";
     private final String expectedType = "TASK_IN_PROGRESS";
     private final String activityPartId = "33";
     private final String partDescription = "пробует решить задачу";
