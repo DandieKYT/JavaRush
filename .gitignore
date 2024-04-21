@@ -3,5 +3,5 @@
 /allure-results
 /build
 *.properties
-notifications/config.json
+/notifications/config.json
 
