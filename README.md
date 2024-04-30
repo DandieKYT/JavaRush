@@ -10,7 +10,6 @@
 + [:heavy_check_mark:  Реализованные проверки:](#ImplementedСhecks)  
   - <a href="#cases-ui"> UI
   - <a href="#cases-api"> API
-  - <a href="#cases-mobile"> Mobile
 + [👷‍♂️ Сборка в Jenkins](#buildInJenkins)
     + [Страница сборки job в Jenkins](#buildInJenkins1)
     + [Главный экран со списком job в Jenkins](#buildInJenkins2)
@@ -18,7 +17,6 @@
 + [:computer: Запуск из терминала](#Launch_from_terminal)
   - <a href="#console-ui"> UI
   - <a href="#console-api"> API
-  - <a href="#console-mobile"> Mobile
 + [:chart_with_downwards_trend: Allure Report](#Allure_report)
     + [Главный экран отчета в Allure Report](#Allure_report1)
     + [Страница с проведенными тестами в Allure Report](#Allure_report2)
@@ -71,9 +69,6 @@
 `Telegram Bot` - для уведомлений о результатах тестирования.\
 `Allure TestOps` - система управления тестированием
 `Rest Assured` - выполняет роль обёртки над http клиентом
-`Appium` - используются для управления мобильным устройством с помощью веб драйвера
-`Browserstack` - для удаленного запуска мобильных автотестов
-`Android_Studio` - для эмулятора мобильного устройства и получения данных для подключения к apk
 .
 
 <a name="Project"><h2>Проект</h2></a>
@@ -106,17 +101,6 @@
 
 :heavy_check_mark:Открытие JSON сайта</br>
 
-<a id="cases-mobile"></a>Mobile-кейсы:
-
-:heavy_check_mark: Авторизация в приложении</br>
-
-:heavy_check_mark: Создание нового аккаунта с прохождением теста по Java</br>
-
-:heavy_check_mark: Добавление лайка на комментарий/лекцию </br>
-
-:heavy_check_mark: Добавление коментария и проверка его автора и текста</br>
-
-:heavy_check_mark: Открытие разделов Course/Java и проверка их содержимого</br>
 
 
 <a name="buildInJenkins" href="https://jenkins.autotests.cloud/job/JavaRush/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush/)<h2></a>
@@ -157,12 +141,6 @@ gradle clean UI
 
 ```
 gradle clean Api
-```
-
-### <a id="console-mobile"></a>Локальный запуск Mobile-тестов
-
-```
-gradle clean Mobile
 ```
 
 Удаленный запуск:
