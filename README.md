@@ -158,15 +158,16 @@ ${TASK}
 -DbrowserVersion="${BROWSER_VERSION}"
 -DremoteUrl=${REMOTE_URL}
 ```
-<a name="Allure_report"><h2>:chart_with_downwards_trend: [Allure Report](https://jenkins.autotests.cloud/job/Students/job/DiplomaSteam/178/allure/)</h2></a>
+<a name="Allure_report"><h2>:chart_with_downwards_trend: [Allure Report](https://jenkins.autotests.cloud/job/JavaRush/100/allure/)</h2></a>
 
-- <a name="Allure_report1"><h3>Главный экран отчета в [Allure Report](https://jenkins.autotests.cloud/job/Students/job/DiplomaSteam/178/allure/#)</h3></a>
+- <a name="Allure_report1"><h3>Главный экран отчета в [Allure Report](https://jenkins.autotests.cloud/job/JavaRush/100/allure/)</h3></a>
 
-![This is an image](design/pictures/allure.png)
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/cf828172-249a-43ec-a10b-151363242ab7)
 
--  <a name="Allure_report2"><h3>Страница с проведенными тестами в [Allure Report](https://jenkins.autotests.cloud/job/Students/job/DiplomaSteam/178/allure/#suites/5c6961ccda11b989b711be0fa000af14/e117dc1bb946ebe9/)</h3></a>
 
-![This is an image](design/pictures/allure1.png)
+-  <a name="Allure_report2"><h3>Страница с проведенными тестами в [Allure Report](https://jenkins.autotests.cloud/job/JavaRush/100/allure/#suites/a231097a0283795f4a5780f0d13a8133/660cc25265403457/)</h3></a>
+
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/86c0c666-772c-419e-9287-5bff8790b5dc)
 
 <a name="Integration_Allure_TestOps"><h2>:bar_chart: Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/24564)</h2></a>
 
