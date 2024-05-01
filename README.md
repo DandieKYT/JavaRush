@@ -191,4 +191,6 @@ ${TASK}
 
 - <a name="Video1"><h3>Пример запуска тестов </h3></a>
 
+https://github.com/DandieKYT/JavaRush/assets/75677738/ca03e546-1d02-41d6-884e-6fbb4aecaa34
+
 
