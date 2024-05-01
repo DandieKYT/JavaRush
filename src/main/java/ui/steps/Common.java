@@ -14,12 +14,6 @@ public class Common {
         mainPageSteps.startLearnButton();
         learnStep.beginLearnButton();
         learnStep.russianLanguageButton();
-//        learnStep.qaButton();
-//        learnStep.blackPictureClick();
-//        learnStep.notNowButton();
-//        learnStep.xpInProgrammingNo();
-//        learnStep.checkOutResult();
-//        learnStep.getCourseButton();
         learnStep.emailInput(generationRandomText() + email);
         learnStep.passwordInput(generationRandomText() + password);
         learnStep.createAccount();

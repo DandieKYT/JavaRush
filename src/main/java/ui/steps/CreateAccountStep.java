@@ -21,41 +21,15 @@ public class CreateAccountStep {
         createAccountPage.russianLanguageButton.click();
     }
 
-    @Step("Нажатие на кнопку 'Инженером Тестирования")
-    public void qaButton() {
-        createAccountPage.qaButton.click();
-    }
-
-    @Step("Выбор темной темы")
-    public void blackPictureClick() {
-        createAccountPage.blackPictureClick.click();
-    }
-
-    @Step("Нажатие на кнопку 'Не сейчас'")
-    public void notNowButton() {
-        createAccountPage.notNowButton.click();
-    }
-
-    @Step("Нажатие на кнопку 'Нет'")
-    public void xpInProgrammingNo() {
-        createAccountPage.xpInProgrammingNo.click();
-    }
-
     @Step("Проверка о успешном создании курса")
     public void checkOutResult() {
-        createAccountPage.checkOutResult.shouldBe(text("Подтверди свой email-адрес"));
+        createAccountPage.checkOutResult.shouldBe(text("Обучение Java программированию с нуля"));
     }
 
     @Step("Нажатие на кнопку проверить уровень знаний")
     public void xpInProgrammingYes() {
         createAccountPage.xpInProgrammingYes.click();
         sleep(2000);
-    }
-
-    @Step("Нажатие на кнопку 'Получить'")
-    public void getCourseButton() {
-        createAccountPage.getCourseButton.click();
-        sleep(4000);
     }
 
     @Step("Ввод email")
