@@ -104,14 +104,16 @@
 
 
 <a name="buildInJenkins" href="https://jenkins.autotests.cloud/job/JavaRush/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush/)<h2></a>
-- <a name="buildInJenkins1"><h5>Страница сборки job в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush/55/)</h5></a>
+- <a name="buildInJenkins1"><h5>Страница сборки job в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush/100/)</h5></a>
 
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/04b8b36b-a78a-47b5-93ea-4fe10cc7f549)
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/c1b3752e-0326-4800-8a92-a944b361ac0f)
 
 
-- <a name="buildInJenkins2"><h5>Главный экран со списком job в [Jenkins](https://jenkins.autotests.cloud/job/Students/job/DiplomaSteam/)</h5></a>
 
-![This is an image](design/pictures/jenkins2.png)
+- <a name="buildInJenkins2"><h5>Главный экран со списком job в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush/)</h5></a>
+
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/afe75edd-d7d1-4cc3-8718-9c3dbe57145b)
+
 
 <a name="terminal"><h2>:computer: Параметры сборки в Jenkins</h2></a>
 
