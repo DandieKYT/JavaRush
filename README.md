@@ -24,12 +24,10 @@
     + [Экран с результатами запуска тестов](#Integration_Allure_TestOps1)
     + [Страница с тестами в TestOps](#Integration_Allure_TestOps2)
     + [Страница с тестами из Launches в Allure TestOps](#Integration_Allure_TestOps3)
-+ [:bar_chart: Примеры сборок в Browserstack](#Integration_Brawserstack)
-  + [Экран с результатами запуска тестов](#Integration_Brawserstack)
 + [:iphone: Отчет в Telegram](#Telegram)
 + [:movie_camera: Видео примеры прохождения тестов](#Video)
-    + [Пример запуска тестов через selenoid](#Video1)
-    + [Пример запуска тестов через Browserstack](#Video2)
+    + [Пример запуска тестов](#Video1)
+
 
 <h2> :trophy:  Мои инструменты и технологии:</h2>
 
