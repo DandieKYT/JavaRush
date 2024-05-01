@@ -181,23 +181,11 @@ ${TASK}
 
 - <a name="Integration_Allure_TestOps3"><h3>Страница с тестами из Launches в [Allure TestOps](https://allure.autotests.cloud/launch/24564/tree/369247?treeId=4235)</h3></a>
 
-![This is an image](design/pictures/allureTestsOp2.png)
-
-<a name="Integration_Brawserstack"><h2>:bar_chart: Примеры сборок в [Browserstack](https://app-automate.browserstack.com/dashboard/v2/builds/a30dac4f7670d214d2a0cfda3716ec3a802ad3e2/sessions/e55b3ffbab9e70fd98626e7518989f663ab82f67)</h2></a>
-
-- <a name="Integration_Brawserstack"><h3>Экран с результатами запуска тестов</h3></a>
-
-![This is an image](design/pictures/Brawserstack.png)
-
- <a name="Integration_Jira"><h2>:chart_with_upwards_trend: Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-675)</h2></a>
-
-- <a name="Page_Jira"><h3>Страница с задачей в [Jira](https://jira.autotests.cloud/browse/HOMEWORK-675)<h3></a>
-
-![This is an image](design/pictures/jira_task.png)
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/a6f59008-3e2b-4e7e-832e-390561e63cbd)
 
 <a name="Telegram"><h2>:iphone: Отчет в [Telegram](https://t.me/+wAG3zdRUXCxmNWNi)</h2></a>
 
-![This is an image](design/pictures/telegram.png)
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/790d4620-9e65-4f93-a95b-9e4066db80d1)
 
 <a name="Video"><h2>:movie_camera: Видео примеры прохождения тестов</h2></a>
 
