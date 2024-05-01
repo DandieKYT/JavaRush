@@ -189,11 +189,6 @@ ${TASK}
 
 <a name="Video"><h2>:movie_camera: Видео примеры прохождения тестов</h2></a>
 
-- <a name="Video1"><h3>Пример запуска тестов через selenoid</h3></a>
+- <a name="Video1"><h3>Пример запуска тестов </h3></a>
 
-
-
-:heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
-
-:blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
-
+[Запись экрана (02.05.2024 0-57-01) (video-converter.com).webm](https://github.com/DandieKYT/JavaRush/assets/75677738/b097d529-be7b-4259-b5d5-bc5dabcc9b77)
