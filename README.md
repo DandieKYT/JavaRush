@@ -191,4 +191,4 @@ ${TASK}
 
 - <a name="Video1"><h3>Пример запуска тестов </h3></a>
 
-[Запись экрана (02.05.2024 0-57-01) (video-converter.com).webm](https://github.com/DandieKYT/JavaRush/assets/75677738/b097d529-be7b-4259-b5d5-bc5dabcc9b77)
+
