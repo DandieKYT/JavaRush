@@ -81,7 +81,7 @@
 
 :heavy_check_mark: Открытие страниц в Telegram/Youtube </br>
 
-:heavy_check_mark: Поиск пользователей</br>
+:heavy_check_mark: Поиск пользователей по имени</br>
 
 :heavy_check_mark: Открытие страниц Отзывы/О нас и проверка их содержимого</br>
 
@@ -89,7 +89,7 @@
 
 <a id="cases-api"></a>API-кейсы:
 
-:heavy_check_mark: Открытие раздела "Игры" '</br>
+:heavy_check_mark: Открытие раздела "Игры"</br>
 
 :heavy_check_mark: Открытие страницы активности пользователей</br>
 
