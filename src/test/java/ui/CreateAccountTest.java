@@ -18,5 +18,6 @@ public class CreateAccountTest extends TestBase {
     public void createAccountWithQuiz() {
         common.stepsForWebApp();
         createAccountStep.checkOutResult();
+        common.stepsForDeleteAccount();
     }
 }
