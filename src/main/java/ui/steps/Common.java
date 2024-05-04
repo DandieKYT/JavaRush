@@ -23,7 +23,9 @@ public class Common {
     public void stepsForDeleteAccount(){
         sideBarSteps.openSettings();
         userSettingsStep.openSafetyAndEntry();
+        userSettingsStep.scrollPageDown();
         userSettingsStep.clickTextForDeletingAccount();
         userSettingsStep.inputTextConfirmAndDeleteAccount();
+        userSettingsStep.checkDeleteAccount();
     }
 }
