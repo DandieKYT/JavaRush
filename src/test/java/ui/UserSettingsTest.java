@@ -27,5 +27,10 @@ public class UserSettingsTest extends TestBase {
         userSettingsStep.savePhoto();
         userSettingsStep.saveChanges();
         userSettingsStep.checkChanges();
+        userSettingsStep.openSafetyAndEntry();
+        userSettingsStep.scrollPageDown();
+        userSettingsStep.clickTextForDeletingAccount();
+        userSettingsStep.inputTextConfirmAndDeleteAccount();
+        userSettingsStep.checkDeleteAccount();
     }
 }
