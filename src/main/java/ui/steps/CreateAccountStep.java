@@ -26,12 +26,6 @@ public class CreateAccountStep {
         createAccountPage.checkOutResult.shouldBe(text("Обучение Java программированию с нуля"));
     }
 
-    @Step("Нажатие на кнопку проверить уровень знаний")
-    public void xpInProgrammingYes() {
-        createAccountPage.xpInProgrammingYes.click();
-        sleep(2000);
-    }
-
     @Step("Ввод email")
     public void emailInput(String email) {
         createAccountPage.emailInput.setValue(email);

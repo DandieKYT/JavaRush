@@ -27,6 +27,8 @@ public class SideBarSteps {
 
     @Step("Открытие вкладки 'Настройки'")
     public void openSettings() {
+        refresh();
+        sleep(5000);
         WebDriverRunner.getWebDriver().manage().window().maximize();
         sideBarPage.clickImage.click();
         sideBarPage.bookmarks.scrollTo();
