@@ -83,10 +83,10 @@
 
 <a name="Manual"><h2> ✍️ Ручные тест-кейсы в Allure TestOps</h2></a>
 
-- <a name="Manual1"><h3>Тест-кейс "Авторизация по секретному ключу"[Manual1](https://allure.autotests.cloud/project/3488/test-cases/29884?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h3></a>
+- <a name="Manual1"><h3>Тест-кейс "Авторизация по [секретному ключу"](https://allure.autotests.cloud/project/3488/test-cases/29884?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h3></a>
 ![image](https://github.com/DandieKYT/JavaRush/assets/75677738/d4ea1e2c-6e46-4e26-9ef0-6bea0fa187ce)
 
-- <a name="Manual1"><h3>Тест-кейс "Запись на курс по JAVA""[Manual2](https://allure.autotests.cloud/project/3488/test-cases/29746?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h3></a>
+- <a name="Manual1"><h3>Тест-кейс 'Запись на курс [по JAVA](https://allure.autotests.cloud/project/3488/test-cases/29746?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h3></a>
 ![image](https://github.com/DandieKYT/JavaRush/assets/75677738/f932f657-581f-4f90-b006-d31ce9d294e3)
 
 - <a name="Manual1"><h3>Тест-кейс "Авторизация по секретному ключу"[Manual1](https://allure.autotests.cloud/project/3488/test-cases/29884?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h3></a>
