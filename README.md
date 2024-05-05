@@ -81,7 +81,7 @@
 
 ![картаJR](https://github.com/DandieKYT/JavaRush/assets/75677738/feee57cd-f8e6-430f-bc39-82ca74e7c78f)
 
-<a name="Manual"><h2> ✍️ Ручные тест-кейсы в Allure TestOps</h2></a>
+<a name="Manual"><h2> ✍️ Ручные тест-кейсы в [Allure TestOps](https://allure.autotests.cloud/project/3488/test-cases/29925?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h2></a>
 
 - <a name="Manual1"><h3>Тест-кейс ["Авторизация по секретному ключу"](https://allure.autotests.cloud/project/3488/test-cases/29884?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h3></a>
 ![image](https://github.com/DandieKYT/JavaRush/assets/75677738/d4ea1e2c-6e46-4e26-9ef0-6bea0fa187ce)
