@@ -56,7 +56,7 @@ public class MainPageSteps {
 
     @Step("Проверка содержимого вкладки")
     public void checksTitle(String expectedText) {
-        mainPage.checkTitle(expectedText).shouldBe(text(expectedText));
+        mainPage.checkTitle(expectedText).shouldBe(text(expectedText).because("Текст не найден"));
     }
 }
 
