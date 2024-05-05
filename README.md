@@ -11,7 +11,7 @@
 + [✍️ Ручные тест-кейсы в Allure TestOps](#Manual)
   + [Тест-кейс "Авторизация по секретному ключу"](#Manual1)
   + [Тест-кейс "Запись на курс по JAVA"](#Manual2)
-  + [Тест-кейс "Добавление в друзья пользователей"](#Manual3)
+  + [Тест-кейс "Добавление/редактирование личных данных"](#Manual3)
 + [:heavy_check_mark:  Реализованные проверки:](#ImplementedСhecks)
   - <a href="#cases-ui"> UI
   - <a href="#cases-api"> API
@@ -83,13 +83,14 @@
 
 <a name="Manual"><h2> ✍️ Ручные тест-кейсы в Allure TestOps</h2></a>
 
-- <a name="Manual1"><h3>Тест-кейс "Авторизация по [секретному ключу"](https://allure.autotests.cloud/project/3488/test-cases/29884?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h3></a>
+- <a name="Manual1"><h3>Тест-кейс ["Авторизация по секретному ключу"](https://allure.autotests.cloud/project/3488/test-cases/29884?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h3></a>
 ![image](https://github.com/DandieKYT/JavaRush/assets/75677738/d4ea1e2c-6e46-4e26-9ef0-6bea0fa187ce)
 
-- <a name="Manual1"><h3>Тест-кейс 'Запись на курс [по JAVA](https://allure.autotests.cloud/project/3488/test-cases/29746?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h3></a>
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/f932f657-581f-4f90-b006-d31ce9d294e3)
+- <a name="Manual2"><h3>Тест-кейс ["Запись на курс по JAVA"](https://allure.autotests.cloud/project/3488/test-cases/29746?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h3></a>
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/e48a2b2b-74d5-4e42-a5b2-bc7368cc450d)
 
-- <a name="Manual1"><h3>Тест-кейс "Авторизация по секретному ключу"[Manual1](https://allure.autotests.cloud/project/3488/test-cases/29884?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h3></a>
+- <a name="Manual3"><h3>Тест-кейс [Добавление/редактирование личных данных](https://allure.autotests.cloud/project/3488/test-cases/29925?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h3></a>
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/9e9f8e80-ecd8-43f1-b755-7bf4473d1e71)
 
 
 <a name="ImplementedСhecks"><h2>:heavy_check_mark:  Реализованные проверки:</h2></a>
