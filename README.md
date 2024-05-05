@@ -8,7 +8,8 @@
 + [Описаниe](#Description)
 + [Проект](#Project)
 + [🗺️ Mind-карта сайта](#Mind)
-+ [:heavy_check_mark:  Реализованные проверки:](#ImplementedСhecks)  
++ [✍️ Ручные тест-кейсы в Allure TestOps](#Manual)
++ [:heavy_check_mark:  Реализованные проверки:](#ImplementedСhecks)
   - <a href="#cases-ui"> UI
   - <a href="#cases-api"> API
 + [👷‍♂️ Сборка в Jenkins](#buildInJenkins)
@@ -77,6 +78,10 @@
 
 ![картаJR](https://github.com/DandieKYT/JavaRush/assets/75677738/feee57cd-f8e6-430f-bc39-82ca74e7c78f)
 
+<a name="Manual"><h2> ✍️ Ручные тест-кейсы в Allure TestOps</h2></a>
+
+- <a name="Allure_report1"><h3>Главный экран отчета в [Allure Report](https://allure.autotests.cloud/project/3488/test-cases/29884?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h3></a>
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/d4ea1e2c-6e46-4e26-9ef0-6bea0fa187ce)
 
 <a name="ImplementedСhecks"><h2>:heavy_check_mark:  Реализованные проверки:</h2></a>
 <a id="cases-ui"></a>UI-кейсы:
