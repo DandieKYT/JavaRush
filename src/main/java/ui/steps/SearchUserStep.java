@@ -18,6 +18,6 @@ public class SearchUserStep {
 
     @Step("Проверка результата поиска")
     public void checkoutResult(String actualName) {
-        searchUsersPage.checkoutResult.shouldBe(Condition.text(actualName));
+        searchUsersPage.checkoutResult.shouldBe(Condition.text(actualName).because("Пользователь не найден"));
     }
 }

@@ -23,8 +23,7 @@ public class CreateAccountStep {
 
     @Step("Проверка о успешном создании курса")
     public void checkOutResult() {
-        createAccountPage.checkOutResult.shouldBe(text("Обучение Java программированию с нуля"));
-    }
+        createAccountPage.checkOutResult.shouldBe(text("Обучение Java программированию с нуля").because("Текст не найден"));}
 
     @Step("Ввод email")
     public void emailInput(String email) {

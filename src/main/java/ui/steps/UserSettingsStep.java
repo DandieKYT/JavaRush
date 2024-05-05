@@ -32,7 +32,7 @@ public class UserSettingsStep {
     @Step("Проверка загрузки фотографии")
     public void checkUploadPhoto() {
         sleep(2000);
-        profileSettingsPage.checkUploadPhoto.should(visible);
+        profileSettingsPage.checkUploadPhoto.should(visible.because("Фотография не загружена"));
     }
 
     @Step("Нажатие на кнопку 'Сохранить изменения'")
@@ -42,30 +42,34 @@ public class UserSettingsStep {
 
     @Step("Проверка надписи об успешном сохранении изменений")
     public void checkChanges() {
-        profileSettingsPage.checkSuccessFullChanges.should(text("Личные данные сохранены"));
+        profileSettingsPage.checkSuccessFullChanges.should(text("Личные данные сохранены").because("Текст об изменении фотографии не найден"));
     }
 
     @Step("Открытие раздела Безопасность и вход")
-    public void openSafetyAndEntry(){
-       profileSettingsPage.securityAndEntry.click();
+    public void openSafetyAndEntry() {
+        profileSettingsPage.securityAndEntry.click();
     }
+
     @Step("Скролл страницы вниз")
-    public void scrollPageDown(){
+    public void scrollPageDown() {
         sleep(1000);
         mainPage.youtubeButton.scrollTo();
     }
+
     @Step("Нажатие на текст 'Вы можете удалить свой аккаунт и свои персональные данные'")
-    public void clickTextForDeletingAccount(){
+    public void clickTextForDeletingAccount() {
         profileSettingsPage.textForDeleteAccount.scrollTo();
         profileSettingsPage.textForDeleteAccount.click();
     }
+
     @Step("Ввод текста 'DELETE' и нажатие кнопки удалить")
-    public void inputTextConfirmAndDeleteAccount(){
+    public void inputTextConfirmAndDeleteAccount() {
         profileSettingsPage.inputFieldForDelete.setValue("DELETE");
         profileSettingsPage.deleteButton.click();
     }
+
     @Step("Проверка удаления аккаунта")
-    public void checkDeleteAccount(){
+    public void checkDeleteAccount() {
         mainPage.startLearnButton.shouldBe(visible.because("Аккаунт не удален"));
     }
 }

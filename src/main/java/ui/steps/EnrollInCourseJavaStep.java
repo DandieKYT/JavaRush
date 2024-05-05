@@ -18,6 +18,6 @@ public class EnrollInCourseJavaStep {
 
     @Step("Проверка заголовка анкеты 'Записаться на курс'")
     public void checkoutForm() {
-        enrollInCourseJavaPage.checkoutForm.shouldBe(text("Записаться на курс"));
+        enrollInCourseJavaPage.checkoutForm.shouldBe(text("Записаться на курс").because("Текст не найден"));
     }
 }

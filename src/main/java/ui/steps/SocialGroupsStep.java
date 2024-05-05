@@ -13,14 +13,14 @@ public class SocialGroupsStep {
 
     @Step("Проверка заголовка на YouTube")
     public void checkOutYoutubeTitle() {
-        socialGroupsPage.checkOutYoutubeTitle.shouldHave(Condition.text("JavaRush"));
+        socialGroupsPage.checkOutYoutubeTitle.shouldHave(Condition.text("JavaRush").because("Текст не найден"));
         closeWindow();
         switchTo().window(0);
     }
 
     @Step("Проверка заголовка на Telegram")
     public void checkOutTelegramTitle() {
-        socialGroupsPage.checkOutTelegramTitle.shouldBe(Condition.text("JavaRush"));
+        socialGroupsPage.checkOutTelegramTitle.shouldBe(Condition.text("JavaRush").because("Текст не найден"));
         sleep(1000);
         closeWindow();
         switchTo().window(0);
