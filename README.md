@@ -89,7 +89,7 @@
 - <a name="Manual2"><h3>Тест-кейс ["Запись на курс по JAVA"](https://allure.autotests.cloud/project/3488/test-cases/29746?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h3></a>
 ![image](https://github.com/DandieKYT/JavaRush/assets/75677738/e48a2b2b-74d5-4e42-a5b2-bc7368cc450d)
 
-- <a name="Manual3"><h3>Тест-кейс [Добавление/редактирование личных данных](https://allure.autotests.cloud/project/3488/test-cases/29925?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h3></a>
+- <a name="Manual3"><h3>Тест-кейс ["Добавление/редактирование личных данных"](https://allure.autotests.cloud/project/3488/test-cases/29925?treeId=6806&search=W3siaWQiOiJ0eXBlIiwidHlwZSI6InRlc3RDYXNlVHlwZUFycmF5IiwidmFsdWUiOlsibWFudWFsIl19XQ%3D%3D)</h3></a>
 ![image](https://github.com/DandieKYT/JavaRush/assets/75677738/9e9f8e80-ecd8-43f1-b755-7bf4473d1e71)
 
 
