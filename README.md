@@ -7,6 +7,7 @@
 + [:trophy: Инструменты и технологии](#MyToolsAndTechnologies)
 + [Описаниe](#Description)
 + [Проект](#Project)
++ [Mind-карта сайта](#Mind)
 + [:heavy_check_mark:  Реализованные проверки:](#ImplementedСhecks)  
   - <a href="#cases-ui"> UI
   - <a href="#cases-api"> API
@@ -71,6 +72,10 @@
 
 <a name="Project"><h2>Проект</h2></a>
 <a href="https://javarush.com/"><code><img width="5%" title="Steam" src="https://yt3.googleusercontent.com/ytc/APkrFKYPRuYZhFR5vGnF2c6htR6815HiRYLmhikCqrjR7w=s900-c-k-c0x00ffffff-no-rj"></code></a> Проект по автоматизации тестирования для Java-Rush, — практический онлайн-курс по обучению Java. :star2:
+
+<a name="Mind"><h2>Майнд-карта сайта</h2></a>
+![InkedкартаJR12](https://github.com/DandieKYT/JavaRush/assets/75677738/6e1891d8-728b-44a2-ac62-c05daae8eaa9)
+
 
 <a name="ImplementedСhecks"><h2>:heavy_check_mark:  Реализованные проверки:</h2></a>
 <a id="cases-ui"></a>UI-кейсы:
