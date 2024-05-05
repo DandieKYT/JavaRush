@@ -73,7 +73,7 @@
 <a name="Project"><h2>Проект</h2></a>
 <a href="https://javarush.com/"><code><img width="5%" title="Steam" src="https://yt3.googleusercontent.com/ytc/APkrFKYPRuYZhFR5vGnF2c6htR6815HiRYLmhikCqrjR7w=s900-c-k-c0x00ffffff-no-rj"></code></a> Проект по автоматизации тестирования для Java-Rush, — практический онлайн-курс по обучению Java. :star2:
 
-<a name="Mind"><h2> 🗺️ Майнд-карта сайта</h2></a>
+<a name="Mind"><h2> 🗺️ Майнд-карта Java-Rush</h2></a>
 
 ![картаJR](https://github.com/DandieKYT/JavaRush/assets/75677738/feee57cd-f8e6-430f-bc39-82ca74e7c78f)
 
