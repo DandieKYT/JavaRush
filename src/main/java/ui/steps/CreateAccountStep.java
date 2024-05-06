@@ -4,17 +4,13 @@ import io.qameta.allure.Step;
 import ui.pages.CreateAccountPage;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.sleep;
 
 public class CreateAccountStep {
 
     CreateAccountPage createAccountPage = new CreateAccountPage();
 
     @Step("Нажатие на кнопку 'Начать'")
-    public void beginLearnButton() {
-        createAccountPage.beginLearnButton.click();
-    }
+    public void beginLearnButton() {createAccountPage.beginLearnButton.click();}
 
     @Step("Нажатие на кнопку 'Русский'")
     public void russianLanguageButton() {

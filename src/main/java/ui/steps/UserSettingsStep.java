@@ -1,12 +1,10 @@
 package ui.steps;
 
 import io.qameta.allure.Step;
-import org.openqa.selenium.Keys;
 import ui.pages.MainPage;
 import ui.pages.ProfileSettingsPage;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class UserSettingsStep {
@@ -16,6 +14,7 @@ public class UserSettingsStep {
 
     @Step("Нажатие на фотографию профиля")
     public void clickAvatarImage() {
+        sleep(2000);
         profileSettingsPage.clickProfilePhoto.click();
     }
 

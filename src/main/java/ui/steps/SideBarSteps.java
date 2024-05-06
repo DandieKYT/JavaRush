@@ -2,6 +2,7 @@ package ui.steps;
 
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Step;
+import ui.pages.CreateAccountPage;
 import ui.pages.SideBarPage;
 
 import static com.codeborne.selenide.Selenide.*;
@@ -9,6 +10,8 @@ import static com.codeborne.selenide.Selenide.*;
 public class SideBarSteps {
 
     SideBarPage sideBarPage = new SideBarPage();
+
+    CreateAccountPage createAccountPage = new CreateAccountPage();
 
     @Step("Открытие вкладки Java-университет")
     public void openJavaUniversity() {

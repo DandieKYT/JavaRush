@@ -1,8 +1,6 @@
 package ui.steps;
 
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
-import com.codeborne.selenide.selector.ByTagAndText;
 import io.qameta.allure.Step;
 import org.openqa.selenium.Keys;
 import ui.pages.MainPage;
