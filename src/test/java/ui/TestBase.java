@@ -42,7 +42,7 @@ public class TestBase extends Attach {
         Configuration.remote = System.getProperty("selenoid");
         Configuration.browserVersion = System.getProperty("browserVersion", config.getBrowserVersion());
         if (isRemote) {
-            Configuration.remote = "https://user1:1234@" + System.getProperty("selenoid_url", "selenoid.autotests.cloud/wd/hub");
+            Configuration.remote = remoteUrl;
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                     "enableVNC", true,
