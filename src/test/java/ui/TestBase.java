@@ -58,7 +58,7 @@ public class TestBase extends Attach {
         Attach.browserConsoleLogs();
         Attach.screenshotAs("Last screenshot");
         if (isRemote) {
-            Attach.addVideoSelenoid();
+            Attach.addVideo();
         }
     }
 
