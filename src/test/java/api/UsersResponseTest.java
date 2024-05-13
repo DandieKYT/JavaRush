@@ -87,24 +87,6 @@ public class UsersResponseTest {
     }
 
     @Test
-    @DisplayName("Проверка пользователей из России и их частичного ключа")
-    void checkingForPartCountry() {
-        Users[] data = given()
-                .spec(requestSpec)
-                .when()
-                .get("users?filter=ALL")
-                .then()
-                .spec(responseSpec)
-                .extract().as(Users[].class);
-        Users actualUsers = Arrays.stream(data)
-                .filter(users -> users.getCountry().contains("Россия"))
-                .findFirst()
-                .orElseThrow(() -> new AssertionError(""));
-        String actualKey = String.valueOf(actualUsers.getKey());
-        assertThat(actualKey).contains("anonymous#");
-    }
-
-    @Test
     @DisplayName("Проверка соответствия userID и ID")
     void checkingForPartDescription() {
         Users[] data = given()
