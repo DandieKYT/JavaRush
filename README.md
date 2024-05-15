@@ -123,16 +123,17 @@
 
 
 <a name="buildInJenkins" href="https://jenkins.autotests.cloud/job/JavaRush/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush1/job/JavaRush_UI_API/)<h2></a>
-- <a name="buildInJenkins1"><h5>Страница сборки job в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush/100/)</h5></a>
+- <a name="buildInJenkins1"><h5>Главный экран со списком job в[Jenkins](https://jenkins.autotests.cloud/job/JavaRush/100/)</h5></a>
 
 ![image](https://github.com/DandieKYT/JavaRush/assets/75677738/adaba9f4-ebea-4478-b820-9093c46d3884)
 
 
 
 
-- <a name="buildInJenkins2"><h5>Главный экран со списком job в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush/)</h5></a>
+- <a name="buildInJenkins2"><h5>Страница сборки job в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush1/job/JavaRush_UI_API/3/)</h5></a>
 
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/afe75edd-d7d1-4cc3-8718-9c3dbe57145b)
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/0ec15516-482f-4765-889a-f9a1d3e5fe47)
+
 
 
 <a name="terminal"><h2>:computer: Параметры сборки в Jenkins</h2></a>
