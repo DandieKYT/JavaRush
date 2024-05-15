@@ -205,9 +205,10 @@ ${TASK}
 
 
 
-- <a name="Integration_Allure_TestOps3"><h3>Страница с тестами из Launches в [Allure TestOps](https://allure.autotests.cloud/launch/24564/tree/369247?treeId=4235)</h3></a>
+- <a name="Integration_Allure_TestOps3"><h3>Страница с тестами из Launches в [Allure TestOps](https://allure.autotests.cloud/launch/38959/tree/635433?search=W3siaWQiOiJzdGF0dXMiLCJ0eXBlIjoidGVzdFN0YXR1c0FycmF5IiwidmFsdWUiOlsicGFzc2VkIl19XQ%3D%3D&treeId=6806)</h3></a>
 
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/a6f59008-3e2b-4e7e-832e-390561e63cbd)
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/e34d1dbd-65e0-498d-adfd-87edc3a5eb9b)
+
 
 <a name="Telegram"><h2>:iphone: Отчет в [Telegram](https://t.me/+wAG3zdRUXCxmNWNi)</h2></a>
 
