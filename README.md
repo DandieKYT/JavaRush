@@ -210,7 +210,7 @@ ${TASK}
 ![image](https://github.com/DandieKYT/JavaRush/assets/75677738/e34d1dbd-65e0-498d-adfd-87edc3a5eb9b)
 
 
-<a name="Telegram"><h2>:iphone: Отчет в [Telegram](https://t.me/+wAG3zdRUXCxmNWNi)</h2></a>
+<a name="Telegram"><h2>:iphone: Отчет в Telegram</h2></a>
 
 ![image](https://github.com/DandieKYT/JavaRush/assets/75677738/b58c0e6f-f350-4e89-a021-b18f75ba847e)
 
