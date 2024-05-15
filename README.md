@@ -122,10 +122,11 @@
 
 
 
-<a name="buildInJenkins" href="https://jenkins.autotests.cloud/job/JavaRush/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush/)<h2></a>
+<a name="buildInJenkins" href="https://jenkins.autotests.cloud/job/JavaRush/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush1/job/JavaRush_UI_API/)<h2></a>
 - <a name="buildInJenkins1"><h5>Страница сборки job в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush/100/)</h5></a>
 
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/c1b3752e-0326-4800-8a92-a944b361ac0f)
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/adaba9f4-ebea-4478-b820-9093c46d3884)
+
 
 
 
