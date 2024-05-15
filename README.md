@@ -123,7 +123,7 @@
 
 
 <a name="buildInJenkins" href="https://jenkins.autotests.cloud/job/JavaRush/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush1/job/JavaRush_UI_API/)<h2></a>
-- <a name="buildInJenkins1"><h5>Главный экран со списком job в[Jenkins](https://jenkins.autotests.cloud/job/JavaRush/100/)</h5></a>
+- <a name="buildInJenkins1"><h5>Главный экран со списком job в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush/100/)</h5></a>
 
 ![image](https://github.com/DandieKYT/JavaRush/assets/75677738/adaba9f4-ebea-4478-b820-9093c46d3884)
 
