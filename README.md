@@ -192,15 +192,18 @@ ${TASK}
 ![image](https://github.com/DandieKYT/JavaRush/assets/75677738/8739d0d0-044e-457e-afb4-172cea5d4b12)
 
 
-<a name="Integration_Allure_TestOps"><h2>:bar_chart: Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/38392/?treeId=0)</h2></a>
+<a name="Integration_Allure_TestOps"><h2>:bar_chart: Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/38959/?search=W3siaWQiOiJzdGF0dXMiLCJ0eXBlIjoidGVzdFN0YXR1c0FycmF5IiwidmFsdWUiOlsicGFzc2VkIl19XQ%3D%3D&treeId=0)</h2></a>
 
 - <a name="Integration_Allure_TestOps1"><h3>Экран с результатами запуска тестов</h3></a>
 
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/dc68c9d9-9927-414d-9794-f9c14769d64b)
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/cc1ae6c5-f1c8-4ef1-abea-0957d0fa39fd)
 
-- <a name="Integration_Allure_TestOps2"><h3>Страница с тестами в [TestOps](https://allure.autotests.cloud/project/2188/test-cases/20742?treeId=4235)</h3></a>
 
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/7976d3ad-09b5-4ee2-88bb-0a0e718a595a)
+- <a name="Integration_Allure_TestOps2"><h3>Страница с тестами в [TestOps](https://allure.autotests.cloud/project/3488/test-cases/31464?search=W3siaWQiOiJzdGF0dXMiLCJ0eXBlIjoibG9uZ0FycmF5IiwidmFsdWUiOlsiLTMiXX1d&treeId=6806)</h3></a>
+
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/3f66aa30-c559-46dc-8d7e-8b40a95caf51)
+
+
 
 - <a name="Integration_Allure_TestOps3"><h3>Страница с тестами из Launches в [Allure TestOps](https://allure.autotests.cloud/launch/24564/tree/369247?treeId=4235)</h3></a>
 
