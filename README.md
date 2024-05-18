@@ -1,4 +1,4 @@
-# UI и API автотесты для сайта [Java-Rush](https://javarush.com/) — практический онлайн-курс по обучению Java.
+# UI, [Mobile](https://github.com/DandieKYT/JavaRushMobile) и API автотесты для сайта [Java-Rush](https://javarush.com/) — практический онлайн-курс по обучению Java.
 ![image](https://github.com/DandieKYT/JavaRush/assets/75677738/cd08eb3b-22da-4c6e-819b-f9fc04ed6361)
 
 
