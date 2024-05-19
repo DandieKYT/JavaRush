@@ -212,7 +212,7 @@ ${TASK}
 
 <a name="Telegram"><h2>:iphone: Отчет в Telegram</h2></a>
 
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/b58c0e6f-f350-4e89-a021-b18f75ba847e)
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/6dbeb9cf-d7e8-42f3-b443-74272ca0ff61)
 
 
 <a name="Video"><h2>:movie_camera: Видео примеры прохождения тестов</h2></a>
