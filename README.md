@@ -1,4 +1,4 @@
-# UI и API автотесты для сайта [Java-Rush](https://javarush.com/) — практический онлайн-курс по обучению Java.
+# UI, [Mobile](https://github.com/DandieKYT/JavaRushMobile) и API автотесты для сайта [Java-Rush](https://javarush.com/) — практический онлайн-курс по обучению Java.
 ![image](https://github.com/DandieKYT/JavaRush/assets/75677738/cd08eb3b-22da-4c6e-819b-f9fc04ed6361)
 
 
@@ -122,16 +122,18 @@
 
 
 
-<a name="buildInJenkins" href="https://jenkins.autotests.cloud/job/JavaRush/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush/)<h2></a>
-- <a name="buildInJenkins1"><h5>Страница сборки job в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush/100/)</h5></a>
+<a name="buildInJenkins" href="https://jenkins.autotests.cloud/job/JavaRush/"><h2>👷‍♂️ Сборки в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush1/job/JavaRush_UI_API/)<h2></a>
+- <a name="buildInJenkins1"><h5>Главный экран со списком job в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush/100/)</h5></a>
 
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/c1b3752e-0326-4800-8a92-a944b361ac0f)
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/adaba9f4-ebea-4478-b820-9093c46d3884)
 
 
 
-- <a name="buildInJenkins2"><h5>Главный экран со списком job в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush/)</h5></a>
 
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/afe75edd-d7d1-4cc3-8718-9c3dbe57145b)
+- <a name="buildInJenkins2"><h5>Страница сборки job в [Jenkins](https://jenkins.autotests.cloud/job/JavaRush1/job/JavaRush_UI_API/3/)</h5></a>
+
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/0ec15516-482f-4765-889a-f9a1d3e5fe47)
+
 
 
 <a name="terminal"><h2>:computer: Параметры сборки в Jenkins</h2></a>
@@ -177,39 +179,48 @@ ${TASK}
 -DbrowserVersion="${BROWSER_VERSION}"
 -DremoteUrl=${REMOTE_URL}
 ```
-<a name="Allure_report"><h2>:chart_with_downwards_trend: [Allure Report](https://jenkins.autotests.cloud/job/JavaRush/100/allure/)</h2></a>
+<a name="Allure_report"><h2>:chart_with_downwards_trend: [Allure Report](https://jenkins.autotests.cloud/job/JavaRush1/job/JavaRush_UI_API/3/allure/)</h2></a>
 
-- <a name="Allure_report1"><h3>Главный экран отчета в [Allure Report](https://jenkins.autotests.cloud/job/JavaRush/100/allure/)</h3></a>
+- <a name="Allure_report1"><h3>Главный экран отчета в [Allure Report](https://jenkins.autotests.cloud/job/JavaRush1/job/JavaRush_UI_API/3/allure/)</h3></a>
 
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/cf828172-249a-43ec-a10b-151363242ab7)
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/4cb52020-d33a-453e-9579-11a264965f82)
 
 
--  <a name="Allure_report2"><h3>Страница с проведенными тестами в [Allure Report](https://jenkins.autotests.cloud/job/JavaRush/100/allure/#suites/a231097a0283795f4a5780f0d13a8133/660cc25265403457/)</h3></a>
 
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/86c0c666-772c-419e-9287-5bff8790b5dc)
+-  <a name="Allure_report2"><h3>Страница с проведенными тестами в [Allure Report](https://jenkins.autotests.cloud/job/JavaRush1/job/JavaRush_UI_API/3/allure/#suites/c6e095b3810bf1b3b1d089748842a365/21e4a840cb73bc79/)</h3></a>
 
-<a name="Integration_Allure_TestOps"><h2>:bar_chart: Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/38392/?treeId=0)</h2></a>
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/8739d0d0-044e-457e-afb4-172cea5d4b12)
+
+
+<a name="Integration_Allure_TestOps"><h2>:bar_chart: Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/38959/?search=W3siaWQiOiJzdGF0dXMiLCJ0eXBlIjoidGVzdFN0YXR1c0FycmF5IiwidmFsdWUiOlsicGFzc2VkIl19XQ%3D%3D&treeId=0)</h2></a>
 
 - <a name="Integration_Allure_TestOps1"><h3>Экран с результатами запуска тестов</h3></a>
 
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/dc68c9d9-9927-414d-9794-f9c14769d64b)
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/cc1ae6c5-f1c8-4ef1-abea-0957d0fa39fd)
 
-- <a name="Integration_Allure_TestOps2"><h3>Страница с тестами в [TestOps](https://allure.autotests.cloud/project/2188/test-cases/20742?treeId=4235)</h3></a>
 
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/7976d3ad-09b5-4ee2-88bb-0a0e718a595a)
+- <a name="Integration_Allure_TestOps2"><h3>Страница с тестами в [TestOps](https://allure.autotests.cloud/project/3488/test-cases/31464?search=W3siaWQiOiJzdGF0dXMiLCJ0eXBlIjoibG9uZ0FycmF5IiwidmFsdWUiOlsiLTMiXX1d&treeId=6806)</h3></a>
 
-- <a name="Integration_Allure_TestOps3"><h3>Страница с тестами из Launches в [Allure TestOps](https://allure.autotests.cloud/launch/24564/tree/369247?treeId=4235)</h3></a>
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/3f66aa30-c559-46dc-8d7e-8b40a95caf51)
 
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/a6f59008-3e2b-4e7e-832e-390561e63cbd)
 
-<a name="Telegram"><h2>:iphone: Отчет в [Telegram](https://t.me/+wAG3zdRUXCxmNWNi)</h2></a>
 
-![image](https://github.com/DandieKYT/JavaRush/assets/75677738/790d4620-9e65-4f93-a95b-9e4066db80d1)
+- <a name="Integration_Allure_TestOps3"><h3>Страница с тестами из Launches в [Allure TestOps](https://allure.autotests.cloud/launch/38959/tree/635433?search=W3siaWQiOiJzdGF0dXMiLCJ0eXBlIjoidGVzdFN0YXR1c0FycmF5IiwidmFsdWUiOlsicGFzc2VkIl19XQ%3D%3D&treeId=6806)</h3></a>
+
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/e34d1dbd-65e0-498d-adfd-87edc3a5eb9b)
+
+
+<a name="Telegram"><h2>:iphone: Отчет в Telegram</h2></a>
+
+![image](https://github.com/DandieKYT/JavaRush/assets/75677738/6dbeb9cf-d7e8-42f3-b443-74272ca0ff61)
+
 
 <a name="Video"><h2>:movie_camera: Видео примеры прохождения тестов</h2></a>
 
-- <a name="Video1"><h3>Пример запуска тестов </h3></a>
+- <a name="Video1"><h3>Пример запуска тестов через Selenide </h3></a>
 
-https://github.com/DandieKYT/JavaRush/assets/75677738/ca03e546-1d02-41d6-884e-6fbb4aecaa34
+
+https://github.com/DandieKYT/JavaRush/assets/75677738/a96f0f64-b136-45e5-bb69-0a8296c9d929
+
 
 
